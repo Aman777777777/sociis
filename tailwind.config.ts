@@ -9,7 +9,7 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1200px",
       },
     },
     extend: {
@@ -57,17 +57,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Brand colors
+        ivory: "hsl(var(--ivory))",
+        navy: "hsl(var(--navy))",
+        slate: "hsl(var(--slate))",
         gold: "hsl(var(--gold))",
-        "gold-light": "hsl(var(--gold-light))",
-        charcoal: "hsl(var(--charcoal))",
-        "charcoal-light": "hsl(var(--charcoal-light))",
-        cream: "hsl(var(--cream))",
-        "cream-dark": "hsl(var(--cream-dark))",
-        sand: "hsl(var(--sand))",
+        electric: "hsl(var(--electric-blue))",
       },
       fontFamily: {
-        serif: ["Cormorant Garamond", "Georgia", "serif"],
-        sans: ["Montserrat", "system-ui", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        accent: ["Playfair Display", "Georgia", "serif"],
+      },
+      fontSize: {
+        "body": ["18px", { lineHeight: "150%" }],
+        "body-lg": ["20px", { lineHeight: "150%" }],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -88,18 +91,15 @@ export default {
           to: { opacity: "1" },
         },
         "fade-in-up": {
-          from: { opacity: "0", transform: "translateY(20px)" },
+          from: { opacity: "0", transform: "translateY(12px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.6s ease-out",
+        "fade-in": "fade-in 0.8s ease-out",
         "fade-in-up": "fade-in-up 0.8s ease-out",
-      },
-      transitionTimingFunction: {
-        luxury: "cubic-bezier(0.4, 0, 0.2, 1)",
       },
     },
   },

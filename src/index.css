@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,100 +6,75 @@
 
 @layer base {
   :root {
-    /* Aman-inspired luxury palette - warm creams and deep charcoals */
-    --background: 40 30% 96%;
-    --foreground: 30 10% 15%;
+    /* SOCIIS Brand Colors */
+    --background: 40 33% 96%; /* Ivory #FAF7F2 */
+    --foreground: 222 23% 14%; /* Deep Midnight Navy #1A1F2B */
 
-    --card: 40 25% 94%;
-    --card-foreground: 30 10% 15%;
+    --card: 40 33% 96%;
+    --card-foreground: 222 23% 14%;
 
-    --popover: 40 30% 96%;
-    --popover-foreground: 30 10% 15%;
+    --popover: 40 33% 96%;
+    --popover-foreground: 222 23% 14%;
 
-    /* Warm gold accent */
-    --primary: 38 65% 50%;
-    --primary-foreground: 40 30% 96%;
+    /* Muted Gold accent */
+    --primary: 43 50% 62%; /* #D1B46A */
+    --primary-foreground: 222 23% 14%;
 
-    --secondary: 40 20% 90%;
-    --secondary-foreground: 30 10% 25%;
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 0 0% 25%; /* Slate Grey #404040 */
 
-    --muted: 40 15% 88%;
-    --muted-foreground: 30 8% 45%;
+    --muted: 40 15% 90%;
+    --muted-foreground: 0 0% 25%; /* Slate Grey #404040 */
 
-    --accent: 38 50% 45%;
-    --accent-foreground: 40 30% 96%;
+    --accent: 220 100% 55%; /* Electric Blue #1B65FF */
+    --accent-foreground: 40 33% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 20% 85%;
-    --input: 40 20% 85%;
-    --ring: 38 65% 50%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 43 50% 62%;
 
     --radius: 0.25rem;
 
-    /* Custom luxury variables */
-    --gold: 38 65% 50%;
-    --gold-light: 40 60% 65%;
-    --charcoal: 30 10% 12%;
-    --charcoal-light: 30 10% 18%;
-    --cream: 40 30% 96%;
-    --cream-dark: 40 25% 92%;
-    --sand: 35 25% 85%;
+    /* Brand-specific tokens */
+    --ivory: 40 33% 96%;
+    --navy: 222 23% 14%;
+    --slate: 0 0% 25%;
+    --gold: 43 50% 62%;
+    --electric-blue: 220 100% 55%;
 
-    /* Sidebar */
-    --sidebar-background: 40 30% 96%;
-    --sidebar-foreground: 30 10% 25%;
-    --sidebar-primary: 38 65% 50%;
-    --sidebar-primary-foreground: 40 30% 96%;
-    --sidebar-accent: 40 20% 90%;
-    --sidebar-accent-foreground: 30 10% 25%;
-    --sidebar-border: 40 20% 85%;
-    --sidebar-ring: 38 65% 50%;
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 40 33% 96%;
+    --sidebar-foreground: 222 23% 14%;
+    --sidebar-primary: 43 50% 62%;
+    --sidebar-primary-foreground: 40 33% 96%;
+    --sidebar-accent: 40 20% 92%;
+    --sidebar-accent-foreground: 222 23% 14%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 43 50% 62%;
   }
 
   .dark {
-    --background: 30 10% 8%;
-    --foreground: 40 20% 92%;
-
-    --card: 30 10% 10%;
-    --card-foreground: 40 20% 92%;
-
-    --popover: 30 10% 8%;
-    --popover-foreground: 40 20% 92%;
-
-    --primary: 38 65% 55%;
-    --primary-foreground: 30 10% 8%;
-
-    --secondary: 30 10% 15%;
-    --secondary-foreground: 40 20% 88%;
-
-    --muted: 30 10% 18%;
-    --muted-foreground: 40 15% 60%;
-
-    --accent: 38 55% 50%;
-    --accent-foreground: 30 10% 8%;
-
-    --border: 30 10% 20%;
-    --input: 30 10% 20%;
-    --ring: 38 65% 55%;
-
-    --charcoal: 30 10% 8%;
-    --charcoal-light: 30 10% 12%;
-    --cream: 40 20% 92%;
-    --cream-dark: 40 15% 85%;
-    --gold: 38 65% 55%;
-    --gold-light: 40 60% 70%;
-    --sand: 35 15% 25%;
-
-    --sidebar-background: 30 10% 10%;
-    --sidebar-foreground: 40 20% 88%;
-    --sidebar-primary: 38 65% 55%;
-    --sidebar-primary-foreground: 30 10% 8%;
-    --sidebar-accent: 30 10% 15%;
-    --sidebar-accent-foreground: 40 20% 88%;
-    --sidebar-border: 30 10% 20%;
-    --sidebar-ring: 38 65% 55%;
+    /* SOCIIS doesn't use dark mode - keep same as light */
+    --background: 40 33% 96%;
+    --foreground: 222 23% 14%;
+    --card: 40 33% 96%;
+    --card-foreground: 222 23% 14%;
+    --popover: 40 33% 96%;
+    --popover-foreground: 222 23% 14%;
+    --primary: 43 50% 62%;
+    --primary-foreground: 222 23% 14%;
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 0 0% 25%;
+    --muted: 40 15% 90%;
+    --muted-foreground: 0 0% 25%;
+    --accent: 220 100% 55%;
+    --accent-foreground: 40 33% 96%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 43 50% 62%;
   }
 }
 
@@ -108,59 +83,75 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-light tracking-wide;
+    @apply font-sans font-light tracking-tight;
+    letter-spacing: 0.04em;
   }
 
   p {
-    @apply font-sans font-light leading-relaxed;
+    @apply font-sans font-normal leading-relaxed;
+    font-size: 18px;
+    line-height: 150%;
   }
 }
 
 @layer utilities {
-  .text-gold {
-    color: hsl(var(--gold));
+  /* Brand color utilities */
+  .text-ivory {
+    color: hsl(var(--ivory));
   }
 
-  .bg-gold {
-    background-color: hsl(var(--gold));
+  .bg-ivory {
+    background-color: hsl(var(--ivory));
+  }
+
+  .text-navy {
+    color: hsl(var(--navy));
+  }
+
+  .bg-navy {
+    background-color: hsl(var(--navy));
+  }
+
+  .text-slate {
+    color: hsl(var(--slate));
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
   }
 
   .border-gold {
     border-color: hsl(var(--gold));
   }
 
-  .text-charcoal {
-    color: hsl(var(--charcoal));
+  .text-electric {
+    color: hsl(var(--electric-blue));
   }
 
-  .bg-charcoal {
-    background-color: hsl(var(--charcoal));
+  .underline-electric {
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--electric-blue));
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
   }
 
-  .text-cream {
-    color: hsl(var(--cream));
+  /* Quote/accent font */
+  .font-accent {
+    font-family: 'Playfair Display', serif;
   }
 
-  .bg-cream {
-    background-color: hsl(var(--cream));
-  }
-
-  .bg-cream-dark {
-    background-color: hsl(var(--cream-dark));
-  }
-
-  .bg-sand {
-    background-color: hsl(var(--sand));
-  }
-
-  /* Luxury animations */
+  /* Subtle animations per brand guidelines */
   .animate-fade-in {
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   .animate-fade-in-up {
@@ -168,59 +159,17 @@
   }
 
   .animate-fade-in-delayed {
-    animation: fadeIn 1s ease-out 0.3s forwards;
+    animation: fadeIn 0.8s ease-out 0.3s forwards;
     opacity: 0;
   }
 
-  .animate-slide-in-left {
-    animation: slideInLeft 0.8s ease-out forwards;
+  /* Letter spacing */
+  .tracking-brand {
+    letter-spacing: 0.04em;
   }
 
-  .animate-slide-in-right {
-    animation: slideInRight 0.8s ease-out forwards;
-  }
-
-  .animate-scale-in {
-    animation: scaleIn 0.6s ease-out forwards;
-  }
-
-  /* Subtle hover effects */
-  .hover-lift {
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px -15px hsl(var(--charcoal) / 0.1);
-  }
-
-  /* Elegant underline effect */
-  .underline-hover {
-    position: relative;
-  }
-
-  .underline-hover::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: hsl(var(--gold));
-    transition: width 0.4s ease;
-  }
-
-  .underline-hover:hover::after {
-    width: 100%;
-  }
-
-  /* Letter spacing utilities */
-  .tracking-luxury {
-    letter-spacing: 0.25em;
-  }
-
-  .tracking-elegant {
-    letter-spacing: 0.15em;
+  .tracking-wide-brand {
+    letter-spacing: 0.1em;
   }
 }
 
@@ -236,7 +185,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -244,58 +193,26 @@
   }
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
+/* Custom scrollbar - subtle */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--cream-dark));
+  background: hsl(var(--ivory));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--sand));
-  border-radius: 4px;
+  background: hsl(var(--border));
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground));
+  background: hsl(var(--slate));
+}
+
+/* Selection color */
+::selection {
+  background-color: hsl(var(--gold) / 0.3);
+  color: hsl(var(--navy));
 }

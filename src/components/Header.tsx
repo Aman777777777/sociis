@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import SociisSymbol from "./SociisSymbol";
 
 const Header = () => {
   const location = useLocation();
@@ -16,78 +17,82 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Access", href: "/" },
-    { name: "Who Is Inside", href: "/team" },
+    { name: "Impact", href: "/#impact" },
+    { name: "Experiences", href: "/#experiences" },
+    { name: "House", href: "/#house" },
+    { name: "Network", href: "/#network" },
+    { name: "Collections", href: "/#collections" },
+    { name: "Media", href: "/#media" },
   ];
+
+  const handleNavClick = (href: string) => {
+    setIsMobileMenuOpen(false);
+    if (href.startsWith("/#")) {
+      const id = href.substring(2);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm py-4"
+          ? "bg-background/98 backdrop-blur-sm py-4"
           : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded border border-foreground/20 flex items-center justify-center">
-              <span className="text-foreground font-serif text-xl font-semibold">
-                S
-              </span>
-            </div>
-            <span className="font-serif text-xl tracking-elegant text-foreground">
-              <span className="font-light">sociis</span>
-              <span className="font-medium">group</span>
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex items-center gap-3"
+          >
+            <SociisSymbol size={32} className="text-foreground" />
+            <span className="font-sans text-lg tracking-wide-brand text-foreground font-light">
+              SOCIIS<sup className="text-xs">™</sup>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-12">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
-                to={link.href}
-                className={`font-sans text-sm tracking-elegant uppercase underline-hover transition-colors ${
-                  location.pathname === link.href
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
-                }`}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(link.href);
+                }}
+                className="font-sans text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link
-              to="/#request"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-sans text-sm tracking-elegant uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+          {/* Access CTA */}
+          <div className="hidden lg:block">
+            <a
+              href="#access"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("/#access");
+              }}
+              className="inline-flex items-center gap-2 font-sans text-sm tracking-wide text-foreground hover:text-primary transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-                <polyline points="10 17 15 12 10 7" />
-                <line x1="15" y1="12" x2="3" y2="12" />
-              </svg>
-              Member Area
-            </Link>
+              Access
+              <span className="text-primary">→</span>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -96,25 +101,32 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md shadow-lg py-8 px-6 animate-fade-in">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-sm py-8 px-6 animate-fade-in border-t border-border">
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
-                  to={link.href}
-                  className="font-sans text-lg tracking-elegant uppercase text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  href={link.href}
+                  className="font-sans text-lg text-foreground hover:text-primary transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(link.href);
+                  }}
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
-              <Link
-                to="/#request"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-primary text-primary font-sans text-sm tracking-elegant uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300 mt-4"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <a
+                href="#access"
+                className="inline-flex items-center gap-2 font-sans text-lg text-foreground hover:text-primary transition-colors mt-4 pt-4 border-t border-border"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick("/#access");
+                }}
               >
-                Member Area
-              </Link>
+                Request Access
+                <span className="text-primary">→</span>
+              </a>
             </div>
           </div>
         )}
