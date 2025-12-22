@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-earth.jpg";
+import heroImage from "@/assets/hero-earth-light.jpg";
 import { ArrowUpRight } from "lucide-react";
 
 const Hero = () => {
@@ -8,10 +8,10 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Global network of lights from space"
+          alt="Global network of lights from space at sunrise"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-charcoal/60" />
+        <div className="absolute inset-0 bg-charcoal/40" />
       </div>
 
       {/* Content */}
