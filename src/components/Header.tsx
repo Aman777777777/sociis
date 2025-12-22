@@ -32,8 +32,8 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-serif text-xl font-semibold">
+            <div className="w-10 h-10 rounded border border-foreground/20 flex items-center justify-center">
+              <span className="text-foreground font-serif text-xl font-semibold">
                 S
               </span>
             </div>
