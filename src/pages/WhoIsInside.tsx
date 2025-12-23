@@ -83,7 +83,7 @@ const TeamCard = ({ member, index }: { member: TeamMember; index: number }) => {
       className="group opacity-0 animate-[fade-in-up_0.6s_ease-out_forwards]"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <div className="relative overflow-hidden mb-4 aspect-[3/4] bg-muted">
+      <div className="relative overflow-hidden mb-4 aspect-[3/4] bg-muted max-w-[180px]">
         <img
           src={member.image}
           alt={member.name}
