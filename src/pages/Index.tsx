@@ -16,7 +16,10 @@ import SectionCollections from "@/components/sections/SectionCollections";
 import SectionUnconventional from "@/components/sections/SectionUnconventional";
 import SectionOneBillion from "@/components/sections/SectionOneBillion";
 import SectionFlywheel from "@/components/sections/SectionFlywheel";
+import SectionCalendar from "@/components/sections/SectionCalendar";
 import SectionAlliances from "@/components/sections/SectionAlliances";
+import SectionLime from "@/components/sections/SectionLime";
+import SectionMedia from "@/components/sections/SectionMedia";
 import SectionAccess from "@/components/sections/SectionAccess";
 
 const Index = () => {
@@ -39,7 +42,10 @@ const Index = () => {
       <SectionUnconventional />
       <SectionOneBillion />
       <SectionFlywheel />
+      <SectionCalendar />
       <SectionAlliances />
+      <SectionLime />
+      <SectionMedia />
       <SectionAccess />
       <Footer />
     </main>
