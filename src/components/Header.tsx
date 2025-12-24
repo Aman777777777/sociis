@@ -1,10 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import SociisSymbol from "./SociisSymbol";
+import sociisLogo from "@/assets/sociis-logo.png";
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -30,9 +31,20 @@ const Header = () => {
     setIsMobileMenuOpen(false);
     if (href.startsWith("/#")) {
       const id = href.substring(2);
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+      // If not on home page, navigate to home first then scroll
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
     }
   };
@@ -53,9 +65,13 @@ const Header = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-3"
           >
-            <SociisSymbol size={32} className="text-foreground" />
+            <img 
+              src={sociisLogo} 
+              alt="Sociis Group" 
+              className="h-8 w-auto invert brightness-0"
+            />
             <span className="font-sans text-lg tracking-wide-brand text-foreground font-light">
-              SOCIIS<sup className="text-xs">™</sup>
+              SOCIIS GROUP<sup className="text-xs">™</sup>
             </span>
           </Link>
 
