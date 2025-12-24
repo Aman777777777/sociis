@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Import team photos - Board
 import jeremie from "@/assets/team/jeremie.png";
 import dominiqueD from "@/assets/team/dominique-d.png";
-import micael from "@/assets/team/micael.png";
+import micael from "@/assets/team/micael-new.jpg";
 import abbas from "@/assets/team/abbas.jpg";
 
 // Import team photos - Council
