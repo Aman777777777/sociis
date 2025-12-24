@@ -63,16 +63,12 @@ const Header = () => {
           <Link
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-3"
           >
             <img 
               src={sociisLogo} 
               alt="Sociis Group" 
-              className="h-8 w-auto grayscale"
+              className="h-10 w-auto brightness-0 invert-0"
             />
-            <span className="font-sans text-lg tracking-wide-brand text-foreground font-light">
-              SOCIIS GROUP<sup className="text-xs">™</sup>
-            </span>
           </Link>
 
           {/* Desktop Navigation */}

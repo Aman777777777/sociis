@@ -65,8 +65,9 @@ export default {
         electric: "hsl(var(--electric-blue))",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        accent: ["Playfair Display", "Georgia", "serif"],
+        sans: ["Cormorant Garamond", "Georgia", "serif"],
+        accent: ["Cormorant Garamond", "Georgia", "serif"],
+        formal: ["Cormorant Garamond", "Georgia", "serif"],
       },
       fontSize: {
         "body": ["18px", { lineHeight: "150%" }],
