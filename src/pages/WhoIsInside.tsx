@@ -46,6 +46,7 @@ interface TeamMember {
   role: string;
   image: string;
   category: "board" | "council" | "advisor" | "steward";
+  imagePosition?: string;
 }
 
 const teamMembers: TeamMember[] = [
@@ -66,7 +67,8 @@ const teamMembers: TeamMember[] = [
     name: "Micael Craenhals",
     role: "Head of Sociis Experiences™",
     image: micael,
-    category: "board"
+    category: "board",
+    imagePosition: "center 30%"
   },
   {
     name: "Abbas Fasaei",
@@ -254,7 +256,8 @@ const TeamCard = ({ member, index }: { member: TeamMember; index: number }) => {
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+          style={{ objectPosition: member.imagePosition || "center" }}
         />
       </div>
       <h3 className="font-sans text-foreground text-sm font-medium mb-0.5 group-hover:text-accent transition-colors duration-300">
