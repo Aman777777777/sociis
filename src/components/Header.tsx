@@ -68,7 +68,7 @@ const Header = () => {
             <img 
               src={sociisLogo} 
               alt="Sociis Group" 
-              className="h-8 w-auto invert brightness-0"
+              className="h-8 w-auto grayscale"
             />
             <span className="font-sans text-lg tracking-wide-brand text-foreground font-light">
               SOCIIS GROUP<sup className="text-xs">™</sup>
