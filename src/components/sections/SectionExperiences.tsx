@@ -1,3 +1,5 @@
+import charityVideo from "@/assets/charity-video.mp4";
+
 const SectionExperiences = () => {
   const experiences = [
     {
@@ -33,6 +35,23 @@ const SectionExperiences = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Charity Fundraising Video */}
+          <div className="mb-12 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <h3 className="font-accent text-xl text-foreground italic mb-4">
+              Charity Fundraising
+            </h3>
+            <div className="relative aspect-video rounded-lg overflow-hidden bg-muted/30">
+              <video
+                src={charityVideo}
+                controls
+                className="w-full h-full object-cover"
+                poster=""
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
 
           <p className="text-body text-muted-foreground border-t border-border pt-8">
