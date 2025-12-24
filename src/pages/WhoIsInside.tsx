@@ -250,11 +250,11 @@ const TeamCard = ({ member, index }: { member: TeamMember; index: number }) => {
       className="group opacity-0 animate-[fade-in-up_0.6s_ease-out_forwards]"
       style={{ animationDelay: `${index * 0.08}s` }}
     >
-      <div className="relative overflow-hidden mb-4 w-[140px] h-[140px] aspect-square bg-muted/30 rounded-full">
+      <div className="relative overflow-hidden mb-4 w-[140px] h-[140px] aspect-square bg-muted/30">
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-full object-cover object-center rounded-full grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+          className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
         />
       </div>
       <h3 className="font-sans text-foreground text-sm font-medium mb-0.5 group-hover:text-accent transition-colors duration-300">
