@@ -103,7 +103,7 @@ const teamMembers: TeamMember[] = [
     category: "council"
   },
   {
-    name: "Tatjana Dragović Andersen, EdD",
+    name: "Tatjana Dragović\nAndersen, EdD",
     role: "Corporate educator, executive coach, associate professor",
     image: tatiana,
     category: "council"
@@ -260,7 +260,7 @@ const TeamCard = ({ member, index }: { member: TeamMember; index: number }) => {
           style={{ objectPosition: member.imagePosition || "center" }}
         />
       </div>
-      <h3 className="font-sans text-foreground text-sm font-medium mb-0.5 group-hover:text-accent transition-colors duration-300">
+      <h3 className="font-sans text-foreground text-sm font-medium mb-0.5 group-hover:text-accent transition-colors duration-300 whitespace-pre-line">
         {member.name}
       </h3>
       <p className="font-sans text-xs text-muted-foreground leading-relaxed max-w-[140px]">
