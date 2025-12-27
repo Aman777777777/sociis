@@ -117,7 +117,7 @@ const SectionHero = () => {
               
               {/* Orbiting dot */}
               <div className="absolute inset-0 flex items-center justify-center animate-[rotate-slow_20s_linear_infinite]">
-                <div className="absolute w-2 h-2 bg-accent rounded-full" style={{ transform: 'translateX(160px)' }}></div>
+                <div className="absolute w-2 h-2 rounded-full" style={{ transform: 'translateX(160px)', backgroundColor: '#B8860B' }}></div>
               </div>
             </div>
           </div>
