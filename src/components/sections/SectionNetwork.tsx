@@ -21,11 +21,11 @@ const SectionNetwork = () => {
             </div>
             
             <div className="relative group opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden rounded-2xl">
                 <img
                   src={networkImage}
                   alt="Leaders in conversation"
-                  className="w-full aspect-[16/10] object-cover grayscale group-hover:grayscale-[50%] transition-all duration-700"
+                  className="w-full aspect-[16/10] object-cover grayscale group-hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-background/60 via-transparent to-transparent"></div>
               </div>

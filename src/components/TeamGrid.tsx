@@ -131,11 +131,11 @@ const TeamCard = ({ member, index }: TeamCardProps) => {
       }`}
       style={{ transitionDelay: `${(index % 4) * 100}ms` }}
     >
-      <div className="relative overflow-hidden mb-6 bg-sand aspect-[3/4]">
+      <div className="relative overflow-hidden mb-6 bg-sand aspect-[3/4] rounded-2xl">
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl"
         />
         <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/20 transition-colors duration-500" />
         

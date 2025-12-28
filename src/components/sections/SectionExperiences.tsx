@@ -47,11 +47,11 @@ const SectionExperiences = () => {
               >
                 {/* Image - alternating sides */}
                 <div className={`relative group ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden rounded-2xl">
                     <img
                       src={exp.image}
                       alt={exp.name}
-                      className="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+                      className="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105 rounded-2xl"
                     />
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
