@@ -85,39 +85,24 @@ const SectionHero = () => {
             </a>
           </div>
 
-          {/* Right: Animated symbol with enhanced effects */}
+          {/* Right: Minimal symbol with subtle animation */}
           <div className="flex items-center justify-center">
             <div className="relative opacity-0 animate-[fade-in_1.2s_ease-out_0.5s_forwards]">
-              {/* Rotating outer ring */}
-              <div className="absolute inset-0 flex items-center justify-center animate-[rotate-slow_60s_linear_infinite]">
-                <div className="w-[350px] h-[350px] rounded-full border border-accent/10"></div>
-              </div>
-              
-              {/* Pulsing glow ring */}
+              {/* Single subtle outer ring */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[300px] h-[300px] rounded-full animate-[glow-pulse_4s_ease-in-out_infinite]"></div>
+                <div className="w-[280px] h-[280px] rounded-full border border-foreground/5"></div>
               </div>
               
-              {/* Outer faint ring with slow pulse */}
-              <div className="absolute inset-0 flex items-center justify-center animate-[pulse-slow_4s_ease-in-out_infinite]">
-                <SociisSymbol size={320} faint gold />
-              </div>
-              
-              {/* Middle ring with gentle float */}
-              <div className="animate-[float_6s_ease-in-out_infinite]">
-                <SociisSymbol size={280} faint gold />
-              </div>
-              
-              {/* Inner symbol with subtle breathe */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="animate-[breathe_8s_ease-in-out_infinite]">
-                  <SociisSymbol size={120} gold />
+              {/* Outer faint symbol - very subtle drift */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-20">
+                <div className="animate-[drift_12s_ease-in-out_infinite]">
+                  <SociisSymbol size={260} faint className="text-foreground/30" />
                 </div>
               </div>
               
-              {/* Orbiting dot */}
-              <div className="absolute inset-0 flex items-center justify-center animate-[rotate-slow_20s_linear_infinite]">
-                <div className="absolute w-2 h-2 rounded-full" style={{ transform: 'translateX(160px)', backgroundColor: '#B8860B' }}></div>
+              {/* Main symbol - clean, minimal */}
+              <div className="relative">
+                <SociisSymbol size={180} className="text-foreground/80" />
               </div>
             </div>
           </div>

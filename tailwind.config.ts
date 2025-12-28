@@ -112,6 +112,12 @@ export default {
           "50%": { opacity: "1", transform: "scaleY(1)" },
           "100%": { opacity: "0.5", transform: "scaleY(0.5)" },
         },
+        "drift": {
+          "0%, 100%": { transform: "translate(0, 0) rotate(0deg)" },
+          "25%": { transform: "translate(2px, -3px) rotate(0.5deg)" },
+          "50%": { transform: "translate(-1px, 2px) rotate(-0.5deg)" },
+          "75%": { transform: "translate(-2px, -1px) rotate(0.3deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -122,6 +128,7 @@ export default {
         "pulse-slow": "pulse-slow 4s ease-in-out infinite",
         "breathe": "breathe 8s ease-in-out infinite",
         "scroll-line": "scroll-line 2s ease-in-out infinite",
+        "drift": "drift 12s ease-in-out infinite",
       },
     },
   },
