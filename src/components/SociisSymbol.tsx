@@ -21,20 +21,20 @@ const SociisSymbol = ({ size = 40, className = "", faint = false, gold = false, 
       <style>
         {`
           @keyframes ellipse-drift-1 {
-            0%, 100% { transform: rotate(-8deg) translateX(0); }
-            50% { transform: rotate(-5deg) translateX(3px); }
+            0%, 100% { transform: rotate(-12deg) translateX(0); }
+            50% { transform: rotate(-3deg) translateX(8px); }
           }
           @keyframes ellipse-drift-2 {
-            0%, 100% { transform: rotate(5deg) translateY(0); }
-            50% { transform: rotate(8deg) translateY(-3px); }
+            0%, 100% { transform: rotate(8deg) translateY(0); }
+            50% { transform: rotate(12deg) translateY(-8px); }
           }
           @keyframes ellipse-pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.97); }
           }
-          .ellipse-1 { animation: ellipse-drift-1 8s ease-in-out infinite; transform-origin: center; }
-          .ellipse-2 { animation: ellipse-drift-2 10s ease-in-out infinite; transform-origin: center; }
-          .ellipse-main { animation: ellipse-pulse 6s ease-in-out infinite; }
+          .ellipse-1 { animation: ellipse-drift-1 4s ease-in-out infinite; transform-origin: center; }
+          .ellipse-2 { animation: ellipse-drift-2 5s ease-in-out infinite; transform-origin: center; }
+          .ellipse-main { animation: ellipse-pulse 3s ease-in-out infinite; transform-origin: center; }
         `}
       </style>
       
