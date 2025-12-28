@@ -7,6 +7,7 @@ import jeremie from "@/assets/team/jeremie.png";
 import dominiqueD from "@/assets/team/dominique-new.jpg";
 import micael from "@/assets/team/micael-new.jpg";
 import abbas from "@/assets/team/abbas.jpg";
+import rudi from "@/assets/team/rudi.png";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -74,6 +75,12 @@ const teamMembers: TeamMember[] = [
     name: "Abbas Fasaei",
     role: "Head of Sociis Experience™",
     image: abbas,
+    category: "board"
+  },
+  {
+    name: "Rudi Schreiner",
+    role: "Head of Sociis",
+    image: rudi,
     category: "board"
   },
 
