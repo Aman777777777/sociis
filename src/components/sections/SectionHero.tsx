@@ -90,19 +90,19 @@ const SectionHero = () => {
             <div className="relative opacity-0 animate-[fade-in_1.2s_ease-out_0.5s_forwards]">
               {/* Single subtle outer ring */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[340px] h-[340px] rounded-full border border-foreground/5"></div>
+                <div className="w-[400px] h-[400px] rounded-full border border-foreground/5"></div>
               </div>
               
               {/* Outer faint symbol - very subtle drift */}
               <div className="absolute inset-0 flex items-center justify-center opacity-20">
                 <div className="animate-[drift_12s_ease-in-out_infinite]">
-                  <SociisSymbol size={320} faint className="text-foreground/30" />
+                  <SociisSymbol size={380} faint className="text-foreground/30" />
                 </div>
               </div>
               
               {/* Main symbol - clean, minimal with animated ellipses */}
               <div className="relative">
-                <SociisSymbol size={240} className="text-foreground/80" animated />
+                <SociisSymbol size={300} className="text-foreground/80" animated />
               </div>
             </div>
           </div>
