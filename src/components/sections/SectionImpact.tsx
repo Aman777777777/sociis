@@ -64,11 +64,11 @@ const SectionImpact = () => {
 
           {/* Image */}
           <div className="relative group opacity-0 animate-[fade-in_0.8s_ease-out_0.3s_forwards]">
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={impactImage}
                 alt="Leadership and contemplation"
-                className="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-[50%] transition-all duration-700"
+                className="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-background/20"></div>

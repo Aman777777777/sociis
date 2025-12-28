@@ -22,11 +22,11 @@ const SectionAlliances = () => {
         <div className="max-w-6xl mx-auto">
           {/* Hero Image */}
           <div className="relative mb-16 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
-            <div className="relative overflow-hidden aspect-[21/9]">
+            <div className="relative overflow-hidden aspect-[21/9] rounded-2xl">
               <img
                 src={alliancesImage}
                 alt="Luxury venue interior"
-                className="w-full h-full object-cover grayscale hover:grayscale-[50%] transition-all duration-700"
+                className="w-full h-full object-cover grayscale hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent"></div>
               

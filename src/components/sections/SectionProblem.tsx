@@ -7,11 +7,11 @@ const SectionProblem = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Image */}
           <div className="relative group order-2 lg:order-1 opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={problemImage}
                 alt="Environmental contrast - the challenge we face"
-                className="w-full aspect-square object-cover grayscale group-hover:grayscale-[50%] transition-all duration-700"
+                className="w-full aspect-square object-cover grayscale group-hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-tr from-background/40 via-transparent to-transparent"></div>
