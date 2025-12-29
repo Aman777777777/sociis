@@ -78,8 +78,8 @@ const teamMembers: TeamMember[] = [
     category: "board"
   },
   {
-    name: "Rudi Schreiner",
-    role: "Head of Sociis",
+    name: "Rudi Plettinx",
+    role: "Board Director",
     image: rudi,
     category: "board"
   },
