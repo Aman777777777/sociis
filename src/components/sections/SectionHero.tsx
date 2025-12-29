@@ -53,7 +53,7 @@ const SectionHero = () => {
               className="font-sans font-extralight text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
             >
               <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
-              <sup className="text-[0.5rem] md:text-[0.6rem] text-accent align-super -ml-1">TM</sup>
+              <sup className="text-[0.5rem] md:text-[0.6rem] text-accent -ml-1" style={{ verticalAlign: 'super', top: '-0.5em', position: 'relative' }}>TM</sup>
             </h1>
             <p 
               className="font-accent text-2xl md:text-3xl text-foreground font-light italic mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
