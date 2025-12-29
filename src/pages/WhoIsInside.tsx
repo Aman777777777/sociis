@@ -8,6 +8,7 @@ import dominiqueD from "@/assets/team/dominique-new.jpg";
 import micael from "@/assets/team/micael-new.jpg";
 import abbas from "@/assets/team/abbas.jpg";
 import rudi from "@/assets/team/rudi.png";
+import mikkel from "@/assets/team/mikkel.jpg";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -40,7 +41,6 @@ import nick from "@/assets/team/nick.png";
 import kavita from "@/assets/team/kavita.jpg";
 import maeva from "@/assets/team/maeva.png";
 import jeanBosco from "@/assets/team/jean-bosco.jpg";
-import mikkel from "@/assets/team/mikkel.jpg";
 
 interface TeamMember {
   name: string;
@@ -81,6 +81,12 @@ const teamMembers: TeamMember[] = [
     name: "Rudi Plettinx",
     role: "Board Director",
     image: rudi,
+    category: "board"
+  },
+  {
+    name: "Mikkel Iversen",
+    role: "Board Director",
+    image: mikkel,
     category: "board"
   },
 
@@ -243,12 +249,6 @@ const teamMembers: TeamMember[] = [
     name: "Jean Bosco Safari",
     role: "Singer",
     image: jeanBosco,
-    category: "steward"
-  },
-  {
-    name: "Mikkel",
-    role: "Cultural & Charity Steward",
-    image: mikkel,
     category: "steward"
   },
 ];
