@@ -85,9 +85,9 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Georges Reyes",
-    role: "Board Director",
+    role: "Cultural & Charity Steward",
     image: mikkel,
-    category: "board"
+    category: "steward"
   },
 
   // The Council
