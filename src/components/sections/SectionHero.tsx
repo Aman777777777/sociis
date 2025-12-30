@@ -86,7 +86,7 @@ const SectionHero = () => {
           </div>
 
           {/* Right: Minimal symbol with subtle animation */}
-          <div className="flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
             <div className="relative opacity-0 animate-[fade-in_1.2s_ease-out_0.5s_forwards]">
               {/* Single subtle outer ring */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -104,6 +104,15 @@ const SectionHero = () => {
               <div className="relative">
                 <SociisSymbol size={300} className="text-foreground/80" animated />
               </div>
+            </div>
+            
+            {/* The Mark explanation */}
+            <div className="mt-8 text-center max-w-xs opacity-0 animate-[fade-in-up_0.8s_ease-out_1s_forwards]">
+              <p className="text-xs tracking-widest text-muted-foreground uppercase mb-2">The Mark — ◎ II (1 | 1)</p>
+              <p className="text-xs text-muted-foreground/70 leading-relaxed">
+                Two complete individuals, equal, side by side. No one above, no one below. 
+                Impact created with people, not on top of people.
+              </p>
             </div>
           </div>
         </div>
