@@ -68,7 +68,8 @@ const teamMembers: TeamMember[] = [
     name: "Micael Craenhals",
     role: "Head of SOCIIS™",
     image: micaelC,
-    category: "board"
+    category: "board",
+    imagePosition: "center 25%"
   },
   {
     name: "Abbas Fasaei",
