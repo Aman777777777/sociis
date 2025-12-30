@@ -130,18 +130,18 @@ const SectionHero = () => {
             {/* The Mark explanation */}
             <div 
               ref={markRef}
-              className={`mt-8 text-center max-w-xs transition-all duration-1000 ease-out ${
+              className={`mt-8 text-center max-w-sm transition-all duration-1000 ease-out ${
                 isMarkVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-4'
               }`}
             >
-              <p className={`text-xs tracking-widest text-muted-foreground uppercase mb-2 transition-all duration-700 delay-200 ${
+              <p className={`text-sm tracking-widest text-muted-foreground uppercase mb-3 transition-all duration-700 delay-200 ${
                 isMarkVisible ? 'opacity-100' : 'opacity-0'
               }`}>
                 The Mark — ◎ II (1 | 1)
               </p>
-              <p className={`text-xs text-muted-foreground/70 leading-relaxed transition-all duration-700 delay-500 ${
+              <p className={`text-sm text-muted-foreground/80 leading-relaxed transition-all duration-700 delay-500 ${
                 isMarkVisible ? 'opacity-100' : 'opacity-0'
               }`}>
                 Two complete individuals, equal, side by side. No one above, no one below. 
