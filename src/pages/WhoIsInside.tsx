@@ -77,7 +77,7 @@ const teamMembers: TeamMember[] = [
     category: "board"
   },
   {
-    name: "Mikkel Iversen",
+    name: "Georges Reyes",
     role: "Board Director",
     image: mikkel,
     category: "board"
