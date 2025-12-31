@@ -14,7 +14,7 @@ const SectionDivisions = () => {
     },
     {
       name: "Sociis Network™",
-      description: "100 Circle Members, 8 Sovereign Partners, Trusted Advisors and Trusted Companies.",
+      description: "Long-term institutional collaborators carrying the language into the world.",
     },
     {
       name: "Sociis Collections™",

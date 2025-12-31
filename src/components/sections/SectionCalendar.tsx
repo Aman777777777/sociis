@@ -9,7 +9,7 @@ const SectionCalendar = () => {
       date: "April 2026",
       location: "London",
       items: [
-        "2. The 22 — sovereign lunch at The Connaught.",
+        "2. The 22 — leadership lunch at The Connaught.",
         "3. The 64 — evening experience at Club TwentyTwo."
       ]
     },
@@ -54,8 +54,8 @@ const SectionCalendar = () => {
       date: "November 2026",
       location: "Geneva",
       items: [
-        "11. The 22 — Sovereign Lunch at La Réserve.",
-        "12. The 64 — Sovereign Evening at La Réserve."
+        "11. The 22 — Leadership Lunch at La Réserve.",
+        "12. The 64 — Evening Experience at La Réserve."
       ]
     },
     {

@@ -98,18 +98,27 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Access CTA */}
-          <div className="hidden lg:block">
+          {/* House CTA - Primary */}
+          <div className="hidden lg:flex items-center gap-6">
             <a
               href="#access"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick("/#access");
               }}
-              className="inline-flex items-center gap-2 font-sans text-sm tracking-wide text-foreground hover:text-primary transition-colors"
+              className="font-sans text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors"
             >
               Access
-              <span className="text-primary">→</span>
+            </a>
+            <a
+              href="#house"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("/#house");
+              }}
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-sans text-sm tracking-wide hover:bg-foreground/90 transition-colors"
+            >
+              Join Sociis House
             </a>
           </div>
 
@@ -152,14 +161,23 @@ const Header = () => {
               ))}
               <a
                 href="#access"
-                className="inline-flex items-center gap-2 font-sans text-lg text-foreground hover:text-primary transition-colors mt-4 pt-4 border-t border-border"
+                className="font-sans text-lg text-muted-foreground hover:text-foreground transition-colors mt-4 pt-4 border-t border-border"
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick("/#access");
                 }}
               >
-                Request Access
-                <span className="text-primary">→</span>
+                Access
+              </a>
+              <a
+                href="#house"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-foreground text-background font-sans text-lg hover:bg-foreground/90 transition-colors mt-4"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick("/#house");
+                }}
+              >
+                Join Sociis House
               </a>
             </div>
           </div>

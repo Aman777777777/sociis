@@ -7,7 +7,7 @@ const SectionExperiences = () => {
   const experiences = [
     {
       name: "The 22",
-      description: "One table. Twenty-two leaders. High-stakes, sovereign conversations.",
+      description: "One table. Twenty-two leaders. High-stakes, high-trust conversations.",
       image: experienceDinner,
     },
     {

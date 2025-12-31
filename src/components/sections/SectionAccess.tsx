@@ -3,6 +3,13 @@ const SectionAccess = () => {
     <section id="access" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
+          <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase mb-4">
+            High-Trust Entry
+          </p>
+          <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-10">
+            Access
+          </h2>
+
           <p className="font-accent text-2xl text-foreground italic mb-8">
             You already lead.
             <br />
@@ -10,22 +17,23 @@ const SectionAccess = () => {
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
-            At SOCIIS™, you join a society that treats behaviour as the foundation of Impact,
-            and an institute building the standard the world has been missing.
+            Access exists for Experiences, deeper institutional collaboration,
+            and serious alignment conversations.
           </p>
 
           <p className="text-body text-muted-foreground mb-12">
-            Access is by request, reviewed for alignment and values,
-            approved by invitation.
+            It is selective. There are no forms. Human judgement is the filter.
           </p>
 
-          <a
-            href="mailto:access@sociisgroup.com"
-            className="inline-flex items-center gap-3 font-sans text-base tracking-wide text-foreground border-b-2 border-primary pb-2 hover:text-primary transition-colors group"
-          >
-            <span className="text-primary group-hover:translate-x-1 transition-transform">→</span>
-            Request Access
-          </a>
+          <div className="border-t border-border pt-10">
+            <p className="text-sm text-muted-foreground mb-4">Contact</p>
+            <a
+              href="mailto:info@sociisgroup.com"
+              className="font-sans text-foreground hover:text-primary transition-colors"
+            >
+              info@sociisgroup.com
+            </a>
+          </div>
         </div>
       </div>
     </section>

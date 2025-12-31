@@ -89,19 +89,16 @@ const SectionHero = () => {
             <p 
               className="text-body text-muted-foreground mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.8s_forwards]"
             >
-              We do not sell a club.
-              <br />
               We sell <span className="text-foreground font-medium relative inline-block group">
                 Impact
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </span> — behavioural, cultural and institutional.
             </p>
             <a
-              href="#access"
-              className="inline-flex items-center gap-3 font-sans text-sm tracking-wide text-foreground border-b border-primary pb-1 hover:text-accent hover:border-accent transition-all duration-300 group opacity-0 animate-[fade-in-up_0.8s_ease-out_1s_forwards]"
+              href="#house"
+              className="inline-flex items-center gap-3 font-sans text-sm tracking-wide px-6 py-3 bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 group opacity-0 animate-[fade-in-up_0.8s_ease-out_1s_forwards]"
             >
-              <span className="text-accent group-hover:translate-x-2 transition-transform duration-300">→</span>
-              Request Access
+              Join Sociis House
             </a>
           </div>
 

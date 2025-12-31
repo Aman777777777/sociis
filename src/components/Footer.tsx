@@ -66,6 +66,9 @@ const Footer = () => {
               </li>
             </ul>
             <p className="font-sans text-xs text-muted-foreground mt-8">
+              SOCIIS™ is the society. SociisGroup™ is the governing institute.
+            </p>
+            <p className="font-sans text-xs text-muted-foreground mt-2">
               SociisGroup™ — Benefit Corporation
               <br />
               Brussels, Belgium

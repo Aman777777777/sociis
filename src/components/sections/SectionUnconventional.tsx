@@ -4,8 +4,7 @@ const SectionUnconventional = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-body text-muted-foreground mb-8">
-            We do not build another sustainability conference
-            with the same experts on the same panels.
+            This is a different approach to sustainability.
           </p>
 
           <p className="text-body text-muted-foreground mb-8">

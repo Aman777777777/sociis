@@ -28,8 +28,7 @@ const SectionMedia = () => {
             Media & Storytelling
           </h2>
           <p className="text-body text-muted-foreground mb-12">
-            We do not chase every headline.
-            We work with a small circle of outlets that understand depth:
+            Depth over noise. A small circle of outlets that understand substance:
           </p>
 
           <div className="space-y-8 mb-16">

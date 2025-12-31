@@ -2,7 +2,7 @@ const SectionOneBillion = () => {
   const channels = [
     {
       name: "Tomorrowland & Love Tomorrow",
-      description: "The 300 Immersive Experience — turning a festival into a behavioural altar.",
+      description: "The 300 Immersive Experience — turning a festival into a behavioural arena.",
     },
     {
       name: "Podeo (350M)",
@@ -22,7 +22,7 @@ const SectionOneBillion = () => {
     },
     {
       name: "Sociis Network™",
-      description: "Circle, Sovereigns, Advisors and Companies carrying this language into institutions.",
+      description: "Long-term institutional collaborators carrying this language into the world.",
     },
     {
       name: "Media",

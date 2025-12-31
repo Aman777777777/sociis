@@ -20,7 +20,7 @@ const SectionImpactDetail = () => {
 
           <p className="font-accent text-xl text-foreground italic">
             This is how sustainable behaviour stops being a statement
-            and becomes a verifiable asset.
+            and becomes an accountable asset.
           </p>
         </div>
       </div>
