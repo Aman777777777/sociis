@@ -25,6 +25,7 @@ const Header = () => {
     { name: "Collections", href: "/#collections" },
     { name: "Media", href: "/#media" },
     { name: "Who's Inside", href: "/who-is-inside", isPage: true },
+    { name: "Access", href: "/#access" },
   ];
 
   const handleNavClick = (href: string) => {
@@ -101,16 +102,6 @@ const Header = () => {
           {/* House CTA - Primary */}
           <div className="hidden lg:flex items-center gap-6">
             <a
-              href="#access"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick("/#access");
-              }}
-              className="font-sans text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Access
-            </a>
-            <a
               href="#house"
               onClick={(e) => {
                 e.preventDefault();
@@ -159,16 +150,6 @@ const Header = () => {
                   </a>
                 )
               ))}
-              <a
-                href="#access"
-                className="font-sans text-lg text-muted-foreground hover:text-foreground transition-colors mt-4 pt-4 border-t border-border"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("/#access");
-                }}
-              >
-                Access
-              </a>
               <a
                 href="#house"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-foreground text-background font-sans text-lg hover:bg-foreground/90 transition-colors mt-4"
