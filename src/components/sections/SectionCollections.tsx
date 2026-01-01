@@ -17,8 +17,12 @@ const SectionCollections = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             video.play().catch(() => {});
+            video.muted = false;
+            setIsMuted(false);
           } else {
             video.pause();
+            video.muted = true;
+            setIsMuted(true);
           }
         });
       },
