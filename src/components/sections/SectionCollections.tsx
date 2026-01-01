@@ -56,7 +56,7 @@ const SectionCollections = () => {
               muted={isMuted}
               loop
               playsInline
-              className="w-full aspect-video object-cover"
+              className="w-full aspect-video object-cover rounded-2xl"
             />
             <button
               onClick={toggleMute}
