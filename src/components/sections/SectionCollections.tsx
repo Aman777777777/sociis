@@ -16,9 +16,19 @@ const SectionCollections = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            video.play().catch(() => {});
+            // Start playback muted (allowed by browsers), then attempt to enable sound.
+            video.muted = true;
+            video
+              .play()
+              .then(() => {
+                video.muted = false;
+                setIsMuted(false);
+              })
+              .catch(() => {});
           } else {
             video.pause();
+            video.muted = true;
+            setIsMuted(true);
           }
         });
       },
