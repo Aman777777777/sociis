@@ -25,17 +25,17 @@ const SectionDivisions = () => {
   return (
     <section id="divisions" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-8 justify-items-start text-left">
+        <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap gap-x-6 gap-y-8">
           {divisions.map((division, index) => (
             <div
               key={division.name}
-              className="w-full border-t border-border pt-6 animate-fade-in-up"
+              className="w-full md:w-[calc(50%-12px)] lg:w-1/5 lg:flex-1 border-t border-border pt-6 animate-fade-in-up text-left"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="font-sans font-medium text-base tracking-wide text-foreground mb-3">
+              <h3 className="font-sans font-medium text-base tracking-wide text-foreground mb-3 text-left">
                 {division.name}
               </h3>
-              <p className="font-sans text-base text-muted-foreground leading-relaxed">
+              <p className="font-sans text-base text-muted-foreground leading-relaxed text-left">
                 {division.description}
               </p>
             </div>
