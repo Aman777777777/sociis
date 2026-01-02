@@ -1,67 +1,67 @@
 const SectionCalendar = () => {
   const events = [
     {
-      date: "December 2025",
+      date: "Winter 2025",
       location: "London",
       items: ["Let There Be Light™ private premiere and gathering."]
     },
     {
-      date: "April 2026",
+      date: "Spring 2026",
       location: "London",
       items: [
-        "2. The 22 — leadership lunch at The Connaught.",
-        "3. The 64 — evening experience at Club TwentyTwo."
+        "The 22 — leadership lunch at The Connaught.",
+        "The 64 — evening experience at Club TwentyTwo."
       ]
     },
     {
-      date: "May 2026",
+      date: "Spring 2026",
       location: "Cannes",
       items: [
-        "4. The 22 — Sociis delegation at the Global Gift Foundation Gala, supporting women, dignity, philanthropy and children with special needs."
+        "The 22 — Sociis delegation at the Global Gift Foundation Gala, supporting women, dignity, philanthropy and children with special needs."
       ]
     },
     {
-      date: "June 2026",
+      date: "Summer 2026",
       location: "Paris",
       items: [
-        "5. The 22 — leadership experience at Le Meurice.",
-        "6. The 64 — LIME Book launch journey aboard the Orient Express."
+        "The 22 — leadership experience at Le Meurice.",
+        "The 64 — LIME Book launch journey aboard the Orient Express."
       ]
     },
     {
-      date: "July 22, 2026",
+      date: "Summer 2026",
       location: "Brussels",
-      items: ["7. The 64 — The Invocation™ at Corinthia Brussels."]
+      items: ["The 64 — A Curated Boutique Gathering at Corinthia Brussels."]
     },
     {
-      date: "July 26, 2026",
+      date: "Summer 2026",
       location: "Tomorrowland",
-      items: ["8. The 300 — Immersive Experience with Love Tomorrow."]
+      items: ["The 300 — In collaboration with Love Tomorrow, a We Are One World experience, on the Tomorrowland premises."]
     },
     {
-      date: "September 2026",
+      date: "Autumn 2026",
       location: "Madrid",
-      items: ["9. The 300 — Circle Gathering at Mandarin Oriental Ritz."]
+      items: ["The 300 — Circle Gathering at Mandarin Oriental Ritz."]
     },
     {
-      date: "September 2026",
-      location: "New York Climate Week",
+      date: "Autumn 2026",
+      location: "New York",
       items: [
-        "10. The 22 — climate, finance and governance leaders, introducing SBS™ as the missing B in ESG."
+        "The 22 — climate, finance and governance leaders, introducing SBS™ as the missing B in ESG."
       ]
     },
     {
-      date: "November 2026",
+      date: "Autumn 2026",
       location: "Geneva",
       items: [
-        "11. The 22 — Leadership Lunch at La Réserve.",
-        "12. The 64 — Evening Experience at La Réserve."
+        "The 22 — Leadership Lunch at La Réserve.",
+        "The 64 — Evening Experience at La Réserve."
       ]
     },
     {
-      date: "December 2026",
+      date: "Winter 2026",
       location: "Abu Dhabi",
-      items: ["13. The 300 — Circle Experience at Mandarin Oriental Emirates Palace."]
+      items: ["The 300 — Circle Experience at Mandarin Oriental Emirates Palace."]
     }
   ];
 
@@ -73,7 +73,7 @@ const SectionCalendar = () => {
             Global Rhythm 2025–2026
           </h2>
           <p className="text-body text-muted-foreground mb-16">
-            13 key Experiences across Europe, the Middle East and the US.
+            Key Experiences across Europe, the Middle East and the US.
           </p>
 
           <div className="space-y-12">

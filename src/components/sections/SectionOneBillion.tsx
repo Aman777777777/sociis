@@ -6,7 +6,7 @@ const SectionOneBillion = () => {
     },
     {
       name: "Podeo",
-      description: "Audio distribution at scale — House content reaching audiences worldwide.",
+      description: "Podeo — audio distribution at scale.",
     },
     {
       name: "Sociis Experiences™",

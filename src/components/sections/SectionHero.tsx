@@ -89,7 +89,7 @@ const SectionHero = () => {
             <p 
               className="text-body text-muted-foreground mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.8s_forwards]"
             >
-              We sell <span className="text-foreground font-medium relative inline-block group">
+              We build <span className="text-foreground font-medium relative inline-block group">
                 Impact
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </span> — behavioural, cultural and institutional.
