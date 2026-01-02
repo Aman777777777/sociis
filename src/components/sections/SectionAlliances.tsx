@@ -33,7 +33,7 @@ const SectionAlliances = () => {
               {/* Overlay content */}
               <div className="absolute inset-0 flex items-center">
                 <div className="px-8 md:px-16">
-                  <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase mb-3">
+                  <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3">
                     Strategic Partners
                   </p>
                   <h2 className="font-sans font-light text-3xl md:text-5xl text-foreground tracking-tight mb-4">
@@ -63,12 +63,12 @@ const SectionAlliances = () => {
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
                 <div className="relative pb-4 mb-4 border-b border-border/50 group-hover:border-accent/50 transition-colors duration-500">
-                  <h3 className="font-sans text-sm tracking-[0.2em] text-foreground uppercase">
+                  <h3 className="font-sans text-base tracking-[0.2em] text-foreground uppercase">
                     {alliance.category}
                   </h3>
                   <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                 </div>
-                <p className="font-sans text-sm text-muted-foreground leading-relaxed">
+                <p className="font-sans text-base text-muted-foreground leading-relaxed">
                   {alliance.partners}
                 </p>
               </div>

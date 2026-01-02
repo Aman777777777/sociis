@@ -3,7 +3,7 @@ const SectionHouse = () => {
     <section id="house" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase mb-4">
+          <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
             Public Entry Point
           </p>
           <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-10">
@@ -27,28 +27,28 @@ const SectionHouse = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <a
               href="#house-join"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-sans text-sm tracking-wide hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-sans text-base tracking-wide hover:bg-foreground/90 transition-colors"
             >
               Join Sociis House
             </a>
           </div>
 
           <div className="border-t border-border pt-8">
-            <p className="text-sm text-muted-foreground mb-4">Explore</p>
+            <p className="text-base text-muted-foreground mb-4">Explore</p>
             <div className="flex flex-wrap gap-6">
-              <a href="#" className="text-sm text-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-base text-foreground hover:text-primary transition-colors">
                 Journeys
               </a>
-              <a href="#" className="text-sm text-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-base text-foreground hover:text-primary transition-colors">
                 Listen
               </a>
-              <a href="#" className="text-sm text-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-base text-foreground hover:text-primary transition-colors">
                 Watch
               </a>
-              <a href="#" className="text-sm text-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-base text-foreground hover:text-primary transition-colors">
                 Read
               </a>
-              <a href="#" className="text-sm text-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-base text-foreground hover:text-primary transition-colors">
                 Subscribe
               </a>
             </div>

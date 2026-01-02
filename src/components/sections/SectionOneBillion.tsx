@@ -41,10 +41,10 @@ const SectionOneBillion = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {channels.map((channel, index) => (
               <div key={channel.name} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
-                <h3 className="font-sans font-medium text-sm text-foreground mb-2">
+                <h3 className="font-sans font-medium text-base text-foreground mb-2">
                   {channel.name}
                 </h3>
-                <p className="font-sans text-sm text-muted-foreground">
+                <p className="font-sans text-base text-muted-foreground">
                   {channel.description}
                 </p>
               </div>

@@ -41,7 +41,7 @@ const SectionLime = () => {
                 <h3 className="font-sans text-foreground font-medium mb-2">
                   {principle.name}
                 </h3>
-                <p className="font-sans text-sm text-muted-foreground">
+                <p className="font-sans text-base text-muted-foreground">
                   {principle.description}
                 </p>
               </div>
@@ -49,7 +49,7 @@ const SectionLime = () => {
           </div>
 
           <div className="border-t border-border pt-12">
-            <h3 className="font-sans text-sm tracking-wide-brand text-foreground mb-6">
+            <h3 className="font-sans text-base tracking-wide-brand text-foreground mb-6">
               THE ETHICAL COUNCIL'S ROLE
             </h3>
             <ul className="space-y-3">

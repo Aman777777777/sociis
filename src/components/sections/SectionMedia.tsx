@@ -38,7 +38,7 @@ const SectionMedia = () => {
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <h3 className="font-sans text-sm tracking-wide-brand text-foreground mb-3">
+                <h3 className="font-sans text-base tracking-wide-brand text-foreground mb-3">
                   {outlet.category}
                 </h3>
                 <p className="font-sans text-muted-foreground">
@@ -49,7 +49,7 @@ const SectionMedia = () => {
           </div>
 
           <div className="border-t border-border pt-12">
-            <h3 className="font-sans text-sm tracking-wide-brand text-foreground mb-6">
+            <h3 className="font-sans text-base tracking-wide-brand text-foreground mb-6">
               OUR MEDIA STRATEGY IS SIMPLE
             </h3>
             <ul className="space-y-4 mb-12">

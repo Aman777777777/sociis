@@ -84,7 +84,7 @@ const SectionCalendar = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div>
-                  <p className="font-sans text-sm tracking-wide-brand text-foreground mb-1">
+                  <p className="font-sans text-base tracking-wide-brand text-foreground mb-1">
                     {event.date}
                   </p>
                   <p className="font-accent text-lg text-primary italic">

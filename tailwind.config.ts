@@ -70,8 +70,9 @@ export default {
         formal: ["Cormorant Garamond", "Georgia", "serif"],
       },
       fontSize: {
-        "body": ["18px", { lineHeight: "150%" }],
-        "body-lg": ["20px", { lineHeight: "150%" }],
+        "body": ["1.125rem", { lineHeight: "1.75" }],
+        "body-lg": ["1.25rem", { lineHeight: "1.75" }],
+        "body-sm": ["1rem", { lineHeight: "1.6" }],
       },
       borderRadius: {
         lg: "var(--radius)",

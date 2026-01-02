@@ -30,7 +30,7 @@ const SectionExperiences = () => {
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="mb-16 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
-            <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase mb-4">
+            <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
               Curated Gatherings
             </p>
             <h2 className="font-sans font-light text-4xl md:text-5xl text-foreground tracking-tight mb-6">
@@ -64,13 +64,13 @@ const SectionExperiences = () => {
 
                 {/* Content */}
                 <div className={`${index % 2 === 1 ? 'md:order-1 md:text-right' : ''}`}>
-                  <span className="inline-block text-accent text-sm tracking-widest mb-3 opacity-60">
+                  <span className="inline-block text-accent text-base tracking-widest mb-3 opacity-60">
                     0{index + 1}
                   </span>
                   <h3 className="font-accent text-3xl md:text-4xl text-foreground italic mb-2 hover:text-accent transition-colors duration-300">
                     {exp.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground tracking-wide mb-4">
+                  <p className="text-base text-muted-foreground tracking-wide mb-4">
                     {exp.subtitle}
                   </p>
                   <p className="text-body text-muted-foreground leading-relaxed max-w-md">
@@ -90,7 +90,7 @@ const SectionExperiences = () => {
             <div className="relative mb-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-px bg-accent"></div>
-                <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
+                <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase">
                   Purpose in Practice
                 </p>
               </div>

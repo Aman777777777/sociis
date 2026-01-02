@@ -79,7 +79,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="font-sans text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors"
+                  className="font-sans text-base tracking-wide text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -91,7 +91,7 @@ const Header = () => {
                     e.preventDefault();
                     handleNavClick(link.href);
                   }}
-                  className="font-sans text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors"
+                  className="font-sans text-base tracking-wide text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.name}
                 </a>
@@ -105,7 +105,7 @@ const Header = () => {
               href="https://www.sociis.house/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-sans text-sm tracking-wide hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-sans text-base tracking-wide hover:bg-foreground/90 transition-colors"
             >
               Join Sociis House
             </a>

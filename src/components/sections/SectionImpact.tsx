@@ -7,7 +7,7 @@ const SectionImpact = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Content */}
           <div>
-            <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
+            <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
               What We Create
             </p>
             <p className="font-accent text-3xl md:text-4xl text-foreground italic mb-10 opacity-0 animate-[fade-in_0.8s_ease-out_0.1s_forwards]">
@@ -17,7 +17,7 @@ const SectionImpact = () => {
             <div className="space-y-6 mb-10">
               <div className="group opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">
                 <div className="flex items-start gap-4">
-                  <span className="text-accent text-sm mt-1.5">01</span>
+                  <span className="text-accent text-base mt-1.5">01</span>
                   <div>
                     <p className="text-foreground font-medium mb-1">Impact on people</p>
                     <p className="text-body text-muted-foreground">
@@ -29,7 +29,7 @@ const SectionImpact = () => {
               
               <div className="group opacity-0 animate-[fade-in_0.8s_ease-out_0.3s_forwards]">
                 <div className="flex items-start gap-4">
-                  <span className="text-accent text-sm mt-1.5">02</span>
+                  <span className="text-accent text-base mt-1.5">02</span>
                   <div>
                     <p className="text-foreground font-medium mb-1">Impact on institutions</p>
                     <p className="text-body text-muted-foreground">
@@ -41,7 +41,7 @@ const SectionImpact = () => {
               
               <div className="group opacity-0 animate-[fade-in_0.8s_ease-out_0.4s_forwards]">
                 <div className="flex items-start gap-4">
-                  <span className="text-accent text-sm mt-1.5">03</span>
+                  <span className="text-accent text-base mt-1.5">03</span>
                   <div>
                     <p className="text-foreground font-medium mb-1">Impact on culture</p>
                     <p className="text-body text-muted-foreground">

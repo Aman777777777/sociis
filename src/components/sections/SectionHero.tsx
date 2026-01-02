@@ -67,7 +67,7 @@ const SectionHero = () => {
             {/* Animated accent line */}
             <div className="flex items-center gap-4 mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards]">
               <div className="w-12 h-px bg-accent animate-[shimmer_2s_ease-in-out_infinite]" style={{ backgroundSize: '200% 100%', backgroundImage: 'linear-gradient(90deg, transparent, hsl(var(--accent)), transparent)' }}></div>
-              <span className="text-xs tracking-[0.3em] text-muted-foreground uppercase">Est. 2023</span>
+              <span className="text-sm tracking-[0.3em] text-muted-foreground uppercase">Est. 2023</span>
             </div>
             
             <h1 
@@ -132,12 +132,12 @@ const SectionHero = () => {
                   : 'opacity-0 translate-y-4'
               }`}
             >
-              <p className={`text-sm tracking-widest text-muted-foreground uppercase mb-3 transition-all duration-700 delay-200 ${
+              <p className={`text-base tracking-widest text-muted-foreground uppercase mb-3 transition-all duration-700 delay-200 ${
                 isMarkVisible ? 'opacity-100' : 'opacity-0'
               }`}>
                 The Mark — ◎ II (1 | 1)
               </p>
-              <p className={`text-sm text-muted-foreground/80 leading-relaxed transition-all duration-700 delay-500 ${
+              <p className={`text-base text-muted-foreground/80 leading-relaxed transition-all duration-700 delay-500 ${
                 isMarkVisible ? 'opacity-100' : 'opacity-0'
               }`}>
                 Two complete individuals, equal, side by side. No one above, no one below. 
@@ -150,7 +150,7 @@ const SectionHero = () => {
         {/* Scroll indicator */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-0 animate-[fade-in_1s_ease-out_1.5s_forwards]">
           <div className="flex flex-col items-center gap-2 text-muted-foreground group cursor-pointer">
-            <span className="text-xs tracking-widest group-hover:text-accent transition-colors duration-300">SCROLL</span>
+            <span className="text-sm tracking-widest group-hover:text-accent transition-colors duration-300">SCROLL</span>
             <div className="w-px h-8 bg-gradient-to-b from-muted-foreground/50 to-transparent animate-[scroll-line_2s_ease-in-out_infinite]" />
           </div>
         </div>

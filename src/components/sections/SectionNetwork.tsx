@@ -8,7 +8,7 @@ const SectionNetwork = () => {
           {/* Header with Image */}
           <div className="grid lg:grid-cols-2 gap-12 mb-16 items-center">
             <div className="opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
-              <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase mb-4">
+              <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
                 Curated Connections
               </p>
               <h2 className="font-sans font-light text-4xl text-foreground tracking-tight mb-6">
