@@ -2,7 +2,7 @@ const SectionUnconventional = () => {
   return (
     <section id="unconventional" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <p className="text-body text-muted-foreground mb-8">
             This is a different approach to sustainability.
           </p>

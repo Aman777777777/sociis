@@ -2,7 +2,7 @@ const SectionWhat = () => {
   return (
     <section id="what" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <p className="text-body text-muted-foreground mb-8">
             In simple terms, SOCIIS™ does three things:
           </p>

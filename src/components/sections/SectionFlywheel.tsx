@@ -11,13 +11,13 @@ const SectionFlywheel = () => {
   return (
     <section id="flywheel" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-12">
             The Flywheel
           </h2>
 
           {/* Visual flywheel */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+          <div className="flex flex-wrap items-center justify-start gap-4 mb-12">
             {steps.map((step, index) => (
               <span key={step} className="flex items-center">
                 <span className="font-sans text-sm text-foreground">{step}</span>

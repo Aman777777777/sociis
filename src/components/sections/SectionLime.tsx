@@ -20,7 +20,7 @@ const SectionLime = () => {
   return (
     <section id="lime" className="py-32 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl">
           <p className="font-accent text-2xl md:text-3xl text-foreground italic mb-8">
             LIME — The balance between Life and Time, and everything in between.
           </p>

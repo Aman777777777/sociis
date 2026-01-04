@@ -33,7 +33,7 @@ const SectionOneBillion = () => {
   return (
     <section id="onebillion" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl">
           <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-12">
             How We Reach One Billion
           </h2>
@@ -51,7 +51,7 @@ const SectionOneBillion = () => {
             ))}
           </div>
 
-          <p className="font-accent text-xl text-foreground italic text-center border-t border-border pt-10">
+          <p className="font-accent text-xl text-foreground italic text-left border-t border-border pt-10">
             This is how one behavioural language
             can reach one billion people by 2030.
           </p>

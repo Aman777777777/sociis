@@ -39,7 +39,7 @@ const SectionCollections = () => {
   return (
     <section id="collections" ref={sectionRef} className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl">
           <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-10">
             Sociis Collections™
           </h2>

@@ -2,7 +2,7 @@ const SectionWho = () => {
   return (
     <section id="who" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <p className="text-body-lg text-foreground mb-8">
             <span className="font-medium">SOCIIS™</span> is the private society.
             <br />

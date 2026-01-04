@@ -4,9 +4,9 @@ const SectionMark = () => {
   return (
     <section id="mark" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl">
           {/* Large faint symbol */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-start mb-12">
             <SociisSymbol size={160} className="text-foreground" faint />
           </div>
 
