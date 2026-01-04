@@ -66,7 +66,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Micael Craenhals",
-    role: "Head of SOCIIS™",
+    role: "Head of Sociis Experience™",
     image: micaelC,
     category: "board",
     imagePosition: "center 25%"
