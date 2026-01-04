@@ -2,7 +2,7 @@ const SectionImpactDetail = () => {
   return (
     <section id="impact-detail" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-10">
             Sociis Impact™
           </h2>
