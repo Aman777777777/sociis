@@ -2,7 +2,7 @@ const SectionHouse = () => {
   return (
     <section id="house" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
             Public Entry Point
           </p>
