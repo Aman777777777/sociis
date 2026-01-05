@@ -10,7 +10,7 @@ import abbas from "@/assets/team/abbas.jpg";
 import rudi from "@/assets/team/rudi.png";
 import mikkel from "@/assets/team/mikkel.jpg";
 import marc from "@/assets/team/marc.jpg";
-import member2 from "@/assets/team/member-2.jpg";
+
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -83,12 +83,6 @@ const teamMembers: TeamMember[] = [
     name: "Marc Bogaerts",
     role: "Chief Commercial Officer (CCO)\nExecutive Liaison",
     image: marc,
-    category: "board"
-  },
-  {
-    name: "Joost Peeters",
-    role: "Legal Counsel",
-    image: member2,
     category: "board"
   },
   {
