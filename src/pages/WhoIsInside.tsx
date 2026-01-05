@@ -54,32 +54,32 @@ const teamMembers: TeamMember[] = [
   // Board
   {
     name: "Jeremie Landweer",
-    role: "Chairman & CEO SociisGroup™",
+    role: "Founder\nChief Executive Officer (CEO)",
     image: jeremie,
     category: "board"
   },
   {
     name: "Dominique Debecker",
-    role: "Chief Behavioural Officer (CBO)",
+    role: "Chief Behavioural Officer (CBO)\nHead of Sociis Impact™",
     image: dominiqueD,
     category: "board"
   },
   {
     name: "Micael Craenhals",
-    role: "Head of Sociis Experience™",
+    role: "Executive Director, Sociis Experiences™",
     image: micaelC,
     category: "board",
     imagePosition: "center 25%"
   },
   {
     name: "Abbas Fasaei",
-    role: "Head of Sociis House™",
+    role: "Executive Director, Sociis House™",
     image: abbas,
     category: "board"
   },
   {
     name: "Rudi Plettinx",
-    role: "Board Director",
+    role: "Strategic Introductions\nSociisGroup™",
     image: rudi,
     category: "board"
   },
@@ -161,7 +161,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Luc Garguet-Duport",
-    role: "Strategic Advisor",
+    role: "Research & Development, Sociis Impact™",
     image: luc,
     category: "advisor"
   },
