@@ -4,13 +4,13 @@ const SectionImpact = () => {
   return (
     <section id="impact" className="py-32 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Content */}
           <div>
-            <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
+            <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
               What We Create
             </p>
-            <p className="font-accent text-3xl md:text-4xl text-foreground italic mb-10 opacity-0 animate-[fade-in_0.8s_ease-out_0.1s_forwards]">
+            <p className="font-accent text-2xl sm:text-3xl md:text-4xl text-foreground italic mb-6 sm:mb-10 opacity-0 animate-[fade-in_0.8s_ease-out_0.1s_forwards]">
               Our hero product is Impact.
             </p>
 
