@@ -24,10 +24,10 @@ const SectionMedia = () => {
     <section id="media" className="py-32 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-4">
+          <h2 className="font-sans font-light text-2xl sm:text-3xl text-foreground tracking-brand mb-3 sm:mb-4">
             Media & Storytelling
           </h2>
-          <p className="text-body text-muted-foreground mb-12">
+          <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-12">
             Depth over noise. A small circle of outlets that understand substance:
           </p>
 
@@ -38,31 +38,31 @@ const SectionMedia = () => {
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <h3 className="font-sans text-base tracking-wide-brand text-foreground mb-3">
+                <h3 className="font-sans text-xs sm:text-sm tracking-wide-brand text-foreground mb-2 sm:mb-3">
                   {outlet.category}
                 </h3>
-                <p className="font-sans text-muted-foreground">
+                <p className="font-sans text-sm sm:text-base text-muted-foreground break-words">
                   {outlet.names}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="border-t border-border pt-12">
-            <h3 className="font-sans text-base tracking-wide-brand text-foreground mb-6">
+          <div className="border-t border-border pt-8 sm:pt-12">
+            <h3 className="font-sans text-xs sm:text-sm tracking-wide-brand text-foreground mb-4 sm:mb-6">
               OUR MEDIA STRATEGY IS SIMPLE
             </h3>
-            <ul className="space-y-4 mb-12">
+            <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
               {strategy.map((item, index) => (
-                <li key={index} className="text-body text-muted-foreground flex items-start gap-3">
-                  <span className="text-primary">→</span>
-                  {item}
+                <li key={index} className="text-sm sm:text-base text-muted-foreground flex items-start gap-2 sm:gap-3">
+                  <span className="text-primary flex-shrink-0">→</span>
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <p className="font-accent text-xl text-foreground italic">
+          <p className="font-accent text-lg sm:text-xl text-foreground italic">
             Where others push messages,
             we let conduct, culture and Impact speak.
           </p>

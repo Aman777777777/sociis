@@ -29,22 +29,22 @@ const SectionExperiences = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="mb-16 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
-            <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4">
+          <div className="mb-12 lg:mb-16 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
+            <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
               Curated Gatherings
             </p>
-            <h2 className="font-sans font-light text-4xl md:text-5xl text-foreground tracking-tight mb-6">
+            <h2 className="font-sans font-light text-3xl sm:text-4xl md:text-5xl text-foreground tracking-tight mb-4 sm:mb-6">
               Sociis Experiences™
             </h2>
             <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent"></div>
           </div>
 
           {/* Experience Cards */}
-          <div className="space-y-20 mb-20">
+          <div className="space-y-12 sm:space-y-20 mb-12 sm:mb-20">
             {experiences.map((exp, index) => (
               <div 
                 key={exp.name} 
-                className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center opacity-0 animate-[fade-in_0.8s_ease-out_forwards]`}
+                className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center opacity-0 animate-[fade-in_0.8s_ease-out_forwards]`}
                 style={{ animationDelay: `${0.2 + index * 0.15}s` }}
               >
                 {/* Image - alternating sides */}
@@ -64,16 +64,16 @@ const SectionExperiences = () => {
 
                 {/* Content */}
                 <div className={`${index % 2 === 1 ? 'md:order-1 md:text-right' : ''}`}>
-                  <span className="inline-block text-accent text-base tracking-widest mb-3 opacity-60">
+                  <span className="inline-block text-accent text-sm sm:text-base tracking-widest mb-2 sm:mb-3 opacity-60">
                     0{index + 1}
                   </span>
-                  <h3 className="font-accent text-3xl md:text-4xl text-foreground italic mb-2 hover:text-accent transition-colors duration-300">
+                  <h3 className="font-accent text-2xl sm:text-3xl md:text-4xl text-foreground italic mb-2 hover:text-accent transition-colors duration-300">
                     {exp.name}
                   </h3>
-                  <p className="text-base text-muted-foreground tracking-wide mb-4">
+                  <p className="text-sm sm:text-base text-muted-foreground tracking-wide mb-3 sm:mb-4">
                     {exp.subtitle}
                   </p>
-                  <p className="text-body text-muted-foreground leading-relaxed max-w-md">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md">
                     {exp.description}
                   </p>
                   {/* Animated underline */}
@@ -87,31 +87,31 @@ const SectionExperiences = () => {
 
           {/* Humanity in Action Section */}
           <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]">
-            <div className="relative mb-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-px bg-accent"></div>
-                <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase">
+            <div className="relative mb-6 sm:mb-8">
+              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <div className="w-8 sm:w-12 h-px bg-accent"></div>
+                <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase">
                   Purpose in Practice
                 </p>
               </div>
-              <h3 className="font-accent text-2xl md:text-3xl text-foreground italic mb-2">
+              <h3 className="font-accent text-xl sm:text-2xl md:text-3xl text-foreground italic mb-2">
                 Humanity in Action
               </h3>
-              <p className="text-body text-muted-foreground max-w-lg">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-lg">
                 Behaviour translated into lived responsibility through culture and aligned humanitarian collaborations.
               </p>
             </div>
           </div>
 
           {/* Closing Statement */}
-          <div className="mt-20 pt-12 border-t border-border/50 opacity-0 animate-[fade-in_0.8s_ease-out_0.8s_forwards]">
-            <div className="flex items-start gap-6">
-              <div className="hidden md:block w-16 h-px bg-gradient-to-r from-accent to-transparent mt-3"></div>
+          <div className="mt-12 sm:mt-20 pt-8 sm:pt-12 border-t border-border/50 opacity-0 animate-[fade-in_0.8s_ease-out_0.8s_forwards]">
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="hidden md:block w-12 sm:w-16 h-px bg-gradient-to-r from-accent to-transparent mt-3"></div>
               <div>
-                <p className="text-lg md:text-xl text-foreground font-light leading-relaxed mb-4">
+                <p className="text-base sm:text-lg md:text-xl text-foreground font-light leading-relaxed mb-3 sm:mb-4">
                   These are not "events".
                 </p>
-                <p className="text-body text-muted-foreground italic">
+                <p className="text-sm sm:text-base text-muted-foreground italic">
                   They are environments engineered to test and reinforce sustainable behaviour.
                 </p>
               </div>

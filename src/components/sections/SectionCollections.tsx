@@ -40,11 +40,11 @@ const SectionCollections = () => {
     <section id="collections" ref={sectionRef} className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
-          <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-10">
+          <h2 className="font-sans font-light text-2xl sm:text-3xl text-foreground tracking-brand mb-8 sm:mb-10">
             Sociis Collections™
           </h2>
 
-          <p className="font-accent text-2xl text-foreground italic mb-10">
+          <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-8 sm:mb-10">
             Culture remembers what spreadsheets forget.
           </p>
 
@@ -76,20 +76,20 @@ const SectionCollections = () => {
             </button>
           </div>
 
-          <div className="space-y-6 mb-10">
-            <p className="text-body text-muted-foreground">
+          <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
+            <p className="text-sm sm:text-base text-muted-foreground">
               <span className="text-foreground font-medium">Let There Be Light™</span> — a cultural framework translating values into lived behaviour, amplified with Under One Sky and aligned collaborators.
             </p>
-            <p className="text-body text-muted-foreground">
+            <p className="text-sm sm:text-base text-muted-foreground">
               <span className="text-foreground font-medium">The LIME Book</span> — The Balance Between Life and Time — launched on the Orient Express.
             </p>
-            <p className="text-body text-muted-foreground">
+            <p className="text-sm sm:text-base text-muted-foreground">
               <span className="text-foreground font-medium">Objects, apparel and collaborations</span> —
               quiet but powerful reminders of who you chose to be.
             </p>
           </div>
 
-          <p className="text-body text-foreground">
+          <p className="text-sm sm:text-base text-foreground">
             Sociis Collections™ makes behaviour tangible.
           </p>
         </div>
