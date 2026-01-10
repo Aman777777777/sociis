@@ -46,7 +46,13 @@ const SectionProblem = () => {
               </p>
             </div>
 
-            <p className="font-accent text-2xl text-foreground italic mb-8 opacity-0 animate-[fade-in_0.8s_ease-out_0.3s_forwards]">
+            <div className="mb-8 opacity-0 animate-[fade-in_0.8s_ease-out_0.25s_forwards]">
+              <p className="text-body text-muted-foreground">
+                <span className="font-semibold text-foreground">Why now:</span> Trust has become a behavioural issue. AI accelerates output faster than ethics, ESG regulation enters the enforcement era, and institutions face a legitimacy crisis driven by conduct, not reporting. The decade ahead will measure how leaders behave, not just what they disclose.
+              </p>
+            </div>
+
+            <p className="font-accent text-2xl text-foreground italic mb-8 opacity-0 animate-[fade-in_0.8s_ease-out_0.35s_forwards]">
               Behaviour is the missing "B" in ESG.
             </p>
 
