@@ -122,7 +122,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-sm py-8 px-6 animate-fade-in border-t border-border">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-background py-8 px-6 animate-fade-in border-t border-border shadow-lg">
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 link.isPage ? (
