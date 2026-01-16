@@ -21,7 +21,7 @@ const Partners = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Partner company names from Sociis Group
+  // Partner company names from SociisGroup
   const partners = [
     "Synergy-W",
     "APLANET",

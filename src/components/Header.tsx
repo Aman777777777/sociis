@@ -67,7 +67,7 @@ const Header = () => {
           >
             <img 
               src={sociisLogo} 
-              alt="Sociis Group" 
+              alt="SociisGroup" 
               className="h-10 w-auto brightness-0 invert-0"
             />
           </Link>
