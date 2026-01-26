@@ -1,6 +1,13 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 // Import team photos - Board
 import jeremie from "@/assets/team/jeremie.png";
@@ -50,6 +57,7 @@ interface TeamMember {
   image: string;
   category: "board" | "council" | "advisor" | "steward";
   imagePosition?: string;
+  bio?: string;
 }
 
 const teamMembers: TeamMember[] = [
@@ -58,38 +66,44 @@ const teamMembers: TeamMember[] = [
     name: "Jeremie Landweer",
     role: "Founder\nChief Executive Officer (CEO)",
     image: jeremie,
-    category: "board"
+    category: "board",
+    bio: "Jeremie Landweer is the Founder and CEO of SociisGroup™. With a vision to unite purpose-driven leaders across sectors, he architects the strategic direction of the organization and cultivates an ecosystem where aligned individuals create lasting impact through collaboration and shared values."
   },
   {
     name: "Dominique Debecker",
     role: "Chief Behavioural Officer (CBO)\nHead of Sociis Impact™",
     image: dominiqueD,
-    category: "board"
+    category: "board",
+    bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™. With deep expertise in behavioral science and organizational psychology, she ensures that every initiative within the network is grounded in integrity, ethical conduct, and meaningful transformation."
   },
   {
     name: "Micael Craenhals",
     role: "Executive Director, Sociis Experiences™",
     image: micaelC,
     category: "board",
-    imagePosition: "center 25%"
+    imagePosition: "center 25%",
+    bio: "Micael Craenhals is the Executive Director of Sociis Experiences™. He curates and orchestrates exclusive gatherings that bring together visionary leaders in intimate settings, fostering connections that transcend conventional networking and create enduring partnerships."
   },
   {
     name: "Abbas Fasaei",
     role: "Executive Director, Sociis House™",
     image: abbas,
-    category: "board"
+    category: "board",
+    bio: "Abbas Fasaei leads Sociis House™ as Executive Director. He oversees the development and stewardship of physical spaces where members convene, ensuring each environment reflects the values of discretion, excellence, and purposeful engagement that define the SociisGroup™ ethos."
   },
   {
     name: "Marc Bogaerts",
     role: "Chief Commercial Officer (CCO)\nExecutive Liaison",
     image: marc,
-    category: "board"
+    category: "board",
+    bio: "Marc Bogaerts serves as Chief Commercial Officer and Executive Liaison at SociisGroup™. He bridges strategic partnerships and institutional relationships, ensuring that commercial endeavors align with the organization's mission to create value through principled collaboration."
   },
   {
     name: "Rudi Plettinx",
     role: "Strategic Introductions\nSociisGroup™",
     image: rudi,
-    category: "board"
+    category: "board",
+    bio: "Rudi Plettinx specializes in Strategic Introductions for SociisGroup™. With an extensive network cultivated over decades, he facilitates meaningful connections between aligned leaders, ensuring that every introduction carries the potential for substantive partnership and mutual growth."
   },
 
   // The Council
@@ -255,11 +269,22 @@ const teamMembers: TeamMember[] = [
   },
 ];
 
-const TeamCard = ({ member, index }: { member: TeamMember; index: number }) => {
+const TeamCard = ({ 
+  member, 
+  index, 
+  onClick 
+}: { 
+  member: TeamMember; 
+  index: number; 
+  onClick?: () => void;
+}) => {
+  const isClickable = member.category === "board" && member.bio;
+  
   return (
     <div 
-      className="group opacity-0 animate-[fade-in-up_0.6s_ease-out_forwards]"
+      className={`group opacity-0 animate-[fade-in-up_0.6s_ease-out_forwards] ${isClickable ? 'cursor-pointer' : ''}`}
       style={{ animationDelay: `${index * 0.08}s` }}
+      onClick={isClickable ? onClick : undefined}
     >
       <div className="relative overflow-hidden mb-4 w-[140px] h-[140px] aspect-square bg-muted/30 rounded-xl">
         <img
@@ -280,6 +305,8 @@ const TeamCard = ({ member, index }: { member: TeamMember; index: number }) => {
 };
 
 const WhoIsInside = () => {
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  
   const board = teamMembers.filter(m => m.category === "board");
   const council = teamMembers.filter(m => m.category === "council");
   const advisors = teamMembers.filter(m => m.category === "advisor");
@@ -288,6 +315,39 @@ const WhoIsInside = () => {
   return (
     <main className="min-h-screen bg-background">
       <Header />
+      
+      {/* Bio Dialog */}
+      <Dialog open={!!selectedMember} onOpenChange={() => setSelectedMember(null)}>
+        <DialogContent className="max-w-md bg-background border-border">
+          {selectedMember && (
+            <>
+              <DialogHeader>
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0">
+                    <img
+                      src={selectedMember.image}
+                      alt={selectedMember.name}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: selectedMember.imagePosition || "center" }}
+                    />
+                  </div>
+                  <div>
+                    <DialogTitle className="font-sans text-lg font-medium text-foreground whitespace-pre-line">
+                      {selectedMember.name}
+                    </DialogTitle>
+                    <p className="font-sans text-xs text-muted-foreground mt-1 whitespace-pre-line">
+                      {selectedMember.role}
+                    </p>
+                  </div>
+                </div>
+              </DialogHeader>
+              <p className="font-sans text-sm text-foreground/80 leading-relaxed">
+                {selectedMember.bio}
+              </p>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
       
       {/* Hero */}
       <section className="pt-32 pb-16">
@@ -309,7 +369,12 @@ const WhoIsInside = () => {
           </p>
           <div className="flex flex-wrap gap-8">
             {board.map((member, index) => (
-              <TeamCard key={member.name} member={member} index={index} />
+              <TeamCard 
+                key={member.name} 
+                member={member} 
+                index={index} 
+                onClick={() => setSelectedMember(member)}
+              />
             ))}
           </div>
         </div>
