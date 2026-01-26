@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import PageTransition from "@/components/PageTransition";
 import SectionHero from "@/components/sections/SectionHero";
 
 import SectionProblem from "@/components/sections/SectionProblem";
@@ -25,32 +26,34 @@ import SectionAccess from "@/components/sections/SectionAccess";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
-      <SectionHero />
-      
-      <SectionProblem />
-      <SectionWho />
-      <SectionWorlds />
-      <SectionWhat />
-      <SectionImpact />
-      <SectionDivisions />
-      <SectionImpactDetail />
-      <SectionHouse />
-      <SectionExperiences />
-      <SectionNetwork />
-      <SectionCollections />
-      <SectionUnconventional />
-      <SectionOneBillion />
-      <SectionFlywheel />
-      <SectionCalendar />
-      <SectionAlliances />
-      <SectionLime />
-      <SectionMedia />
-      <SectionAccess />
-      <Footer />
-      <ScrollToTop />
-    </main>
+    <PageTransition>
+      <main className="min-h-screen bg-background">
+        <Header />
+        <SectionHero />
+        
+        <SectionProblem />
+        <SectionWho />
+        <SectionWorlds />
+        <SectionWhat />
+        <SectionImpact />
+        <SectionDivisions />
+        <SectionImpactDetail />
+        <SectionHouse />
+        <SectionExperiences />
+        <SectionNetwork />
+        <SectionCollections />
+        <SectionUnconventional />
+        <SectionOneBillion />
+        <SectionFlywheel />
+        <SectionCalendar />
+        <SectionAlliances />
+        <SectionLime />
+        <SectionMedia />
+        <SectionAccess />
+        <Footer />
+        <ScrollToTop />
+      </main>
+    </PageTransition>
   );
 };
 

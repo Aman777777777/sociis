@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { Link } from "react-router-dom";
 import {
   Dialog,
@@ -313,8 +314,8 @@ const WhoIsInside = () => {
   const stewards = teamMembers.filter(m => m.category === "steward");
 
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
+    <PageTransition>
+      <main className="min-h-screen bg-background">
       
       {/* Bio Dialog */}
       <Dialog open={!!selectedMember} onOpenChange={() => setSelectedMember(null)}>
@@ -455,7 +456,8 @@ const WhoIsInside = () => {
       </section>
 
       <Footer />
-    </main>
+      </main>
+    </PageTransition>
   );
 };
 
