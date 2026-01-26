@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,12 +13,32 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [showPreloader, setShowPreloader] = useState(() => {
+    // Check if this is a fresh page load (not HMR)
+    const hasLoaded = sessionStorage.getItem("sociis-loaded");
+    return !hasLoaded;
+  });
+
+  useEffect(() => {
+    // Mark as loaded after preloader completes
+    if (!showPreloader) {
+      sessionStorage.setItem("sociis-loaded", "true");
+    }
+  }, [showPreloader]);
+
+  // Clear on actual page unload to show preloader on hard refresh
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      sessionStorage.removeItem("sociis-loaded");
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+        {showPreloader && <Preloader onComplete={() => setShowPreloader(false)} />}
         <Toaster />
         <Sonner />
         <BrowserRouter>
