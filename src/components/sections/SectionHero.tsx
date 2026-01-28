@@ -78,7 +78,7 @@ const SectionHero = () => {
             <p 
               className="font-accent text-xl sm:text-2xl md:text-3xl text-foreground font-light italic mb-6 lg:mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
             >
-              A private society turning sustainable behaviour into global Impact.
+              A private behavioural institution turning sustainable behaviour into global Impact.
             </p>
             <p 
               className="text-body text-muted-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
