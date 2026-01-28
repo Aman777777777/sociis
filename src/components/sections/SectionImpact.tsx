@@ -10,8 +10,11 @@ const SectionImpact = () => {
             <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
               What We Create
             </p>
-            <p className="font-accent text-2xl sm:text-3xl md:text-4xl text-foreground italic mb-6 sm:mb-10 opacity-0 animate-[fade-in_0.8s_ease-out_0.1s_forwards]">
-              Our hero product is Impact.
+            <p className="font-accent text-2xl sm:text-3xl md:text-4xl text-foreground italic mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_0.1s_forwards]">
+              Impact is the outcome of behavioural infrastructure deployed at scale.
+            </p>
+            <p className="text-body-lg text-foreground mb-6 sm:mb-10 opacity-0 animate-[fade-in_0.8s_ease-out_0.15s_forwards]">
+              Surgically-built behavioural infrastructure that makes Impact at Scale real and accountable.
             </p>
 
             <div className="space-y-6 mb-10">

@@ -6,6 +6,7 @@ import SectionHero from "@/components/sections/SectionHero";
 
 import SectionProblem from "@/components/sections/SectionProblem";
 import SectionWho from "@/components/sections/SectionWho";
+import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
 import SectionWorlds from "@/components/sections/SectionWorlds";
 import SectionWhat from "@/components/sections/SectionWhat";
 import SectionImpact from "@/components/sections/SectionImpact";
@@ -33,6 +34,7 @@ const Index = () => {
         
         <SectionProblem />
         <SectionWho />
+        <SectionInfrastructure />
         <SectionWorlds />
         <SectionWhat />
         <SectionImpact />

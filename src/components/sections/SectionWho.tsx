@@ -4,11 +4,11 @@ const SectionWho = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-body-lg text-foreground mb-8">
-            <span className="font-medium">SOCIIS™</span> is the private society.
-            <br />
-            <span className="font-medium">SociisGroup™</span> is the institute that runs it —
-            <br />
-            a benefit corporation for profit and Impact.
+            <span className="font-medium">SociisGroup™</span> is a private behavioural institution and benefit corporation building behavioural infrastructure for sustainability, hospitality and humanity, making Impact at Scale real and accountable.
+          </p>
+
+          <p className="text-body text-muted-foreground mb-8">
+            We operate on standards (SBS™), measurement (BEE™), public learning (House™), and sovereign alliances to embed accountable conduct into institutions and organisations.
           </p>
 
           <p className="text-body text-muted-foreground">
