@@ -291,11 +291,17 @@ const TeamCard = ({
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105 rounded-xl"
+          className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105 rounded-xl ${isClickable ? 'group-hover:ring-2 ring-accent/50 ring-offset-2 ring-offset-background' : ''}`}
           style={{ objectPosition: member.imagePosition || "center" }}
         />
+        {/* Bio indicator */}
+        {isClickable && (
+          <div className="absolute bottom-2 right-2 w-5 h-5 rounded-full bg-background/90 border border-accent/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="text-[10px] text-accent font-medium">i</span>
+          </div>
+        )}
       </div>
-      <h3 className="font-sans text-foreground text-sm font-medium mb-0.5 group-hover:text-accent transition-colors duration-300 whitespace-pre-line">
+      <h3 className={`font-sans text-foreground text-sm font-medium mb-0.5 transition-colors duration-300 whitespace-pre-line ${isClickable ? 'group-hover:text-accent' : ''}`}>
         {member.name}
       </h3>
       <p className="font-sans text-xs text-muted-foreground leading-relaxed max-w-[140px]">
