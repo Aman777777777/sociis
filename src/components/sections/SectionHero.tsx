@@ -105,25 +105,11 @@ const SectionHero = () => {
           {/* Right: Minimal symbol with subtle animation */}
           <div className="flex flex-col items-center justify-center order-1 lg:order-2 py-8 lg:py-0">
             <div className="relative opacity-0 animate-[fade-in_1.2s_ease-out_0.5s_forwards]">
-              {/* Single subtle outer ring - responsive sizing */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[200px] sm:w-[280px] lg:w-[400px] h-[200px] sm:h-[280px] lg:h-[400px] rounded-full border border-foreground/5"></div>
-              </div>
-              
-              {/* Outer faint symbol - very subtle drift */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                <div className="animate-[drift_12s_ease-in-out_infinite]">
-                  <SociisSymbol size={180} faint className="text-foreground/30 sm:hidden" />
-                  <SociisSymbol size={260} faint className="text-foreground/30 hidden sm:block lg:hidden" />
-                  <SociisSymbol size={380} faint className="text-foreground/30 hidden lg:block" />
-                </div>
-              </div>
-              
-              {/* Main symbol - clean, minimal with animated ellipses - responsive */}
+              {/* Main symbol - clean, minimal - responsive */}
               <div className="relative">
-                <SociisSymbol size={140} className="text-foreground/80 sm:hidden" animated />
-                <SociisSymbol size={200} className="text-foreground/80 hidden sm:block lg:hidden" animated />
-                <SociisSymbol size={300} className="text-foreground/80 hidden lg:block" animated />
+                <SociisSymbol size={140} className="text-foreground/80 sm:hidden" />
+                <SociisSymbol size={200} className="text-foreground/80 hidden sm:block lg:hidden" />
+                <SociisSymbol size={300} className="text-foreground/80 hidden lg:block" />
               </div>
             </div>
             
