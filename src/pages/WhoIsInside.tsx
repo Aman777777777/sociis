@@ -94,10 +94,9 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Marc Bogaerts",
-    role: "Chief Commercial Officer (CCO)\nExecutive Liaison",
+    role: "Artistic Director",
     image: marc,
-    category: "board",
-    bio: "Marc Bogaerts serves as Chief Commercial Officer and Executive Liaison at SociisGroup™, bridging strategic partnerships and institutional relationships across sectors. With extensive experience in business development, commercial strategy, and stakeholder management, he ensures that commercial endeavours align with the organisation's mission to create value through principled collaboration. His role encompasses cultivating relationships with sovereign entities, institutional investors, and aligned organisations seeking to embed behavioural accountability into their operations. Marc brings a disciplined approach to partnership development, prioritising long-term alignment over transactional relationships. His network spans industries including finance, hospitality, sustainability, and governance — enabling SociisGroup™ to extend its reach while maintaining the selectivity that defines its institutional character."
+    category: "advisor"
   },
   {
     name: "Rudi Plettinx",
