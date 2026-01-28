@@ -33,7 +33,7 @@ import peter from "@/assets/team/peter.png";
 import eva from "@/assets/team/eva.jpeg";
 import olivierB from "@/assets/team/olivier-b.png";
 import olivierV from "@/assets/team/olivier-v.png";
-import bhavya from "@/assets/team/bhavya.png";
+
 import jayNew from "@/assets/team/jay-new.jpeg";
 import luc from "@/assets/team/luc.jpg";
 import chantalNew from "@/assets/team/chantal-new.png";
@@ -168,12 +168,6 @@ const teamMembers: TeamMember[] = [
     name: "Olivier Vanden Eynde",
     role: "Founder and CEO, Close the Gap",
     image: olivierV,
-    category: "advisor"
-  },
-  {
-    name: "Bhavya Bansal",
-    role: "Executive Director, Digital Strategy, Innovation and R&D",
-    image: bhavya,
     category: "advisor"
   },
   {
