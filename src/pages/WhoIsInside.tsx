@@ -68,14 +68,14 @@ const teamMembers: TeamMember[] = [
     role: "Founder\nChief Executive Officer (CEO)",
     image: jeremie,
     category: "board",
-    bio: "Jeremie Landweer is the Founder and CEO of SociisGroup™. With a vision to unite purpose-driven leaders across sectors, he architects the strategic direction of the organization and cultivates an ecosystem where aligned individuals create lasting impact through collaboration and shared values."
+    bio: "Jeremie Landweer is the Founder and Chief Executive Officer of SociisGroup™, a private behavioural institution building infrastructure for sustainability, hospitality, and humanity. With over two decades of experience bridging business strategy with ethical leadership, he has architected a unique ecosystem where purpose-driven leaders converge to create measurable Impact at Scale. His vision centres on making trust visible and behaviour accountable — transforming how institutions operate and how leaders are measured. Under his leadership, SociisGroup™ has developed proprietary frameworks including SBS™ (Sustainable Behavioural Standard) and BEE™ (Behavioural Engine of Ethics), positioning the organisation at the forefront of behavioural governance. He is a sought-after voice on credibility-based leadership and the future of institutional trust."
   },
   {
     name: "Dominique Debecker",
     role: "Chief Behavioural Officer (CBO)\nHead of Sociis Impact™",
     image: dominiqueD,
     category: "board",
-    bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™. With deep expertise in behavioral science and organizational psychology, she ensures that every initiative within the network is grounded in integrity, ethical conduct, and meaningful transformation."
+    bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™, the division responsible for developing and deploying SBS™ — the Sustainable Behavioural Standard. With deep expertise in behavioural science, organisational psychology, and brain-based leadership methodologies, she ensures that every initiative within the institution is grounded in integrity, ethical conduct, and meaningful transformation. Her work focuses on translating complex behavioural frameworks into practical tools that organisations can embed into their governance structures. She oversees BEE™ (Behavioural Engine of Ethics), which provides signals, patterns, and dashboards showing how leaders and organisations behave over time. Her academic background and executive coaching experience inform a rigorous, evidence-based approach to making sustainable behaviour an accountable asset rather than a statement."
   },
   {
     name: "Micael Craenhals",
@@ -83,28 +83,28 @@ const teamMembers: TeamMember[] = [
     image: micaelC,
     category: "board",
     imagePosition: "center 25%",
-    bio: "Micael Craenhals is the Executive Director of Sociis Experiences™. He curates and orchestrates exclusive gatherings that bring together visionary leaders in intimate settings, fostering connections that transcend conventional networking and create enduring partnerships."
+    bio: "Micael Craenhals is the Executive Director of Sociis Experiences™, the division that designs and delivers the institution's live behavioural laboratories: The 22, The 64, and The 300. With a background spanning luxury hospitality, event architecture, and leadership development, he curates gatherings where conduct is visible under pressure. Each experience is meticulously designed to test and shape trustworthy behaviour in environments that combine discretion with intentional challenge. His approach transcends conventional networking — creating intimate settings where aligned leaders forge enduring partnerships grounded in shared values. He works closely with world-class venues including The Connaught, Orient Express, and Mandarin Oriental to ensure every environment reflects the institutional standards of SociisGroup™."
   },
   {
     name: "Abbas Fasaei",
     role: "Executive Director, Sociis House™",
     image: abbas,
     category: "board",
-    bio: "Abbas Fasaei leads Sociis House™ as Executive Director. He oversees the development and stewardship of physical spaces where members convene, ensuring each environment reflects the values of discretion, excellence, and purposeful engagement that define the SociisGroup™ ethos."
+    bio: "Abbas Fasaei leads Sociis House™ as Executive Director, overseeing the institution's learning, storytelling, and cultural programming. Originally from Iran, Abbas brings a unique perspective shaped by his journey from political turmoil to international recognition. He is an accomplished actor and acting teacher with over two decades of experience, having studied under Michael Margotta and Oscar-winner Paul Haggis. His screen credits include Netflix's Undercover and Iron Sky: The Coming Race, earning a nomination for the Belgian Ensors. As founder of CinAct Academy, he has trained the next generation of performers in authentic human expression. At Sociis House™, he applies his mastery of narrative and human behaviour to create transformative educational experiences, films, and stories that carry the LIME Code™ into culture — distributed through strategic media collaborations including Podeo."
   },
   {
     name: "Marc Bogaerts",
     role: "Chief Commercial Officer (CCO)\nExecutive Liaison",
     image: marc,
     category: "board",
-    bio: "Marc Bogaerts serves as Chief Commercial Officer and Executive Liaison at SociisGroup™. He bridges strategic partnerships and institutional relationships, ensuring that commercial endeavors align with the organization's mission to create value through principled collaboration."
+    bio: "Marc Bogaerts serves as Chief Commercial Officer and Executive Liaison at SociisGroup™, bridging strategic partnerships and institutional relationships across sectors. With extensive experience in business development, commercial strategy, and stakeholder management, he ensures that commercial endeavours align with the organisation's mission to create value through principled collaboration. His role encompasses cultivating relationships with sovereign entities, institutional investors, and aligned organisations seeking to embed behavioural accountability into their operations. Marc brings a disciplined approach to partnership development, prioritising long-term alignment over transactional relationships. His network spans industries including finance, hospitality, sustainability, and governance — enabling SociisGroup™ to extend its reach while maintaining the selectivity that defines its institutional character."
   },
   {
     name: "Rudi Plettinx",
     role: "Strategic Introductions\nSociisGroup™",
     image: rudi,
     category: "board",
-    bio: "Rudi Plettinx specializes in Strategic Introductions for SociisGroup™. With an extensive network cultivated over decades, he facilitates meaningful connections between aligned leaders, ensuring that every introduction carries the potential for substantive partnership and mutual growth."
+    bio: "Rudi Plettinx specialises in Strategic Introductions for SociisGroup™, serving as a bridge between the institution and leaders seeking alignment with its mission. With an extensive network cultivated over decades across business, governance, and philanthropy, he facilitates meaningful connections that carry the potential for substantive partnership and mutual growth. His approach is characterised by discretion and precision — understanding that trust is the only credential that matters. Every introduction he facilitates is assessed not for transactional value but for alignment with the institution's behavioural standards. Rudi's role embodies the SociisGroup™ principle that access is selective and human judgement is the filter, ensuring that the network grows in quality rather than quantity."
   },
 
   // The Council
@@ -319,7 +319,7 @@ const WhoIsInside = () => {
       
       {/* Bio Dialog */}
       <Dialog open={!!selectedMember} onOpenChange={() => setSelectedMember(null)}>
-        <DialogContent className="max-w-md bg-background border-border">
+        <DialogContent className="max-w-lg bg-background border-border max-h-[85vh] overflow-y-auto">
           {selectedMember && (
             <>
               <DialogHeader>
