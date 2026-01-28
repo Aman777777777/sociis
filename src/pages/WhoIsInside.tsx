@@ -348,7 +348,7 @@ const WhoIsInside = () => {
                   </div>
                 </div>
               </DialogHeader>
-              <p className="font-sans text-sm text-foreground/80 leading-relaxed">
+              <p className="font-sans text-base text-foreground leading-relaxed">
                 {selectedMember.bio}
               </p>
             </>
