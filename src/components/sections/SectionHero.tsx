@@ -24,7 +24,7 @@ const SectionHero = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 pb-24 lg:pt-24 lg:pb-12 overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0">
         {/* Background image with slow zoom */}
@@ -61,11 +61,11 @@ const SectionHero = () => {
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           {/* Left: Text with staggered animations */}
-          <div className="order-2 lg:order-1">
+          <div className="order-1 lg:order-1 text-center lg:text-left">
             {/* Animated accent line */}
-            <div className="flex items-center gap-4 mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards]">
+            <div className="flex items-center justify-center lg:justify-start gap-4 mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards]">
               <div className="w-12 h-px bg-accent animate-[shimmer_2s_ease-in-out_infinite]" style={{ backgroundSize: '200% 100%', backgroundImage: 'linear-gradient(90deg, transparent, hsl(var(--accent)), transparent)' }}></div>
               <span className="text-sm tracking-[0.3em] text-muted-foreground uppercase">Est. 2023</span>
             </div>
@@ -103,7 +103,7 @@ const SectionHero = () => {
           </div>
 
           {/* Right: Minimal symbol with subtle animation */}
-          <div className="flex flex-col items-center justify-center order-1 lg:order-2 py-8 lg:py-0">
+          <div className="flex flex-col items-center justify-center order-2 lg:order-2 py-4 lg:py-0">
             <div className="relative opacity-0 animate-[fade-in_1.2s_ease-out_0.5s_forwards]">
               {/* Main symbol - clean, minimal - responsive */}
               <div className="relative">
@@ -137,8 +137,8 @@ const SectionHero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-0 animate-[fade-in_1s_ease-out_1.5s_forwards]">
+        {/* Scroll indicator - hidden on mobile */}
+        <div className="hidden lg:block absolute bottom-12 left-1/2 -translate-x-1/2 opacity-0 animate-[fade-in_1s_ease-out_1.5s_forwards]">
           <div className="flex flex-col items-center gap-2 text-muted-foreground group cursor-pointer">
             <span className="text-sm tracking-widest group-hover:text-accent transition-colors duration-300">SCROLL</span>
             <div className="w-px h-8 bg-gradient-to-b from-muted-foreground/50 to-transparent animate-[scroll-line_2s_ease-in-out_infinite]" />
