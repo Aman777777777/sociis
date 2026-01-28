@@ -32,9 +32,9 @@ const Index = () => {
         <Header />
         <SectionHero />
         
-        <SectionProblem />
         <SectionWho />
         <SectionInfrastructure />
+        <SectionProblem />
         <SectionWorlds />
         <SectionWhat />
         <SectionImpact />
