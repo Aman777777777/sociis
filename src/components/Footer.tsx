@@ -16,7 +16,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="font-sans text-sm sm:text-base text-muted-foreground max-w-xs">
-              A private society turning sustainable behaviour into global Impact.
+              A private behavioural institution turning sustainable behaviour into global Impact.
             </p>
           </div>
 
