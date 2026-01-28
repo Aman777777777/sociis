@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 lg:px-12 text-center py-32">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-cream font-light leading-tight mb-8 animate-fade-in-up">
-            The World's Leading Private Society For{" "}
+            The World's Leading Private Behavioural Institution For{" "}
             <span className="text-gold italic">Trustworthy Leadership</span>
           </h1>
 

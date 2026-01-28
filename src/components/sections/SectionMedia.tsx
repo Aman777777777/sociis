@@ -62,6 +62,10 @@ const SectionMedia = () => {
             </ul>
           </div>
 
+          <p className="text-body text-muted-foreground mb-6">
+            We speak about behaviour, sustainability and legitimacy — not ego.
+          </p>
+
           <p className="font-accent text-lg sm:text-xl text-foreground italic">
             Where others push messages,
             we let conduct, culture and Impact speak.

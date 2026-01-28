@@ -10,15 +10,14 @@ const SectionAccess = () => {
             Access
           </h2>
 
+          <p className="text-body text-muted-foreground mb-6 sm:mb-8">
+            Access is for experiences, institutional collaboration and alignment conversations.
+          </p>
+
           <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-6 sm:mb-8">
             You already lead.
             <br />
             The question is how.
-          </p>
-
-          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
-            Access exists for Experiences, deeper institutional collaboration,
-            and serious alignment conversations.
           </p>
 
           <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-12">
