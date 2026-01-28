@@ -40,8 +40,8 @@ const SectionHero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background/80"></div>
         
-        {/* Floating particles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Floating particles - hidden on mobile */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden lg:block">
           {[...Array(6)].map((_, i) => (
             <div
               key={i}
