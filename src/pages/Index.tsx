@@ -14,8 +14,7 @@ import SectionDivisions from "@/components/sections/SectionDivisions";
 import SectionImpactDetail from "@/components/sections/SectionImpactDetail";
 import SectionHouse from "@/components/sections/SectionHouse";
 import SectionExperiences from "@/components/sections/SectionExperiences";
-import SectionNetwork from "@/components/sections/SectionNetwork";
-import SectionCollections from "@/components/sections/SectionCollections";
+import SectionCulture from "@/components/sections/SectionCulture";
 import SectionUnconventional from "@/components/sections/SectionUnconventional";
 import SectionOneBillion from "@/components/sections/SectionOneBillion";
 import SectionFlywheel from "@/components/sections/SectionFlywheel";
@@ -42,8 +41,7 @@ const Index = () => {
         <SectionImpactDetail />
         <SectionHouse />
         <SectionExperiences />
-        <SectionNetwork />
-        <SectionCollections />
+        <SectionCulture />
         <SectionUnconventional />
         <SectionOneBillion />
         <SectionFlywheel />

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import charityVideo from "@/assets/charity-video.mp4";
 
-const SectionCollections = () => {
+const SectionCulture = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [isMuted, setIsMuted] = useState(true);
@@ -37,11 +37,11 @@ const SectionCollections = () => {
   };
 
   return (
-    <section id="collections" ref={sectionRef} className="py-32">
+    <section id="culture" ref={sectionRef} className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
           <h2 className="font-sans font-light text-2xl sm:text-3xl text-foreground tracking-brand mb-8 sm:mb-10">
-            Sociis Collections™
+            Sociis Culture™
           </h2>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-8 sm:mb-10">
@@ -90,7 +90,7 @@ const SectionCollections = () => {
           </div>
 
           <p className="text-sm sm:text-base text-foreground">
-            Sociis Collections™ makes behaviour tangible.
+            Sociis Culture™ makes behaviour tangible.
           </p>
         </div>
       </div>
@@ -98,4 +98,4 @@ const SectionCollections = () => {
   );
 };
 
-export default SectionCollections;
+export default SectionCulture;

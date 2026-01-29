@@ -76,23 +76,14 @@ const SectionHero = () => {
               <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
             </h1>
             <p 
-              className="font-accent text-xl sm:text-2xl md:text-3xl text-foreground font-light italic mb-6 lg:mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
+              className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
             >
-              A private behavioural institution turning sustainable behaviour into global Impact.
+              <span className="font-medium">SociisGroup™</span> is a private behavioural institution and benefit corporation building behavioural infrastructure for sustainability, hospitality and humanity, making Impact at Scale real and accountable.
             </p>
             <p 
-              className="text-body text-muted-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
+              className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
             >
-              We bring together leaders across Sustainability, Hospitality and Humanity
-              to influence one billion people by 2030.
-            </p>
-            <p 
-              className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.8s_forwards]"
-            >
-              We build <span className="text-foreground font-medium relative inline-block group">
-                Impact
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-              </span> — behavioural, cultural and institutional.
+              We operate on standards (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
             </p>
             <a
               href="#house"

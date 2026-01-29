@@ -37,8 +37,18 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/#network" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
-                  Network
+                <a href="/#house" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                  House
+                </a>
+              </li>
+              <li>
+                <a href="/#culture" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                  Culture
+                </a>
+              </li>
+              <li>
+                <a href="/#access" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                  Access
                 </a>
               </li>
               <li>
