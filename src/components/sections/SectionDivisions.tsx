@@ -13,11 +13,7 @@ const SectionDivisions = () => {
       description: "The learning and storytelling environment distributed through strategic media collaborations, including Podeo.",
     },
     {
-      name: "Sociis Network™",
-      description: "Long-term institutional collaborators carrying the language into the world.",
-    },
-    {
-      name: "Sociis Collections™",
+      name: "Sociis Culture™",
       description: "Anthem, book, apparel, objects and collaborations that carry the LIME Code™ into daily life.",
     },
   ];
@@ -25,7 +21,7 @@ const SectionDivisions = () => {
   return (
     <section id="divisions" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
           {divisions.map((division, index) => (
             <div
               key={division.name}
