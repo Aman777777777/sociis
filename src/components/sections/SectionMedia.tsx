@@ -1,16 +1,8 @@
 const SectionMedia = () => {
   const outlets = [
     {
-      category: "INSTITUTIONAL & BUSINESS",
-      names: "TIME · Financial Times · Bloomberg · Forbes · Inc."
-    },
-    {
-      category: "CULTURE & STYLE",
-      names: "Monocle · Vanity Fair · GQ-level longform"
-    },
-    {
-      category: "HOSPITALITY & EXPERIENCE",
-      names: "Select hospitality and design titles aligned with Aman, Orient Express, Corinthia, Mandarin Oriental and others."
+      category: "EDITORIAL ROOMS WE RESPECT",
+      names: "TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair"
     }
   ];
 
@@ -28,7 +20,7 @@ const SectionMedia = () => {
             Media & Storytelling
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-12">
-            Depth over noise. A small circle of outlets that understand substance:
+            Depth over noise.
           </p>
 
           <div className="space-y-8 mb-16">

@@ -16,8 +16,10 @@ const SectionAccess = () => {
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-6 sm:mb-8">
             You already lead.
-            <br />
-            The question is how.
+          </p>
+
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
+            Our role is to give you a circle, a language and a system that keeps you ahead, in presence, in pressure, in proof.
           </p>
 
           <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-12">
