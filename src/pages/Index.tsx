@@ -5,7 +5,6 @@ import PageTransition from "@/components/PageTransition";
 import SectionHero from "@/components/sections/SectionHero";
 
 import SectionProblem from "@/components/sections/SectionProblem";
-import SectionWho from "@/components/sections/SectionWho";
 import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
 import SectionWorlds from "@/components/sections/SectionWorlds";
 import SectionWhat from "@/components/sections/SectionWhat";
@@ -31,7 +30,6 @@ const Index = () => {
         <Header />
         <SectionHero />
         
-        <SectionWho />
         <SectionInfrastructure />
         <SectionProblem />
         <SectionWorlds />
