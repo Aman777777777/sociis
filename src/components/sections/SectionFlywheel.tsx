@@ -3,7 +3,7 @@ const SectionFlywheel = () => {
     "Experience",
     "Story", 
     "House",
-    "Network",
+    "Access",
     "Standard",
     "Impact",
   ];

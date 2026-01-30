@@ -44,10 +44,6 @@ const SectionCulture = () => {
             Sociis Culture™
           </h2>
 
-          <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-8 sm:mb-10">
-            Culture remembers what spreadsheets forget.
-          </p>
-
           {/* Let There Be Light Video */}
           <div className="relative mb-12 rounded-2xl overflow-hidden">
             <video
@@ -78,19 +74,18 @@ const SectionCulture = () => {
 
           <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
             <p className="text-sm sm:text-base text-muted-foreground">
-              <span className="text-foreground font-medium">Let There Be Light™</span> — a cultural framework translating values into lived behaviour, amplified with Under One Sky and aligned collaborators.
+              <span className="text-foreground font-medium">Let There Be Light</span>
             </p>
             <p className="text-sm sm:text-base text-muted-foreground">
-              <span className="text-foreground font-medium">The LIME Book</span> — The Balance Between Life and Time — launched on the Orient Express.
+              <span className="text-foreground font-medium">The LIME Book</span>
             </p>
             <p className="text-sm sm:text-base text-muted-foreground">
-              <span className="text-foreground font-medium">Objects, apparel and collaborations</span> —
-              quiet but powerful reminders of who you chose to be.
+              <span className="text-foreground font-medium">Objects and collaborations</span>
             </p>
           </div>
 
           <p className="text-sm sm:text-base text-foreground">
-            Sociis Culture™ makes behaviour tangible.
+            Sociis Culture makes behaviour tangible.
           </p>
         </div>
       </div>
