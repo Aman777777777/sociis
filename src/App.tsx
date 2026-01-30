@@ -6,8 +6,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTopOnMount from "./components/ScrollToTopOnMount";
 import Preloader from "./components/Preloader";
+import CookieBanner from "./components/CookieBanner";
 import Index from "./pages/Index";
 import WhoIsInside from "./pages/WhoIsInside";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,9 +50,13 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/who-is-inside" element={<WhoIsInside />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <CookieBanner />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

@@ -66,14 +66,19 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="#" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/privacy-policy" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/terms-of-service" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
                   Terms of Service
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/cookie-policy" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                  Cookie Policy
+                </Link>
               </li>
             </ul>
             <p className="font-sans text-xs sm:text-sm text-muted-foreground mt-6 sm:mt-8">
