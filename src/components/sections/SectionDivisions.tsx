@@ -28,10 +28,10 @@ const SectionDivisions = () => {
               className="border-t border-border pt-6 animate-fade-in-up text-left"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="font-sans font-medium text-sm sm:text-base tracking-wide text-foreground mb-2 sm:mb-3 text-left">
+              <h3 className="font-sans font-medium text-body tracking-wide text-foreground mb-2 sm:mb-3 text-left">
                 {division.name}
               </h3>
-              <p className="font-sans text-sm sm:text-base text-muted-foreground leading-relaxed text-left">
+              <p className="font-sans text-body-sm text-muted-foreground leading-relaxed text-left">
                 {division.description}
               </p>
             </div>
