@@ -13,7 +13,7 @@ const SectionUnconventional = () => {
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
-            Instead of preaching to 10.000 already convinced people,
+            Instead of preaching to the already convinced,
             we reach millions through unexpected formats:
             festivals, anthems, film, journeys and symbols.
           </p>
