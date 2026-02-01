@@ -28,10 +28,10 @@ const SectionInfrastructure = () => {
               className="text-center animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <p className="text-[10px] sm:text-xs tracking-[0.3em] text-muted-foreground uppercase mb-2">
+              <p className="text-body-sm tracking-[0.3em] text-muted-foreground uppercase mb-2">
                 {pillar.label}
               </p>
-              <p className="font-sans font-medium text-lg sm:text-xl text-foreground">
+              <p className="font-sans font-medium text-body-lg text-foreground">
                 {pillar.name}
               </p>
             </div>

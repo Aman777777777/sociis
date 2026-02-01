@@ -41,17 +41,17 @@ const SectionOneBillion = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {channels.map((channel, index) => (
               <div key={channel.name} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
-                <h3 className="font-sans font-medium text-sm sm:text-base text-foreground mb-1 sm:mb-2">
+                <h3 className="font-sans font-medium text-body text-foreground mb-1 sm:mb-2">
                   {channel.name}
                 </h3>
-                <p className="font-sans text-sm sm:text-base text-muted-foreground">
+                <p className="font-sans text-body-sm text-muted-foreground">
                   {channel.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <p className="font-accent text-lg sm:text-xl text-foreground italic text-left border-t border-border pt-8 sm:pt-10">
+          <p className="font-accent text-body-lg text-foreground italic text-left border-t border-border pt-8 sm:pt-10">
             This is how one behavioural language
             can reach one billion people by 2030.
           </p>
