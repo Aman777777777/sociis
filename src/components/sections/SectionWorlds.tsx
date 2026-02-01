@@ -10,7 +10,7 @@ const SectionWorlds = () => {
     },
     {
       title: "Humanity",
-      description: "Culture, story, philanthropy, education. Because saving the planet means nothing if we forget the people on it.",
+      description: "Culture, story, philanthropy, education. Sustainability has meaning only when humanity remains at its centre.",
     },
   ];
 

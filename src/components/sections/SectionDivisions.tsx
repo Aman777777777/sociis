@@ -6,7 +6,7 @@ const SectionDivisions = () => {
     },
     {
       name: "Sociis Experiences™",
-      description: "The 22 · The 64 · The 300 — our live behavioural laboratories.",
+      description: "The 22 · The 64 · The 300 — our private sovereign gatherings.",
     },
     {
       name: "Sociis House™",

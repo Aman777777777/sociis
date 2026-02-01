@@ -70,46 +70,54 @@ const SectionHero = () => {
               <span className="text-sm tracking-[0.3em] text-muted-foreground uppercase">Est. 2023</span>
             </div>
             
-            <h1 
-              className="font-sans font-extralight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
-            >
-              <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
-            </h1>
-            
-            {/* Pronunciation module */}
-            <div className="flex items-center justify-center lg:justify-start gap-3 mb-6 lg:mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.3s_forwards]">
-              <span className="text-sm text-muted-foreground tracking-wide">
-                Sociis | /ˈsoː.t͡ʃiːs/ | Pronounced "so tchees"
-              </span>
-              <button
-                onClick={() => {
-                  const utterance = new SpeechSynthesisUtterance("so tchees");
-                  utterance.rate = 0.8;
-                  utterance.pitch = 1.1;
-                  speechSynthesis.speak(utterance);
-                }}
-                className="p-1.5 rounded-full hover:bg-foreground/10 transition-colors"
-                aria-label="Play pronunciation"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                </svg>
-              </button>
-            </div>
+            {/* Position 1: SociisGroup definition */}
             <p 
-              className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
+              className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
             >
               <span className="font-medium">SociisGroup™</span> is a private behavioural institution and benefit corporation building behavioural infrastructure for sustainability, hospitality and humanity, making Impact at Scale real and accountable.
             </p>
+            
+            {/* Position 2: Operations line */}
             <p 
-              className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
+              className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
             >
               We operate on standards (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
             </p>
+            
+            {/* Position 3: Sociis Explanation Block */}
+            <div className="mb-8 lg:mb-10 p-6 border border-border/50 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]">
+              <h2 className="font-sans font-light text-2xl sm:text-3xl text-foreground tracking-brand mb-3">
+                Sociis
+              </h2>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-sm text-muted-foreground tracking-wide">
+                  /ˈsoː.t͡ʃiːs/
+                </span>
+                <button
+                  onClick={() => {
+                    const utterance = new SpeechSynthesisUtterance("so tchees");
+                    utterance.rate = 0.8;
+                    utterance.pitch = 1.1;
+                    speechSynthesis.speak(utterance);
+                  }}
+                  className="p-1.5 rounded-full hover:bg-foreground/10 transition-colors"
+                  aria-label="Play pronunciation"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground hover:text-foreground transition-colors">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg>
+                </button>
+              </div>
+              <p className="text-body text-muted-foreground">
+                Sociis are the people.<br />
+                SociisGroup is the governing institute.
+              </p>
+            </div>
+            
             <a
               href="#house"
-              className="inline-flex items-center gap-3 font-sans text-sm tracking-wide px-6 py-3 bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 group opacity-0 animate-[fade-in-up_0.8s_ease-out_1s_forwards]"
+              className="inline-flex items-center gap-3 font-sans text-sm tracking-wide px-6 py-3 bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 group opacity-0 animate-[fade-in-up_0.8s_ease-out_0.8s_forwards]"
             >
               Join Sociis House
             </a>
