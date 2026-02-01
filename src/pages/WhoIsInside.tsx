@@ -314,6 +314,7 @@ const WhoIsInside = () => {
 
   return (
     <PageTransition>
+      <Header />
       <main className="min-h-screen bg-background">
       
       {/* Bio Dialog */}
