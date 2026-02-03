@@ -93,12 +93,12 @@ const SectionHero = () => {
                 <span className="text-body-sm text-muted-foreground tracking-wide">
                   /ˈsoː.t͡ʃiːs/
                 </span>
-                <button
-                  onClick={() => {
-                    const utterance = new SpeechSynthesisUtterance("so tchees");
-                    utterance.rate = 0.8;
-                    utterance.pitch = 1.1;
-                    speechSynthesis.speak(utterance);
+                  <button
+                    onClick={() => {
+                      const utterance = new SpeechSynthesisUtterance("soo cheeze");
+                      utterance.rate = 0.7;
+                      utterance.pitch = 1.0;
+                      speechSynthesis.speak(utterance);
                   }}
                   className="p-1.5 rounded-full hover:bg-foreground/10 transition-colors"
                   aria-label="Play pronunciation"
