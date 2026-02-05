@@ -71,10 +71,14 @@ const SectionHero = () => {
             </div>
             
             <h1 
-              className="font-sans font-extralight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
+              className="font-sans font-extralight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-2 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
             >
               <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
             </h1>
+            
+            <p className="text-sm text-muted-foreground tracking-wide mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.3s_forwards]">
+              /ˈsoː.t͡ʃiːs/ — "so tchees"
+            </p>
             
             <p 
               className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
