@@ -76,27 +76,6 @@ const SectionHero = () => {
               <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
             </h1>
             
-            {/* Pronunciation module */}
-            <div className="flex items-center justify-center lg:justify-start gap-3 mb-6 lg:mb-8 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.3s_forwards]">
-              <span className="text-sm text-muted-foreground tracking-wide">
-                Sociis | /ˈsoː.t͡ʃiːs/ | Pronounced "so tchees"
-              </span>
-              <button
-                onClick={() => {
-                  const utterance = new SpeechSynthesisUtterance("so tchees");
-                  utterance.rate = 0.8;
-                  utterance.pitch = 1.1;
-                  speechSynthesis.speak(utterance);
-                }}
-                className="p-1.5 rounded-full hover:bg-foreground/10 transition-colors"
-                aria-label="Play pronunciation"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                </svg>
-              </button>
-            </div>
             <p 
               className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
             >
