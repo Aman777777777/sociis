@@ -76,8 +76,12 @@ const SectionHero = () => {
               <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
             </h1>
             
-            <p className="text-sm text-muted-foreground tracking-wide mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.3s_forwards]">
-              /ˈsoː.t͡ʃiːs/ — "so tchees"
+            <p className="text-sm text-muted-foreground tracking-wide mb-2 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.3s_forwards]">
+              pronounced "So-chees"
+            </p>
+            
+            <p className="text-sm text-muted-foreground/70 italic mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.35s_forwards]">
+              From Latin socius: ally, companion, one who stands with another.
             </p>
             
             <p 
@@ -118,17 +122,18 @@ const SectionHero = () => {
                   : 'opacity-0 translate-y-4'
               }`}
             >
-              <p className={`text-sm sm:text-base tracking-widest text-muted-foreground uppercase mb-2 sm:mb-3 transition-all duration-700 delay-200 ${
+              <p className={`text-sm sm:text-base tracking-widest text-muted-foreground uppercase mb-3 sm:mb-4 transition-all duration-700 delay-200 ${
                 isMarkVisible ? 'opacity-100' : 'opacity-0'
               }`}>
-                The Mark — ◎ II (1 | 1)
+                THE MARK
               </p>
-              <p className={`text-sm sm:text-base text-muted-foreground/80 leading-relaxed transition-all duration-700 delay-500 ${
+              <div className={`text-sm sm:text-base text-muted-foreground/80 leading-relaxed space-y-1 transition-all duration-700 delay-500 ${
                 isMarkVisible ? 'opacity-100' : 'opacity-0'
               }`}>
-                Two complete individuals, equal, side by side. No one above, no one below. 
-                Impact created with people, not on top of people.
-              </p>
+                <p>Two complete individuals, equal, side by side.</p>
+                <p>No one above, no one below.</p>
+                <p>Impact created with people, not on top of people.</p>
+              </div>
             </div>
           </div>
         </div>
