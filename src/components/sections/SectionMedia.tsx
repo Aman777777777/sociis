@@ -19,7 +19,7 @@ const SectionMedia = () => {
           <h2 className="font-sans font-light text-2xl sm:text-3xl text-foreground tracking-brand mb-3 sm:mb-4">
             Media & Storytelling
           </h2>
-          <p className="text-body-sm text-muted-foreground mb-8 sm:mb-12">
+          <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-12">
             Depth over noise.
           </p>
 
@@ -30,10 +30,10 @@ const SectionMedia = () => {
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <h3 className="font-sans text-body-sm tracking-wide-brand text-foreground mb-2 sm:mb-3">
+                <h3 className="font-sans text-xs sm:text-sm tracking-wide-brand text-foreground mb-2 sm:mb-3">
                   {outlet.category}
                 </h3>
-                <p className="font-sans text-body-sm text-muted-foreground break-words">
+                <p className="font-sans text-sm sm:text-base text-muted-foreground break-words">
                   {outlet.names}
                 </p>
               </div>
@@ -41,12 +41,12 @@ const SectionMedia = () => {
           </div>
 
           <div className="border-t border-border pt-8 sm:pt-12">
-            <h3 className="font-sans text-body-sm tracking-wide-brand text-foreground mb-4 sm:mb-6">
+            <h3 className="font-sans text-xs sm:text-sm tracking-wide-brand text-foreground mb-4 sm:mb-6">
               OUR MEDIA STRATEGY IS SIMPLE
             </h3>
             <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
               {strategy.map((item, index) => (
-                <li key={index} className="text-body-sm text-muted-foreground flex items-start gap-2 sm:gap-3">
+                <li key={index} className="text-sm sm:text-base text-muted-foreground flex items-start gap-2 sm:gap-3">
                   <span className="text-primary flex-shrink-0">→</span>
                   <span>{item}</span>
                 </li>
@@ -58,7 +58,7 @@ const SectionMedia = () => {
             We speak about behaviour, sustainability and legitimacy — not ego.
           </p>
 
-          <p className="font-accent text-body-lg text-foreground italic">
+          <p className="font-accent text-lg sm:text-xl text-foreground italic">
             Where others push messages,
             we let conduct, culture and Impact speak.
           </p>

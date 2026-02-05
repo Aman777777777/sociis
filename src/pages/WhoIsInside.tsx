@@ -83,7 +83,7 @@ const teamMembers: TeamMember[] = [
     image: micaelC,
     category: "board",
     imagePosition: "center 25%",
-    bio: "Micael Craenhals is the Executive Director of Sociis Experiences™, the division that designs and delivers the institution's private sovereign gatherings: The 22, The 64, and The 300. With a background spanning luxury hospitality, event architecture, and leadership development, he curates gatherings where conduct is visible under pressure. Each experience is meticulously designed to test and shape trustworthy behaviour in environments that combine discretion with intentional challenge. His approach transcends conventional networking — creating intimate settings where aligned leaders forge enduring partnerships grounded in shared values. He works closely with world-class venues including The Connaught, Orient Express, and Mandarin Oriental to ensure every environment reflects the institutional standards of SociisGroup™."
+    bio: "Micael Craenhals is the Executive Director of Sociis Experiences™, the division that designs and delivers the institution's live behavioural laboratories: The 22, The 64, and The 300. With a background spanning luxury hospitality, event architecture, and leadership development, he curates gatherings where conduct is visible under pressure. Each experience is meticulously designed to test and shape trustworthy behaviour in environments that combine discretion with intentional challenge. His approach transcends conventional networking — creating intimate settings where aligned leaders forge enduring partnerships grounded in shared values. He works closely with world-class venues including The Connaught, Orient Express, and Mandarin Oriental to ensure every environment reflects the institutional standards of SociisGroup™."
   },
   {
     name: "Abbas Fasaei",
@@ -314,7 +314,6 @@ const WhoIsInside = () => {
 
   return (
     <PageTransition>
-      <Header />
       <main className="min-h-screen bg-background">
       
       {/* Bio Dialog */}

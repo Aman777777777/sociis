@@ -38,7 +38,7 @@ const SectionCalendar = () => {
     },
     {
       date: "Winter 2026",
-      location: "Abu Dhabi (Institutional)",
+      location: "Dubai",
       items: ["Circle experience, private gathering and institutional alignment."]
     }
   ];
