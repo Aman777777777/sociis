@@ -98,8 +98,39 @@
 
   p {
     @apply font-sans font-normal leading-relaxed;
-    font-size: 18px;
-    line-height: 150%;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* Ensure minimum readable text sizes */
+  .text-sm {
+    font-size: 0.9375rem; /* 15px min */
+    line-height: 1.6;
+  }
+  
+  .text-xs {
+    font-size: 0.8125rem; /* 13px min */
+    line-height: 1.5;
+  }
+
+  .text-base {
+    font-size: 1rem; /* 16px */
+    line-height: 1.65;
+  }
+
+  .text-body {
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.7;
+  }
+
+  .text-body-sm {
+    font-size: 1rem; /* 16px */
+    line-height: 1.65;
+  }
+
+  .text-body-lg {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.7;
   }
 }
 

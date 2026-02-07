@@ -94,12 +94,7 @@ const SectionHero = () => {
             >
               We operate on standards (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
             </p>
-            <a
-              href="#house"
-              className="inline-flex items-center gap-3 font-sans text-sm tracking-wide px-6 py-3 bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 group opacity-0 animate-[fade-in-up_0.8s_ease-out_1s_forwards]"
-            >
-              Join Sociis House
-            </a>
+            {/* Join button removed - layout balanced with existing content */}
           </div>
 
           {/* Right: Minimal symbol with subtle animation */}

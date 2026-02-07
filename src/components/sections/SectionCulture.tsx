@@ -52,6 +52,7 @@ const SectionCulture = () => {
               muted={isMuted}
               loop
               playsInline
+              autoPlay
               className="w-full aspect-video object-cover rounded-2xl"
             />
             <button
