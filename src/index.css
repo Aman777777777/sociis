@@ -224,7 +224,7 @@
   }
 }
 
-/* Hero animations */
+/* Hero animations - optimized for performance */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -250,7 +250,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 }
 
@@ -296,23 +296,48 @@
     opacity: 0;
   }
   10% {
-    opacity: 0.6;
+    opacity: 0.5;
   }
   90% {
-    opacity: 0.6;
+    opacity: 0.5;
   }
   100% {
-    transform: translateY(-100px) translateX(20px);
+    transform: translateY(-80px) translateX(15px);
     opacity: 0;
   }
 }
 
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(var(--accent) / 0.1);
+    box-shadow: 0 0 15px hsl(var(--accent) / 0.1);
   }
   50% {
-    box-shadow: 0 0 40px hsl(var(--accent) / 0.2);
+    box-shadow: 0 0 30px hsl(var(--accent) / 0.15);
+  }
+}
+
+/* Reduce motion for users who prefer it and mobile devices */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  .animate-\[breathe_20s_ease-in-out_infinite\],
+  .animate-\[shimmer_3s_ease-in-out_infinite\],
+  .animate-\[shimmer_2s_ease-in-out_infinite\],
+  .animate-\[particle-float_.*\],
+  .animate-\[scroll-line_2s_ease-in-out_infinite\] {
+    animation: none !important;
+  }
+  
+  /* Reduce transform complexity on mobile */
+  .group-hover\:scale-105:hover {
+    transform: none !important;
   }
 }
 
