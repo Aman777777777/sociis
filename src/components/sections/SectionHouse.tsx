@@ -24,35 +24,16 @@ const SectionHouse = () => {
             House content — audio, stories, reflections — is distributed through strategic media collaborations, including <span className="text-foreground font-medium">Podeo</span>, reaching far beyond the private rooms where it was born.
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          {/* CTA to external site */}
+          <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="#house-join"
+              href="https://www.sociis.house/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-sans text-base tracking-wide hover:bg-foreground/90 transition-colors"
             >
               Join Sociis House
             </a>
-          </div>
-
-          <div className="border-t border-border pt-6 sm:pt-8">
-            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">Explore</p>
-            <div className="flex flex-wrap gap-4 sm:gap-6">
-              <a href="#" className="text-sm sm:text-base text-foreground hover:text-primary transition-colors">
-                Journeys
-              </a>
-              <a href="#" className="text-sm sm:text-base text-foreground hover:text-primary transition-colors">
-                Listen
-              </a>
-              <a href="#" className="text-sm sm:text-base text-foreground hover:text-primary transition-colors">
-                Watch
-              </a>
-              <a href="#" className="text-sm sm:text-base text-foreground hover:text-primary transition-colors">
-                Read
-              </a>
-              <a href="#" className="text-sm sm:text-base text-foreground hover:text-primary transition-colors">
-                Subscribe
-              </a>
-            </div>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ const SectionCalendar = () => {
       location: "London",
       items: [
         "The 22, leadership lunch at The Connaught.",
-        "The 64, evening experience at Club TwentyTwo."
+        "Evening experience at Club TwentyTwo."
       ]
     },
     {
@@ -18,13 +18,13 @@ const SectionCalendar = () => {
       location: "Paris",
       items: [
         "The 22, leadership experience at Le Meurice.",
-        "The 64, LIME Book launch journey aboard the Orient Express."
+        "LIME Book launch journey aboard the Orient Express."
       ]
     },
     {
       date: "Summer 2026",
       location: "Brussels",
-      items: ["The 64, a curated boutique gathering at Corinthia Brussels."]
+      items: ["A curated boutique gathering at Corinthia Brussels."]
     },
     {
       date: "Summer 2026",

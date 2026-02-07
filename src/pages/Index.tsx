@@ -35,7 +35,7 @@ const Index = () => {
         <SectionWorlds />
         <SectionWhat />
         <SectionImpact />
-        <SectionDivisions />
+        {/* SectionDivisions removed per content requirements */}
         <SectionImpactDetail />
         <SectionHouse />
         <SectionExperiences />
