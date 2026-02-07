@@ -1,8 +1,12 @@
+import { memo } from "react";
 import experienceDinner from "@/assets/experience-dinner.jpg";
 import experienceGala from "@/assets/experience-gala.jpg";
 import experienceFestival from "@/assets/experience-festival.jpg";
+import { useMobilePerformance } from "@/hooks/use-mobile-performance";
 
-const SectionExperiences = () => {
+const SectionExperiences = memo(() => {
+  const { shouldReduceAnimations } = useMobilePerformance();
+  
   const experiences = [
     {
       name: "The 22",
@@ -44,8 +48,10 @@ const SectionExperiences = () => {
             {experiences.map((exp, index) => (
               <div 
                 key={exp.name} 
-                className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center opacity-0 animate-[fade-in_0.8s_ease-out_forwards]`}
-                style={{ animationDelay: `${0.2 + index * 0.15}s` }}
+                className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center ${
+                  shouldReduceAnimations ? 'opacity-100' : 'opacity-0 animate-[fade-in_0.8s_ease-out_forwards]'
+                }`}
+                style={shouldReduceAnimations ? undefined : { animationDelay: `${0.2 + index * 0.15}s` }}
               >
                 {/* Image - alternating sides */}
                 <div className={`relative group ${index % 2 === 1 ? 'md:order-2' : ''}`}>
@@ -53,13 +59,23 @@ const SectionExperiences = () => {
                     <img
                       src={exp.image}
                       alt={exp.name}
-                      className="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105 rounded-2xl"
+                      loading="lazy"
+                      decoding="async"
+                      className={`w-full aspect-[4/3] object-cover grayscale rounded-2xl ${
+                        shouldReduceAnimations 
+                          ? '' 
+                          : 'hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105'
+                      }`}
                     />
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    {/* Overlay gradient - hidden on mobile for performance */}
+                    {!shouldReduceAnimations && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    )}
                   </div>
-                  {/* Decorative line */}
-                  <div className={`absolute top-1/2 ${index % 2 === 1 ? '-left-4' : '-right-4'} w-8 h-px bg-accent transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ${index % 2 === 1 ? 'group-hover:-translate-x-2' : 'group-hover:translate-x-2'}`}></div>
+                  {/* Decorative line - hidden on mobile */}
+                  {!shouldReduceAnimations && (
+                    <div className={`absolute top-1/2 ${index % 2 === 1 ? '-left-4' : '-right-4'} w-8 h-px bg-accent transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ${index % 2 === 1 ? 'group-hover:-translate-x-2' : 'group-hover:translate-x-2'}`}></div>
+                  )}
                 </div>
 
                 {/* Content */}
@@ -67,7 +83,9 @@ const SectionExperiences = () => {
                   <span className="inline-block text-accent text-sm sm:text-base tracking-widest mb-2 sm:mb-3 opacity-60">
                     0{index + 1}
                   </span>
-                  <h3 className="font-accent text-2xl sm:text-3xl md:text-4xl text-foreground italic mb-2 hover:text-accent transition-colors duration-300">
+                  <h3 className={`font-accent text-2xl sm:text-3xl md:text-4xl text-foreground italic mb-2 ${
+                    shouldReduceAnimations ? '' : 'hover:text-accent transition-colors duration-300'
+                  }`}>
                     {exp.name}
                   </h3>
                   <p className="text-sm sm:text-base text-muted-foreground tracking-wide mb-3 sm:mb-4">
@@ -76,9 +94,13 @@ const SectionExperiences = () => {
                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md">
                     {exp.description}
                   </p>
-                  {/* Animated underline */}
+                  {/* Animated underline - static on mobile */}
                   <div className={`mt-6 h-px bg-border overflow-hidden ${index % 2 === 1 ? 'ml-auto' : ''}`} style={{ width: '60px' }}>
-                    <div className="h-full w-full bg-accent transform -translate-x-full animate-[slide-right_2s_ease-in-out_infinite]" style={{ animationDelay: `${index * 0.3}s` }}></div>
+                    {shouldReduceAnimations ? (
+                      <div className="h-full w-full bg-accent"></div>
+                    ) : (
+                      <div className="h-full w-full bg-accent transform -translate-x-full animate-[slide-right_2s_ease-in-out_infinite]" style={{ animationDelay: `${index * 0.3}s` }}></div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -86,7 +108,7 @@ const SectionExperiences = () => {
           </div>
 
           {/* Humanity in Action Section */}
-          <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]">
+          <div className={shouldReduceAnimations ? '' : 'opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]'}>
             <div className="relative mb-6 sm:mb-8">
               <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                 <div className="w-8 sm:w-12 h-px bg-accent"></div>
@@ -129,6 +151,8 @@ const SectionExperiences = () => {
       `}</style>
     </section>
   );
-};
+});
+
+SectionExperiences.displayName = "SectionExperiences";
 
 export default SectionExperiences;
