@@ -75,7 +75,7 @@ const SectionCulture = memo(() => {
     <section id="culture" ref={sectionRef} className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
-          <h2 className="font-sans font-light text-2xl sm:text-3xl text-foreground tracking-brand mb-8 sm:mb-10">
+          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
             Sociis Culture™
           </h2>
 
@@ -132,19 +132,19 @@ const SectionCulture = memo(() => {
             )}
           </div>
 
-          <div className={`space-y-4 sm:space-y-6 mb-8 sm:mb-10 ${shouldReduceAnimations ? '' : 'animate-fade-in'}`}>
-            <p className="text-sm sm:text-base text-muted-foreground">
+          <div className={`space-y-6 mb-10 ${shouldReduceAnimations ? '' : 'animate-fade-in'}`}>
+            <p className="text-body text-muted-foreground">
               <span className="text-foreground font-medium">Let There Be Light</span>
             </p>
-            <p className="text-sm sm:text-base text-muted-foreground">
+            <p className="text-body text-muted-foreground">
               <span className="text-foreground font-medium">The LIME Book</span>
             </p>
-            <p className="text-sm sm:text-base text-muted-foreground">
+            <p className="text-body text-muted-foreground">
               <span className="text-foreground font-medium">Objects and collaborations</span>
             </p>
           </div>
 
-          <p className="text-sm sm:text-base text-foreground">
+          <p className="text-body text-foreground">
             Sociis Culture makes behaviour tangible.
           </p>
         </div>

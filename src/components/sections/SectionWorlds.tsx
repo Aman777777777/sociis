@@ -20,7 +20,7 @@ const SectionWorlds = () => {
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {worlds.map((world, index) => (
             <div key={world.title} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <h3 className="font-sans font-light text-2xl text-foreground tracking-brand mb-6">
+              <h3 className="font-sans font-light text-2xl text-foreground tracking-tight mb-6">
                 {world.title}
               </h3>
               <p className="text-body text-muted-foreground">

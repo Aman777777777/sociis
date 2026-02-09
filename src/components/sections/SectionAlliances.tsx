@@ -36,7 +36,7 @@ const SectionAlliances = () => {
                   <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3">
                     Strategic Partners
                   </p>
-                  <h2 className="font-sans font-light text-3xl md:text-5xl text-foreground tracking-tight mb-4">
+                  <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
                     Selected Collaborations
                     <br />
                     <span className="text-accent">&</span> Allies

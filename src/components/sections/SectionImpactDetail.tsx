@@ -3,7 +3,7 @@ const SectionImpactDetail = () => {
     <section id="impact-detail" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
-          <h2 className="font-sans font-light text-4xl md:text-5xl text-foreground tracking-tight mb-6">
+          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
             Sociis Impact™
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
@@ -19,7 +19,7 @@ const SectionImpactDetail = () => {
             over time, not just how they present themselves.
           </p>
 
-          <p className="font-accent text-xl text-foreground italic">
+          <p className="font-accent text-xl sm:text-2xl text-foreground italic">
             This is how sustainable behaviour stops being a statement
             and becomes an accountable asset.
           </p>
