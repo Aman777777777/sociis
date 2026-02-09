@@ -12,7 +12,7 @@ const SectionFlywheel = () => {
     <section id="flywheel" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
-          <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-12">
+          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
             The Flywheel
           </h2>
 
@@ -40,7 +40,7 @@ const SectionFlywheel = () => {
             <p>New, higher experiences are created.</p>
           </div>
 
-          <p className="font-accent text-xl text-foreground italic mt-10">
+          <p className="font-accent text-xl sm:text-2xl text-foreground italic mt-10">
             That is the Sociis flywheel.
           </p>
         </div>

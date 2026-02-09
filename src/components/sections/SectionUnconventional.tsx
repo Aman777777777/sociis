@@ -18,7 +18,7 @@ const SectionUnconventional = () => {
             festivals, anthems, film, journeys and symbols.
           </p>
 
-          <p className="font-accent text-xl text-foreground italic">
+          <p className="font-accent text-xl sm:text-2xl text-foreground italic">
             This is how sustainable behaviour becomes culture,
             not just compliance.
           </p>

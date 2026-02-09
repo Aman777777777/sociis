@@ -6,21 +6,21 @@ const SectionHouse = () => {
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
             Public Entry Point
           </p>
-          <h2 className="font-sans font-light text-3xl sm:text-4xl md:text-5xl text-foreground tracking-tight mb-4 sm:mb-6">
+          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
             Sociis House™
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-8 sm:mb-10"></div>
+          <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
-          <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-6 sm:mb-8">
+          <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-8">
             Sociis House™ is where Impact scales.
           </p>
 
-          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
+          <p className="text-body text-muted-foreground mb-8">
             Leaders and learners enter journeys, watch films, listen to deep conversations,
             and reflect using the LIME Code™ as compass.
           </p>
 
-          <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-12">
+          <p className="text-body text-muted-foreground mb-10">
             House content — audio, stories, reflections — is distributed through strategic media collaborations, including <span className="text-foreground font-medium">Podeo</span>, reaching far beyond the private rooms where it was born.
           </p>
 

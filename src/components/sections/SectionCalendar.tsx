@@ -47,7 +47,7 @@ const SectionCalendar = () => {
     <section id="calendar" className="py-32 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-sans font-light text-3xl text-foreground tracking-brand mb-4">
+          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
             Global Rhythm 2025–2026
           </h2>
           <p className="text-body text-muted-foreground mb-16">

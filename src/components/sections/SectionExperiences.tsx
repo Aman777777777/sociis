@@ -37,7 +37,7 @@ const SectionExperiences = memo(() => {
             <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
               Curated Gatherings
             </p>
-            <h2 className="font-sans font-light text-3xl sm:text-4xl md:text-5xl text-foreground tracking-tight mb-4 sm:mb-6">
+            <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
               Sociis Experiences™
             </h2>
             <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent"></div>
@@ -88,10 +88,10 @@ const SectionExperiences = memo(() => {
                   }`}>
                     {exp.name}
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground tracking-wide mb-3 sm:mb-4">
+                  <p className="text-body text-muted-foreground tracking-wide mb-4">
                     {exp.subtitle}
                   </p>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md">
+                  <p className="text-body text-muted-foreground leading-relaxed max-w-md">
                     {exp.description}
                   </p>
                   {/* Animated underline - static on mobile */}
@@ -119,7 +119,7 @@ const SectionExperiences = memo(() => {
               <h3 className="font-accent text-xl sm:text-2xl md:text-3xl text-foreground italic mb-2">
                 Humanity in Action
               </h3>
-              <p className="text-sm sm:text-base text-muted-foreground max-w-lg">
+              <p className="text-body text-muted-foreground max-w-lg">
                 Behaviour translated into lived responsibility through culture and aligned humanitarian collaborations.
               </p>
             </div>
@@ -130,10 +130,10 @@ const SectionExperiences = memo(() => {
             <div className="flex items-start gap-4 sm:gap-6">
               <div className="hidden md:block w-12 sm:w-16 h-px bg-gradient-to-r from-accent to-transparent mt-3"></div>
               <div>
-                <p className="text-base sm:text-lg md:text-xl text-foreground font-light leading-relaxed mb-3 sm:mb-4">
+                <p className="text-body-lg text-foreground font-light leading-relaxed mb-4">
                   These are not "events".
                 </p>
-                <p className="text-sm sm:text-base text-muted-foreground italic">
+                <p className="text-body text-muted-foreground italic">
                   They are environments engineered to test and reinforce sustainable behaviour.
                 </p>
               </div>
