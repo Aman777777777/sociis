@@ -37,12 +37,14 @@ const SectionCulture = memo(() => {
     const video = videoRef.current;
     if (!video || videoError) return;
 
-    const playVideo = async () => {
-      if (isInView && videoLoaded) {
+    const attemptPlay = async () => {
+      if (isInView) {
         try {
+          video.muted = true;
           await video.play();
+          setVideoLoaded(true);
         } catch (error) {
-          // Autoplay blocked - this is normal on mobile
+          // Muted autoplay failed — show fallback
           console.log("Autoplay blocked, waiting for user interaction");
         }
       } else {
@@ -50,8 +52,8 @@ const SectionCulture = memo(() => {
       }
     };
 
-    playVideo();
-  }, [isInView, videoLoaded, videoError]);
+    attemptPlay();
+  }, [isInView, videoError]);
 
   const toggleMute = useCallback(() => {
     if (videoRef.current) {
@@ -94,11 +96,11 @@ const SectionCulture = memo(() => {
                   muted={isMuted}
                   loop
                   playsInline
-                  preload={isMobile ? "metadata" : "auto"}
+                  preload="auto"
                   className={`w-full aspect-video object-cover rounded-2xl transition-opacity duration-300 ${
                     videoLoaded ? "opacity-100" : "opacity-0"
                   }`}
-                  onLoadedData={handleVideoLoaded}
+                  onCanPlay={handleVideoLoaded}
                   onError={handleVideoError}
                 />
                 
