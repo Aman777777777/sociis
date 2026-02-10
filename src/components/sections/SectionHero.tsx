@@ -114,9 +114,9 @@ const SectionHero = memo(() => {
             <div className="relative opacity-0 animate-[fade-in_1.2s_ease-out_0.5s_forwards]">
               {/* Main symbol - clean, minimal - responsive */}
               <div className="relative">
-                <SociisSymbol size={140} className="text-foreground/80 sm:hidden" />
-                <SociisSymbol size={200} className="text-foreground/80 hidden sm:block lg:hidden" />
-                <SociisSymbol size={300} className="text-foreground/80 hidden lg:block" />
+                <SociisSymbol size={140} className="text-foreground/80 sm:hidden" animated />
+                <SociisSymbol size={200} className="text-foreground/80 hidden sm:block lg:hidden" animated />
+                <SociisSymbol size={300} className="text-foreground/80 hidden lg:block" animated />
               </div>
             </div>
             
