@@ -8,11 +8,11 @@ const SectionAlliances = () => {
     },
     {
       category: "Culture & Media",
-      partners: "Tomorrowland · Love Tomorrow · Podeo · TIME · Financial Times · Bloomberg · Forbes · Inc. · Monocle · Vanity Fair"
+      partners: "Tomorrowland · Love Tomorrow · Podeo · TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair"
     },
     {
       category: "Humanity & Philanthropy",
-      partners: "Global Gift Foundation · Under One Sky · The Diana Award · We Do It Together"
+      partners: "Under One Sky · The Diana Award · We Do It Together"
     }
   ];
 
@@ -25,19 +25,18 @@ const SectionAlliances = () => {
             <div className="relative overflow-hidden aspect-[21/9] rounded-2xl">
               <img
                 src={alliancesImage}
-                alt="Luxury venue interior"
+                alt="Institutional venue"
                 className="w-full h-full object-cover grayscale hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent"></div>
               
-              {/* Overlay content */}
               <div className="absolute inset-0 flex items-center">
                 <div className="px-8 md:px-16">
                   <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3">
-                    Strategic Partners
+                    Institutional Partners
                   </p>
                   <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-                    Selected Collaborations
+                    Sovereign Collaborations
                     <br />
                     <span className="text-accent">&</span> Allies
                   </h2>
@@ -45,13 +44,12 @@ const SectionAlliances = () => {
               </div>
             </div>
             
-            {/* Decorative corner */}
             <div className="absolute -bottom-3 -right-3 w-20 h-20 border-r-2 border-b-2 border-accent/30"></div>
           </div>
 
           {/* Description */}
           <p className="text-body text-muted-foreground mb-12 max-w-2xl opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">
-            We collaborate with institutions whose environments, audiences and ethics magnify sustainable behaviour.
+            SociisGroup™ collaborates with institutions whose environments, governance and ethics amplify behavioural standards at scale.
           </p>
 
           {/* Alliance Categories */}
@@ -79,7 +77,7 @@ const SectionAlliances = () => {
           <div className="pt-8 border-t border-border/50 flex items-center gap-6 opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]">
             <div className="w-12 h-px bg-accent"></div>
             <p className="text-body text-muted-foreground italic">
-              Each collaboration exists for one purpose: to amplify Impact through behaviour.
+              Each collaboration exists to amplify institutional impact through behavioural standards.
             </p>
           </div>
         </div>

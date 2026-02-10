@@ -12,23 +12,31 @@ const SectionLime = () => {
 
   const councilRoles = [
     "guard the LIME Code™",
-    "review how SBS™ is defined and used",
+    "review how SBS™ is defined and governed",
     "oversee data ethics for BEE™",
-    "question any collaboration, event or decision that drifts from this spine."
+    "question any collaboration, event or decision that drifts from institutional standards."
   ];
 
   return (
     <section id="lime" className="py-32 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
+          <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
+            Governance & Integrity
+          </p>
+          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
+            The LIME Code™
+          </h2>
+          <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
+
           <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-8">
-            LIME — The balance between Life and Time, and everything in between.
+            The balance between Life and Time, and everything in between.
           </p>
           
           <p className="text-body text-muted-foreground mb-12">
-            The LIME Code™ is the ethical and behavioural architecture of SOCIIS™.
-            It powers SBS™, shapes leadership decisions,
-            and is the reference framework used by the Sociis Ethical Council™.
+            The LIME Code™ is the ethical and behavioural architecture governing SociisGroup™.
+            It powers SBS™, shapes institutional decisions,
+            and serves as the reference framework for the Sociis Ethical Council™.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6 mb-16">
@@ -50,7 +58,7 @@ const SectionLime = () => {
 
           <div className="border-t border-border pt-12">
             <h3 className="font-sans text-base tracking-wide-brand text-foreground mb-6">
-              THE ETHICAL COUNCIL'S ROLE
+              THE ETHICAL COUNCIL'S MANDATE
             </h3>
             <ul className="space-y-3">
               {councilRoles.map((role, index) => (
@@ -63,8 +71,7 @@ const SectionLime = () => {
           </div>
 
           <p className="text-body text-foreground mt-12 pt-8 border-t border-border">
-            This is how Impact keeps its integrity
-            even as Sociis™ scales.
+            The LIME Code™ ensures institutional integrity as SociisGroup™ scales.
           </p>
         </div>
       </div>

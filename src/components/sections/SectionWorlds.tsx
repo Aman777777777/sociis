@@ -2,15 +2,15 @@ const SectionWorlds = () => {
   const worlds = [
     {
       title: "Sustainability",
-      description: "Boards, governance, systems, long-term incentives. Where SBS™ turns intent into accountable behaviour.",
+      description: "Governance, incentive structures, long-term accountability. SBS™ converts institutional intent into verifiable behavioural conduct.",
     },
     {
       title: "Hospitality",
-      description: "Environments where conduct is visible under pressure, from singular tables to global immersions.",
+      description: "Controlled environments where leadership behaviour is observed under pressure — from sovereign gatherings to global immersions.",
     },
     {
       title: "Humanity",
-      description: "Culture, story, philanthropy, education. Because saving the planet means nothing if we forget the people on it.",
+      description: "Sustainability has meaning only when humanity remains at its centre. Culture, education and philanthropy anchor the institutional mission.",
     },
   ];
 

@@ -10,20 +10,18 @@ const SectionProblem = () => {
             <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={problemImage}
-                alt="Environmental contrast - the challenge we face"
+                alt="Structural fracture — the governance gap"
                 className="w-full aspect-square object-cover grayscale group-hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
               />
-              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-tr from-background/40 via-transparent to-transparent"></div>
             </div>
-            {/* Decorative corner */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r-2 border-b-2 border-accent/30"></div>
           </div>
 
           {/* Content */}
           <div className="order-1 lg:order-2">
             <p className="text-body-lg text-foreground mb-8 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
-              The world measures emissions, capital, performance and risk.
+              The global system measures emissions, capital, performance and risk.
               <br />
               It does not measure <span className="relative inline-block">
                 <span className="relative z-10">behaviour</span>
@@ -34,21 +32,21 @@ const SectionProblem = () => {
             <div className="space-y-3 mb-8 opacity-0 animate-[fade-in_0.8s_ease-out_0.15s_forwards]">
               <p className="text-body text-muted-foreground flex items-center gap-3">
                 <span className="w-2 h-px bg-accent"></span>
-                Institutions lose trust.
+                Institutions face a legitimacy crisis driven by conduct, not reporting.
               </p>
               <p className="text-body text-muted-foreground flex items-center gap-3">
                 <span className="w-2 h-px bg-accent"></span>
-                People burn out.
+                Leadership credibility erodes under pressure.
               </p>
               <p className="text-body text-muted-foreground flex items-center gap-3">
                 <span className="w-2 h-px bg-accent"></span>
-                Sustainability becomes a logo, not a lived practice.
+                Sustainability remains declarative, not behavioural.
               </p>
             </div>
 
             <div className="mb-8 opacity-0 animate-[fade-in_0.8s_ease-out_0.25s_forwards]">
               <p className="text-body text-muted-foreground">
-                <span className="font-semibold text-foreground">Why now:</span> Trust has become a behavioural issue. AI accelerates output faster than ethics, ESG regulation enters the enforcement era, and institutions face a legitimacy crisis driven by conduct, not reporting. The decade ahead will measure how leaders behave, not just what they disclose.
+                <span className="font-semibold text-foreground">Why now:</span> AI accelerates output faster than ethics can govern it. ESG regulation enters the enforcement era. Stakeholder scrutiny shifts from disclosure to conduct. The decade ahead will measure how leaders behave, not what they report.
               </p>
             </div>
 
@@ -57,7 +55,7 @@ const SectionProblem = () => {
             </p>
 
             <p className="text-body text-muted-foreground opacity-0 animate-[fade-in_0.8s_ease-out_0.45s_forwards]">
-              SOCIIS™ exists to make that measurable, teachable and scalable.
+              SociisGroup™ builds the infrastructure to make it measurable, teachable and scalable.
             </p>
           </div>
         </div>

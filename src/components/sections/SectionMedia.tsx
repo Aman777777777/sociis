@@ -7,9 +7,9 @@ const SectionMedia = () => {
   ];
 
   const strategy = [
-    "use iconic experiences and human stories as the raw material",
-    "place them in outlets that combine reach with intelligence",
-    "speak about behaviour, not ego"
+    "deploy institutional conduct and behavioural evidence as source material",
+    "place it in outlets that combine reach with editorial intelligence",
+    "communicate behaviour and governance, not personality"
   ];
 
   return (
@@ -17,10 +17,10 @@ const SectionMedia = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            Media & Storytelling
+            Media & Institutional Narrative
           </h2>
           <p className="text-body text-muted-foreground mb-10">
-            Depth over noise.
+            Depth over noise. Conduct over commentary.
           </p>
 
           <div className="space-y-8 mb-16">
@@ -42,7 +42,7 @@ const SectionMedia = () => {
 
           <div className="border-t border-border pt-10">
             <h3 className="font-sans text-xs sm:text-sm tracking-wide-brand text-foreground mb-6">
-              OUR MEDIA STRATEGY IS SIMPLE
+              INSTITUTIONAL MEDIA STRATEGY
             </h3>
             <ul className="space-y-4 mb-10">
               {strategy.map((item, index) => (
@@ -54,13 +54,9 @@ const SectionMedia = () => {
             </ul>
           </div>
 
-          <p className="text-body text-muted-foreground mb-6">
-            We speak about behaviour, sustainability and legitimacy — not ego.
-          </p>
-
           <p className="font-accent text-xl sm:text-2xl text-foreground italic">
             Where others push messages,
-            we let conduct, culture and Impact speak.
+            SociisGroup™ lets conduct and institutional impact speak.
           </p>
         </div>
       </div>

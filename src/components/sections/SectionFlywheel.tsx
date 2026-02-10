@@ -13,7 +13,7 @@ const SectionFlywheel = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            The Flywheel
+            The Institutional Flywheel
           </h2>
 
           {/* Visual flywheel */}
@@ -31,17 +31,17 @@ const SectionFlywheel = () => {
           </div>
 
           <div className="space-y-4 text-body text-muted-foreground">
-            <p>An experience creates emotion.</p>
-            <p>Emotion becomes story.</p>
+            <p>A controlled environment generates behavioural evidence.</p>
+            <p>Evidence becomes story.</p>
             <p>Story becomes learning in House.</p>
-            <p>Learning spreads through the Network.</p>
-            <p>The Standard turns it into something accountable.</p>
-            <p>Impact becomes visible.</p>
-            <p>New, higher experiences are created.</p>
+            <p>Learning spreads through Access.</p>
+            <p>The Standard converts it into accountable infrastructure.</p>
+            <p>Impact becomes institutional and visible.</p>
+            <p>Higher-calibre environments are created.</p>
           </div>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic mt-10">
-            That is the Sociis flywheel.
+            That is the SociisGroup™ flywheel.
           </p>
         </div>
       </div>

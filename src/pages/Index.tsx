@@ -4,13 +4,13 @@ import ScrollToTop from "@/components/ScrollToTop";
 import PageTransition from "@/components/PageTransition";
 import SectionHero from "@/components/sections/SectionHero";
 
-import SectionProblem from "@/components/sections/SectionProblem";
 import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
+import SectionProblem from "@/components/sections/SectionProblem";
 import SectionWorlds from "@/components/sections/SectionWorlds";
 import SectionWhat from "@/components/sections/SectionWhat";
 import SectionImpact from "@/components/sections/SectionImpact";
-import SectionDivisions from "@/components/sections/SectionDivisions";
 import SectionImpactDetail from "@/components/sections/SectionImpactDetail";
+import SectionLeaders from "@/components/sections/SectionLeaders";
 import SectionHouse from "@/components/sections/SectionHouse";
 import SectionExperiences from "@/components/sections/SectionExperiences";
 import SectionCulture from "@/components/sections/SectionCulture";
@@ -28,24 +28,32 @@ const Index = () => {
     <PageTransition>
       <main className="min-h-screen bg-background">
         <Header />
+        {/* 1. Institutional Definition */}
         <SectionHero />
-        
         <SectionInfrastructure />
+        
+        {/* 2. What SociisGroup™ Does */}
         <SectionProblem />
         <SectionWorlds />
         <SectionWhat />
         <SectionImpact />
-        {/* SectionDivisions removed per content requirements */}
         <SectionImpactDetail />
-        <SectionHouse />
+        
+        {/* 3. Why It Matters to Power */}
+        <SectionLeaders />
+        
+        {/* 4. Cultural & Experiential Layer */}
         <SectionExperiences />
         <SectionCulture />
         <SectionUnconventional />
+        <SectionHouse />
+        
+        {/* 5. Governance & Integrity */}
+        <SectionLime />
         <SectionOneBillion />
         <SectionFlywheel />
         <SectionCalendar />
         <SectionAlliances />
-        <SectionLime />
         <SectionMedia />
         <SectionAccess />
         <Footer />

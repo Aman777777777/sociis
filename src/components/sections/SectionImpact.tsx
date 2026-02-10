@@ -15,13 +15,13 @@ const SectionImpact = memo(() => {
           {/* Content */}
           <div>
             <p className={`text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4 ${animateClass('forwards')}`}>
-              What We Create
+              Institutional Output
             </p>
             <p className={`font-accent text-2xl sm:text-3xl md:text-4xl text-foreground italic mb-4 ${animateClass('0.1s')}`}>
-              Impact is the outcome of behavioural infrastructure deployed at scale.
+              Impact is the outcome of behavioural infrastructure deployed at institutional scale.
             </p>
             <p className={`text-body-lg text-foreground mb-6 sm:mb-10 ${animateClass('0.15s')}`}>
-              Surgically-built behavioural infrastructure that makes Impact at Scale real and accountable.
+              SociisGroup™ builds behavioural infrastructure that makes Impact at Scale real, verifiable and accountable.
             </p>
 
             <div className="space-y-6 mb-10">
@@ -29,9 +29,9 @@ const SectionImpact = memo(() => {
                 <div className="flex items-start gap-4">
                   <span className="text-accent text-base mt-1.5">01</span>
                   <div>
-                    <p className="text-foreground font-medium mb-1">Impact on people</p>
+                    <p className="text-foreground font-medium mb-1">Impact on Leadership</p>
                     <p className="text-body text-muted-foreground">
-                      How leaders behave when nobody is watching.
+                      How leaders conduct themselves when governance structures are absent.
                     </p>
                   </div>
                 </div>
@@ -41,9 +41,9 @@ const SectionImpact = memo(() => {
                 <div className="flex items-start gap-4">
                   <span className="text-accent text-base mt-1.5">02</span>
                   <div>
-                    <p className="text-foreground font-medium mb-1">Impact on institutions</p>
+                    <p className="text-foreground font-medium mb-1">Impact on Institutions</p>
                     <p className="text-body text-muted-foreground">
-                      How decisions are made, not just reported.
+                      How decisions are governed, not merely disclosed.
                     </p>
                   </div>
                 </div>
@@ -53,9 +53,9 @@ const SectionImpact = memo(() => {
                 <div className="flex items-start gap-4">
                   <span className="text-accent text-base mt-1.5">03</span>
                   <div>
-                    <p className="text-foreground font-medium mb-1">Impact on culture</p>
+                    <p className="text-foreground font-medium mb-1">Impact on Systems</p>
                     <p className="text-body text-muted-foreground">
-                      What is admired, copied and remembered.
+                      What becomes standard, adopted and enforced at scale.
                     </p>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ const SectionImpact = memo(() => {
                 SBS™ — the Sustainable Behavioural Standard
               </p>
               <p className="text-body text-muted-foreground">
-                is the framework that makes this visible, measurable and repeatable.
+                The institutional framework that makes leadership conduct visible, accountable and repeatable.
               </p>
             </div>
           </div>
@@ -77,17 +77,15 @@ const SectionImpact = memo(() => {
             <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={impactImage}
-                alt="Leadership and contemplation"
+                alt="Institutional contemplation"
                 loading="lazy"
                 decoding="async"
                 className={`w-full aspect-[4/5] object-cover grayscale rounded-2xl ${
                   shouldReduceAnimations ? '' : 'group-hover:grayscale-[50%] transition-all duration-700'
                 }`}
               />
-              {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-background/20"></div>
             </div>
-            {/* Decorative elements - hidden on mobile for performance */}
             {!shouldReduceAnimations && (
               <>
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 border-l-2 border-b-2 border-accent/20"></div>

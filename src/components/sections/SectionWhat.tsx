@@ -3,27 +3,31 @@ const SectionWhat = () => {
     <section id="what" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-body text-muted-foreground mb-8">
-            In simple terms, SOCIIS™ does three things:
+          <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
+            Institutional Mandate
           </p>
+          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
+            What SociisGroup™ Does
+          </h2>
+          <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
           <div className="space-y-6 mb-10">
             <p className="text-body-lg text-foreground">
               <span className="text-primary mr-3">1.</span>
-              We define a standard for trustworthy, sustainable behaviour.
+              Sets and governs the standard for trustworthy, sustainable behaviour.
             </p>
             <p className="text-body-lg text-foreground">
               <span className="text-primary mr-3">2.</span>
-              We place leaders in experiences that test and shape that behaviour.
+              Deploys leaders into environments that test and calibrate that behaviour under pressure.
             </p>
             <p className="text-body-lg text-foreground">
               <span className="text-primary mr-3">3.</span>
-              We bring these behaviours into culture until they reach one billion people.
+              Distributes behavioural standards through culture until they reach one billion people.
             </p>
           </div>
 
           <p className="text-body text-muted-foreground">
-            Everything else is scaffolding.
+            Everything else is infrastructure.
           </p>
         </div>
       </div>
