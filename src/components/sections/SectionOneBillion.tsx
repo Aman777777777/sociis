@@ -10,23 +10,23 @@ const SectionOneBillion = () => {
     },
     {
       name: "Sociis Experiences™",
-      description: "22 · 64 · 300 formats on four continents — proof under pressure, captured and shared.",
+      description: "22 · 64 · 300 — controlled formats across four continents, generating behavioural proof under pressure.",
     },
     {
       name: "Sociis House™",
-      description: "Journeys and stories that can serve hundreds of thousands, then millions.",
+      description: "Journeys and stories scaled from sovereign gatherings to public learning.",
     },
     {
-      name: "Sociis Collections™",
-      description: "Anthem, book, objects — emotional anchors in daily life.",
+      name: "Sociis Culture™",
+      description: "Anthem, book, objects — cultural anchors that embed behavioural standards into daily life.",
     },
     {
-      name: "Sociis Network™",
-      description: "Long-term institutional collaborators carrying this language into the world.",
+      name: "Institutional Alliances",
+      description: "Long-term collaborators carrying SociisGroup™ standards into their own institutions and networks.",
     },
     {
       name: "Media",
-      description: "TIME, Financial Times, Bloomberg, Forbes, Inc., Monocle, Vanity Fair and others translate this into narratives the world can see.",
+      description: "TIME, Financial Times, Bloomberg, Forbes, Monocle, Vanity Fair — translating conduct into narratives the world can see.",
     },
   ];
 
@@ -34,9 +34,13 @@ const SectionOneBillion = () => {
     <section id="onebillion" className="py-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
+          <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
+            Scale Architecture
+          </p>
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            How We Reach One Billion
+            How SociisGroup™ Reaches One Billion
           </h2>
+          <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {channels.map((channel, index) => (
@@ -52,8 +56,7 @@ const SectionOneBillion = () => {
           </div>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic text-left border-t border-border pt-10">
-            This is how one behavioural language
-            can reach one billion people by 2030.
+            One behavioural standard. One institutional language. One billion people by 2030.
           </p>
         </div>
       </div>

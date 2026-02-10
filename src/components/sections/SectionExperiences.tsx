@@ -11,19 +11,19 @@ const SectionExperiences = memo(() => {
     {
       name: "The 22",
       subtitle: "Leadership Table",
-      description: "One table. One conversation. Leadership clarity.",
+      description: "One table. One conversation. Leadership conduct calibrated in private.",
       image: experienceDinner,
     },
     {
       name: "The 64",
-      subtitle: "A curated boutique gathering",
-      description: "An intentionally limited circle where culture and conduct meet.",
+      subtitle: "Sovereign Gathering",
+      description: "An intentionally limited environment where institutional conduct and culture converge.",
       image: experienceGala,
     },
     {
       name: "The 300",
-      subtitle: "Immersive cultural experience",
-      description: "Where light, sound and story converge to amplify behaviour at scale. In collaboration with Love Tomorrow, a We Are One World experience, on the Tomorrowland premises.",
+      subtitle: "Immersive Format",
+      description: "Behavioural standards deployed at cultural scale. In collaboration with Love Tomorrow, a We Are One World experience, on the Tomorrowland premises.",
       image: experienceFestival,
     },
   ];
@@ -32,10 +32,10 @@ const SectionExperiences = memo(() => {
     <section id="experiences" className="py-32 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl">
-          {/* Section Header - left aligned like House and Impact */}
+          {/* Section Header */}
           <div className="mb-12 lg:mb-16 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
             <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
-              Curated Gatherings
+              Controlled Environments
             </p>
             <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
               Sociis Experiences™
@@ -53,7 +53,7 @@ const SectionExperiences = memo(() => {
                 }`}
                 style={shouldReduceAnimations ? undefined : { animationDelay: `${0.2 + index * 0.15}s` }}
               >
-                {/* Image - alternating sides */}
+                {/* Image */}
                 <div className={`relative group ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                   <div className="relative overflow-hidden rounded-2xl">
                     <img
@@ -67,12 +67,10 @@ const SectionExperiences = memo(() => {
                           : 'hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105'
                       }`}
                     />
-                    {/* Overlay gradient - hidden on mobile for performance */}
                     {!shouldReduceAnimations && (
                       <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     )}
                   </div>
-                  {/* Decorative line - hidden on mobile */}
                   {!shouldReduceAnimations && (
                     <div className={`absolute top-1/2 ${index % 2 === 1 ? '-left-4' : '-right-4'} w-8 h-px bg-accent transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ${index % 2 === 1 ? 'group-hover:-translate-x-2' : 'group-hover:translate-x-2'}`}></div>
                   )}
@@ -94,7 +92,6 @@ const SectionExperiences = memo(() => {
                   <p className="text-body text-muted-foreground leading-relaxed max-w-md">
                     {exp.description}
                   </p>
-                  {/* Animated underline - static on mobile */}
                   <div className={`mt-6 h-px bg-border overflow-hidden ${index % 2 === 1 ? 'ml-auto' : ''}`} style={{ width: '60px' }}>
                     {shouldReduceAnimations ? (
                       <div className="h-full w-full bg-accent"></div>
@@ -107,7 +104,7 @@ const SectionExperiences = memo(() => {
             ))}
           </div>
 
-          {/* Humanity in Action Section */}
+          {/* Humanity in Action */}
           <div className={shouldReduceAnimations ? '' : 'opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]'}>
             <div className="relative mb-6 sm:mb-8">
               <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
@@ -125,16 +122,13 @@ const SectionExperiences = memo(() => {
             </div>
           </div>
 
-          {/* Closing Statement */}
+          {/* Closing */}
           <div className="mt-12 sm:mt-20 pt-8 sm:pt-12 border-t border-border/50 opacity-0 animate-[fade-in_0.8s_ease-out_0.8s_forwards]">
             <div className="flex items-start gap-4 sm:gap-6">
               <div className="hidden md:block w-12 sm:w-16 h-px bg-gradient-to-r from-accent to-transparent mt-3"></div>
               <div>
-                <p className="text-body-lg text-foreground font-light leading-relaxed mb-4">
-                  These are not "events".
-                </p>
                 <p className="text-body text-muted-foreground italic">
-                  They are environments engineered to test and reinforce sustainable behaviour.
+                  Environments engineered to test and reinforce sustainable behaviour under institutional conditions.
                 </p>
               </div>
             </div>
@@ -142,7 +136,6 @@ const SectionExperiences = memo(() => {
         </div>
       </div>
 
-      {/* Add keyframe for slide animation */}
       <style>{`
         @keyframes slide-right {
           0%, 100% { transform: translateX(-100%); }

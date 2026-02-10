@@ -4,7 +4,7 @@ const SectionAccess = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
-            High-Trust Entry
+            Institutional Entry
           </p>
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
             Access
@@ -14,16 +14,12 @@ const SectionAccess = () => {
             Access is for experiences, institutional collaboration and alignment conversations.
           </p>
 
-          <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-8">
-            You already lead.
-          </p>
-
           <p className="text-body text-muted-foreground mb-8">
-            Our role is to give you a circle, a language and a system that keeps you ahead, in presence, in pressure, in proof.
+            SociisGroup™ engages with leaders and institutions whose conduct aligns with the standards it governs.
           </p>
 
           <p className="text-body text-muted-foreground mb-10">
-            It is selective. There are no forms. Human judgement is the filter.
+            Entry is selective. There are no forms. Human judgement is the filter.
           </p>
 
           <div className="border-t border-border pt-10">

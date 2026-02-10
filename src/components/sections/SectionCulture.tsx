@@ -12,7 +12,6 @@ const SectionCulture = memo(() => {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const { isMobile, shouldReduceAnimations } = useMobilePerformance();
 
-  // Stable callback for intersection observer
   const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
       setIsInView(entry.isIntersecting);
@@ -32,7 +31,6 @@ const SectionCulture = memo(() => {
     return () => observer.disconnect();
   }, [handleIntersection]);
 
-  // Handle video play/pause based on visibility
   useEffect(() => {
     const video = videoRef.current;
     if (!video || videoError) return;
@@ -44,7 +42,6 @@ const SectionCulture = memo(() => {
           await video.play();
           setVideoLoaded(true);
         } catch (error) {
-          // Muted autoplay failed — show fallback
           console.log("Autoplay blocked, waiting for user interaction");
         }
       } else {
@@ -78,12 +75,12 @@ const SectionCulture = memo(() => {
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
             Sociis Culture™
           </h2>
+          <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
-          {/* Video Container with Fallback */}
+          {/* Video Container */}
           <div className="relative mb-12 rounded-2xl overflow-hidden bg-muted">
             {!videoError ? (
               <>
-                {/* Loading placeholder */}
                 {!videoLoaded && (
                   <div className="absolute inset-0 flex items-center justify-center bg-muted">
                     <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
@@ -125,7 +122,6 @@ const SectionCulture = memo(() => {
                 )}
               </>
             ) : (
-              /* Fallback when video fails */
               <div className="w-full aspect-video bg-muted flex items-center justify-center rounded-2xl">
                 <p className="text-muted-foreground text-sm">Video unavailable</p>
               </div>
@@ -145,7 +141,7 @@ const SectionCulture = memo(() => {
           </div>
 
           <p className="text-body text-foreground">
-            Sociis Culture makes behaviour tangible.
+            Sociis Culture™ makes behavioural standards tangible through cultural production.
           </p>
         </div>
       </div>
