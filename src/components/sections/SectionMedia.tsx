@@ -13,7 +13,7 @@ const SectionMedia = () => {
   ];
 
   return (
-    <section id="media" className="py-8 sm:py-14 border-t border-border">
+    <section id="media" className="py-5 sm:py-10 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">

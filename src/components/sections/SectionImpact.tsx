@@ -9,7 +9,7 @@ const SectionImpact = memo(() => {
     shouldReduceAnimations ? '' : `opacity-0 animate-[fade-in_0.8s_ease-out_${delay}_forwards]`;
 
   return (
-    <section id="impact" className="py-8 sm:py-14 overflow-hidden">
+    <section id="impact" className="py-5 sm:py-10 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Content */}
