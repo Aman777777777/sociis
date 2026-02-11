@@ -36,7 +36,7 @@ const Team = () => {
       <section className="py-20 lg:py-32 bg-cream-dark">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-light mb-6">
-            Join Our <span className="italic text-primary">Distinguished</span> Network
+            Join Our <span className="italic text-primary">Distinguished</span> Culture
           </h2>
           <p className="font-sans text-muted-foreground mb-8 max-w-xl mx-auto">
             We're always looking for exceptional leaders who share our vision

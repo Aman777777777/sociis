@@ -22,7 +22,7 @@ const SectionOneBillion = () => {
     },
     {
       name: "Institutional Alliances",
-      description: "Long-term collaborators carrying SociisGroup standards into their own institutions and networks.",
+      description: "Long-term collaborators carrying SociisGroup standards into their own institutions and cultures.",
     },
     {
       name: "Media",
