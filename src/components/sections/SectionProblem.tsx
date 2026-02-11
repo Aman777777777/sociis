@@ -2,7 +2,7 @@ import problemImage from "@/assets/problem-texture.jpg";
 
 const SectionProblem = () => {
   return (
-    <section id="problem" className="py-5 sm:py-10 overflow-hidden">
+    <section id="problem" className="py-16 sm:py-24 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl">
           {/* Image */}

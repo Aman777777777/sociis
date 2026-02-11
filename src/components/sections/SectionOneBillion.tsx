@@ -31,7 +31,7 @@ const SectionOneBillion = () => {
   ];
 
   return (
-    <section id="onebillion" className="py-5 sm:py-10">
+    <section id="onebillion" className="py-16 sm:py-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
