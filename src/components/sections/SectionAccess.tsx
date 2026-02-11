@@ -1,6 +1,6 @@
 const SectionAccess = () => {
   return (
-    <section id="access" className="py-8 sm:py-14">
+    <section id="access" className="py-5 sm:py-10">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">

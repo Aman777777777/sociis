@@ -15,7 +15,7 @@ const SectionWorlds = () => {
   ];
 
   return (
-    <section id="worlds" className="py-8 sm:py-14">
+    <section id="worlds" className="py-5 sm:py-10">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {worlds.map((world, index) => (
