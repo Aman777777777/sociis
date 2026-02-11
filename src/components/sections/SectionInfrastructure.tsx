@@ -19,7 +19,7 @@ const SectionInfrastructure = () => {
   ];
 
   return (
-    <section id="infrastructure" className="py-10 sm:py-16">
+    <section id="infrastructure" className="py-12 sm:py-20">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
           {pillars.map((pillar, index) => (

@@ -44,7 +44,7 @@ const SectionCalendar = () => {
   ];
 
   return (
-    <section id="calendar" className="py-16 sm:py-24 border-t border-border">
+    <section id="calendar" className="py-20 sm:py-28 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-[720px] mx-auto">
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-2">
