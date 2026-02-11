@@ -29,7 +29,7 @@ const SectionExperiences = memo(() => {
   ];
 
   return (
-    <section id="experiences" className="py-16 sm:py-24 overflow-hidden">
+    <section id="experiences" className="py-20 sm:py-28 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl">
           {/* Section Header */}

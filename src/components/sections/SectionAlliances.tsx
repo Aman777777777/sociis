@@ -17,7 +17,7 @@ const SectionAlliances = () => {
   ];
 
   return (
-    <section id="alliances" className="py-16 sm:py-24 overflow-hidden">
+    <section id="alliances" className="py-20 sm:py-28 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Hero Image */}
