@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SociisSymbol from "./SociisSymbol";
+import sociisGroupLogo from "@/assets/sociisgroup-logo.png";
 
 const Footer = () => {
   return (
@@ -9,11 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="sm:col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4 sm:mb-6">
-              <SociisSymbol size={24} className="text-foreground sm:hidden" />
-              <SociisSymbol size={28} className="text-foreground hidden sm:block" />
-              <span className="font-sans text-sm sm:text-base tracking-wide-brand text-foreground font-light">
-                SOCIIS<sup className="text-xs">™</sup>
-              </span>
+              <img src={sociisGroupLogo} alt="SociisGroup" className="h-8 sm:h-10 w-auto" />
             </Link>
             <p className="font-sans text-sm sm:text-base text-muted-foreground max-w-xs mb-4">
               SociisGroup™
