@@ -41,7 +41,7 @@ const SectionFlywheel = () => {
           </div>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic mt-10">
-            That is the SociisGroup flywheel.
+            That is the SociisGroup™ flywheel.
           </p>
         </div>
       </div>

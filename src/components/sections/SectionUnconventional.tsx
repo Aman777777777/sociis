@@ -16,7 +16,7 @@ const SectionUnconventional = () => {
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
-            SociisGroup uses culture, sovereign gatherings, film, music, publishing and immersive formats as institutional channels for behavioural standards.
+            SociisGroup deploys culture, sovereign gatherings, film, music, publishing and immersive formats as institutional channels for behavioural standards.
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
