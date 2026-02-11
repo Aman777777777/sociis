@@ -29,7 +29,7 @@ const SectionExperiences = memo(() => {
   ];
 
   return (
-    <section id="experiences" className="py-32 overflow-hidden">
+    <section id="experiences" className="py-14 sm:py-24 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl">
           {/* Section Header */}
@@ -38,7 +38,7 @@ const SectionExperiences = memo(() => {
               Controlled Environments
             </p>
             <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-              Sociis Experiences™
+              Sociis Experiences
             </h2>
             <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent"></div>
           </div>

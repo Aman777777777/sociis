@@ -2,7 +2,7 @@ import SociisSymbol from "../SociisSymbol";
 
 const SectionMark = () => {
   return (
-    <section id="mark" className="py-32">
+    <section id="mark" className="py-14 sm:py-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
           {/* Large faint symbol */}

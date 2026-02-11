@@ -9,11 +9,11 @@ const SectionFlywheel = () => {
   ];
 
   return (
-    <section id="flywheel" className="py-32">
+    <section id="flywheel" className="py-14 sm:py-24">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-[720px]">
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            The Institutional Flywheel
+            The SociisGroup™ Flywheel
           </h2>
 
           {/* Visual flywheel */}
@@ -41,7 +41,7 @@ const SectionFlywheel = () => {
           </div>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic mt-10">
-            That is the SociisGroup™ flywheel.
+            That is the SociisGroup flywheel.
           </p>
         </div>
       </div>

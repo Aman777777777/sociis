@@ -1,6 +1,6 @@
 const SectionHouse = () => {
   return (
-    <section id="house" className="py-32">
+    <section id="house" className="py-14 sm:py-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
@@ -12,11 +12,11 @@ const SectionHouse = () => {
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
           <p className="text-body text-muted-foreground mb-8">
-            Sociis House™ is the public learning platform of SociisGroup™ — where behavioural standards are translated into journeys, films and deep conversations guided by the LIME Code™.
+            Sociis House™ is the public learning platform of SociisGroup, where behavioural standards are translated into journeys, films and deep conversations guided by the LIME Code.
           </p>
 
           <p className="text-body text-muted-foreground mb-10">
-            House content — audio, stories, reflections — is distributed through strategic media collaborations, including <span className="text-foreground font-medium">Podeo</span>, extending institutional reach beyond sovereign gatherings.
+            House content (audio, stories, reflections) is distributed through strategic media collaborations, including <span className="text-foreground font-medium">Podeo</span>, extending institutional reach beyond sovereign gatherings.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

@@ -69,7 +69,7 @@ const SectionCulture = memo(() => {
   }, []);
 
   return (
-    <section id="culture" ref={sectionRef} className="py-32">
+    <section id="culture" ref={sectionRef} className="py-14 sm:py-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
@@ -141,7 +141,7 @@ const SectionCulture = memo(() => {
           </div>
 
           <p className="text-body text-foreground">
-            Sociis Culture™ makes behavioural standards tangible through cultural production.
+            Sociis Culture makes behavioural standards tangible through cultural production.
           </p>
         </div>
       </div>

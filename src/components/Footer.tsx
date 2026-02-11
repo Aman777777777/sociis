@@ -85,9 +85,8 @@ const Footer = () => {
               Sociis are the people. SociisGroup is the governing institute.
             </p>
             <p className="font-sans text-sm text-muted-foreground mt-2">
-              SociisGroup™ — Benefit Corporation
-              <br />
-              Brussels, Belgium
+              SociisGroup™, Benefit Corporation.
+              Brussels, Belgium.
             </p>
           </div>
         </div>
@@ -95,7 +94,7 @@ const Footer = () => {
         {/* Operations Statement */}
         <div className="pt-8 pb-6 border-t border-border">
           <p className="font-sans text-base text-muted-foreground max-w-3xl">
-            We operate on standards (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
+            We operate on standards (SBS), measurement (BEE), public learning (House), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
           </p>
         </div>
 

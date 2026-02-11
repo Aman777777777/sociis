@@ -4,20 +4,20 @@ const SectionAlliances = () => {
   const alliances = [
     {
       category: "Venues & Hospitality",
-      partners: "The Connaught · Club TwentyTwo · Orient Express · Corinthia Brussels · Mandarin Oriental · La Réserve Geneva · Aman · Hôtel de Paris Monte-Carlo · Le Meurice Paris"
+      collaborators: "The Connaught · Club TwentyTwo · Orient Express · Corinthia Brussels · Mandarin Oriental · La Réserve Geneva · Aman · Hôtel de Paris Monte-Carlo · Le Meurice Paris"
     },
     {
       category: "Culture & Media",
-      partners: "Tomorrowland · Love Tomorrow · Podeo · TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair"
+      collaborators: "Tomorrowland · Love Tomorrow · Podeo · TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair"
     },
     {
       category: "Humanity & Philanthropy",
-      partners: "Under One Sky · The Diana Award · We Do It Together"
+      collaborators: "Under One Sky · The Diana Award · We Do It Together"
     }
   ];
 
   return (
-    <section id="alliances" className="py-32 overflow-hidden">
+    <section id="alliances" className="py-14 sm:py-24 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Hero Image */}
@@ -36,7 +36,7 @@ const SectionAlliances = () => {
                     Institutional Partners
                   </p>
                   <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-                    Sovereign Collaborations
+                    Selected Collaborations
                     <br />
                     <span className="text-accent">&</span> Allies
                   </h2>
@@ -49,7 +49,7 @@ const SectionAlliances = () => {
 
           {/* Description */}
           <p className="text-body text-muted-foreground mb-12 max-w-2xl opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">
-            SociisGroup™ collaborates with institutions whose environments, governance and ethics amplify behavioural standards at scale.
+            SociisGroup collaborates with institutions whose environments, governance and ethics amplify behavioural standards at scale.
           </p>
 
           {/* Alliance Categories */}
@@ -67,7 +67,7 @@ const SectionAlliances = () => {
                   <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                 </div>
                 <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                  {alliance.partners}
+                  {alliance.collaborators}
                 </p>
               </div>
             ))}
@@ -77,7 +77,7 @@ const SectionAlliances = () => {
           <div className="pt-8 border-t border-border/50 flex items-center gap-6 opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]">
             <div className="w-12 h-px bg-accent"></div>
             <p className="text-body text-muted-foreground italic">
-              Each collaboration exists to amplify institutional impact through behavioural standards.
+              Each collaboration exists to amplify institutional Impact through behavioural standards.
             </p>
           </div>
         </div>

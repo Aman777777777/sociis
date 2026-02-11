@@ -6,7 +6,8 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 500);
+      const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      setIsVisible(scrollPercent > 0.25);
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -20,12 +21,12 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-50 p-3 bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+      className={`fixed bottom-6 right-6 z-50 p-2 bg-foreground/60 text-background hover:bg-foreground/80 transition-all duration-300 rounded ${
+        isVisible ? "opacity-60 translate-y-0 hover:opacity-100" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
       aria-label="Scroll to top"
     >
-      <ArrowUp size={20} />
+      <ArrowUp size={16} />
     </button>
   );
 };
