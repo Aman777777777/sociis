@@ -28,7 +28,7 @@ const Hero = () => {
           </p>
 
           <p className="font-sans text-base text-cream/70 max-w-xl mx-auto mb-12 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            We unite leaders who prove that trust is earned through character —
+            We unite leaders who prove that trust is earned through character,
             never through performance alone.
           </p>
 

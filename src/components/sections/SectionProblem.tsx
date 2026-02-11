@@ -10,7 +10,7 @@ const SectionProblem = () => {
             <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={problemImage}
-                alt="Structural fracture — the governance gap"
+                alt="Structural fracture, the governance gap"
                 className="w-full aspect-square object-cover grayscale group-hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-background/40 via-transparent to-transparent"></div>

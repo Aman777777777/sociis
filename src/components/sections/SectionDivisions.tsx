@@ -2,11 +2,11 @@ const SectionDivisions = () => {
   const divisions = [
     {
       name: "Sociis Impact™",
-      description: "Home of SBS™ and BEE™ — where sustainable behaviour becomes data and value.",
+      description: "Home of SBS™ and BEE™, where sustainable behaviour becomes data and value.",
     },
     {
       name: "Sociis Experiences™",
-      description: "The 22 · The 64 · The 300 — our live behavioural laboratories.",
+      description: "The 22 · The 64 · The 300, our live behavioural laboratories.",
     },
     {
       name: "Sociis House™",

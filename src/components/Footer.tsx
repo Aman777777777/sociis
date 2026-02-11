@@ -15,6 +15,9 @@ const Footer = () => {
                 SOCIIS<sup className="text-xs">™</sup>
               </span>
             </Link>
+            <p className="font-sans text-sm sm:text-base text-muted-foreground max-w-xs mb-4">
+              SociisGroup™
+            </p>
             <p className="font-sans text-sm sm:text-base text-muted-foreground max-w-xs">
               A sovereign independent behavioural institution turning sustainable behaviour into global Impact.
             </p>

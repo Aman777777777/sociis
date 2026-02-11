@@ -10,7 +10,7 @@ const SectionOneBillion = () => {
     },
     {
       name: "Sociis Experiences",
-      description: "22 · 64 · 300, controlled formats across four continents, generating behavioural proof under pressure.",
+      description: "22 · 64 · 300, controlled formats generating behavioural proof under pressure.",
     },
     {
       name: "Sociis House",

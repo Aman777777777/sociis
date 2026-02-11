@@ -68,14 +68,14 @@ const teamMembers: TeamMember[] = [
     role: "Founder\nChief Executive Officer (CEO)",
     image: jeremie,
     category: "board",
-    bio: "Jeremie Landweer is the Founder and Chief Executive Officer of SociisGroup™, a private behavioural institution building infrastructure for sustainability, hospitality, and humanity. With over two decades of experience bridging business strategy with ethical leadership, he has architected a unique ecosystem where purpose-driven leaders converge to create measurable Impact at Scale. His vision centres on making trust visible and behaviour accountable — transforming how institutions operate and how leaders are measured. Under his leadership, SociisGroup™ has developed proprietary frameworks including SBS™ (Sustainable Behavioural Standard) and BEE™ (Behavioural Engine of Ethics), positioning the organisation at the forefront of behavioural governance. He is a sought-after voice on credibility-based leadership and the future of institutional trust."
+    bio: "Jeremie Landweer is the Founder and Chief Executive Officer of SociisGroup™, a sovereign independent behavioural institution building infrastructure for sustainability, hospitality, and humanity. With over two decades of experience bridging business strategy with ethical leadership, he has architected a unique ecosystem where purpose-driven leaders converge to create measurable Impact at Scale. His vision centres on making trust visible and behaviour accountable, transforming how institutions operate and how leaders are measured. Under his leadership, SociisGroup has developed proprietary frameworks including SBS™ (Sustainable Behavioural Standard) and BEE (Behavioural Engine of Ethics), positioning the organisation at the forefront of behavioural governance. He is a sought-after voice on credibility-based leadership and the future of institutional trust."
   },
   {
     name: "Dominique Debecker",
     role: "Chief Behavioural Officer (CBO)\nHead of Sociis Impact™",
     image: dominiqueD,
     category: "board",
-    bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™, the division responsible for developing and deploying SBS™ — the Sustainable Behavioural Standard. With deep expertise in behavioural science, organisational psychology, and brain-based leadership methodologies, she ensures that every initiative within the institution is grounded in integrity, ethical conduct, and meaningful transformation. Her work focuses on translating complex behavioural frameworks into practical tools that organisations can embed into their governance structures. She oversees BEE™ (Behavioural Engine of Ethics), which provides signals, patterns, and dashboards showing how leaders and organisations behave over time. Her academic background and executive coaching experience inform a rigorous, evidence-based approach to making sustainable behaviour an accountable asset rather than a statement."
+    bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™, the division responsible for developing and deploying SBS™, the Sustainable Behavioural Standard. With deep expertise in behavioural science, organisational psychology, and brain-based leadership methodologies, she ensures that every initiative within the institution is grounded in integrity, ethical conduct, and meaningful transformation. Her work focuses on translating complex behavioural frameworks into practical tools that organisations can embed into their governance structures. She oversees BEE (Behavioural Engine of Ethics), which provides signals, patterns, and dashboards showing how leaders and organisations behave over time, not how they present themselves. Her academic background and executive coaching experience inform a rigorous, evidence-based approach to making sustainable behaviour an accountable asset rather than a statement."
   },
   {
     name: "Micael Craenhals",
@@ -90,7 +90,7 @@ const teamMembers: TeamMember[] = [
     role: "Executive Director, Sociis House™",
     image: abbas,
     category: "board",
-    bio: "Abbas Fasaei leads Sociis House™ as Executive Director, overseeing the institution's learning, storytelling, and cultural programming. Originally from Iran, Abbas brings a unique perspective shaped by his journey from political turmoil to international recognition. He is an accomplished actor and acting teacher with over two decades of experience, having studied under Michael Margotta and Oscar-winner Paul Haggis. His screen credits include Netflix's Undercover and Iron Sky: The Coming Race, earning a nomination for the Belgian Ensors. As founder of CinAct Academy, he has trained the next generation of performers in authentic human expression. At Sociis House™, he applies his mastery of narrative and human behaviour to create transformative educational experiences, films, and stories that carry the LIME Code™ into culture — distributed through strategic media collaborations including Podeo."
+    bio: "Abbas Fasaei leads Sociis House™ as Executive Director, overseeing the institution's learning, storytelling, and cultural programming. Originally from Iran, Abbas brings a unique perspective shaped by his journey from political turmoil to international recognition. He is an accomplished actor and acting teacher with over two decades of experience, having studied under Michael Margotta and Oscar-winner Paul Haggis. His screen credits include Netflix's Undercover and Iron Sky: The Coming Race, earning a nomination for the Belgian Ensors. As founder of CinAct Academy, he has trained the next generation of performers in authentic human expression. At Sociis House, he applies his mastery of narrative and human behaviour to create transformative educational experiences, films, and stories that carry the LIME Code™ into culture, distributed through strategic media collaborations including Podeo."
   },
   {
     name: "Marc Bogaerts",
@@ -429,7 +429,7 @@ const WhoIsInside = () => {
             Cultural & Charity Stewards
           </h2>
           <p className="font-sans text-xs text-muted-foreground/70 mb-10">
-            Symbolic voices — artists, humanitarians, and cultural storytellers.
+            Symbolic voices, artists, humanitarians, and cultural storytellers.
           </p>
           <div className="flex flex-wrap gap-8">
             {stewards.map((member, index) => (

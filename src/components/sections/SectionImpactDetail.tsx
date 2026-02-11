@@ -19,7 +19,7 @@ const SectionImpactDetail = () => {
           <p className="text-body text-muted-foreground mb-8">
             It is supported by <span className="text-foreground font-medium">BEE</span>, the Behavioural Engine of Ethics:
             a data infrastructure of signals, patterns and dashboards that tracks how leaders and institutions behave
-            over time — not how they present themselves.
+            over time, not how they present themselves.
           </p>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic">

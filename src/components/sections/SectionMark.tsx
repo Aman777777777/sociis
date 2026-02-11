@@ -11,7 +11,7 @@ const SectionMark = () => {
           </div>
 
           <p className="text-body-lg text-foreground mb-8 animate-fade-in-up">
-            Our symbol is a circle with two pillars — <span className="font-medium">1 | 1</span>.
+            Our symbol is a circle with two pillars, <span className="font-medium">1 | 1</span>.
           </p>
 
           <p className="text-body text-muted-foreground mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
