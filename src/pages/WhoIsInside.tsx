@@ -83,7 +83,7 @@ const teamMembers: TeamMember[] = [
     image: micaelC,
     category: "board",
     imagePosition: "center 25%",
-    bio: "Micael Craenhals is the Executive Director of Sociis Experiences™, the division that designs and delivers the institution's live behavioural laboratories: The 22, The 64, and The 300. With a background spanning luxury hospitality, event architecture, and leadership development, he curates gatherings where conduct is visible under pressure. Each experience is meticulously designed to test and shape trustworthy behaviour in environments that combine discretion with intentional challenge. His approach transcends conventional networking — creating intimate settings where aligned leaders forge enduring partnerships grounded in shared values. He works closely with world-class venues including The Connaught, Orient Express, and Mandarin Oriental to ensure every environment reflects the institutional standards of SociisGroup™."
+    bio: "Micael Craenhals is the Executive Director of Sociis Experiences™, the division that designs and delivers the institution's live behavioural laboratories: The 22, The 64, and The 300. With a background spanning luxury hospitality, event architecture, and leadership development, he curates gatherings where conduct is visible under pressure. Each experience is meticulously designed to test and shape trustworthy behaviour in environments that combine discretion with intentional challenge. His approach transcends conventional gatherings, creating intimate settings where aligned leaders forge enduring collaborations grounded in shared values. He works closely with world-class venues including The Connaught, Orient Express, and Mandarin Oriental to ensure every environment reflects the institutional standards of SociisGroup™."
   },
   {
     name: "Abbas Fasaei",
@@ -103,7 +103,7 @@ const teamMembers: TeamMember[] = [
     role: "Strategic Introductions\nSociisGroup™",
     image: rudi,
     category: "board",
-    bio: "Rudi Plettinx specialises in Strategic Introductions for SociisGroup™, serving as a bridge between the institution and leaders seeking alignment with its mission. With an extensive network cultivated over decades across business, governance, and philanthropy, he facilitates meaningful connections that carry the potential for substantive partnership and mutual growth. His approach is characterised by discretion and precision — understanding that trust is the only credential that matters. Every introduction he facilitates is assessed not for transactional value but for alignment with the institution's behavioural standards. Rudi's role embodies the SociisGroup™ principle that access is selective and human judgement is the filter, ensuring that the network grows in quality rather than quantity."
+    bio: "Rudi Plettinx specialises in Strategic Introductions for SociisGroup™, serving as a bridge between the institution and leaders seeking alignment with its mission. With an extensive circle cultivated over decades across business, governance, and philanthropy, he facilitates meaningful connections that carry the potential for substantive collaboration and mutual growth. His approach is characterised by discretion and precision, understanding that trust is the only credential that matters. Every introduction he facilitates is assessed not for transactional value but for alignment with the institution's behavioural standards. Rudi's role embodies the SociisGroup™ principle that access is selective and human judgement is the filter, ensuring that the culture grows in quality rather than quantity."
   },
 
   // The Council
@@ -443,7 +443,7 @@ const WhoIsInside = () => {
       <section className="py-16 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-sm text-muted-foreground mb-4">
-            To connect with the network, request access on the main page.
+            To connect with the institution, request access on the main page.
           </p>
           <Link
             to="/#access"
