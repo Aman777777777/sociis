@@ -1,6 +1,6 @@
 const SectionUnconventional = () => {
   return (
-    <section id="unconventional" className="py-32">
+    <section id="unconventional" className="py-14 sm:py-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
@@ -16,11 +16,11 @@ const SectionUnconventional = () => {
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
-            SociisGroup™ deploys culture — sovereign gatherings, film, music, publishing and immersive formats — as institutional channels for behavioural standards.
+            SociisGroup uses culture, sovereign gatherings, film, music, publishing and immersive formats as institutional channels for behavioural standards.
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
-            Instead of preaching to the already convinced, SociisGroup™ reaches millions through formats that embed conduct into lived experience.
+            Instead of preaching to the already convinced, SociisGroup reaches millions through formats that embed conduct into lived experience.
           </p>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic">

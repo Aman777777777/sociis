@@ -9,7 +9,7 @@ const SectionImpact = memo(() => {
     shouldReduceAnimations ? '' : `opacity-0 animate-[fade-in_0.8s_ease-out_${delay}_forwards]`;
 
   return (
-    <section id="impact" className="py-32 overflow-hidden">
+    <section id="impact" className="py-14 sm:py-24 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Content */}
@@ -21,7 +21,7 @@ const SectionImpact = memo(() => {
               Impact is the outcome of behavioural infrastructure deployed at institutional scale.
             </p>
             <p className={`text-body-lg text-foreground mb-6 sm:mb-10 ${animateClass('0.15s')}`}>
-              SociisGroup™ builds behavioural infrastructure that makes Impact at Scale real, verifiable and accountable.
+              SociisGroup builds behavioural infrastructure that makes Impact at Scale real, verifiable and accountable.
             </p>
 
             <div className="space-y-6 mb-10">
@@ -64,7 +64,7 @@ const SectionImpact = memo(() => {
 
             <div className={`relative pl-6 border-l-2 border-accent ${animateClass('0.5s')}`}>
               <p className="text-body-lg text-foreground mb-2">
-                SBS™ — the Sustainable Behavioural Standard
+                SBS, the Sustainable Behavioural Standard
               </p>
               <p className="text-body text-muted-foreground">
                 The institutional framework that makes leadership conduct visible, accountable and repeatable.

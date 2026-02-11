@@ -2,7 +2,7 @@ import problemImage from "@/assets/problem-texture.jpg";
 
 const SectionProblem = () => {
   return (
-    <section id="problem" className="py-32 overflow-hidden">
+    <section id="problem" className="py-14 sm:py-24 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl">
           {/* Image */}
@@ -55,7 +55,7 @@ const SectionProblem = () => {
             </p>
 
             <p className="text-body text-muted-foreground opacity-0 animate-[fade-in_0.8s_ease-out_0.45s_forwards]">
-              SociisGroup™ builds the infrastructure to make it measurable, teachable and scalable.
+              SociisGroup builds the infrastructure to make it measurable, teachable and scalable.
             </p>
           </div>
         </div>

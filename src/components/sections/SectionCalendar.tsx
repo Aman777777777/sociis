@@ -44,14 +44,14 @@ const SectionCalendar = () => {
   ];
 
   return (
-    <section id="calendar" className="py-32 border-t border-border">
+    <section id="calendar" className="py-14 sm:py-24 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            Global Rhythm 2025–2026
+        <div className="max-w-[720px] mx-auto">
+          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-2">
+            Global Rhythm, examples
           </h2>
           <p className="text-body text-muted-foreground mb-16">
-            Key Experiences across Europe, the Middle East and the US.
+            Illustrative moments, not a fixed schedule.
           </p>
 
           <div className="space-y-12">
@@ -81,7 +81,7 @@ const SectionCalendar = () => {
           </div>
 
           <p className="text-body text-muted-foreground mt-16 pt-8 border-t border-border">
-            Each moment is a proof point feeding Sociis House™, Sociis Impact™
+            Each moment is a proof point feeding Sociis House, Sociis Impact
             and the one billion mission.
           </p>
         </div>

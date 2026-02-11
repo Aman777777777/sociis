@@ -2,11 +2,11 @@ const SectionWorlds = () => {
   const worlds = [
     {
       title: "Sustainability",
-      description: "Governance, incentive structures, long-term accountability. SBS™ converts institutional intent into verifiable behavioural conduct.",
+      description: "Governance, incentive structures, long-term accountability. SBS converts institutional intent into verifiable behavioural conduct.",
     },
     {
       title: "Hospitality",
-      description: "Controlled environments where leadership behaviour is observed under pressure — from sovereign gatherings to global immersions.",
+      description: "Controlled environments where leadership behaviour is observed under pressure, from sovereign gatherings to global immersions.",
     },
     {
       title: "Humanity",
@@ -15,7 +15,7 @@ const SectionWorlds = () => {
   ];
 
   return (
-    <section id="worlds" className="py-32">
+    <section id="worlds" className="py-14 sm:py-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {worlds.map((world, index) => (

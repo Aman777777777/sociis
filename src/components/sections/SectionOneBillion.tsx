@@ -2,43 +2,43 @@ const SectionOneBillion = () => {
   const channels = [
     {
       name: "Love Tomorrow",
-      description: "The 300 Immersive Experience — in collaboration with Love Tomorrow, a We Are One World experience, on the Tomorrowland premises.",
+      description: "The 300 Immersive Experience, in collaboration with Love Tomorrow, a We Are One World experience, on the Tomorrowland premises.",
     },
     {
       name: "Podeo",
-      description: "Podeo — audio distribution at scale.",
+      description: "Podeo, audio distribution at scale.",
     },
     {
-      name: "Sociis Experiences™",
-      description: "22 · 64 · 300 — controlled formats across four continents, generating behavioural proof under pressure.",
+      name: "Sociis Experiences",
+      description: "22 · 64 · 300, controlled formats across four continents, generating behavioural proof under pressure.",
     },
     {
-      name: "Sociis House™",
+      name: "Sociis House",
       description: "Journeys and stories scaled from sovereign gatherings to public learning.",
     },
     {
-      name: "Sociis Culture™",
-      description: "Anthem, book, objects — cultural anchors that embed behavioural standards into daily life.",
+      name: "Sociis Culture",
+      description: "Anthem, book, objects, cultural anchors that embed behavioural standards into daily life.",
     },
     {
       name: "Institutional Alliances",
-      description: "Long-term collaborators carrying SociisGroup™ standards into their own institutions and networks.",
+      description: "Long-term collaborators carrying SociisGroup standards into their own institutions and networks.",
     },
     {
       name: "Media",
-      description: "TIME, Financial Times, Bloomberg, Forbes, Monocle, Vanity Fair — translating conduct into narratives the world can see.",
+      description: "TIME, Financial Times, Bloomberg, Forbes, Monocle, Vanity Fair. Translating conduct into narratives the world can see.",
     },
   ];
 
   return (
-    <section id="onebillion" className="py-32">
+    <section id="onebillion" className="py-14 sm:py-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
             Scale Architecture
           </p>
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            How SociisGroup™ Reaches One Billion
+            How SociisGroup Reaches One Billion
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 

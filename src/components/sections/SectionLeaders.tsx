@@ -10,11 +10,11 @@ const SectionLeaders = () => {
     },
     {
       title: "Reputation Protection",
-      description: "Conduct under pressure defines institutional credibility. SociisGroup™ builds the framework to sustain it.",
+      description: "Conduct under pressure defines institutional credibility. SociisGroup builds the framework to sustain it.",
     },
     {
       title: "ESG Preparedness",
-      description: "Regulatory enforcement is shifting from what organisations report to how their leaders behave. SociisGroup™ addresses the gap.",
+      description: "Regulatory enforcement is shifting from what organisations report to how their leaders behave. SociisGroup addresses the gap.",
     },
     {
       title: "Leadership Credibility",
@@ -22,19 +22,19 @@ const SectionLeaders = () => {
     },
     {
       title: "Behaviour Under Pressure",
-      description: "Controlled environments reveal and calibrate leadership conduct — the foundation of sustainable institutional trust.",
+      description: "Controlled environments reveal and calibrate leadership conduct, the foundation of sustainable institutional trust.",
     },
   ];
 
   return (
-    <section id="leaders" className="py-32 border-t border-border">
+    <section id="leaders" className="py-14 sm:py-24 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
             Institutional Relevance
           </p>
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            Why Leaders and Institutions Engage with SociisGroup™
+            Why Leaders and Institutions Engage with SociisGroup
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-12"></div>
 
@@ -56,7 +56,7 @@ const SectionLeaders = () => {
           </div>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic">
-            The question is no longer what an institution discloses — but how it behaves.
+            The question is no longer what an institution discloses, but how it behaves.
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 const SectionAccess = () => {
   return (
-    <section id="access" className="py-24 sm:py-32">
+    <section id="access" className="py-14 sm:py-24">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
@@ -15,7 +15,7 @@ const SectionAccess = () => {
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
-            SociisGroup™ engages with leaders and institutions whose conduct aligns with the standards it governs.
+            SociisGroup engages with leaders and institutions whose conduct aligns with the standards it governs.
           </p>
 
           <p className="text-body text-muted-foreground mb-10">
