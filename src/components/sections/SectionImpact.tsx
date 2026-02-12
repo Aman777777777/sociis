@@ -6,7 +6,7 @@ const SectionImpact = memo(() => {
   const { shouldReduceAnimations } = useMobilePerformance();
 
   const animateClass = (delay: string) => 
-    shouldReduceAnimations ? '' : `opacity-0 animate-[fade-in_0.8s_ease-out_${delay}_forwards]`;
+    shouldReduceAnimations ? '' : `animate-fade-in-up`;
 
   return (
     <section id="impact" className="py-20 sm:py-28 overflow-hidden">
