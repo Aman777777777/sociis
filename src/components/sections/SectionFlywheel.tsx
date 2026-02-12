@@ -20,14 +20,14 @@ const SectionFlywheel = () => {
           <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-4 mb-12">
             {steps.map((step, index) => (
               <span key={step} className="flex items-center">
-                <span className="font-sans text-base sm:text-lg text-foreground whitespace-nowrap">{step}</span>
+                <span className="font-sans text-lg sm:text-xl text-foreground whitespace-nowrap">{step}</span>
                 {index < steps.length - 1 && (
-                  <span className="text-primary text-lg mx-2 sm:mx-3">→</span>
+                  <span className="text-primary text-xl mx-2 sm:mx-4">→</span>
                 )}
               </span>
             ))}
-            <span className="text-primary text-lg mx-2 sm:mx-3">→</span>
-            <span className="font-sans text-base sm:text-lg text-foreground whitespace-nowrap">Experience</span>
+            <span className="text-primary text-xl mx-2 sm:mx-4">→</span>
+            <span className="font-sans text-lg sm:text-xl text-foreground whitespace-nowrap">Experience</span>
           </div>
 
           <div className="space-y-4 text-body-lg text-muted-foreground">
