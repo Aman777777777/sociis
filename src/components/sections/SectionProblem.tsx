@@ -10,7 +10,7 @@ const SectionProblem = () => {
             <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={problemImage}
-                alt="Structural fracture, the governance gap"
+                alt="The governance gap"
                 className="w-full aspect-square object-cover grayscale group-hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-background/40 via-transparent to-transparent"></div>
@@ -51,7 +51,7 @@ const SectionProblem = () => {
             </div>
 
             <p className="font-accent text-2xl text-foreground italic mb-8 opacity-0 animate-[fade-in_0.8s_ease-out_0.35s_forwards]">
-              Behaviour is the missing "B" in ESG.
+              Behaviour is the missing B in ESG.
             </p>
 
             <p className="text-body text-muted-foreground opacity-0 animate-[fade-in_0.8s_ease-out_0.45s_forwards]">

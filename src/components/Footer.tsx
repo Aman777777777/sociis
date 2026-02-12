@@ -11,9 +11,6 @@ const Footer = () => {
             <Link to="/" className="flex items-center gap-3 mb-4 sm:mb-6">
               <img src={sociisGroupLogo} alt="SociisGroup" className="h-8 sm:h-10 w-auto" />
             </Link>
-            <p className="font-sans text-sm sm:text-base text-muted-foreground max-w-xs mb-4">
-              SociisGroup™
-            </p>
             <p className="font-sans text-sm sm:text-base text-muted-foreground max-w-xs">
               A sovereign independent behavioural institution turning sustainable behaviour into global Impact.
             </p>
@@ -93,7 +90,7 @@ const Footer = () => {
         {/* Operations Statement */}
         <div className="pt-8 pb-6 border-t border-border">
           <p className="font-sans text-base text-muted-foreground max-w-3xl">
-            We operate on standards (SBS), measurement (BEE), public learning (House), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
+            We operate on standards (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
           </p>
         </div>
 

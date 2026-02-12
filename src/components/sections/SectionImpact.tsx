@@ -31,7 +31,7 @@ const SectionImpact = memo(() => {
                   <div>
                     <p className="text-foreground font-medium mb-1">Impact on Leadership</p>
                     <p className="text-body text-muted-foreground">
-                      How leaders conduct themselves when governance structures are absent.
+                      How leaders behave under pressure, when incentives and scrutiny intensify.
                     </p>
                   </div>
                 </div>
@@ -77,7 +77,7 @@ const SectionImpact = memo(() => {
             <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={impactImage}
-                alt="Institutional contemplation"
+                alt="Governance and measurement"
                 loading="lazy"
                 decoding="async"
                 className={`w-full aspect-[4/5] object-cover grayscale rounded-2xl ${
