@@ -109,7 +109,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Joost Peeters",
     role: "Legal Counsel",
-    image: joost,
+    image: null,
     category: "board",
   },
 
