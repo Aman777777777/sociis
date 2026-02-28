@@ -7,7 +7,7 @@ import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
 import SectionProblem from "@/components/sections/SectionProblem";
 import SectionWorlds from "@/components/sections/SectionWorlds";
 import SectionWhat from "@/components/sections/SectionWhat";
-import SectionAmbassadors from "@/components/sections/SectionAmbassadors";
+
 import SectionImpact from "@/components/sections/SectionImpact";
 import SectionImpactDetail from "@/components/sections/SectionImpactDetail";
 import SectionLeaders from "@/components/sections/SectionLeaders";
@@ -39,9 +39,6 @@ const Index = () => {
         <SectionWorlds />
         <SectionWhat />
         
-        {/* Ambassadors */}
-        <SectionAmbassadors />
-
         {/* Institutional Output */}
         <SectionImpact />
         <SectionImpactDetail />
