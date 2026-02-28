@@ -48,8 +48,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link to="/who-is-inside" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
-                  Who Is Inside
+                <Link to="/governance" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                  Governance
                 </Link>
               </li>
             </ul>
@@ -90,7 +90,7 @@ const Footer = () => {
         {/* Operations Statement */}
         <div className="pt-8 pb-6 border-t border-border">
           <p className="font-sans text-base text-muted-foreground max-w-3xl">
-            We operate on standards (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
+            We operate on the Sustainable Behavioural Standard (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
           </p>
         </div>
 

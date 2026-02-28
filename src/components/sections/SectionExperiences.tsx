@@ -89,9 +89,17 @@ const SectionExperiences = memo(() => {
                   <p className="text-body text-muted-foreground tracking-wide mb-4">
                     {exp.subtitle}
                   </p>
-                  <p className="text-body text-muted-foreground leading-relaxed max-w-md">
+                  <p className="text-body text-muted-foreground leading-relaxed max-w-md mb-4">
                     {exp.description}
                   </p>
+                  <a
+                    href={`/${exp.name.toLowerCase().replace(/\s/g, '-')}-deck.pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+                  >
+                    View Experience Deck (PDF)
+                  </a>
                   <div className={`mt-6 h-px bg-border overflow-hidden ${index % 2 === 1 ? 'ml-auto' : ''}`} style={{ width: '60px' }}>
                     {shouldReduceAnimations ? (
                       <div className="h-full w-full bg-accent"></div>
