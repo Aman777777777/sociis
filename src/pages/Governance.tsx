@@ -20,6 +20,7 @@ import rudi from "@/assets/team/rudi.png";
 import zanele from "@/assets/team/zanele.jpg";
 import luc from "@/assets/team/luc.jpg";
 import marc from "@/assets/team/marc.jpg";
+import joost from "@/assets/team/joost.jpeg";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -108,7 +109,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Joost Peeters",
     role: "Legal Counsel",
-    image: null,
+    image: joost,
     category: "board",
   },
 
