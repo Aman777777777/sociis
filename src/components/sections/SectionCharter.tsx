@@ -8,7 +8,7 @@ const SectionCharter = () => {
           Institutional Charter
         </h3>
         <p className="text-body text-muted-foreground mb-8">
-          The governing document that defines SociisGroup's mandate, safeguards, and institutional structure. It sets the rules that protect independence, integrity, and long-term trust.
+          The governing document that defines SociisGroup's mandate, safeguards and institutional structure. It clarifies authority, oversight, and the protection of long-term trust.
         </p>
         <div className="flex flex-wrap gap-4">
           <Link

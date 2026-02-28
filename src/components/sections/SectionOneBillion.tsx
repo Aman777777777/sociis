@@ -18,11 +18,11 @@ const SectionOneBillion = () => {
     },
     {
       name: "Sociis Culture",
-      description: "Anthem, book, objects, cultural anchors that embed behavioural standards into daily life.",
+      description: "Anthem, book, objects, cultural anchors that embed the Sustainable Behavioural Standard (SBS™) into daily life.",
     },
     {
       name: "Institutional Alliances",
-      description: "Long-term collaborators carrying SociisGroup standards into their own institutions and cultures.",
+      description: "Long-term collaborators carrying the Sustainable Behavioural Standard (SBS™) into their own institutions and cultures.",
     },
     {
       name: "Media",

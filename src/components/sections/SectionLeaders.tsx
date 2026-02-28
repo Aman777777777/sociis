@@ -6,7 +6,7 @@ const SectionLeaders = () => {
     },
     {
       title: "Governance Resilience",
-      description: "SBS™ provides a behavioural layer that strengthens institutional governance beyond disclosure and reporting.",
+      description: "The Sustainable Behavioural Standard (SBS™) provides a behavioural layer that strengthens institutional governance beyond disclosure and reporting.",
     },
     {
       title: "Reputation Protection",
