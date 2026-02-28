@@ -42,20 +42,12 @@ import fei from "@/assets/team/fei.jpg";
 import karim from "@/assets/team/karim.jpg";
 import james from "@/assets/team/james.webp";
 
-// Import team photos - Cultural & Charity Stewards
-import tessy from "@/assets/team/tessy.jpg";
-import gabriella from "@/assets/team/gabriella.jpg";
-import maria from "@/assets/team/maria.png";
-import kavita from "@/assets/team/kavita.jpg";
-import maeva from "@/assets/team/maeva.png";
-import jeanBosco from "@/assets/team/jean-bosco.jpg";
-import mikkel from "@/assets/team/mikkel.jpg";
 
 interface TeamMember {
   name: string;
   role: string;
   image: string;
-  category: "executive" | "board" | "council" | "advisor" | "steward";
+  category: "executive" | "board" | "council" | "advisor";
   imagePosition?: string;
   bio?: string;
 }
@@ -167,7 +159,7 @@ const teamMembers: TeamMember[] = [
   // Trusted Advisors
   {
     name: "Marc Bogaerts",
-    role: "Artistic Director",
+    role: "Chief Commercial Officer (CCO)",
     image: marc,
     category: "advisor"
   },
@@ -232,49 +224,6 @@ const teamMembers: TeamMember[] = [
     category: "advisor"
   },
 
-  // Cultural & Charity Stewards
-  {
-    name: "Dr. Tessy Ojo, CBE",
-    role: "Chief Executive Officer, The Diana Award",
-    image: tessy,
-    category: "steward"
-  },
-  {
-    name: "Gabriella Wright",
-    role: "Actress / Humanitarian",
-    image: gabriella,
-    category: "steward"
-  },
-  {
-    name: "María Bravo",
-    role: "Philanthroprenuer · Actress",
-    image: maria,
-    category: "steward"
-  },
-  {
-    name: "Kavita Rathore",
-    role: "CSR Director and Board Member of Blessing Foundation",
-    image: kavita,
-    category: "steward"
-  },
-  {
-    name: "Maëva Fischer",
-    role: "Singer",
-    image: maeva,
-    category: "steward"
-  },
-  {
-    name: "Jean Bosco Safari",
-    role: "Singer",
-    image: jeanBosco,
-    category: "steward"
-  },
-  {
-    name: "Georges Reyes",
-    role: "Cultural & Charity Steward",
-    image: mikkel,
-    category: "steward"
-  },
 ];
 
 const TeamCard = ({ 
@@ -299,17 +248,12 @@ const TeamCard = ({
           <img
             src={member.image}
             alt={member.name}
-            className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105 rounded-xl ${isClickable ? 'group-hover:ring-2 ring-accent/50 ring-offset-2 ring-offset-background' : ''}`}
+            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105 rounded-xl"
             style={{ objectPosition: member.imagePosition || "center" }}
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center rounded-xl bg-muted/20">
             <span className="text-muted-foreground/40 text-2xl font-light">{member.name.split(' ').map(n => n[0]).join('')}</span>
-          </div>
-        )}
-        {isClickable && (
-          <div className="absolute bottom-2 right-2 w-5 h-5 rounded-full bg-background/90 border border-accent/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-[10px] text-accent font-medium">i</span>
           </div>
         )}
       </div>
@@ -330,7 +274,7 @@ const Governance = () => {
   const board = teamMembers.filter(m => m.category === "board");
   const council = teamMembers.filter(m => m.category === "council");
   const advisors = teamMembers.filter(m => m.category === "advisor");
-  const stewards = teamMembers.filter(m => m.category === "steward");
+  
 
   return (
     <PageTransition>
@@ -392,12 +336,16 @@ const Governance = () => {
           <p className="font-sans text-sm text-muted-foreground/70 mb-10">
             The Board provides institutional oversight and strategic direction for SociisGroup™.
           </p>
-          
+
           {/* Executive Leadership Team */}
           <div className="mb-12">
-            <h3 className="font-sans text-xs tracking-widest text-muted-foreground/50 uppercase mb-6">
+            <h3 className="font-sans text-xs tracking-widest text-muted-foreground/50 uppercase mb-2">
               Executive Leadership Team
             </h3>
+            <p className="font-sans text-xs text-muted-foreground/50 mb-6">
+              Members of the Board with executive responsibility for institutional direction and execution.
+            </p>
+          
             <div className="flex flex-wrap gap-8">
               {executive.map((member, index) => (
                 <TeamCard 
@@ -412,9 +360,12 @@ const Governance = () => {
 
           {/* Board Members */}
           <div>
-            <h3 className="font-sans text-xs tracking-widest text-muted-foreground/50 uppercase mb-6">
+            <h3 className="font-sans text-xs tracking-widest text-muted-foreground/50 uppercase mb-2">
               Board Members
             </h3>
+            <p className="font-sans text-xs text-muted-foreground/50 mb-6">
+              Board members contributing to governance, strategy and institutional development.
+            </p>
             <div className="flex flex-wrap gap-8">
               {board.map((member, index) => (
                 <TeamCard 
@@ -468,22 +419,6 @@ const Governance = () => {
         </div>
       </section>
 
-      {/* Cultural & Charity Stewards */}
-      <section className="py-12 border-t border-border/50">
-        <div className="container mx-auto px-6 lg:px-8">
-          <h2 className="font-sans text-xs tracking-widest text-muted-foreground uppercase mb-2">
-            Cultural & Charity Stewards
-          </h2>
-          <p className="font-sans text-xs text-muted-foreground/70 mb-10">
-            Symbolic voices, artists, humanitarians, and cultural storytellers.
-          </p>
-          <div className="flex flex-wrap gap-8">
-            {stewards.map((member, index) => (
-              <TeamCard key={member.name} member={member} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Charter Block */}
       <section className="py-12 border-t border-border/50">
@@ -496,7 +431,7 @@ const Governance = () => {
       <section className="py-16 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-sm text-muted-foreground mb-4">
-            To connect with the institution, request access on the main page.
+            Access is handled through the main page. There are no forms. Human judgement is the filter.
           </p>
           <Link
             to="/#access"

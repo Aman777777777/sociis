@@ -22,7 +22,7 @@ const SectionWhat = () => {
             </p>
             <p className="text-body-lg text-foreground">
               <span className="text-primary mr-3">3.</span>
-              Distributes behavioural standards through culture until they reach one billion people.
+              Distributes the Sustainable Behavioural Standard (SBS™) through culture until it reaches one billion people.
             </p>
           </div>
 
