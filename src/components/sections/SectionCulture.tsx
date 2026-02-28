@@ -1,6 +1,26 @@
-import { memo } from "react";
+import { memo, useRef, useEffect } from "react";
+import charityVideo from "@/assets/charity-video.mp4";
 
 const SectionCulture = memo(() => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="culture" className="py-20 sm:py-28">
       <div className="container mx-auto px-6 lg:px-8">
@@ -65,8 +85,29 @@ const SectionCulture = memo(() => {
             </ul>
           </div>
 
+          {/* Let There Be Light */}
+          <div className="pt-10 mt-12 border-t border-border/50">
+            <h3 className="font-sans text-lg text-foreground font-medium mb-2">
+              Let There Be Light™
+            </h3>
+            <p className="text-body text-muted-foreground mb-8">
+              A cultural chapter of SociisGroup™ expressing dignity and behavioural leadership through music.
+            </p>
+            <div className="rounded-2xl overflow-hidden">
+              <video
+                ref={videoRef}
+                src={charityVideo}
+                muted
+                playsInline
+                controls
+                preload="metadata"
+                className="w-full"
+              />
+            </div>
+          </div>
+
           <p className="text-body text-foreground mt-12">
-            Sociis Culture makes behavioural standards tangible through cultural production.
+            Sociis Culture makes the Sustainable Behavioural Standard (SBS™) tangible through cultural production.
           </p>
         </div>
       </div>
