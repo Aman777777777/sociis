@@ -116,7 +116,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Joost Peeters",
     role: "Legal Counsel",
-    image: marc, // placeholder
+    image: null,
     category: "board",
   },
 
@@ -295,12 +295,18 @@ const TeamCard = ({
       onClick={isClickable ? onClick : undefined}
     >
       <div className="relative overflow-hidden mb-4 w-[140px] h-[140px] aspect-square bg-muted/30 rounded-xl">
-        <img
-          src={member.image}
-          alt={member.name}
-          className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105 rounded-xl ${isClickable ? 'group-hover:ring-2 ring-accent/50 ring-offset-2 ring-offset-background' : ''}`}
-          style={{ objectPosition: member.imagePosition || "center" }}
-        />
+        {member.image ? (
+          <img
+            src={member.image}
+            alt={member.name}
+            className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105 rounded-xl ${isClickable ? 'group-hover:ring-2 ring-accent/50 ring-offset-2 ring-offset-background' : ''}`}
+            style={{ objectPosition: member.imagePosition || "center" }}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center rounded-xl bg-muted/20">
+            <span className="text-muted-foreground/40 text-2xl font-light">{member.name.split(' ').map(n => n[0]).join('')}</span>
+          </div>
+        )}
         {isClickable && (
           <div className="absolute bottom-2 right-2 w-5 h-5 rounded-full bg-background/90 border border-accent/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="text-[10px] text-accent font-medium">i</span>
