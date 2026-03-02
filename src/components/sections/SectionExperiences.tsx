@@ -23,7 +23,7 @@ const SectionExperiences = memo(() => {
     {
       name: "The 300",
       subtitle: "Immersive Format",
-      description: "A private SociisGroup™ experience on the Tomorrowland premises, in collaboration with Love Tomorrow.",
+      description: "A private SociisGroup™ immersive experience for 300 curated leaders.",
       image: experienceFestival,
     },
   ];

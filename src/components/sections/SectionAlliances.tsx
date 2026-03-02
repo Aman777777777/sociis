@@ -47,7 +47,7 @@ const SectionAlliances = () => {
                 </h3>
               </div>
               <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                Corinthia Grand Hotel Astoria Brussels · Tomorrowland Premises
+                Corinthia Grand Hotel Astoria Brussels
               </p>
             </div>
 
@@ -71,7 +71,7 @@ const SectionAlliances = () => {
                 </h3>
               </div>
               <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                Love Tomorrow · Podeo
+                Podeo
               </p>
             </div>
 

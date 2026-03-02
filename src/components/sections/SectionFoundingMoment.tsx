@@ -37,9 +37,9 @@ const SectionFoundingMoment = () => {
     {
       year: "23 July 2026",
       label: "Institutional Inauguration",
-      location: "Tomorrowland Premises",
+      location: "Belgium",
       venue: null,
-      collaboration: "In collaboration with Love Tomorrow",
+      collaboration: null,
       paragraphs: [
         "Shape Tomorrow Today™ — The 300",
         "The Institutional Inauguration establishes the centre of gravity."
