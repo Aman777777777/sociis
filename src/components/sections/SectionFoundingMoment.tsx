@@ -14,7 +14,7 @@ const SectionFoundingMoment = () => {
       ]
     },
     {
-      year: "2025–2026",
+      year: "2024–2025",
       label: "Formation",
       location: "London · Paris · Brussels",
       venue: null,

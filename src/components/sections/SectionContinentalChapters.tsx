@@ -1,7 +1,7 @@
 const SectionContinentalChapters = () => {
   const anchors = [
     {
-      year: "2027",
+      year: "2026",
       city: "Cape Town, South Africa",
       venue: "Mount Nelson, A Belmond Hotel"
     },
