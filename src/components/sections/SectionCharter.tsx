@@ -22,7 +22,7 @@ const SectionCharter = () => {
             download="SociisGroup_Institutional_Charter.pdf"
             className="inline-flex items-center gap-2 px-6 py-3 border border-foreground text-foreground font-sans text-base tracking-wide hover:bg-foreground hover:text-background transition-colors"
           >
-            Download PDF
+            Download Institutional Charter
           </a>
         </div>
       </div>
