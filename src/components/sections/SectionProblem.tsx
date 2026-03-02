@@ -46,7 +46,12 @@ const SectionProblem = () => {
 
             <div className="mb-8 opacity-0 animate-[fade-in_0.8s_ease-out_0.25s_forwards]">
               <p className="text-body text-muted-foreground">
-                <span className="font-semibold text-foreground">Why now:</span> AI accelerates output faster than ethics can govern it. ESG regulation enters the enforcement era. Stakeholder scrutiny shifts from disclosure to conduct. The decade ahead will measure how leaders behave, not what they report.
+                <span className="font-semibold text-foreground">Why now:</span>
+              </p>
+              <p className="text-body text-muted-foreground mt-2">
+                The global system measures capital, emissions and performance.<br />
+                It does not measure behaviour.<br />
+                The next decade will.
               </p>
             </div>
 

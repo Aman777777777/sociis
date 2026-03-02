@@ -24,15 +24,27 @@ const SectionFoundingMoment = () => {
       ]
     },
     {
+      year: "22 July 2026",
+      label: "Institutional Inauguration",
+      location: "Brussels",
+      venue: "Corinthia Grand Hotel Astoria Brussels",
+      collaboration: null,
+      paragraphs: [
+        "The 64 — Founding Boutique Gala"
+      ],
+      showButtons: true
+    },
+    {
       year: "23 July 2026",
-      label: "Cultural Expression",
+      label: "Institutional Inauguration",
       location: "Tomorrowland Premises",
       venue: null,
       collaboration: "In collaboration with Love Tomorrow",
       paragraphs: [
         "Shape Tomorrow Today™ — The 300",
-        "The Founding Season establishes the institutional centre of gravity."
-      ]
+        "The Institutional Inauguration establishes the centre of gravity."
+      ],
+      showButtons: true
     }
   ];
 
@@ -79,6 +91,29 @@ const SectionFoundingMoment = () => {
                     </p>
                   ))}
                 </div>
+
+                {(m as any).showButtons && (
+                  <div className="mt-6">
+                    <div className="flex flex-wrap gap-4 mb-3">
+                      <a
+                        href="/institutional-deck.pdf"
+                        download
+                        className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+                      >
+                        Download Institutional Deck
+                      </a>
+                      <a
+                        href="mailto:access@sociisgroup.com?subject=Alignment%20Conversation%20Request"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+                      >
+                        Request Alignment Conversation
+                      </a>
+                    </div>
+                    <p className="text-xs text-muted-foreground/70 italic">
+                      Attendance by private confirmation only.
+                    </p>
+                  </div>
+                )}
               </div>
             ))}
           </div>

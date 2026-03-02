@@ -2,7 +2,7 @@ const SectionOneBillion = () => {
   const channels = [
     {
       name: "Love Tomorrow",
-      description: "The 300 Immersive Experience, in collaboration with Love Tomorrow, a We Are One World experience, on the Tomorrowland premises.",
+      description: "The 300 Immersive Experience, in collaboration with Love Tomorrow, on the Tomorrowland premises.",
     },
     {
       name: "Podeo",

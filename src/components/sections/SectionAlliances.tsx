@@ -10,7 +10,7 @@ const SectionAlliances = () => {
             <div className="relative overflow-hidden aspect-[21/9] rounded-2xl">
               <img
                 src={alliancesImage}
-                alt="Institutional venue"
+                alt="Institutional environments"
                 className="w-full h-full object-cover grayscale hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent"></div>
@@ -75,17 +75,6 @@ const SectionAlliances = () => {
               </p>
             </div>
 
-            {/* Editorial Rooms We Respect */}
-            <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]">
-              <div className="relative pb-4 mb-4 border-b border-border/50">
-                <h3 className="font-sans text-base tracking-[0.2em] text-foreground uppercase">
-                  Editorial Rooms We Respect
-                </h3>
-              </div>
-              <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair
-              </p>
-            </div>
           </div>
 
           {/* Closing */}
