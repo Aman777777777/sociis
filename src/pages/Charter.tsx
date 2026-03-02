@@ -78,8 +78,7 @@ const Charter = () => {
               <div className="pt-8 border-t border-border">
                 <a
                   href="/SociisGroup_Institutional_Charter_v1_0.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  download="SociisGroup_Institutional_Charter_v1_0.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background font-sans text-base tracking-wide hover:bg-foreground/90 transition-colors"
                 >
                   Download PDF
