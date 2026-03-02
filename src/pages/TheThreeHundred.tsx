@@ -26,7 +26,7 @@ const SlideCover = () => (
         The 300 — Immersive Cultural Experience
       </p>
       <p className="font-sans text-[1.05rem] text-white/40 leading-relaxed max-w-[600px]">
-        A private SociisGroup™ experience on the Tomorrowland premises, in collaboration with Love Tomorrow.
+        A private SociisGroup™ immersive experience for 300 curated leaders.
       </p>
     </div>
   </div>
@@ -48,17 +48,14 @@ const SlideWhatThisIs = () => (
         Shape Tomorrow Today is SociisGroup's flagship cultural moment for 300 curated leaders, founders, creators, and operators.
       </p>
       <p className="font-sans text-[1.15rem] font-light text-white/55 leading-[1.85] mb-8">
-        This is a two-and-a-half to three-hour private immersive experience taking place in a dedicated, confidential location on the Tomorrowland premises during Love Tomorrow.
+        This is a two-and-a-half to three-hour private immersive experience taking place in a dedicated, confidential institutional setting.
       </p>
       <div className="border-l-2 border-white/15 pl-6 my-10">
-        <p className="font-sans text-[1.1rem] text-white/45 leading-[1.8] italic">
-          This is not a Love Tomorrow event.
-        </p>
-        <p className="font-sans text-[1.1rem] text-white/70 leading-[1.8] mt-2">
-          This is a SociisGroup™ private room within a global cultural moment.
+        <p className="font-sans text-[1.1rem] text-white/70 leading-[1.8]">
+          A SociisGroup™ private room within a global cultural moment.
         </p>
       </div>
-      <p className="font-sans text-[0.8rem] text-white/25 mt-12">Tomorrowland premises, Boom.</p>
+      <p className="font-sans text-[0.8rem] text-white/25 mt-12">Belgium, July 2026.</p>
     </div>
   </div>
 );
@@ -101,7 +98,7 @@ const SlideInsideTheRoom = () => (
   </div>
 );
 
-const SlideWhyTomorrowland = () => (
+const SlideCulturalContext = () => (
   <div className="relative w-full h-full flex items-center bg-[#0a0a0a]">
     <div
       className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -112,15 +109,15 @@ const SlideWhyTomorrowland = () => (
     />
     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/75 to-[#0a0a0a]/50" />
     <div className="relative z-10 p-[6%] max-w-[62%]">
-      <p className="font-sans text-[0.8rem] uppercase tracking-[0.25em] text-white/30 mb-8">Why Tomorrowland / Love Tomorrow</p>
+      <p className="font-sans text-[0.8rem] uppercase tracking-[0.25em] text-white/30 mb-8">Cultural Context</p>
       <p className="font-sans text-[1.25rem] font-light text-white/75 leading-[1.8] mb-6">
-        Love Tomorrow convenes thousands of leaders, creators, and builders around culture, technology, and the future of society.
+        SociisGroup™ selects cultural environments where leaders, creators, and builders converge around the future of society.
       </p>
       <p className="font-sans text-[1.1rem] font-light text-white/50 leading-[1.85] mb-6">
-        SociisGroup™ operates independently, on the Tomorrowland premises, in collaboration with Love Tomorrow.
+        The 300 operates as a sovereign institutional experience within a broader cultural moment.
       </p>
       <p className="font-sans text-[1.1rem] font-light text-white/50 leading-[1.85] mb-12">
-        We use the cultural gravity of Tomorrowland to anchor a private institutional experience.
+        Cultural gravity amplifies institutional conduct.
       </p>
       <div className="my-10">
         <p className="font-sans text-[1.6rem] font-light text-white/35 leading-[1.5]">
@@ -130,7 +127,6 @@ const SlideWhyTomorrowland = () => (
           300 step inside.
         </p>
       </div>
-      <p className="font-sans text-[0.8rem] text-white/25 mt-8">Cultural context: Love Tomorrow, Tomorrowland premises.</p>
     </div>
   </div>
 );
@@ -170,7 +166,6 @@ const SlideWhatYouReceive = () => (
       <ul className="space-y-5 mb-14 max-w-[65%]">
         {[
           "Access to The 300, Shape Tomorrow Today private SociisGroup™ experience",
-          "Full Love Tomorrow VIP access on the Tomorrowland premises",
           "Curated entry into the SociisGroup cultural ecosystem",
           "Priority positioning for future SociisGroup experiences",
         ].map((item, i) => (
@@ -184,11 +179,11 @@ const SlideWhatYouReceive = () => (
         <div>
           <p className="font-sans text-[0.8rem] uppercase tracking-[0.25em] text-white/30 mb-3">Practical</p>
           <p className="font-sans text-[1.1rem] text-white/65">July 23, 2026</p>
-          <p className="font-sans text-[0.95rem] text-white/40 mt-1">Tomorrowland premises, Boom</p>
+          <p className="font-sans text-[0.95rem] text-white/40 mt-1">Belgium</p>
         </div>
         <div className="text-right">
           <p className="font-sans text-[2rem] font-light text-white/80">€850</p>
-          <p className="font-sans text-[0.85rem] text-white/35 mt-1">incl. full Love Tomorrow VIP experience</p>
+          <p className="font-sans text-[0.85rem] text-white/35 mt-1">incl. full immersive experience</p>
         </div>
       </div>
     </div>
@@ -228,7 +223,7 @@ const SlideClose = () => (
   </div>
 );
 
-const SLIDES = [SlideCover, SlideWhatThisIs, SlideInsideTheRoom, SlideWhyTomorrowland, SlideWhoThisIsFor, SlideWhatYouReceive, SlideClose];
+const SLIDES = [SlideCover, SlideWhatThisIs, SlideInsideTheRoom, SlideCulturalContext, SlideWhoThisIsFor, SlideWhatYouReceive, SlideClose];
 
 /* ─── Deck Page ─── */
 
