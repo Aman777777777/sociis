@@ -94,11 +94,10 @@ const SectionExperiences = memo(() => {
                   </p>
                   <a
                     href={`/${exp.name.toLowerCase().replace(/\s/g, '-')}-deck.pdf`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    download
                     className="inline-flex items-center gap-2 px-4 py-2 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
                   >
-                    View Experience Deck (PDF)
+                    Download Institutional Deck
                   </a>
                   <div className={`mt-6 h-px bg-border overflow-hidden ${index % 2 === 1 ? 'ml-auto' : ''}`} style={{ width: '60px' }}>
                     {shouldReduceAnimations ? (

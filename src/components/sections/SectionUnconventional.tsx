@@ -19,12 +19,8 @@ const SectionUnconventional = () => {
             SociisGroup deploys culture, sovereign gatherings, film, music, publishing and immersive formats as institutional channels for behavioural standards.
           </p>
 
-          <p className="text-body text-muted-foreground mb-8">
-            Instead of preaching to the already convinced, SociisGroup reaches millions through formats that embed conduct into lived experience.
-          </p>
-
           <p className="font-accent text-xl sm:text-2xl text-foreground italic">
-            Culture is not the purpose. Culture is the distribution layer.
+            Culture distributes the Standard.<br />
             Authority remains with the institution.
           </p>
         </div>

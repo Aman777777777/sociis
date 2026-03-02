@@ -99,7 +99,7 @@ const SectionHero = memo(() => {
             <p 
               className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
             >
-              <span className="font-medium">SociisGroup™</span> is a sovereign independent behavioural institution and benefit corporation. It builds behavioural infrastructure for sustainability, hospitality and humanity, making Impact at Scale real and accountable.
+              <span className="font-medium">SociisGroup™</span> is a Sovereign Independent Behavioural Institution and Benefit Corporation. It builds behavioural infrastructure for sustainability, hospitality and humanity, making Impact at Scale real and accountable.
             </p>
             <p 
               className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"

@@ -25,10 +25,6 @@ const SectionWhat = () => {
               Distributes the Sustainable Behavioural Standard (SBS™) through culture until it reaches one billion people.
             </p>
           </div>
-
-          <p className="text-body text-muted-foreground">
-            Everything else is infrastructure.
-          </p>
         </div>
       </div>
     </section>
