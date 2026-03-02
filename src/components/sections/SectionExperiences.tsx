@@ -23,7 +23,7 @@ const SectionExperiences = memo(() => {
     {
       name: "The 300",
       subtitle: "Immersive Format",
-      description: "The Sustainable Behavioural Standard (SBS™) deployed at cultural scale. In collaboration with Love Tomorrow, a We Are One World experience, on the Tomorrowland premises.",
+      description: "A private SociisGroup™ experience on the Tomorrowland premises, in collaboration with Love Tomorrow.",
       image: experienceFestival,
     },
   ];

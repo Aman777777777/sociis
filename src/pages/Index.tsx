@@ -17,12 +17,12 @@ import SectionCulture from "@/components/sections/SectionCulture";
 import SectionUnconventional from "@/components/sections/SectionUnconventional";
 import SectionOneBillion from "@/components/sections/SectionOneBillion";
 import SectionFlywheel from "@/components/sections/SectionFlywheel";
-import SectionCalendar from "@/components/sections/SectionCalendar";
+import SectionFoundingMoment from "@/components/sections/SectionFoundingMoment";
+import SectionContinentalChapters from "@/components/sections/SectionContinentalChapters";
 import SectionAlliances from "@/components/sections/SectionAlliances";
 import SectionLime from "@/components/sections/SectionLime";
 import SectionCharter from "@/components/sections/SectionCharter";
 import SectionMedia from "@/components/sections/SectionMedia";
-import SectionInstitutionalEnvironments from "@/components/sections/SectionInstitutionalEnvironments";
 import SectionAccess from "@/components/sections/SectionAccess";
 
 const Index = () => {
@@ -59,9 +59,13 @@ const Index = () => {
         </div>
         <SectionOneBillion />
         <SectionFlywheel />
-        <SectionCalendar />
+
+        {/* 6. Institutional Arc */}
+        <SectionFoundingMoment />
+        <SectionContinentalChapters />
+
+        {/* 7. Collaborations & Proof */}
         <SectionAlliances />
-        <SectionInstitutionalEnvironments />
         <SectionMedia />
         <SectionAccess />
         <Footer />
