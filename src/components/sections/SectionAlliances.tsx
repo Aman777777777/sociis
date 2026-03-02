@@ -1,21 +1,6 @@
 import alliancesImage from "@/assets/alliances-venue.jpg";
 
 const SectionAlliances = () => {
-  const alliances = [
-    {
-      category: "Venues & Hospitality",
-      collaborators: "The Connaught · Club TwentyTwo · Orient Express · Corinthia Brussels · Mandarin Oriental · La Réserve Geneva · Aman · Hôtel de Paris Monte-Carlo · Le Meurice Paris"
-    },
-    {
-      category: "Culture & Media",
-      collaborators: "Tomorrowland · Love Tomorrow · Podeo · TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair"
-    },
-    {
-      category: "Humanity & Philanthropy",
-      collaborators: "Under One Sky · The Diana Award · We Do It Together"
-    }
-  ];
-
   return (
     <section id="alliances" className="py-20 sm:py-28 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
@@ -33,12 +18,12 @@ const SectionAlliances = () => {
               <div className="absolute inset-0 flex items-center">
                 <div className="px-8 md:px-16">
                   <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3">
-                    Institutional Partners
+                    Institutional Proof
                   </p>
                   <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
                     Selected Collaborations
                     <br />
-                    <span className="text-accent">&</span> Allies
+                    <span className="text-accent">&</span> Institutional Environments
                   </h2>
                 </div>
               </div>
@@ -52,29 +37,59 @@ const SectionAlliances = () => {
             SociisGroup collaborates with institutions whose environments, governance and ethics amplify behavioural standards at scale.
           </p>
 
-          {/* Alliance Categories */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {alliances.map((alliance, index) => (
-              <div 
-                key={alliance.category}
-                className="group opacity-0 animate-[fade-in_0.8s_ease-out_forwards]"
-                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
-              >
-                <div className="relative pb-4 mb-4 border-b border-border/50 group-hover:border-accent/50 transition-colors duration-500">
-                  <h3 className="font-sans text-base tracking-[0.2em] text-foreground uppercase">
-                    {alliance.category}
-                  </h3>
-                  <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                </div>
-                <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                  {alliance.collaborators}
-                </p>
+          {/* Categories */}
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            {/* Confirmed Institutional Locations */}
+            <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.3s_forwards]">
+              <div className="relative pb-4 mb-4 border-b border-border/50">
+                <h3 className="font-sans text-base tracking-[0.2em] text-foreground uppercase">
+                  Confirmed Institutional Locations
+                </h3>
               </div>
-            ))}
+              <p className="font-sans text-base text-muted-foreground leading-relaxed">
+                Corinthia Grand Hotel Astoria Brussels · Tomorrowland Premises
+              </p>
+            </div>
+
+            {/* Institutional Environments */}
+            <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.4s_forwards]">
+              <div className="relative pb-4 mb-4 border-b border-border/50">
+                <h3 className="font-sans text-base tracking-[0.2em] text-foreground uppercase">
+                  Institutional Environments
+                </h3>
+              </div>
+              <p className="font-sans text-base text-muted-foreground leading-relaxed">
+                The Connaught · La Réserve Geneva · Aman · Mandarin Oriental · Le Meurice · Hôtel de Paris Monte-Carlo · Orient Express
+              </p>
+            </div>
+
+            {/* Cultural & Media Platforms */}
+            <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.5s_forwards]">
+              <div className="relative pb-4 mb-4 border-b border-border/50">
+                <h3 className="font-sans text-base tracking-[0.2em] text-foreground uppercase">
+                  Cultural & Media Platforms
+                </h3>
+              </div>
+              <p className="font-sans text-base text-muted-foreground leading-relaxed">
+                Love Tomorrow · Podeo
+              </p>
+            </div>
+
+            {/* Editorial Rooms We Respect */}
+            <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]">
+              <div className="relative pb-4 mb-4 border-b border-border/50">
+                <h3 className="font-sans text-base tracking-[0.2em] text-foreground uppercase">
+                  Editorial Rooms We Respect
+                </h3>
+              </div>
+              <p className="font-sans text-base text-muted-foreground leading-relaxed">
+                TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair
+              </p>
+            </div>
           </div>
 
           {/* Closing */}
-          <div className="pt-8 border-t border-border/50 flex items-center gap-6 opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]">
+          <div className="pt-8 border-t border-border/50 flex items-center gap-6 opacity-0 animate-[fade-in_0.8s_ease-out_0.7s_forwards]">
             <div className="w-12 h-px bg-accent"></div>
             <p className="text-body text-muted-foreground italic">
               Each collaboration exists to amplify institutional Impact through behavioural standards.

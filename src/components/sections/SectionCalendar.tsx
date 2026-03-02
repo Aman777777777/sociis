@@ -28,8 +28,8 @@ const SectionCalendar = () => {
     },
     {
       date: "Summer 2026",
-      location: "Love Tomorrow",
-      items: ["The immersive experience created with Love Tomorrow, a We Are One World experience."]
+      location: "Tomorrowland Premises",
+      items: ["Shape Tomorrow Today™ — The 300. A private SociisGroup™ experience on the Tomorrowland premises, in collaboration with Love Tomorrow."]
     },
     {
       date: "Autumn 2026",

@@ -160,7 +160,7 @@ const teamMembers: TeamMember[] = [
   // Trusted Advisors
   {
     name: "Marc Bogaerts",
-    role: "Chief Commercial Officer (CCO)",
+    role: "Trusted Advisor, Artistic Director",
     image: marc,
     category: "advisor"
   },
