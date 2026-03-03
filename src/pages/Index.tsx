@@ -21,6 +21,7 @@ import SectionAlliances from "@/components/sections/SectionAlliances";
 import SectionLime from "@/components/sections/SectionLime";
 import SectionMedia from "@/components/sections/SectionMedia";
 import SectionAccess from "@/components/sections/SectionAccess";
+import SectionAmbassadors from "@/components/sections/SectionAmbassadors";
 
 const Index = () => {
   return (
@@ -50,6 +51,7 @@ const Index = () => {
         <SectionHouse />
         
         {/* 5. Governance & Integrity */}
+        <SectionAmbassadors />
         <SectionLime />
         <SectionOneBillion />
         <SectionFlywheel />
