@@ -8,6 +8,7 @@ const ambassadors = [
     slug: "iris-van-der-veken",
     label: "Ambassador",
     photo: irisPhoto as string | null,
+    bio: "Iris van der Veken is a recognised voice in sustainability, responsible business, and institutional engagement. With a career dedicated to bridging industry, policy, and civil society, she has shaped frameworks that hold organisations accountable beyond disclosure. Her expertise lies in translating complex sustainability mandates into actionable institutional practice. As an Ambassador of SociisGroup™, she reinforces the institution's commitment to making the Sustainable Behavioural Standard (SBS™) a governing framework rather than a reporting exercise.",
   },
 ];
 
@@ -69,12 +70,14 @@ const AmbassadorCard = ({
       <h3 className="font-sans text-lg text-foreground font-medium mb-1 group-hover:text-accent transition-colors duration-300">
         {ambassador.name}
       </h3>
-      <p className="font-sans text-sm text-muted-foreground tracking-wide">
+      <p className="font-sans text-sm text-muted-foreground tracking-wide mb-4">
         {ambassador.label}
       </p>
-      <p className="font-sans text-xs text-muted-foreground/70 mt-2 italic">
-        Personal statement forthcoming.
-      </p>
+      {ambassador.bio && (
+        <p className="font-sans text-sm text-muted-foreground/80 leading-relaxed">
+          {ambassador.bio}
+        </p>
+      )}
     </Link>
   );
 };
