@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import irisPhoto from "@/assets/team/iris-van-der-veken.jpg";
 
 const ambassadors = [
@@ -42,15 +42,10 @@ const AmbassadorCard = ({
 }: {
   ambassador: (typeof ambassadors)[number];
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [showBio, setShowBio] = useState(false);
 
   return (
-    <Link
-      to={`/ambassadors/${ambassador.slug}`}
-      className="group block"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className="block">
       <div className="relative overflow-hidden rounded-2xl mb-5 bg-muted/30 aspect-[3/4]">
         {ambassador.photo ? (
           <img
@@ -68,31 +63,51 @@ const AmbassadorCard = ({
           </div>
         )}
       </div>
-      <h3 className="font-sans text-lg text-foreground font-medium mb-1 group-hover:text-accent transition-colors duration-300">
+      <h3 className="font-sans text-lg text-foreground font-medium mb-1">
         {ambassador.name}
       </h3>
       <p className="font-sans text-sm text-muted-foreground tracking-wide mb-4">
         {ambassador.label}
       </p>
       {ambassador.bio && (
-        <div className="font-sans text-sm text-muted-foreground/80 leading-relaxed space-y-3">
-          {ambassador.bio.split('\n\n').map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-        </div>
+        <>
+          <button
+            onClick={() => setShowBio(!showBio)}
+            className="font-sans text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide inline-flex items-center gap-2"
+          >
+            {showBio ? "Hide bio" : "Read bio"}
+            <span className={`transition-transform duration-300 ${showBio ? "rotate-180" : ""}`}>↓</span>
+          </button>
+          <AnimatePresence>
+            {showBio && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="pt-4 font-sans text-sm text-muted-foreground/80 leading-relaxed space-y-3">
+                  {ambassador.bio.split('\n\n').map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                </div>
+                {ambassador.statement && (
+                  <div className="mt-6">
+                    <p className="font-sans text-xs tracking-[0.2em] text-muted-foreground uppercase mb-3">Ambassador Statement</p>
+                    <div className="font-sans text-sm text-muted-foreground/80 leading-relaxed space-y-3">
+                      {ambassador.statement.split('\n\n').map((paragraph, i) => (
+                        <p key={i}>{paragraph}</p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </>
       )}
-      {(ambassador as any).statement && (
-        <div className="mt-6">
-          <p className="font-sans text-xs tracking-[0.2em] text-muted-foreground uppercase mb-3">Ambassador Statement</p>
-          <div className="font-sans text-sm text-muted-foreground/80 leading-relaxed space-y-3">
-            {(ambassador as any).statement.split('\n\n').map((paragraph: string, i: number) => (
-              <p key={i}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-      )}
-    </Link>
+    </div>
   );
 };
-
 export default SectionAmbassadors;
