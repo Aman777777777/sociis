@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import irisPhoto from "@/assets/team/iris-van-der-veken.jpg";
 
 const ambassadors = [
   {
     name: "Dr. Ilham Kadri",
     slug: "ilham-kadri",
     label: "Ambassador",
+    photo: null as string | null,
   },
   {
     name: "Iris van der Veken",
     slug: "iris-van-der-veken",
     label: "Ambassador",
+    photo: irisPhoto as string | null,
   },
 ];
 
@@ -53,14 +56,21 @@ const AmbassadorCard = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative overflow-hidden rounded-2xl mb-5 bg-muted/30 aspect-[3/4]">
-        {/* Placeholder portrait area */}
-        <div className="w-full h-full flex items-center justify-center bg-muted/20">
-          <div className="w-24 h-24 rounded-full bg-muted/40 flex items-center justify-center">
-            <span className="text-muted-foreground/50 text-xs tracking-widest uppercase">
-              Portrait
-            </span>
+        {ambassador.photo ? (
+          <img
+            src={ambassador.photo}
+            alt={ambassador.name}
+            className="w-full h-full object-cover object-top"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-muted/20">
+            <div className="w-24 h-24 rounded-full bg-muted/40 flex items-center justify-center">
+              <span className="text-muted-foreground/50 text-xs tracking-widest uppercase">
+                Portrait
+              </span>
+            </div>
           </div>
-        </div>
+        )}
       </div>
       <h3 className="font-sans text-lg text-foreground font-medium mb-1 group-hover:text-accent transition-colors duration-300">
         {ambassador.name}
