@@ -78,7 +78,7 @@ const Calendar = () => {
 
                   <div>
                     <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-2">23 July 2026</p>
-                    <p className="font-sans text-base text-foreground font-medium mb-1">Belgium</p>
+                    <p className="font-sans text-base text-foreground font-medium mb-1">Tomorrowland Premises, Belgium</p>
                     <p className="font-sans text-sm text-muted-foreground mb-6">Shape Tomorrow Today™, The 300</p>
                     <div className="flex flex-wrap gap-4 mb-3">
                       <a
