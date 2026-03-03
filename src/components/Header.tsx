@@ -22,7 +22,8 @@ const Header = () => {
     { name: "Experiences", href: "/#experiences" },
     { name: "House", href: "/#house" },
     { name: "Culture", href: "/#culture" },
-    { name: "Governance", href: "/governance", isPage: true },
+    { name: "Calendar", href: "/calendar", isPage: true },
+    { name: "Team", href: "/governance", isPage: true },
     { name: "Charter", href: "/charter", isPage: true },
     { name: "Access", href: "/#access" },
   ];
@@ -31,7 +32,6 @@ const Header = () => {
     setIsMobileMenuOpen(false);
     if (href.startsWith("/#")) {
       const id = href.substring(2);
-      // If not on home page, navigate to home first then scroll
       if (location.pathname !== "/") {
         navigate("/");
         setTimeout(() => {
@@ -59,7 +59,6 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
           <Link
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -71,7 +70,6 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               link.isPage ? (
@@ -100,7 +98,6 @@ const Header = () => {
             ))}
           </div>
 
-          {/* House CTA - Primary */}
           <div className="hidden lg:flex items-center gap-6">
             <a
               href="https://www.sociis.house/"
@@ -112,7 +109,6 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -121,7 +117,6 @@ const Header = () => {
           </button>
         </nav>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background py-8 px-6 animate-fade-in border-t border-border shadow-lg">
             <div className="flex flex-col gap-6">

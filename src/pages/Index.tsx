@@ -17,11 +17,8 @@ import SectionCulture from "@/components/sections/SectionCulture";
 import SectionUnconventional from "@/components/sections/SectionUnconventional";
 import SectionOneBillion from "@/components/sections/SectionOneBillion";
 import SectionFlywheel from "@/components/sections/SectionFlywheel";
-import SectionFoundingMoment from "@/components/sections/SectionFoundingMoment";
-import SectionContinentalChapters from "@/components/sections/SectionContinentalChapters";
 import SectionAlliances from "@/components/sections/SectionAlliances";
 import SectionLime from "@/components/sections/SectionLime";
-import SectionCharter from "@/components/sections/SectionCharter";
 import SectionMedia from "@/components/sections/SectionMedia";
 import SectionAccess from "@/components/sections/SectionAccess";
 
@@ -54,17 +51,10 @@ const Index = () => {
         
         {/* 5. Governance & Integrity */}
         <SectionLime />
-        <div className="container mx-auto px-6 lg:px-8">
-          <SectionCharter />
-        </div>
         <SectionOneBillion />
         <SectionFlywheel />
 
-        {/* 6. Institutional Arc */}
-        <SectionFoundingMoment />
-        <SectionContinentalChapters />
-
-        {/* 7. Collaborations & Proof */}
+        {/* 6. Collaborations & Proof */}
         <SectionAlliances />
         <SectionMedia />
         <SectionAccess />

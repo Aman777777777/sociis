@@ -104,7 +104,7 @@ const SectionHero = memo(() => {
             <p 
               className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
             >
-              SociisGroup™ operates on standards (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
+              SociisGroup™ operates on the Sustainable Behavioural Standard (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
             </p>
             {/* Join button removed - layout balanced with existing content */}
           </div>

@@ -18,6 +18,23 @@ const Charter = () => {
               </h1>
               <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
+              {/* Action Buttons */}
+              <div className="flex flex-wrap gap-4 mb-10">
+                <a
+                  href="#charter-text"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background font-sans text-base tracking-wide hover:bg-foreground/90 transition-colors"
+                >
+                  Read the Charter
+                </a>
+                <a
+                  href="/SociisGroup_Institutional_Charter_v1_0.pdf"
+                  download="SociisGroup_Institutional_Charter_v1_0.pdf"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-foreground text-foreground font-sans text-base tracking-wide hover:bg-foreground hover:text-background transition-colors"
+                >
+                  Download Institutional Charter
+                </a>
+              </div>
+
               <div className="space-y-2 text-sm text-muted-foreground mb-10">
                 <p>Status: Controlled Circulation, Internal Alignment</p>
                 <p>Audience: Circle, Advisors, Companies, Allies, Sovereign Actors (by exception)</p>
@@ -29,7 +46,7 @@ const Charter = () => {
               </p>
 
               {/* Charter Content */}
-              <div className="space-y-12 mb-16">
+              <div id="charter-text" className="space-y-12 mb-16">
 
                 {/* 1. Welcome */}
                 <div>
