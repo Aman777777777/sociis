@@ -60,7 +60,7 @@ const AmbassadorCard = ({
           <img
             src={ambassador.photo}
             alt={ambassador.name}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-top grayscale"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted/20">
