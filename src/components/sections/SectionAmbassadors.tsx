@@ -4,12 +4,6 @@ import irisPhoto from "@/assets/team/iris-van-der-veken.jpg";
 
 const ambassadors = [
   {
-    name: "Dr. Ilham Kadri",
-    slug: "ilham-kadri",
-    label: "Ambassador",
-    photo: null as string | null,
-  },
-  {
     name: "Iris van der Veken",
     slug: "iris-van-der-veken",
     label: "Ambassador",
