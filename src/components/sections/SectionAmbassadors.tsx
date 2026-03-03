@@ -8,7 +8,8 @@ const ambassadors = [
     slug: "iris-van-der-veken",
     label: "Ambassador",
     photo: irisPhoto as string | null,
-    bio: "Iris van der Veken is a recognised voice in sustainability, responsible business, and institutional engagement. With a career dedicated to bridging industry, policy, and civil society, she has shaped frameworks that hold organisations accountable beyond disclosure. Her expertise lies in translating complex sustainability mandates into actionable institutional practice. As an Ambassador of SociisGroup™, she reinforces the institution's commitment to making the Sustainable Behavioural Standard (SBS™) a governing framework rather than a reporting exercise.",
+    bio: "Iris Van der Veken is Executive Director and Secretary General of the Watch and Jewellery Initiative 2030, co-founded by Kering and Cartier and delegated by Richemont. She is also a member of the Inclusive Leadership Council of 100 Women @ Davos.\n\nWith a background in law, public affairs, and sustainability, Iris brings over 25 years of international experience across India, China, Africa, Thailand, and Sri Lanka. Her work spans the full value chain, including human rights due diligence, decent labour, environmental standards, and traceability, with a consistent focus on sustainability as a driver of long-term business resilience.\n\nA recognised coalition builder, she has played a key role in advancing gender equality within the industry through partnerships with UN Women, particularly in gender-responsive procurement. She also served as the first Chairwoman of UN Global Compact Belgium under the Ministry of Foreign Affairs.",
+    statement: "Iris Van der Veken serves as an Ambassador of SociisGroup in her personal capacity.\n\nShe believes the world requires a form of leadership that is collaborative, inclusive, and grounded in humility, courage, and purpose. For her, this shift begins with rethinking how future generations are educated and how leadership itself is developed.",
   },
 ];
 
@@ -74,9 +75,21 @@ const AmbassadorCard = ({
         {ambassador.label}
       </p>
       {ambassador.bio && (
-        <p className="font-sans text-sm text-muted-foreground/80 leading-relaxed">
-          {ambassador.bio}
-        </p>
+        <div className="font-sans text-sm text-muted-foreground/80 leading-relaxed space-y-3">
+          {ambassador.bio.split('\n\n').map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </div>
+      )}
+      {(ambassador as any).statement && (
+        <div className="mt-6">
+          <p className="font-sans text-xs tracking-[0.2em] text-muted-foreground uppercase mb-3">Ambassador Statement</p>
+          <div className="font-sans text-sm text-muted-foreground/80 leading-relaxed space-y-3">
+            {(ambassador as any).statement.split('\n\n').map((paragraph: string, i: number) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
       )}
     </Link>
   );
