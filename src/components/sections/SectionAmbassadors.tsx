@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import irisPhoto from "@/assets/team/iris-van-der-veken.jpg";
@@ -46,26 +47,28 @@ const AmbassadorCard = ({
 
   return (
     <div className="block">
-      <div className="relative overflow-hidden rounded-2xl mb-5 bg-muted/30 aspect-[3/4]">
-        {ambassador.photo ? (
-          <img
-            src={ambassador.photo}
-            alt={ambassador.name}
-            className="w-full h-full object-cover object-top grayscale"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-muted/20">
-            <div className="w-24 h-24 rounded-full bg-muted/40 flex items-center justify-center">
-              <span className="text-muted-foreground/50 text-xs tracking-widest uppercase">
-                Portrait
-              </span>
+      <Link to={`/ambassadors/${ambassador.slug}`} className="group block">
+        <div className="relative overflow-hidden rounded-2xl mb-5 bg-muted/30 aspect-[3/4] cursor-pointer">
+          {ambassador.photo ? (
+            <img
+              src={ambassador.photo}
+              alt={ambassador.name}
+              className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-muted/20">
+              <div className="w-24 h-24 rounded-full bg-muted/40 flex items-center justify-center">
+                <span className="text-muted-foreground/50 text-xs tracking-widest uppercase">
+                  Portrait
+                </span>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-      <h3 className="font-sans text-lg text-foreground font-medium mb-1">
-        {ambassador.name}
-      </h3>
+          )}
+        </div>
+        <h3 className="font-sans text-lg text-foreground font-medium mb-1 group-hover:text-accent transition-colors duration-300">
+          {ambassador.name}
+        </h3>
+      </Link>
       <p className="font-sans text-sm text-muted-foreground tracking-wide mb-4">
         {ambassador.label}
       </p>
