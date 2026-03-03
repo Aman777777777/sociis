@@ -4,6 +4,11 @@ const SectionProblem = () => {
   return (
     <section id="problem" className="py-20 sm:py-28 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
+        {/* Institutional positioning lines */}
+        <div className="max-w-6xl mb-16">
+          <p className="text-body-lg text-foreground">We do not measure sustainability outcomes.</p>
+          <p className="text-body-lg text-foreground">We measure the behaviour that causes them.</p>
+        </div>
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl">
           {/* Image */}
           <div className="relative group order-2 lg:order-1 opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">

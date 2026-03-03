@@ -13,18 +13,21 @@ const SectionExperiences = memo(() => {
       subtitle: "Leadership Table",
       description: "One table. One conversation. Leadership conduct calibrated in private.",
       image: experienceDinner,
+      deckUrl: "/the-22-deck.pdf",
     },
     {
       name: "The 64",
       subtitle: "Sovereign Gathering",
       description: "An intentionally limited environment where institutional conduct and culture converge.",
       image: experienceGala,
+      deckUrl: "/the-64-deck.pdf",
     },
     {
       name: "The 300",
       subtitle: "Immersive Format",
       description: "A private SociisGroup™ immersive experience for 300 curated leaders.",
       image: experienceFestival,
+      deckUrl: "/the-300-deck.pdf",
     },
   ];
 
@@ -92,6 +95,14 @@ const SectionExperiences = memo(() => {
                   <p className="text-body text-muted-foreground leading-relaxed max-w-md mb-4">
                     {exp.description}
                   </p>
+                  <a
+                    href={exp.deckUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors ${index % 2 === 1 ? 'md:ml-auto' : ''}`}
+                  >
+                    Download Experience Deck (PDF)
+                  </a>
                   <div className={`mt-6 h-px bg-border overflow-hidden ${index % 2 === 1 ? 'ml-auto' : ''}`} style={{ width: '60px' }}>
                     {shouldReduceAnimations ? (
                       <div className="h-full w-full bg-accent"></div>

@@ -11,13 +11,13 @@ import Index from "./pages/Index";
 import Governance from "./pages/Governance";
 import AmbassadorProfile from "./pages/AmbassadorProfile";
 import Charter from "./pages/Charter";
+import Calendar from "./pages/Calendar";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 import TheThreeHundred from "./pages/TheThreeHundred";
 
-// Create query client with optimized settings for mobile
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -81,13 +81,12 @@ const App = () => {
             <Route path="/governance" element={<Governance />} />
             <Route path="/ambassadors/:slug" element={<AmbassadorProfile />} />
             <Route path="/charter" element={<Charter />} />
+            <Route path="/calendar" element={<Calendar />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
-            {/* Redirect old route */}
             <Route path="/who-is-inside" element={<Governance />} />
             <Route path="/the-300" element={<TheThreeHundred />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieBanner />

@@ -43,14 +43,24 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/#access" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
-                  Access
-                </a>
+                <Link to="/calendar" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                  Calendar
+                </Link>
               </li>
               <li>
                 <Link to="/governance" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
-                  Governance
+                  Team
                 </Link>
+              </li>
+              <li>
+                <Link to="/charter" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                  Charter
+                </Link>
+              </li>
+              <li>
+                <a href="/#access" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                  Access
+                </a>
               </li>
             </ul>
           </div>

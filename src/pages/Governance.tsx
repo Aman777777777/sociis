@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import { Link } from "react-router-dom";
-import SectionCharter from "@/components/sections/SectionCharter";
 import {
   Dialog,
   DialogContent,
@@ -19,7 +18,6 @@ import abbas from "@/assets/team/abbas.jpg";
 import rudi from "@/assets/team/rudi.png";
 import zanele from "@/assets/team/zanele.jpg";
 import luc from "@/assets/team/luc.jpg";
-import marc from "@/assets/team/marc.jpg";
 import joost from "@/assets/team/joost.jpeg";
 
 // Import team photos - Council
@@ -42,6 +40,7 @@ import erikNew from "@/assets/team/erik-new.jpg";
 import fei from "@/assets/team/fei.jpg";
 import karim from "@/assets/team/karim.jpg";
 import james from "@/assets/team/james.webp";
+import marc from "@/assets/team/marc.jpg";
 
 
 interface TeamMember {
@@ -319,7 +318,7 @@ const Governance = () => {
       <section className="pt-32 pb-16">
         <div className="container mx-auto px-6 lg:px-8">
           <h1 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            Governance
+            Team
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-8"></div>
           <p className="text-body text-muted-foreground max-w-2xl">
@@ -332,72 +331,37 @@ const Governance = () => {
       <section className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
           <h2 className="font-sans text-xs tracking-widest text-muted-foreground uppercase mb-2">
-            Board
+            Executive Directors
           </h2>
           <p className="font-sans text-sm text-muted-foreground/70 mb-10">
-            The Board provides institutional oversight and strategic direction for SociisGroup™.
+            Members of the Board with executive responsibility for institutional direction and execution.
           </p>
 
-          {/* Executive Leadership Team */}
-          <div className="mb-12">
-            <h3 className="font-sans text-xs tracking-widest text-muted-foreground/50 uppercase mb-2">
-              Executive Leadership Team
-            </h3>
-            <p className="font-sans text-xs text-muted-foreground/50 mb-6">
-              Members of the Board with executive responsibility for institutional direction and execution.
-            </p>
-          
-            <div className="flex flex-wrap gap-8">
-              {executive.map((member, index) => (
-                <TeamCard 
-                  key={member.name} 
-                  member={member} 
-                  index={index} 
-                  onClick={() => setSelectedMember(member)}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Board Members */}
-          <div>
-            <h3 className="font-sans text-xs tracking-widest text-muted-foreground/50 uppercase mb-2">
-              Board Members
-            </h3>
-            <p className="font-sans text-xs text-muted-foreground/50 mb-6">
-              Board members contributing to governance, strategy and institutional development.
-            </p>
-            <div className="flex flex-wrap gap-8">
-              {board.map((member, index) => (
-                <TeamCard 
-                  key={member.name} 
-                  member={member} 
-                  index={index} 
-                  onClick={() => setSelectedMember(member)}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Council */}
-      <section className="py-12 border-t border-border/50">
-        <div className="container mx-auto px-6 lg:px-8">
-          <h2 className="font-sans text-xs tracking-widest text-muted-foreground uppercase mb-2">
-            The Council
-          </h2>
-          <p className="font-sans text-sm text-muted-foreground/70 mb-10">
-            The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.
-          </p>
-          <div className="flex flex-wrap gap-8 mb-8">
-            {council.slice(0, 4).map((member, index) => (
-              <TeamCard key={member.name} member={member} index={index} />
+          <div className="flex flex-wrap gap-8 mb-12">
+            {executive.map((member, index) => (
+              <TeamCard 
+                key={member.name} 
+                member={member} 
+                index={index} 
+                onClick={() => setSelectedMember(member)}
+              />
             ))}
           </div>
+
+          <h3 className="font-sans text-xs tracking-widest text-muted-foreground/50 uppercase mb-2">
+            Board Members
+          </h3>
+          <p className="font-sans text-xs text-muted-foreground/50 mb-6">
+            Board members contributing to governance, strategy and institutional development.
+          </p>
           <div className="flex flex-wrap gap-8">
-            {council.slice(4, 7).map((member, index) => (
-              <TeamCard key={member.name} member={member} index={index + 4} />
+            {board.map((member, index) => (
+              <TeamCard 
+                key={member.name} 
+                member={member} 
+                index={index} 
+                onClick={() => setSelectedMember(member)}
+              />
             ))}
           </div>
         </div>
@@ -420,11 +384,20 @@ const Governance = () => {
         </div>
       </section>
 
-
-      {/* Charter Block */}
+      {/* Ethical Council */}
       <section className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
-          <SectionCharter />
+          <h2 className="font-sans text-xs tracking-widest text-muted-foreground uppercase mb-2">
+            Ethical Council
+          </h2>
+          <p className="font-sans text-sm text-muted-foreground/70 mb-10">
+            The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.
+          </p>
+          <div className="flex flex-wrap gap-8">
+            {council.map((member, index) => (
+              <TeamCard key={member.name} member={member} index={index} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -439,7 +412,7 @@ const Governance = () => {
             className="inline-flex items-center gap-2 font-sans text-sm text-foreground hover:text-accent transition-colors group"
           >
             <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
-            Request Access
+            View Access
           </Link>
         </div>
       </section>
