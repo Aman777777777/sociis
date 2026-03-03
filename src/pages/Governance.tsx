@@ -330,10 +330,10 @@ const Governance = () => {
       {/* Board Section */}
       <section className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
-          <h2 className="font-sans text-xs tracking-widest text-muted-foreground uppercase mb-2">
+          <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
             Executive Directors
           </h2>
-          <p className="font-sans text-sm text-muted-foreground/70 mb-10">
+          <p className="font-sans text-base text-muted-foreground mb-10">
             Members of the Board with executive responsibility for institutional direction and execution.
           </p>
 
