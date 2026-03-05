@@ -5,14 +5,6 @@ import irisPhoto from "@/assets/team/iris-van-der-veken.jpg";
 
 const ambassadors = [
   {
-    name: "Dr. Ilham Kadri",
-    slug: "ilham-kadri",
-    label: "Ambassador",
-    photo: null as string | null,
-    bio: "Dr. Ilham Kadri is a globally recognised industrial leader, scientist, and advocate for sustainable transformation. She has served as CEO of Solvay and held senior leadership positions across multinational organisations spanning chemicals, materials, and technology. With a doctorate in chemical engineering and decades of experience leading large-scale institutional change, she brings a unique perspective on embedding ethical conduct and sustainability into corporate governance. Her leadership is defined by scientific rigour, strategic clarity, and a deep commitment to long-term institutional responsibility.",
-    statement: "Personal statement forthcoming.",
-  },
-  {
     name: "Iris van der Veken",
     slug: "iris-van-der-veken",
     label: "Ambassador",
