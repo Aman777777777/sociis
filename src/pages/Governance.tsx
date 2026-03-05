@@ -409,12 +409,6 @@ const Governance = () => {
         </div>
       </section>
 
-      {/* Charter Block */}
-      <section className="py-12 border-t border-border/50">
-        <div className="container mx-auto px-6 lg:px-8">
-          <SectionCharter />
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-16 border-t border-border/50">
