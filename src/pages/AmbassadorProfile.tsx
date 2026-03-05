@@ -5,11 +5,17 @@ import PageTransition from "@/components/PageTransition";
 import irisPhoto from "@/assets/team/iris-van-der-veken.jpg";
 
 const ambassadorData: Record<string, { name: string; label: string; photo?: string; bio: string; statement: string }> = {
+  "ilham-kadri": {
+    name: "Dr. Ilham Kadri",
+    label: "Ambassador",
+    bio: "Dr. Ilham Kadri is a globally recognised industrial leader, scientist, and advocate for sustainable transformation. She has served as CEO of Solvay and held senior leadership positions across multinational organisations spanning chemicals, materials, and technology. With a doctorate in chemical engineering and decades of experience leading large-scale institutional change, she brings a unique perspective on embedding ethical conduct and sustainability into corporate governance. Her leadership is defined by scientific rigour, strategic clarity, and a deep commitment to long-term institutional responsibility.",
+    statement: "Personal statement forthcoming.",
+  },
   "iris-van-der-veken": {
     name: "Iris van der Veken",
     label: "Ambassador",
     photo: irisPhoto,
-    bio: "Iris Van der Veken is Executive Director and Secretary General of the Watch and Jewellery Initiative 2030, co-founded by Kering and Cartier and delegated by Richemont. She is also a member of the Inclusive Leadership Council of 100 Women @ Davos.\n\nWith a background in law, public affairs, and sustainability, Iris brings over 25 years of international experience across India, China, Africa, Thailand, and Sri Lanka. Her work spans the full value chain, including human rights due diligence, decent labour, environmental standards, and traceability, with a consistent focus on sustainability as a driver of long-term business resilience.\n\nA recognised coalition builder, she has played a key role in advancing gender equality within the industry through partnerships with UN Women, particularly in gender-responsive procurement. She also served as the first Chairwoman of UN Global Compact Belgium under the Ministry of Foreign Affairs.",
+    bio: "Iris Van der Veken is Executive Director and Secretary General of the Watch and Jewellery Initiative 2030, co-founded by Kering and Cartier and delegated by Richemont. She is also a member of the Inclusive Leadership Council of 100 Women @ Davos.\n\nWith a background in law, public affairs, and sustainability, Iris brings over 25 years of international experience across India, China, Africa, Thailand, and Sri Lanka. Her work spans the full value chain, including human rights due diligence, decent labour, environmental standards, and traceability, with a consistent focus on sustainability as a driver of long-term business resilience.\n\nA recognised coalition builder, she has played a key role in advancing gender equality within the industry through collaborations with UN Women, particularly in gender-responsive procurement. She also served as the first Chairwoman of UN Global Compact Belgium under the Ministry of Foreign Affairs.",
     statement: "Iris Van der Veken serves as an Ambassador of SociisGroup in her personal capacity.\n\nShe believes the world requires a form of leadership that is collaborative, inclusive, and grounded in humility, courage, and purpose. For her, this shift begins with rethinking how future generations are educated and how leadership itself is developed.",
   },
 };

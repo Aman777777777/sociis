@@ -31,7 +31,7 @@ const SectionInstitutionalEnvironments = () => {
               Cultural & Media Platforms
             </h3>
             <p className="text-body text-muted-foreground leading-loose">
-              TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair
+              Tomorrowland · Love Tomorrow · TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair
             </p>
           </div>
         </div>

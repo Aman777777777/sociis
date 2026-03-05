@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import SectionCharter from "@/components/sections/SectionCharter";
 import { Link } from "react-router-dom";
 import {
   Dialog,
@@ -59,14 +60,14 @@ const teamMembers: TeamMember[] = [
     role: "Founder, CEO",
     image: jeremie,
     category: "executive",
-    bio: "Jeremie Landweer is the Founder and Chief Executive Officer of SociisGroup™, a sovereign independent behavioural institution building infrastructure for sustainability, hospitality, and humanity. With over two decades of experience bridging business strategy with ethical leadership, he has architected a unique ecosystem where purpose-driven leaders converge to create measurable Impact at Scale. His vision centres on making trust visible and behaviour accountable, transforming how institutions operate and how leaders are measured. Under his leadership, SociisGroup has developed proprietary frameworks including the Sustainable Behavioural Standard (SBS™) and BEE, the Behavioural Engine of Ethics, positioning the organisation at the forefront of behavioural governance. He is a sought-after voice on credibility-based leadership and the future of institutional trust."
+    bio: "Jeremie Landweer is the Founder and Chief Executive Officer of SociisGroup™, a sovereign independent behavioural institution building infrastructure for sustainability, hospitality, and humanity. With over two decades of experience bridging business strategy with ethical leadership, he has architected a unique ecosystem where purpose-driven leaders converge to create measurable Impact at Scale. His vision centres on making trust visible and behaviour accountable, transforming how institutions operate and how leaders are measured. Under his leadership, SociisGroup has developed proprietary frameworks including the Sustainable Behavioural Standard (SBS™) and BEE™, the Behavioural Engine of Ethics, positioning the organisation at the forefront of behavioural governance. He is a sought-after voice on credibility-based leadership and the future of institutional trust."
   },
   {
     name: "Dominique Debecker",
     role: "Chief Behavioural Officer, Head of Sociis Impact™",
     image: dominiqueD,
     category: "executive",
-    bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™, the division responsible for developing and deploying the Sustainable Behavioural Standard (SBS™). With deep expertise in behavioural science, organisational psychology, and brain-based leadership methodologies, she ensures that every initiative within the institution is grounded in integrity, ethical conduct, and meaningful transformation. Her work focuses on translating complex behavioural frameworks into practical tools that organisations can embed into their governance structures. She oversees BEE, the Behavioural Engine of Ethics, which provides signals, patterns, and dashboards showing how leaders and organisations behave over time, not how they present themselves."
+    bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™, the division responsible for developing and deploying the Sustainable Behavioural Standard (SBS™). With deep expertise in behavioural science, organisational psychology, and brain-based leadership methodologies, she ensures that every initiative within the institution is grounded in integrity, ethical conduct, and meaningful transformation. Her work focuses on translating complex behavioural frameworks into practical tools that organisations can embed into their governance structures. She oversees BEE™, the Behavioural Engine of Ethics, which provides signals, patterns, and dashboards showing how leaders and organisations behave over time, not how they present themselves."
   },
   {
     name: "Zanele Morrison",
@@ -90,7 +91,7 @@ const teamMembers: TeamMember[] = [
     role: "Executive Director, Sociis House™",
     image: abbas,
     category: "board",
-    bio: "Abbas Fasaei leads Sociis House™ as Executive Director, overseeing the institution's learning, storytelling, and cultural programming. Originally from Iran, Abbas brings a unique perspective shaped by his journey from political turmoil to international recognition. He is an accomplished actor and acting teacher with over two decades of experience. At Sociis House, he applies his mastery of narrative and human behaviour to create transformative educational experiences, films, and stories that carry the LIME Code™ into culture, distributed through strategic media collaborations including Podeo."
+    bio: "Abbas Fasaei leads Sociis House™ as Executive Director, overseeing the institution's learning, storytelling, and cultural programming. Originally from Iran, Abbas brings a unique perspective shaped by his journey from political turmoil to international recognition. He is an accomplished actor and acting teacher with over two decades of experience. At Sociis House, he applies his mastery of narrative and human behaviour to create transformative educational experiences, films, and stories that carry the LIME Code™ into culture, distributed through strategic collaborations including Podeo."
   },
   {
     name: "Rudi Plettinx",
@@ -318,7 +319,7 @@ const Governance = () => {
       <section className="pt-32 pb-16">
         <div className="container mx-auto px-6 lg:px-8">
           <h1 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            Team
+            Governance
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-8"></div>
           <p className="text-body text-muted-foreground max-w-2xl">
@@ -331,9 +332,16 @@ const Governance = () => {
       <section className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
           <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
-            Executive Directors
+            Board
           </h2>
           <p className="font-sans text-base text-muted-foreground mb-10">
+            The Board provides institutional oversight and strategic direction for SociisGroup™.
+          </p>
+
+          <h3 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
+            Executive Leadership Team
+          </h3>
+          <p className="font-sans text-xs text-muted-foreground mb-6">
             Members of the Board with executive responsibility for institutional direction and execution.
           </p>
 
@@ -367,6 +375,23 @@ const Governance = () => {
         </div>
       </section>
 
+      {/* Ethical Council */}
+      <section className="py-12 border-t border-border/50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <h2 className="font-sans text-xs tracking-widest text-muted-foreground uppercase mb-2">
+            Ethical Council
+          </h2>
+          <p className="font-sans text-sm text-muted-foreground/70 mb-10">
+            The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.
+          </p>
+          <div className="flex flex-wrap gap-8">
+            {council.map((member, index) => (
+              <TeamCard key={member.name} member={member} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Trusted Advisors */}
       <section className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
@@ -384,20 +409,10 @@ const Governance = () => {
         </div>
       </section>
 
-      {/* Ethical Council */}
+      {/* Charter Block */}
       <section className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
-          <h2 className="font-sans text-xs tracking-widest text-muted-foreground uppercase mb-2">
-            Ethical Council
-          </h2>
-          <p className="font-sans text-sm text-muted-foreground/70 mb-10">
-            The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.
-          </p>
-          <div className="flex flex-wrap gap-8">
-            {council.map((member, index) => (
-              <TeamCard key={member.name} member={member} index={index} />
-            ))}
-          </div>
+          <SectionCharter />
         </div>
       </section>
 

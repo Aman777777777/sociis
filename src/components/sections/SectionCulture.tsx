@@ -48,6 +48,10 @@ const SectionCulture = memo(() => {
               </li>
               <li className="text-body text-muted-foreground flex items-start gap-3">
                 <span className="text-accent mt-0.5">·</span>
+                Tomorrowland
+              </li>
+              <li className="text-body text-muted-foreground flex items-start gap-3">
+                <span className="text-accent mt-0.5">·</span>
                 Podeo
               </li>
             </ul>

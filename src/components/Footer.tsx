@@ -43,18 +43,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link to="/calendar" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
-                  Calendar
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/governance" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
                   Governance
-                </Link>
-              </li>
-              <li>
-                <Link to="/charter" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
-                  Charter
                 </Link>
               </li>
               <li>
@@ -100,7 +90,7 @@ const Footer = () => {
         {/* Operations Statement */}
         <div className="pt-8 pb-6 border-t border-border">
           <p className="font-sans text-base text-muted-foreground max-w-3xl">
-            We operate on the Sustainable Behavioural Standard (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
+            We operate on the Sustainable Behavioural Standard (SBS™), measurement (BEE™, the Behavioural Engine of Ethics), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
           </p>
         </div>
 
