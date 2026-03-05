@@ -75,7 +75,7 @@ const Calendar = () => {
                     Let There Be Light™ Preview
                   </p>
                   <div className="space-y-4 text-body text-muted-foreground">
-                    <p>In collaboration with Jean Bosco Safari and aligned cultural partners.</p>
+                    <p>In collaboration with Jean Bosco Safari and aligned cultural collaborators.</p>
                     <p>Behaviour translated into cultural form.<br />The institutional thesis entered narrative distribution.</p>
                   </div>
                 </div>

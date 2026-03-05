@@ -22,6 +22,7 @@ import SectionLime from "@/components/sections/SectionLime";
 import SectionMedia from "@/components/sections/SectionMedia";
 import SectionAccess from "@/components/sections/SectionAccess";
 import SectionAmbassadors from "@/components/sections/SectionAmbassadors";
+import SectionCharter from "@/components/sections/SectionCharter";
 
 const Index = () => {
   return (
@@ -37,6 +38,9 @@ const Index = () => {
         <SectionWorlds />
         <SectionWhat />
         
+        {/* Ambassadors */}
+        <SectionAmbassadors />
+        
         {/* Institutional Output */}
         <SectionImpact />
         <SectionImpactDetail />
@@ -51,8 +55,15 @@ const Index = () => {
         <SectionHouse />
         
         {/* 5. Governance & Integrity */}
-        <SectionAmbassadors />
         <SectionLime />
+        
+        {/* Charter Block */}
+        <section className="border-t border-border">
+          <div className="container mx-auto px-6 lg:px-8">
+            <SectionCharter />
+          </div>
+        </section>
+        
         <SectionOneBillion />
         <SectionFlywheel />
 

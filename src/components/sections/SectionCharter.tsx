@@ -8,7 +8,7 @@ const SectionCharter = () => {
           Institutional Charter
         </h3>
         <p className="text-body text-muted-foreground mb-8">
-          The governing document that defines SociisGroup's mandate, safeguards and institutional structure. It clarifies authority, oversight, and the protection of long-term trust.
+          The governing document that defines SociisGroup's mandate, safeguards, and institutional structure. It sets the rules that protect independence, integrity, and long-term trust.
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
@@ -22,7 +22,7 @@ const SectionCharter = () => {
             download="SociisGroup_Institutional_Charter.pdf"
             className="inline-flex items-center gap-2 px-6 py-3 border border-foreground text-foreground font-sans text-base tracking-wide hover:bg-foreground hover:text-background transition-colors"
           >
-            Download Institutional Charter
+            Download PDF
           </a>
         </div>
       </div>
