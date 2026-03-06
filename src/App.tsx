@@ -79,7 +79,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/governance" element={<Governance />} />
-            <Route path="/governance" element={<Governance />} />
             <Route path="/team" element={<Governance />} />
             <Route path="/ambassadors/:slug" element={<AmbassadorProfile />} />
             <Route path="/charter" element={<Charter />} />
