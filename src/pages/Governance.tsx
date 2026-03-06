@@ -28,6 +28,7 @@ import tim from "@/assets/team/tim.png";
 import anmarrie from "@/assets/team/anmarrie.jpg";
 import tatiana from "@/assets/team/tatiana.png";
 import lars from "@/assets/team/lars.jpg";
+import peter from "@/assets/team/peter.png";
 
 
 // Import team photos - Trusted Advisors
