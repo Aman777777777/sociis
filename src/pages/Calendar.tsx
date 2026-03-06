@@ -3,6 +3,13 @@ import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 
 const Calendar = () => {
+  const forwardYears = [
+    { year: "2027", events: ["May — London", "July — Brussels", "October — Cape Town"] },
+    { year: "2028", events: ["May — London", "July — Brussels", "October — Cape Town"] },
+    { year: "2029", events: ["May — Abu Dhabi", "July — Brussels", "October — Cape Town"] },
+    { year: "2030", events: ["May — New York", "July — Brussels", "October — Cape Town"] },
+  ];
+
   return (
     <PageTransition>
       <Header />
@@ -80,7 +87,7 @@ const Calendar = () => {
                   </div>
                 </div>
 
-                {/* INAUGURATION */}
+                {/* INAUGURATION - 22 July */}
                 <div>
                   <p className="font-sans text-sm tracking-[0.25em] text-muted-foreground uppercase mb-2">
                     Institutional Inauguration
@@ -104,7 +111,7 @@ const Calendar = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
                     >
-                      Download Institutional Deck (PDF)
+                      Download Institutional Deck
                     </a>
                     <a
                       href="mailto:access@sociisgroup.com?subject=Alignment%20Conversation%20Request"
@@ -116,6 +123,7 @@ const Calendar = () => {
                   <p className="text-xs text-muted-foreground/70 italic">Attendance by private confirmation only.</p>
                 </div>
 
+                {/* 23 July */}
                 <div>
                   <p className="font-sans text-sm tracking-[0.25em] text-muted-foreground uppercase mb-2">
                     Institutional Inauguration
@@ -124,14 +132,14 @@ const Calendar = () => {
                     23 July 2026
                   </p>
                   <p className="font-sans text-base text-foreground font-medium mb-1">
-                    Tomorrowland Premises, Belgium
+                    Belgium
+                  </p>
+                  <p className="font-sans text-sm text-foreground mb-1">
+                    Shape Tomorrow Today™
                   </p>
                   <p className="font-sans text-sm text-muted-foreground mb-6">
-                    Shape Tomorrow Today™, The 300
+                    The 300 Immersive Experience, in collaboration with Love Tomorrow
                   </p>
-                  <div className="space-y-4 text-body text-muted-foreground mb-6">
-                    <p>The Institutional Inauguration establishes the centre of gravity.</p>
-                  </div>
                   <div className="flex flex-wrap gap-4 mb-3">
                     <a
                       href="/the-300-deck.pdf"
@@ -139,7 +147,7 @@ const Calendar = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
                     >
-                      Download Institutional Deck (PDF)
+                      Download Institutional Deck
                     </a>
                     <a
                       href="mailto:access@sociisgroup.com?subject=Alignment%20Conversation%20Request"
@@ -150,51 +158,85 @@ const Calendar = () => {
                   </div>
                   <p className="text-xs text-muted-foreground/70 italic">Attendance by private confirmation only.</p>
                 </div>
-              </div>
 
-              {/* CONTINENTAL ANCHORING */}
-              <div className="mb-20">
-                <p className="text-xs sm:text-sm tracking-[0.25em] text-muted-foreground uppercase mb-10">
-                  Continental Anchoring
-                </p>
+                {/* September 2026 */}
+                <div>
+                  <p className="font-sans text-sm tracking-[0.25em] text-muted-foreground uppercase mb-2">
+                    Circle
+                  </p>
+                  <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-3">
+                    September 2026
+                  </p>
+                  <p className="font-sans text-base text-foreground font-medium mb-1">
+                    Madrid
+                  </p>
+                  <p className="font-sans text-sm text-muted-foreground">
+                    Circle Gathering, Mandarin Oriental Madrid
+                  </p>
+                </div>
 
-                <div className="space-y-14">
-                  <div>
-                    <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-2">2026</p>
-                    <p className="font-sans text-base text-foreground font-medium mb-1">Cape Town, South Africa</p>
-                    <p className="font-sans text-sm text-muted-foreground">Mount Nelson, A Belmond Hotel</p>
+                {/* November 2026 */}
+                <div>
+                  <p className="font-sans text-sm tracking-[0.25em] text-muted-foreground uppercase mb-2">
+                    Sovereign
+                  </p>
+                  <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-3">
+                    November 2026
+                  </p>
+                  <p className="font-sans text-base text-foreground font-medium mb-4">
+                    Geneva
+                  </p>
+                  <div className="space-y-2 text-body text-muted-foreground">
+                    <p>The 22 — Sovereign Lunch</p>
+                    <p>The 64 — Evening Gathering</p>
                   </div>
+                </div>
 
-                  <div>
-                    <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-2">2027</p>
-                    <p className="font-sans text-base text-foreground font-medium mb-1">Cape Town, South Africa</p>
-                    <p className="font-sans text-sm text-muted-foreground">Mount Nelson, A Belmond Hotel</p>
-                  </div>
-
-                  <div>
-                    <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-2">2028</p>
-                    <p className="font-sans text-base text-foreground font-medium mb-1">Rabat, Kingdom of Morocco</p>
-                    <p className="font-sans text-sm text-muted-foreground">Royal Mansour Rabat</p>
-                  </div>
-
-                  <div>
-                    <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-2">2029</p>
-                    <p className="font-sans text-base text-foreground font-medium mb-1">Abu Dhabi, United Arab Emirates</p>
-                    <p className="font-sans text-sm text-muted-foreground">Mandarin Oriental Emirates Palace</p>
-                  </div>
-
-                  <div>
-                    <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-2">2030</p>
-                    <p className="font-sans text-base text-foreground font-medium mb-1">New York, United States</p>
-                    <p className="font-sans text-sm text-muted-foreground">Aman New York</p>
-                  </div>
+                {/* December 2026 */}
+                <div>
+                  <p className="font-sans text-sm tracking-[0.25em] text-muted-foreground uppercase mb-2">
+                    Circle
+                  </p>
+                  <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-3">
+                    December 2026
+                  </p>
+                  <p className="font-sans text-base text-foreground font-medium mb-1">
+                    Abu Dhabi
+                  </p>
+                  <p className="font-sans text-sm text-muted-foreground">
+                    Circle Gathering, Mandarin Oriental Abu Dhabi
+                  </p>
                 </div>
               </div>
 
-              {/* Doctrinal Close */}
+              {/* FORWARD */}
+              <div className="mb-20">
+                <p className="text-xs sm:text-sm tracking-[0.25em] text-muted-foreground uppercase mb-10">
+                  Forward
+                </p>
+
+                <div className="space-y-14">
+                  {forwardYears.map((item) => (
+                    <div key={item.year}>
+                      <p className="font-sans text-2xl sm:text-3xl font-light text-foreground mb-4">
+                        {item.year}
+                      </p>
+                      <div className="space-y-2">
+                        {item.events.map((evt, i) => (
+                          <p key={i} className="font-sans text-sm text-muted-foreground">
+                            {evt}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Closing */}
               <div className="pt-8 border-t border-border/50">
                 <div className="space-y-4 text-body text-muted-foreground">
-                  <p>Expansion follows institutional anchoring and sovereign readiness, never visibility for its own sake.</p>
+                  <p>Expansion follows institutional readiness and sovereign alignment.</p>
                   <p>SociisGroup establishes anchored environments.<br />It does not tour.</p>
                 </div>
               </div>
