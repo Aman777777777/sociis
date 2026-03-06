@@ -19,7 +19,7 @@ import abbas from "@/assets/team/abbas.jpg";
 import rudi from "@/assets/team/rudi.png";
 import zanele from "@/assets/team/zanele.jpg";
 import luc from "@/assets/team/luc.jpg";
-import joost from "@/assets/team/joost.jpeg";
+
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -28,7 +28,7 @@ import tim from "@/assets/team/tim.png";
 import anmarrie from "@/assets/team/anmarrie.jpg";
 import tatiana from "@/assets/team/tatiana.png";
 import lars from "@/assets/team/lars.jpg";
-import peter from "@/assets/team/peter.png";
+
 
 // Import team photos - Trusted Advisors
 import eva from "@/assets/team/eva.jpeg";
@@ -106,12 +106,6 @@ const teamMembers: TeamMember[] = [
     image: luc,
     category: "board",
   },
-  {
-    name: "Joost Peeters",
-    role: "Legal Counsel",
-    image: null,
-    category: "board",
-  },
 
   // The Council
   {
@@ -148,12 +142,6 @@ const teamMembers: TeamMember[] = [
     name: "Lars Carlstrom",
     role: "Senior Advisor, Sustainability & Strategic Growth",
     image: lars,
-    category: "council"
-  },
-  {
-    name: "Peter Somers",
-    role: "Global Logistics Strategist Ex-CEO, Emirates Post",
-    image: peter,
     category: "council"
   },
 
