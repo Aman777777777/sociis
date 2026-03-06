@@ -380,8 +380,13 @@ const Governance = () => {
             The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.
           </p>
           <div className="flex flex-wrap gap-8">
-            {council.map((member, index) => (
+            {council.slice(0, 4).map((member, index) => (
               <TeamCard key={member.name} member={member} index={index} />
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-8 mt-8">
+            {council.slice(4).map((member, index) => (
+              <TeamCard key={member.name} member={member} index={index + 4} />
             ))}
           </div>
         </div>
