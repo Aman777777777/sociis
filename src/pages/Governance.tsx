@@ -115,6 +115,12 @@ const teamMembers: TeamMember[] = [
     category: "council"
   },
   {
+    name: "Peter Somers",
+    role: "Global Logistics Strategist Ex-CEO, Emirates Post",
+    image: peter,
+    category: "council"
+  },
+  {
     name: "Dr. Louis Klein",
     role: "Senior strategic advisor, systems leadership, governance & transformation",
     image: louis,
