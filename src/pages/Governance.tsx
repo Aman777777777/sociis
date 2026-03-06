@@ -140,15 +140,15 @@ const teamMembers: TeamMember[] = [
     category: "council"
   },
   {
-    name: "Annmarie Gorenc Zoran, PhD",
-    role: "Dean at the Faculty of Organisation Studies",
-    image: anmarrie,
-    category: "council"
-  },
-  {
     name: "Tatjana Dragović\nAndersen, EdD",
     role: "Corporate educator, executive coach, associate professor",
     image: tatiana,
+    category: "council"
+  },
+  {
+    name: "Annmarie Gorenc Zoran, PhD",
+    role: "Dean at the Faculty of Organisation Studies",
+    image: anmarrie,
     category: "council"
   },
 
