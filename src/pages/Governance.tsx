@@ -155,6 +155,12 @@ const teamMembers: TeamMember[] = [
 
   // Trusted Advisors
   {
+    name: "Joost Peeters",
+    role: "Legal Counsel",
+    image: joost,
+    category: "advisor"
+  },
+  {
     name: "Marc Bogaerts",
     role: "Trusted Advisor, Artistic Director",
     image: marc,
