@@ -22,7 +22,7 @@ import SectionLime from "@/components/sections/SectionLime";
 import SectionMedia from "@/components/sections/SectionMedia";
 import SectionAccess from "@/components/sections/SectionAccess";
 import SectionAmbassadors from "@/components/sections/SectionAmbassadors";
-import SectionCharter from "@/components/sections/SectionCharter";
+
 
 const Index = () => {
   return (
