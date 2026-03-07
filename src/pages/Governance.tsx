@@ -405,21 +405,6 @@ const Governance = () => {
       </section>
 
 
-      {/* CTA */}
-      <section className="py-16 border-t border-border/50">
-        <div className="container mx-auto px-6 lg:px-8">
-          <p className="text-sm text-muted-foreground mb-4">
-            Access is handled through the main page. There are no forms. Human judgement is the filter.
-          </p>
-          <Link
-            to="/#access"
-            className="inline-flex items-center gap-2 font-sans text-sm text-foreground hover:text-accent transition-colors group"
-          >
-            <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
-            View Access
-          </Link>
-        </div>
-      </section>
 
       <Footer />
       </main>
