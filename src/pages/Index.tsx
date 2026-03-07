@@ -57,12 +57,6 @@ const Index = () => {
         {/* 5. Governance & Integrity */}
         <SectionLime />
         
-        {/* Charter Block */}
-        <section className="border-t border-border">
-          <div className="container mx-auto px-6 lg:px-8">
-            <SectionCharter />
-          </div>
-        </section>
         
         <SectionOneBillion />
         <SectionFlywheel />
