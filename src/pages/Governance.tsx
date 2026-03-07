@@ -43,6 +43,7 @@ import fei from "@/assets/team/fei.jpg";
 import karim from "@/assets/team/karim.jpg";
 import james from "@/assets/team/james.webp";
 import marc from "@/assets/team/marc.jpg";
+import joost from "@/assets/team/joost.jpeg";
 
 
 interface TeamMember {
