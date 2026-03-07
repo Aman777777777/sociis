@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
-import SectionCharter from "@/components/sections/SectionCharter";
+
 import { Link } from "react-router-dom";
 import {
   Dialog,
