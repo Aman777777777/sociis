@@ -154,7 +154,7 @@ const Calendar = () => {
                       </p>
                       <div className="space-y-2">
                         {item.events.map((evt, i) => (
-                          <p key={i} className="text-body text-muted-foreground">
+                          <p key={i} className="text-body-lg text-muted-foreground">
                             {evt}
                           </p>
                         ))}
