@@ -340,11 +340,8 @@ const Governance = () => {
             The Board provides institutional oversight and strategic direction for SociisGroup™.
           </p>
 
-          <h3 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
-            Executive Leadership Team
-          </h3>
           <p className="font-sans text-xs text-muted-foreground mb-6">
-            Members of the Board with executive responsibility for institutional direction and execution.
+            The strategic leadership of SociisGroup™.
           </p>
 
           <div className="flex flex-wrap gap-8 mb-12">
