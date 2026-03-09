@@ -166,7 +166,7 @@ const Calendar = () => {
 
               {/* ─── CLOSING ─── */}
               <div className="pt-10 border-t border-border/50 text-center">
-                <div className="space-y-2 text-body text-muted-foreground">
+                <div className="space-y-2 text-body-lg text-muted-foreground">
                   <p>Expansion follows institutional readiness and sovereign alignment.</p>
                   <p>SociisGroup establishes anchored environments.<br />It does not tour.</p>
                 </div>
