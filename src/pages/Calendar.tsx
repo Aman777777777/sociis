@@ -55,14 +55,14 @@ const Calendar = () => {
                 <div className="space-y-16">
                   {/* 2023 */}
                   <div>
-                    <p className="text-sm tracking-[0.25em] text-muted-foreground uppercase mb-3">
+                    <p className="text-body-sm tracking-[0.25em] text-muted-foreground uppercase mb-3">
                       2023
                     </p>
-                    <p className="text-base text-foreground font-medium">Marbella — Puente Romano</p>
-                    <p className="text-sm text-muted-foreground mt-1 mb-4">
+                    <p className="text-body text-foreground font-medium">Marbella — Puente Romano</p>
+                    <p className="text-body-sm text-muted-foreground mt-1 mb-4">
                       In collaboration with Global Gift Foundation
                     </p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-body text-muted-foreground leading-relaxed">
                       The behavioural thesis that would become SociisGroup™ was first articulated publicly within a philanthropic gathering.
                     </p>
                   </div>
