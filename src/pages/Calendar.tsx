@@ -80,7 +80,7 @@ const Calendar = () => {
 
                   {/* 2025 */}
                   <div>
-                    <p className="text-body-sm tracking-[0.25em] text-muted-foreground uppercase mb-3">
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">
                       2025
                     </p>
                     <p className="text-body text-foreground font-medium">London — Let There Be Light™ Preview</p>
