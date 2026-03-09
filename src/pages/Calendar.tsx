@@ -21,7 +21,7 @@ const Calendar = () => {
           Request Alignment Conversation
         </a>
       </div>
-      <p className="text-xs text-muted-foreground/70 italic">Attendance by private confirmation only.</p>
+      <p className="text-body-sm text-muted-foreground/70 italic">Attendance by private confirmation only.</p>
     </div>
   );
 
