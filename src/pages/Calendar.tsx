@@ -122,7 +122,7 @@ const Calendar = () => {
                   <div>
                     <p className="text-body-lg text-foreground font-medium">Belgium — Shape Tomorrow Today™</p>
                     <p className="text-body text-muted-foreground mt-1">23 July</p>
-                    <p className="text-body text-muted-foreground mt-1">
+                    <p className="text-body-lg text-muted-foreground mt-1">
                       The 300 Immersive Experience<br />
                       In collaboration with Love Tomorrow
                     </p>
