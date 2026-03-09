@@ -48,7 +48,7 @@ const Calendar = () => {
 
               {/* ─── PAST ─── */}
               <div className="mb-24">
-                <p className="text-xs tracking-[0.35em] text-muted-foreground uppercase mb-16">
+                <p className="text-body-sm tracking-[0.35em] text-muted-foreground uppercase mb-16">
                   Past
                 </p>
 
