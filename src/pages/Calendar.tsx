@@ -3,13 +3,6 @@ import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 
 const Calendar = () => {
-  const forwardYears = [
-    { year: "2027", events: ["May — London, UK", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
-    { year: "2028", events: ["May — London, UK", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
-    { year: "2029", events: ["May — Abu Dhabi, UAE", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
-    { year: "2030", events: ["May — New York, USA", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
-  ];
-
   const ActionButtons = () => (
     <div className="mt-6">
       <div className="flex flex-wrap gap-4 mb-3">
@@ -32,6 +25,13 @@ const Calendar = () => {
     </div>
   );
 
+  const forwardYears = [
+    { year: "2027", events: ["May — London, UK", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
+    { year: "2028", events: ["May — London, UK", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
+    { year: "2029", events: ["May — Abu Dhabi, UAE", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
+    { year: "2030", events: ["May — New York, USA", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
+  ];
+
   return (
     <PageTransition>
       <Header />
@@ -52,52 +52,40 @@ const Calendar = () => {
                   Past
                 </p>
 
-                <div className="space-y-20">
-                  {/* Formation */}
+                <div className="space-y-16">
+                  {/* 2023 */}
                   <div>
-                    <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      Formation
-                    </p>
-                    <p className="font-accent text-2xl sm:text-3xl font-light text-foreground mb-4">
+                    <p className="text-sm tracking-[0.25em] text-muted-foreground uppercase mb-3">
                       2023
                     </p>
-                    <p className="text-base text-foreground font-medium">Marbella, Spain</p>
-                    <p className="text-sm text-foreground">Puente Romano</p>
-                    <p className="text-sm text-muted-foreground mt-1 mb-6">
+                    <p className="text-base text-foreground font-medium">Marbella — Puente Romano</p>
+                    <p className="text-sm text-muted-foreground mt-1 mb-4">
                       In collaboration with Global Gift Foundation
                     </p>
-                    <p className="text-body text-muted-foreground">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       The behavioural thesis that would become SociisGroup™ was first articulated publicly within a philanthropic gathering.
                     </p>
                   </div>
 
-                  {/* Institutional Development */}
+                  {/* 2024–2025 */}
                   <div>
-                    <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      Institutional Development
-                    </p>
-                    <p className="font-accent text-2xl sm:text-3xl font-light text-foreground mb-4">
+                    <p className="text-sm tracking-[0.25em] text-muted-foreground uppercase mb-3">
                       2024–2025
                     </p>
-                    <p className="text-base text-foreground font-medium mb-6">Brussels, Belgium</p>
-                    <p className="text-body text-muted-foreground">
+                    <p className="text-base text-foreground font-medium mb-4">Brussels, Belgium</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       The institutional architecture takes form, including governance, culture, and behavioural infrastructure.
                     </p>
                   </div>
 
-                  {/* Cultural Expression */}
+                  {/* 2025 */}
                   <div>
-                    <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      Cultural Expression
+                    <p className="text-sm tracking-[0.25em] text-muted-foreground uppercase mb-3">
+                      2025
                     </p>
-                    <p className="font-accent text-2xl sm:text-3xl font-light text-foreground mb-4">
-                      December 2025
-                    </p>
-                    <p className="text-base text-foreground font-medium">London, UK</p>
-                    <p className="text-sm text-muted-foreground mt-1 mb-6">
-                      Let There Be Light™ Preview
-                    </p>
-                    <div className="space-y-3 text-body text-muted-foreground">
+                    <p className="text-base text-foreground font-medium">London — Let There Be Light™ Preview</p>
+                    <p className="text-sm text-muted-foreground mt-1">December</p>
+                    <div className="space-y-2 text-sm text-muted-foreground leading-relaxed mt-4">
                       <p>In collaboration with Jean Bosco Safari and aligned cultural collaborators.</p>
                       <p>
                         Behaviour translated into cultural form.<br />
@@ -114,33 +102,26 @@ const Calendar = () => {
                   Present
                 </p>
 
-                <div className="space-y-20">
-                  {/* 22 July */}
+                <div className="space-y-16">
+                  {/* 2026 heading */}
+                  <p className="text-sm tracking-[0.25em] text-muted-foreground uppercase -mb-8">
+                    2026
+                  </p>
+
+                  {/* 22 July — Brussels */}
                   <div>
-                    <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      Institutional Inauguration
-                    </p>
-                    <p className="font-accent text-2xl sm:text-3xl font-light text-foreground mb-4">
-                      22 July 2026
-                    </p>
-                    <p className="text-base text-foreground font-medium">Brussels, Belgium</p>
-                    <p className="text-sm text-foreground">Corinthia Grand Hotel Astoria Brussels</p>
+                    <p className="text-base text-foreground font-medium">Brussels — Corinthia Grand Hotel Astoria Brussels</p>
+                    <p className="text-sm text-muted-foreground mt-1">22 July</p>
                     <p className="text-sm text-muted-foreground mt-1">
                       The 64 — Founding Boutique Gala
                     </p>
                     <ActionButtons />
                   </div>
 
-                  {/* 23 July */}
+                  {/* 23 July — Belgium */}
                   <div>
-                    <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      Institutional Inauguration
-                    </p>
-                    <p className="font-accent text-2xl sm:text-3xl font-light text-foreground mb-4">
-                      23 July 2026
-                    </p>
-                    <p className="text-base text-foreground font-medium mb-1">Belgium</p>
-                    <p className="text-sm text-foreground">Shape Tomorrow Today™</p>
+                    <p className="text-base text-foreground font-medium">Belgium — Shape Tomorrow Today™</p>
+                    <p className="text-sm text-muted-foreground mt-1">23 July</p>
                     <p className="text-sm text-muted-foreground mt-1">
                       The 300 Immersive Experience<br />
                       In collaboration with Love Tomorrow
@@ -148,30 +129,10 @@ const Calendar = () => {
                     <ActionButtons />
                   </div>
 
-                  {/* September */}
+                  {/* November — Cape Town */}
                   <div>
-                    <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      Circle
-                    </p>
-                    <p className="font-accent text-2xl sm:text-3xl font-light text-foreground mb-4">
-                      September 2026
-                    </p>
-                    <p className="text-base text-foreground font-medium">Madrid, Spain</p>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Circle Gathering<br />
-                      Mandarin Oriental Madrid
-                    </p>
-                  </div>
-
-                  {/* December */}
-                  <div>
-                    <p className="text-xs tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      Sovereign
-                    </p>
-                    <p className="font-accent text-2xl sm:text-3xl font-light text-foreground mb-4">
-                      December 2026
-                    </p>
                     <p className="text-base text-foreground font-medium">Cape Town, South Africa</p>
+                    <p className="text-sm text-muted-foreground mt-1">November</p>
                   </div>
                 </div>
               </div>
@@ -181,14 +142,14 @@ const Calendar = () => {
                 <p className="text-xs tracking-[0.35em] text-muted-foreground uppercase mb-4">
                   Forward
                 </p>
-                <p className="text-body text-muted-foreground mb-16">
+                <p className="text-sm text-muted-foreground mb-16">
                   Future institutional rhythm.
                 </p>
 
                 <div className="space-y-14">
                   {forwardYears.map((item) => (
                     <div key={item.year}>
-                      <p className="font-accent text-2xl sm:text-3xl font-light text-foreground mb-4">
+                      <p className="text-sm tracking-[0.25em] text-muted-foreground uppercase mb-4">
                         {item.year}
                       </p>
                       <div className="space-y-2">
@@ -205,7 +166,7 @@ const Calendar = () => {
 
               {/* ─── CLOSING ─── */}
               <div className="pt-10 border-t border-border/50 text-center">
-                <div className="space-y-2 text-body-lg text-muted-foreground">
+                <div className="space-y-2 text-sm text-muted-foreground">
                   <p>Expansion follows institutional readiness and sovereign alignment.</p>
                   <p>SociisGroup establishes anchored environments.<br />It does not tour.</p>
                 </div>
