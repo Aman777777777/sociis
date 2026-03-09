@@ -142,7 +142,7 @@ const Calendar = () => {
                 <p className="text-body-sm tracking-[0.35em] text-muted-foreground uppercase mb-4">
                   Forward
                 </p>
-                <p className="text-body text-muted-foreground mb-16">
+                <p className="text-body-lg text-muted-foreground mb-16">
                   Future institutional rhythm.
                 </p>
 
