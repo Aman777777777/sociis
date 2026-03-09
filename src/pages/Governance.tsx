@@ -334,17 +334,14 @@ const Governance = () => {
       <section className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
           <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
-            Board
+            Board & Executive Leadership
           </h2>
           <p className="font-sans text-base text-muted-foreground mb-10">
             The Board provides institutional oversight and strategic direction for SociisGroup™.
           </p>
 
-          <h3 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
-            Executive Leadership Team
-          </h3>
           <p className="font-sans text-xs text-muted-foreground mb-6">
-            Members of the Board with executive responsibility for institutional direction and execution.
+            The strategic leadership of SociisGroup™.
           </p>
 
           <div className="flex flex-wrap gap-8 mb-12">
@@ -359,10 +356,10 @@ const Governance = () => {
           </div>
 
           <h3 className="font-sans text-xs tracking-widest text-muted-foreground/50 uppercase mb-2">
-            Board Members
+            Division Leadership
           </h3>
           <p className="font-sans text-xs text-muted-foreground/50 mb-6">
-            Board members contributing to governance, strategy and institutional development.
+            Leaders responsible for executing the strategic direction defined by the Board & Executive Leadership across SociisGroup's operational divisions.
           </p>
           <div className="flex flex-wrap gap-8">
             {board.map((member, index) => (
