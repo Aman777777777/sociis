@@ -334,7 +334,7 @@ const Governance = () => {
       <section className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
           <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
-            Board
+            Board & Executive Leadership
           </h2>
           <p className="font-sans text-base text-muted-foreground mb-10">
             The Board provides institutional oversight and strategic direction for SociisGroup™.
