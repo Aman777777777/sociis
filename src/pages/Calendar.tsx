@@ -104,15 +104,15 @@ const Calendar = () => {
 
                 <div className="space-y-16">
                   {/* 2026 heading */}
-                  <p className="text-sm tracking-[0.25em] text-muted-foreground uppercase -mb-8">
+                  <p className="text-body-sm tracking-[0.25em] text-muted-foreground uppercase -mb-8">
                     2026
                   </p>
 
                   {/* 22 July — Brussels */}
                   <div>
-                    <p className="text-base text-foreground font-medium">Brussels — Corinthia Grand Hotel Astoria Brussels</p>
-                    <p className="text-sm text-muted-foreground mt-1">22 July</p>
-                    <p className="text-sm text-muted-foreground mt-1">
+                    <p className="text-body text-foreground font-medium">Brussels — Corinthia Grand Hotel Astoria Brussels</p>
+                    <p className="text-body-sm text-muted-foreground mt-1">22 July</p>
+                    <p className="text-body text-muted-foreground mt-1">
                       The 64 — Founding Boutique Gala
                     </p>
                     <ActionButtons />
@@ -120,9 +120,9 @@ const Calendar = () => {
 
                   {/* 23 July — Belgium */}
                   <div>
-                    <p className="text-base text-foreground font-medium">Belgium — Shape Tomorrow Today™</p>
-                    <p className="text-sm text-muted-foreground mt-1">23 July</p>
-                    <p className="text-sm text-muted-foreground mt-1">
+                    <p className="text-body text-foreground font-medium">Belgium — Shape Tomorrow Today™</p>
+                    <p className="text-body-sm text-muted-foreground mt-1">23 July</p>
+                    <p className="text-body text-muted-foreground mt-1">
                       The 300 Immersive Experience<br />
                       In collaboration with Love Tomorrow
                     </p>
@@ -131,8 +131,8 @@ const Calendar = () => {
 
                   {/* November — Cape Town */}
                   <div>
-                    <p className="text-base text-foreground font-medium">Cape Town, South Africa</p>
-                    <p className="text-sm text-muted-foreground mt-1">November</p>
+                    <p className="text-body text-foreground font-medium">Cape Town, South Africa</p>
+                    <p className="text-body-sm text-muted-foreground mt-1">November</p>
                   </div>
                 </div>
               </div>
