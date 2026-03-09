@@ -359,10 +359,10 @@ const Governance = () => {
           </div>
 
           <h3 className="font-sans text-xs tracking-widest text-muted-foreground/50 uppercase mb-2">
-            Board Members
+            Division Leadership
           </h3>
           <p className="font-sans text-xs text-muted-foreground/50 mb-6">
-            Board members contributing to governance, strategy and institutional development.
+            Leaders responsible for executing the strategic direction defined by the Board & Executive Leadership across SociisGroup's operational divisions.
           </p>
           <div className="flex flex-wrap gap-8">
             {board.map((member, index) => (
