@@ -62,7 +62,7 @@ const Calendar = () => {
                     <p className="text-body text-muted-foreground mt-1 mb-4">
                       In collaboration with Global Gift Foundation
                     </p>
-                    <p className="text-body text-muted-foreground leading-relaxed">
+                    <p className="text-body-lg text-muted-foreground leading-relaxed">
                       The behavioural thesis that would become SociisGroup™ was first articulated publicly within a philanthropic gathering.
                     </p>
                   </div>
