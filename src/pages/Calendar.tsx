@@ -104,7 +104,7 @@ const Calendar = () => {
 
                 <div className="space-y-16">
                   {/* 2026 heading */}
-                  <p className="text-body-sm tracking-[0.25em] text-muted-foreground uppercase -mb-8">
+                  <p className="text-body tracking-[0.25em] text-muted-foreground uppercase -mb-8">
                     2026
                   </p>
 
