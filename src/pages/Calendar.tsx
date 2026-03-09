@@ -73,7 +73,7 @@ const Calendar = () => {
                       2024–2025
                     </p>
                     <p className="text-body-lg text-foreground font-medium mb-4">Brussels, Belgium</p>
-                    <p className="text-body text-muted-foreground leading-relaxed">
+                    <p className="text-body-lg text-muted-foreground leading-relaxed">
                       The institutional architecture takes form, including governance, culture, and behavioural infrastructure.
                     </p>
                   </div>
