@@ -139,7 +139,7 @@ const Calendar = () => {
 
               {/* ─── FORWARD ─── */}
               <div className="mb-24">
-                <p className="text-xs tracking-[0.35em] text-muted-foreground uppercase mb-4">
+                <p className="text-body-sm tracking-[0.35em] text-muted-foreground uppercase mb-4">
                   Forward
                 </p>
                 <p className="text-body text-muted-foreground mb-16">
