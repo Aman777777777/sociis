@@ -111,7 +111,7 @@ const Calendar = () => {
                   {/* 22 July — Brussels */}
                   <div>
                     <p className="text-body-lg text-foreground font-medium">Brussels — Corinthia Grand Hotel Astoria Brussels</p>
-                    <p className="text-body-sm text-muted-foreground mt-1">22 July</p>
+                    <p className="text-body text-muted-foreground mt-1">22 July</p>
                     <p className="text-body text-muted-foreground mt-1">
                       The 64 — Founding Boutique Gala
                     </p>
