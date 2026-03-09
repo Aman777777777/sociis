@@ -32,14 +32,9 @@ const SectionCalendar = () => {
       items: ["Shape Tomorrow Today™ — The 300. A private SociisGroup™ immersive experience."]
     },
     {
-      date: "Autumn 2026",
-      location: "Madrid",
-      items: ["Circle experience at Mandarin Oriental Ritz."]
-    },
-    {
-      date: "Winter 2026",
-      location: "Dubai",
-      items: ["Circle experience, private gathering and institutional alignment."]
+      date: "November 2026",
+      location: "Cape Town",
+      items: ["Sovereign gathering and institutional alignment."]
     }
   ];
 
