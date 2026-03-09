@@ -10,7 +10,7 @@ const Calendar = () => {
           href="/the-300-deck.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-6 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+           className="inline-flex items-center px-6 py-2.5 border border-border text-body-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
         >
           Download Institutional Deck
         </a>
