@@ -59,7 +59,7 @@ const Calendar = () => {
                       2023
                     </p>
                     <p className="text-body-lg text-foreground font-medium">Marbella — Puente Romano</p>
-                    <p className="text-body-sm text-muted-foreground mt-1 mb-4">
+                    <p className="text-body text-muted-foreground mt-1 mb-4">
                       In collaboration with Global Gift Foundation
                     </p>
                     <p className="text-body text-muted-foreground leading-relaxed">
