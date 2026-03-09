@@ -132,7 +132,7 @@ const Calendar = () => {
                   {/* November — Cape Town */}
                   <div>
                     <p className="text-body-lg text-foreground font-medium">Cape Town, South Africa</p>
-                    <p className="text-body-sm text-muted-foreground mt-1">November</p>
+                    <p className="text-body text-muted-foreground mt-1">November</p>
                   </div>
                 </div>
               </div>
