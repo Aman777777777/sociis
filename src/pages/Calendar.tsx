@@ -142,19 +142,19 @@ const Calendar = () => {
                 <p className="text-xs tracking-[0.35em] text-muted-foreground uppercase mb-4">
                   Forward
                 </p>
-                <p className="text-sm text-muted-foreground mb-16">
+                <p className="text-body text-muted-foreground mb-16">
                   Future institutional rhythm.
                 </p>
 
                 <div className="space-y-14">
                   {forwardYears.map((item) => (
                     <div key={item.year}>
-                      <p className="text-sm tracking-[0.25em] text-muted-foreground uppercase mb-4">
+                      <p className="text-body-sm tracking-[0.25em] text-muted-foreground uppercase mb-4">
                         {item.year}
                       </p>
                       <div className="space-y-2">
                         {item.events.map((evt, i) => (
-                          <p key={i} className="text-sm text-muted-foreground">
+                          <p key={i} className="text-body text-muted-foreground">
                             {evt}
                           </p>
                         ))}
