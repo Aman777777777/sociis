@@ -149,7 +149,7 @@ const Calendar = () => {
                 <div className="space-y-14">
                   {forwardYears.map((item) => (
                     <div key={item.year}>
-                      <p className="text-body-sm tracking-[0.25em] text-muted-foreground uppercase mb-4">
+                      <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-4">
                         {item.year}
                       </p>
                       <div className="space-y-2">
