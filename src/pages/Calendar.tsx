@@ -84,7 +84,8 @@ const Calendar = () => {
                     <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">
                       2025
                     </p>
-                    <p className="text-body-lg text-foreground font-medium">London — Let There Be Light™ Preview</p>
+                    <p className="text-body-lg text-foreground font-medium">London, UK</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">Let There Be Light™ Preview</p>
                     <p className="text-body text-muted-foreground mt-1">December</p>
                     <div className="space-y-2 text-body-lg text-muted-foreground leading-relaxed mt-4">
                       <p>In collaboration with Jean Bosco Safari and aligned cultural collaborators.</p>
