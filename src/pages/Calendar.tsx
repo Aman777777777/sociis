@@ -16,7 +16,7 @@ const Calendar = () => {
         </a>
         <a
           href="mailto:access@sociisgroup.com?subject=Alignment%20Conversation%20Request"
-          className="inline-flex items-center px-6 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+          className="inline-flex items-center px-6 py-2.5 border border-border text-body-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
         >
           Request Alignment Conversation
         </a>
