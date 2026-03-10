@@ -45,6 +45,7 @@ import james from "@/assets/team/james.webp";
 import marc from "@/assets/team/marc.jpg";
 import joost from "@/assets/team/joost-new.jpeg";
 import sandrine from "@/assets/team/sandrine.jpg";
+import jan from "@/assets/team/jan.jpg";
 
 
 interface TeamMember {
