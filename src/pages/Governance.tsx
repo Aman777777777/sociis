@@ -227,6 +227,12 @@ const teamMembers: TeamMember[] = [
     image: james,
     category: "advisor"
   },
+  {
+    name: "Sandrine Hellinckx",
+    role: "SBS Foundation",
+    image: sandrine,
+    category: "advisor"
+  },
 
 ];
 
