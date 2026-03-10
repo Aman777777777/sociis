@@ -45,6 +45,7 @@ import james from "@/assets/team/james.webp";
 import marc from "@/assets/team/marc.jpg";
 import joost from "@/assets/team/joost-new.jpeg";
 import sandrine from "@/assets/team/sandrine.jpg";
+import jan from "@/assets/team/jan.jpg";
 
 
 interface TeamMember {
@@ -231,6 +232,12 @@ const teamMembers: TeamMember[] = [
     name: "Sandrine Hellinckx",
     role: "SBS Foundation",
     image: sandrine,
+    category: "advisor"
+  },
+  {
+    name: "Prof. Jan de Visch",
+    role: "SBS Foundation",
+    image: jan,
     category: "advisor"
   },
 
