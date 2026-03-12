@@ -123,7 +123,7 @@ const Calendar = () => {
 
                   {/* 23 July — Belgium */}
                   <div>
-                    <p className="text-body-lg text-foreground font-medium">Belgium</p>
+                    <p className="text-body-lg text-foreground font-medium">Boom, Belgium</p>
                     <p className="text-body-lg text-muted-foreground mt-1">Shape Tomorrow Today™</p>
                     <p className="text-body text-muted-foreground mt-1">23 July</p>
                     <p className="text-body-lg text-muted-foreground mt-1">
