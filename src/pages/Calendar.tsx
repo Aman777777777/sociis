@@ -4,13 +4,13 @@ import PageTransition from "@/components/PageTransition";
 
 const Calendar = () => {
   const ActionButtons = () => (
-    <div className="mt-6">
+    <div className="mt-4">
       <div className="flex flex-wrap gap-4 mb-3">
         <a
           href="/the-300-deck.pdf"
           target="_blank"
           rel="noopener noreferrer"
-           className="inline-flex items-center px-6 py-2.5 border border-border text-body-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+          className="inline-flex items-center px-6 py-2.5 border border-border text-body-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
         >
           Download Institutional Deck
         </a>
@@ -24,13 +24,6 @@ const Calendar = () => {
       <p className="text-body-sm text-muted-foreground/70 italic">Attendance by private confirmation only.</p>
     </div>
   );
-
-  const forwardYears = [
-    { year: "2027", events: ["May — London, UK", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
-    { year: "2028", events: ["May — London, UK", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
-    { year: "2029", events: ["May — Abu Dhabi, UAE", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
-    { year: "2030", events: ["May — New York, USA", "July — Brussels, Belgium", "October — Cape Town, South Africa"] },
-  ];
 
   return (
     <PageTransition>
@@ -52,48 +45,37 @@ const Calendar = () => {
                   Past
                 </p>
 
-                <div className="space-y-16">
-                  {/* 2023 */}
+                <div className="space-y-14">
+                  {/* 2023 — Marbella */}
                   <div>
-                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      2023
-                    </p>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2023</p>
                     <p className="text-body-lg text-foreground font-medium">Marbella, Spain</p>
                     <p className="text-body-lg text-muted-foreground mt-1">Puente Romano</p>
-                    <p className="text-body text-muted-foreground mt-1 mb-4">
-                      In collaboration with Global Gift Foundation
-                    </p>
-                    <p className="text-body-lg text-muted-foreground leading-relaxed">
+                    <p className="text-body-lg text-muted-foreground mt-1">In collaboration with Global Gift Foundation</p>
+                    <p className="text-body-lg text-muted-foreground mt-3">
                       The behavioural thesis that would become SociisGroup™ was first articulated publicly within a philanthropic gathering.
                     </p>
                   </div>
 
-                  {/* 2024–2025 */}
+                  {/* 2024–2025 — Brussels */}
                   <div>
-                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      2024–2025
-                    </p>
-                    <p className="text-body-lg text-foreground font-medium mb-4">Brussels, Belgium</p>
-                    <p className="text-body-lg text-muted-foreground leading-relaxed">
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2024–2025</p>
+                    <p className="text-body-lg text-foreground font-medium">Brussels, Belgium</p>
+                    <p className="text-body-lg text-muted-foreground mt-3">
                       The institutional architecture takes form, including governance, culture, and behavioural infrastructure.
                     </p>
                   </div>
 
-                  {/* 2025 */}
+                  {/* 2025 — London */}
                   <div>
-                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">
-                      2025
-                    </p>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2025</p>
                     <p className="text-body-lg text-foreground font-medium">London, UK</p>
                     <p className="text-body-lg text-muted-foreground mt-1">Let There Be Light™ Preview</p>
-                    <p className="text-body text-muted-foreground mt-1">December</p>
-                    <div className="space-y-2 text-body-lg text-muted-foreground leading-relaxed mt-4">
-                      <p>In collaboration with Jean Bosco Safari and aligned cultural collaborators.</p>
-                      <p>
-                        Behaviour translated into cultural form.<br />
-                        The institutional thesis entered narrative distribution.
-                      </p>
-                    </div>
+                    <p className="text-body-lg text-muted-foreground mt-1">December</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">In collaboration with Jean Bosco Safari and aligned cultural collaborators</p>
+                    <p className="text-body-lg text-muted-foreground mt-3">
+                      Behaviour translated into cultural form. The institutional thesis entered narrative distribution.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -104,39 +86,33 @@ const Calendar = () => {
                   Present
                 </p>
 
-                <div className="space-y-16">
-                  {/* 2026 heading */}
-                  <p className="text-body tracking-[0.25em] text-muted-foreground uppercase -mb-8">
-                    2026
-                  </p>
-
-                  {/* 22 July — Brussels */}
+                <div className="space-y-14">
+                  {/* 2026 — Brussels */}
                   <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2026</p>
                     <p className="text-body-lg text-foreground font-medium">Brussels, Belgium</p>
                     <p className="text-body-lg text-muted-foreground mt-1">Corinthia Grand Hotel Astoria Brussels</p>
-                    <p className="text-body text-muted-foreground mt-1">22 July</p>
-                    <p className="text-body-lg text-muted-foreground mt-1">
-                      The 64 — Founding Boutique Gala
-                    </p>
+                    <p className="text-body-lg text-muted-foreground mt-1">22 July</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">The 64 — Founding Boutique Gala</p>
                     <ActionButtons />
                   </div>
 
-                  {/* 23 July — Belgium */}
+                  {/* 2026 — Boom */}
                   <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2026</p>
                     <p className="text-body-lg text-foreground font-medium">Boom, Belgium</p>
                     <p className="text-body-lg text-muted-foreground mt-1">Shape Tomorrow Today™</p>
-                    <p className="text-body text-muted-foreground mt-1">23 July</p>
-                    <p className="text-body-lg text-muted-foreground mt-1">
-                      The 300 Immersive Experience<br />
-                      In collaboration with Love Tomorrow
-                    </p>
+                    <p className="text-body-lg text-muted-foreground mt-1">23 July</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">The 300 Immersive Experience</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">In collaboration with Love Tomorrow</p>
                     <ActionButtons />
                   </div>
 
-                  {/* November — Cape Town */}
+                  {/* 2026 — Cape Town */}
                   <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2026</p>
                     <p className="text-body-lg text-foreground font-medium">Cape Town, South Africa</p>
-                    <p className="text-body text-muted-foreground mt-1">November</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">November</p>
                   </div>
                 </div>
               </div>
@@ -151,20 +127,73 @@ const Calendar = () => {
                 </p>
 
                 <div className="space-y-14">
-                  {forwardYears.map((item) => (
-                    <div key={item.year}>
-                      <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-4">
-                        {item.year}
-                      </p>
-                      <div className="space-y-2">
-                        {item.events.map((evt, i) => (
-                          <p key={i} className="text-body-lg text-muted-foreground">
-                            {evt}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
+                  {/* 2027 */}
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2027</p>
+                    <p className="text-body-lg text-foreground font-medium">London, UK</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">May</p>
+                  </div>
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2027</p>
+                    <p className="text-body-lg text-foreground font-medium">Brussels, Belgium</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">July</p>
+                  </div>
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2027</p>
+                    <p className="text-body-lg text-foreground font-medium">Cape Town, South Africa</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">October</p>
+                  </div>
+
+                  {/* 2028 */}
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2028</p>
+                    <p className="text-body-lg text-foreground font-medium">London, UK</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">May</p>
+                  </div>
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2028</p>
+                    <p className="text-body-lg text-foreground font-medium">Brussels, Belgium</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">July</p>
+                  </div>
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2028</p>
+                    <p className="text-body-lg text-foreground font-medium">Cape Town, South Africa</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">October</p>
+                  </div>
+
+                  {/* 2029 */}
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2029</p>
+                    <p className="text-body-lg text-foreground font-medium">Abu Dhabi, UAE</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">May</p>
+                  </div>
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2029</p>
+                    <p className="text-body-lg text-foreground font-medium">Brussels, Belgium</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">July</p>
+                  </div>
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2029</p>
+                    <p className="text-body-lg text-foreground font-medium">Cape Town, South Africa</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">October</p>
+                  </div>
+
+                  {/* 2030 */}
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2030</p>
+                    <p className="text-body-lg text-foreground font-medium">New York, USA</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">May</p>
+                  </div>
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2030</p>
+                    <p className="text-body-lg text-foreground font-medium">Brussels, Belgium</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">July</p>
+                  </div>
+                  <div>
+                    <p className="text-body tracking-[0.25em] text-muted-foreground uppercase mb-3">2030</p>
+                    <p className="text-body-lg text-foreground font-medium">Cape Town, South Africa</p>
+                    <p className="text-body-lg text-muted-foreground mt-1">October</p>
+                  </div>
                 </div>
               </div>
 
