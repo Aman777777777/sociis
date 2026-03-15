@@ -19,7 +19,7 @@ const SectionExperiences = memo(() => {
       subtitle: "Sovereign Gathering",
       description: "An intentionally limited environment where institutional conduct and culture converge.",
       image: experienceGala,
-      deckUrl: "/the-64-deck.pdf",
+      deckUrl: "/the-64-deck.pptx",
     },
     {
       name: "The 300",
