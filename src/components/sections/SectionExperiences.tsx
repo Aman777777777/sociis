@@ -13,7 +13,6 @@ const SectionExperiences = memo(() => {
       subtitle: "Leadership Table",
       description: "One table. One conversation. Leadership conduct calibrated in private.",
       image: experienceDinner,
-      deckUrl: "/the-22-deck.pdf",
     },
     {
       name: "The 64",
