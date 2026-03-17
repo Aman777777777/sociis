@@ -151,7 +151,7 @@ const Header = () => {
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-foreground text-background font-sans text-lg hover:bg-foreground/90 transition-colors mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Join Sociis House
+                Enter Sociis House
               </a>
             </div>
           </div>
