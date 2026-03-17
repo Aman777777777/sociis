@@ -326,7 +326,7 @@ const Governance = () => {
           <p className="font-sans text-sm text-muted-foreground/70 mb-10">
             The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.
           </p>
-          <div className="flex flex-wrap gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
             {council.map((member, index) => (
               <TeamCard key={member.name} member={member} index={index} />
             ))}
