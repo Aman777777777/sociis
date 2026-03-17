@@ -287,7 +287,7 @@ const Governance = () => {
           <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-10">
             Institutional Leadership
           </h2>
-          <div className="flex flex-wrap gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
             {leadership.map((member, index) => (
               <TeamCard 
                 key={member.name} 
@@ -309,7 +309,7 @@ const Governance = () => {
           <p className="font-sans text-sm text-muted-foreground/70 mb-10 max-w-3xl">
             Strategic & Institutional Contributors bring independent expertise across systems, culture, governance, capital and institutional development. They support the evolution of SociisGroup while remaining independent from its executive leadership.
           </p>
-          <div className="flex flex-wrap gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
             {contributors.map((member, index) => (
               <TeamCard key={member.name} member={member} index={index} />
             ))}
@@ -326,7 +326,7 @@ const Governance = () => {
           <p className="font-sans text-sm text-muted-foreground/70 mb-10">
             The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.
           </p>
-          <div className="flex flex-wrap gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
             {council.map((member, index) => (
               <TeamCard key={member.name} member={member} index={index} />
             ))}
