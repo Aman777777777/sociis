@@ -287,7 +287,7 @@ const Governance = () => {
           <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-10">
             Institutional Leadership
           </h2>
-          <div className="flex flex-wrap gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
             {leadership.map((member, index) => (
               <TeamCard 
                 key={member.name} 
