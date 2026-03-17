@@ -163,12 +163,6 @@ const teamMembers: TeamMember[] = [
     category: "council",
   },
   {
-    name: "Annmarie Gorenc Zoran, PhD",
-    role: "Dean, Faculty of Organisation Studies",
-    image: anmarrie,
-    category: "council",
-  },
-  {
     name: "Tatjana Dragović Andersen, EdD",
     role: "Associate Professor",
     image: tatiana,
@@ -178,6 +172,12 @@ const teamMembers: TeamMember[] = [
     name: "Lars Carlstrom",
     role: "Founder & CEO, Italvolt",
     image: lars,
+    category: "council",
+  },
+  {
+    name: "Annmarie Gorenc Zoran, PhD",
+    role: "Dean, Faculty of Organisation Studies",
+    image: anmarrie,
     category: "council",
   },
 ];
