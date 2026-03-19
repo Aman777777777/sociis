@@ -68,7 +68,7 @@ const teamMembers: TeamMember[] = [
     imagePosition: "center 10%",
   },
 
-  // Strategic & Institutional Contributors
+  // External Relations & Communications
   {
     name: "Luc Garguet-Duport",
     role: "Organisational Development & Institutional Oversight",
