@@ -68,7 +68,7 @@ const teamMembers: TeamMember[] = [
     imagePosition: "center 10%",
   },
 
-  // Strategic & Institutional Contributors
+  // External Relations & Communications
   {
     name: "Luc Garguet-Duport",
     role: "Organisational Development & Institutional Oversight",
@@ -300,14 +300,14 @@ const Governance = () => {
         </div>
       </section>
 
-      {/* Strategic & Institutional Contributors */}
+      {/* External Relations & Communications */}
       <section className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6 lg:px-8">
           <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
-            Strategic & Institutional Contributors
+            External Relations & Communications
           </h2>
           <p className="font-sans text-sm text-muted-foreground/70 mb-10 max-w-3xl">
-            Strategic & Institutional Contributors bring independent expertise across systems, culture, governance, capital and institutional development. They support the evolution of SociisGroup while remaining independent from its executive leadership.
+            External Relations & Communications bring independent expertise across systems, culture, governance, capital and institutional development. They support the evolution of SociisGroup while remaining independent from its executive leadership.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {contributors.map((member, index) => (
