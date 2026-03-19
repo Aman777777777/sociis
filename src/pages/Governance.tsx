@@ -175,7 +175,7 @@ const teamMembers: TeamMember[] = [
     category: "council",
   },
   {
-    name: "Tatjana Dragović Andersen, EdD",
+    name: "Tatjana Dragović Andersen, PhD",
     role: "Associate Professor",
     image: tatiana,
     category: "council",
