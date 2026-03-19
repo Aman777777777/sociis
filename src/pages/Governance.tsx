@@ -95,12 +95,6 @@ const teamMembers: TeamMember[] = [
     category: "contributor",
   },
   {
-    name: "Richard Thommeret",
-    role: "Public Relations & Strategic Introductions",
-    image: "",
-    category: "contributor",
-  },
-  {
     name: "Marc Bogaerts",
     role: "Artistic Director",
     image: marc,
@@ -134,6 +128,12 @@ const teamMembers: TeamMember[] = [
     name: "Prof. Jan de Visch",
     role: "SBS Foundation",
     image: jan,
+    category: "contributor",
+  },
+  {
+    name: "Richard Thommeret",
+    role: "Public Relations & Strategic Introductions",
+    image: "",
     category: "contributor",
   },
 
