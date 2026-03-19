@@ -132,7 +132,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Richard Thommeret",
-    role: "Public Relations & Strategic Introductions",
+    role: "External Relations & Strategic Communications",
     image: "",
     category: "contributor",
   },
