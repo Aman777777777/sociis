@@ -11,15 +11,17 @@ const SectionImpactDetail = () => {
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
-          <p className="text-body text-muted-foreground mb-8">
-            Sociis Impact™ develops and governs <span className="text-foreground font-medium">SBS</span>,
-            the Sustainable Behavioural Standard, the institutional framework that makes leadership conduct visible, accountable and repeatable.
+          <p className="text-body-lg text-foreground mb-8">
+            SBS defines the framework. BEE makes behaviour actionable.
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
-            It is supported by <span className="text-foreground font-medium">BEE™</span>, the Behavioural Engine of Ethics:
-            a data infrastructure of signals, patterns and dashboards that tracks how leaders and institutions behave
-            over time, not how they present themselves.
+            Sociis Impact™ develops and governs <span className="text-foreground font-medium">SBS</span>,
+            the Sustainable Behavioural Standard — a framework designed to make leadership conduct visible, accountable and repeatable, with the ambition to become a global standard over time.
+          </p>
+
+          <p className="text-body text-muted-foreground mb-8">
+            <span className="text-foreground font-medium">BEE™</span>, the Behavioural Engine of Ethics, identifies behavioural friction in real time and guides clearer decision-making under pressure.
           </p>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic">

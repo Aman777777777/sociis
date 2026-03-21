@@ -102,9 +102,14 @@ const SectionHero = memo(() => {
               <span className="font-medium">SociisGroup™</span> is a Sovereign Independent Behavioural Institution and Benefit Corporation. It builds behavioural infrastructure for sustainability, hospitality and humanity, making Impact at Scale real and accountable.
             </p>
             <p 
+              className="text-body text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.5s_forwards]"
+            >
+              SociisGroup structures how leaders behave, how that behaviour is tested in real environments, and how it spreads into institutions over time.
+            </p>
+            <p 
               className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
             >
-              SociisGroup™ operates on the Sustainable Behavioural Standard (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
+              SociisGroup™ operates on the Sustainable Behavioural Standard (SBS™), measurement (BEE™), environment (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
             </p>
             {/* Join button removed - layout balanced with existing content */}
           </div>

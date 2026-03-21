@@ -14,7 +14,7 @@ const SectionOneBillion = () => {
     },
     {
       name: "Sociis House",
-      description: "Journeys and stories scaled from sovereign gatherings to public learning.",
+      description: "The environment where Sociis stay connected through conversations, signals and narratives.",
     },
     {
       name: "Sociis Culture",
@@ -35,7 +35,7 @@ const SectionOneBillion = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
-            Scale Architecture
+            Institutional Reach
           </p>
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
             How SociisGroup Reaches One Billion

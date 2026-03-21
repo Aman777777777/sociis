@@ -12,7 +12,7 @@ const SectionInstitutionalEnvironments = () => {
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
           <p className="text-body text-muted-foreground mb-12">
-            SociisGroup operates within selected institutional environments and cultural platforms aligned with its standard.
+            SociisGroup operates within selected institutional environments and cultural channels aligned with its standard.
           </p>
 
           {/* Institutional Environments */}
@@ -25,10 +25,10 @@ const SectionInstitutionalEnvironments = () => {
             </p>
           </div>
 
-          {/* Cultural & Media Platforms */}
+          {/* Cultural & Media Channels */}
           <div>
             <h3 className="font-sans text-xs tracking-widest text-muted-foreground uppercase mb-4">
-              Cultural & Media Platforms
+              Cultural & Media Channels
             </h3>
             <p className="text-body text-muted-foreground leading-loose">
               Tomorrowland · Love Tomorrow · TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair
