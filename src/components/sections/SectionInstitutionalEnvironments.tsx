@@ -25,10 +25,10 @@ const SectionInstitutionalEnvironments = () => {
             </p>
           </div>
 
-          {/* Cultural & Media Platforms */}
+          {/* Cultural & Media Channels */}
           <div>
             <h3 className="font-sans text-xs tracking-widest text-muted-foreground uppercase mb-4">
-              Cultural & Media Platforms
+              Cultural & Media Channels
             </h3>
             <p className="text-body text-muted-foreground leading-loose">
               Tomorrowland · Love Tomorrow · TIME · Financial Times · Bloomberg · Forbes · Monocle · Vanity Fair
