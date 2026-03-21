@@ -63,11 +63,11 @@ const SectionAlliances = () => {
               </p>
             </div>
 
-            {/* Cultural & Media Platforms */}
+            {/* Cultural & Media Channels */}
             <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.5s_forwards]">
               <div className="relative pb-4 mb-4 border-b border-border/50">
                 <h3 className="font-sans text-base tracking-[0.2em] text-foreground uppercase">
-                  Cultural & Media Platforms
+                  Cultural & Media Channels
                 </h3>
               </div>
               <p className="font-sans text-base text-muted-foreground leading-relaxed">

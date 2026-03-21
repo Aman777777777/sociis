@@ -10,7 +10,7 @@ const SectionDivisions = () => {
     },
     {
       name: "Sociis House™",
-      description: "The learning and storytelling environment distributed through strategic media collaborations, including Podeo.",
+      description: "The environment where Sociis stay connected through conversations, signals and narratives.",
     },
     {
       name: "Sociis Culture™",

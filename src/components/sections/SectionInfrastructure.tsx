@@ -9,7 +9,7 @@ const SectionInfrastructure = () => {
       name: "BEE™",
     },
     {
-      label: "EDUCATION",
+      label: "ENVIRONMENT",
       name: "House™",
     },
     {
