@@ -28,7 +28,7 @@ const SectionHero = memo(() => {
 
   // Simplified animation classes for mobile
   const fadeInClass = shouldReduceAnimations ? "opacity-100" : "opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards]";
-  const fadeInDelayed = (delay: string) => 
+  const fadeInDelayed = (delay: string) =>
     shouldReduceAnimations ? "opacity-100" : `opacity-0 animate-[fade-in-up_0.8s_ease-out_${delay}_forwards]`;
 
   return (
@@ -45,11 +45,11 @@ const SectionHero = memo(() => {
             decoding="async"
           />
         </div>
-        
+
         {/* Gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background/80"></div>
-        
+
         {/* Floating particles - HIDDEN on mobile for performance */}
         {!isMobile && !shouldReduceAnimations && (
           <div className="absolute inset-0 overflow-hidden pointer-events-none hidden lg:block">
@@ -67,11 +67,11 @@ const SectionHero = memo(() => {
             ))}
           </div>
         )}
-        
+
         {/* Animated gradient line - simplified on mobile */}
         <div className={`absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent ${!shouldReduceAnimations ? 'animate-[shimmer_3s_ease-in-out_infinite]' : ''}`} style={{ backgroundSize: '200% 100%' }}></div>
       </div>
-      
+
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           {/* Left: Text with staggered animations */}
@@ -81,30 +81,36 @@ const SectionHero = memo(() => {
               <div className="w-12 h-px bg-accent animate-[shimmer_2s_ease-in-out_infinite]" style={{ backgroundSize: '200% 100%', backgroundImage: 'linear-gradient(90deg, transparent, hsl(var(--accent)), transparent)' }}></div>
               <span className="text-sm tracking-[0.3em] text-muted-foreground uppercase">Est. 2023</span>
             </div>
-            
-            <h1 
+
+            <h1
               className="font-sans font-extralight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-2 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
             >
               <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
             </h1>
-            
+
             <p className="text-sm text-muted-foreground tracking-wide mb-2 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.3s_forwards]">
               pronounced "So-chees"
             </p>
-            
+
             <p className="text-sm text-muted-foreground/70 italic mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.35s_forwards]">
               From Latin socius: ally, companion, one who stands with another.
             </p>
-            
-            <p 
+
+            <p
               className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
             >
               <span className="font-medium">SociisGroup™</span> is a Sovereign Independent Behavioural Institution and Benefit Corporation. It builds behavioural infrastructure for sustainability, hospitality and humanity, making Impact at Scale real and accountable.
             </p>
-            <p 
+            <p
+              className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.5s_forwards]"
+            >
+              This is not only about business.<br />
+              It is about the standard of behaviour we bring into the world, as citizens of it.
+            </p>
+            <p
               className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
             >
-              SociisGroup™ operates on the Sustainable Behavioural Standard (SBS™), measurement (BEE™), public learning (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
+              SociisGroup™ operates on the Sustainable Behavioural Standard (SBS™), supported by BEE™, expressed through Sociis House™, tested in Sociis Experiences™, and distributed through culture.
             </p>
             {/* Join button removed - layout balanced with existing content */}
           </div>
@@ -119,24 +125,21 @@ const SectionHero = memo(() => {
                 <SociisSymbol size={300} className="text-foreground/80 hidden lg:block" animated />
               </div>
             </div>
-            
+
             {/* The Mark explanation - responsive */}
-            <div 
+            <div
               ref={markRef}
-              className={`mt-6 lg:mt-8 text-center max-w-xs sm:max-w-sm px-4 transition-all duration-1000 ease-out ${
-                isMarkVisible 
-                  ? 'opacity-100 translate-y-0' 
+              className={`mt-6 lg:mt-8 text-center max-w-xs sm:max-w-sm px-4 transition-all duration-1000 ease-out ${isMarkVisible
+                  ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-4'
-              }`}
+                }`}
             >
-              <p className={`text-sm sm:text-base tracking-widest text-muted-foreground uppercase mb-3 sm:mb-4 transition-all duration-700 delay-200 ${
-                isMarkVisible ? 'opacity-100' : 'opacity-0'
-              }`}>
+              <p className={`text-sm sm:text-base tracking-widest text-muted-foreground uppercase mb-3 sm:mb-4 transition-all duration-700 delay-200 ${isMarkVisible ? 'opacity-100' : 'opacity-0'
+                }`}>
                 THE MARK
               </p>
-              <div className={`text-sm sm:text-base text-muted-foreground/80 leading-relaxed space-y-1 transition-all duration-700 delay-500 ${
-                isMarkVisible ? 'opacity-100' : 'opacity-0'
-              }`}>
+              <div className={`text-sm sm:text-base text-muted-foreground/80 leading-relaxed space-y-1 transition-all duration-700 delay-500 ${isMarkVisible ? 'opacity-100' : 'opacity-0'
+                }`}>
                 <p>Two complete individuals, equal, side by side.</p>
                 <p>No one above, no one below.</p>
                 <p>Impact created with people, not on top of people.</p>

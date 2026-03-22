@@ -65,7 +65,7 @@ const SectionProblem = () => {
             </p>
 
             <p className="text-body text-muted-foreground opacity-0 animate-[fade-in_0.8s_ease-out_0.45s_forwards]">
-              SociisGroup builds the infrastructure to make it measurable, teachable and scalable.
+              SociisGroup builds the infrastructure to make it measurable, actionable and scalable.
             </p>
           </div>
         </div>

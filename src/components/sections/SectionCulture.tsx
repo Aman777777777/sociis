@@ -10,7 +10,7 @@ const SectionCulture = memo(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          video.play().catch(() => {});
+          video.play().catch(() => { });
         } else {
           video.pause();
         }
@@ -33,13 +33,17 @@ const SectionCulture = memo(() => {
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-12"></div>
 
-          {/* Block 1: Cultural Distribution Platforms */}
+          <p className="text-body-lg text-foreground mb-12">
+            Culture moves faster than governance.
+          </p>
+
+          {/* Block 1: Cultural Distribution Channels */}
           <div className="mb-12">
             <h3 className="font-sans text-lg text-foreground font-medium mb-4">
-              Cultural Distribution Platforms
+              Cultural Distribution Channels
             </h3>
             <p className="text-body text-muted-foreground mb-6">
-              SociisGroup collaborates with selected cultural platforms to distribute the Sustainable Behavioural Standard (SBS™) through immersive and large-scale formats.
+              SociisGroup collaborates with selected cultural channels to distribute the Sustainable Behavioural Standard (SBS™) through immersive and large-scale formats.
             </p>
             <ul className="space-y-2">
               <li className="text-body text-muted-foreground flex items-start gap-3">
@@ -105,6 +109,13 @@ const SectionCulture = memo(() => {
           <p className="text-body text-foreground mt-12">
             Sociis Culture makes the Sustainable Behavioural Standard (SBS™) tangible through cultural production.
           </p>
+
+          <div className="mt-20 text-center border-t border-border pt-16">
+            <p className="font-accent text-xl text-foreground italic">
+              Life is precious.<br />
+              So are you.
+            </p>
+          </div>
         </div>
       </div>
     </section>

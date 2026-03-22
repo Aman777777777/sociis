@@ -14,7 +14,7 @@ const SectionAlliances = () => {
                 className="w-full h-full object-cover grayscale hover:grayscale-[50%] transition-all duration-700 rounded-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent"></div>
-              
+
               <div className="absolute inset-0 flex items-center">
                 <div className="px-8 md:px-16">
                   <p className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3">
@@ -28,7 +28,7 @@ const SectionAlliances = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="absolute -bottom-3 -right-3 w-20 h-20 border-r-2 border-b-2 border-accent/30"></div>
           </div>
 
@@ -63,11 +63,11 @@ const SectionAlliances = () => {
               </p>
             </div>
 
-            {/* Cultural & Media Platforms */}
+            {/* Cultural & Media Channels */}
             <div className="opacity-0 animate-[fade-in_0.8s_ease-out_0.5s_forwards]">
               <div className="relative pb-4 mb-4 border-b border-border/50">
                 <h3 className="font-sans text-base tracking-[0.2em] text-foreground uppercase">
-                  Cultural & Media Platforms
+                  Cultural & Media Channels
                 </h3>
               </div>
               <p className="font-sans text-base text-muted-foreground leading-relaxed">

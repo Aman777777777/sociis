@@ -14,7 +14,7 @@ const SectionOneBillion = () => {
     },
     {
       name: "Sociis House",
-      description: "Journeys and stories scaled from sovereign gatherings to public learning.",
+      description: "Journeys and stories scaled from sovereign gatherings to connection.",
     },
     {
       name: "Sociis Culture",
@@ -44,7 +44,7 @@ const SectionOneBillion = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {channels.map((channel, index) => (
-            <div key={channel.name} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
+              <div key={channel.name} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
                 <h3 className="font-sans font-medium text-body text-foreground mb-2">
                   {channel.name}
                 </h3>

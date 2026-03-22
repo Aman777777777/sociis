@@ -6,7 +6,7 @@ import { useMobilePerformance } from "@/hooks/use-mobile-performance";
 
 const SectionExperiences = memo(() => {
   const { shouldReduceAnimations } = useMobilePerformance();
-  
+
   const experiences = [
     {
       name: "The 22",
@@ -43,16 +43,18 @@ const SectionExperiences = memo(() => {
               Sociis Experiences
             </h2>
             <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent"></div>
+            <p className="text-body-lg text-muted-foreground mt-8">
+              Sociis Experiences™ are where Sociis meet in person. These are controlled environments where behaviour is tested under real conditions.
+            </p>
           </div>
 
           {/* Experience Cards */}
           <div className="space-y-12 sm:space-y-20 mb-12 sm:mb-20">
             {experiences.map((exp, index) => (
-              <div 
-                key={exp.name} 
-                className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center ${
-                  shouldReduceAnimations ? 'opacity-100' : 'opacity-0 animate-[fade-in_0.8s_ease-out_forwards]'
-                }`}
+              <div
+                key={exp.name}
+                className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center ${shouldReduceAnimations ? 'opacity-100' : 'opacity-0 animate-[fade-in_0.8s_ease-out_forwards]'
+                  }`}
                 style={shouldReduceAnimations ? undefined : { animationDelay: `${0.2 + index * 0.15}s` }}
               >
                 {/* Image */}
@@ -63,11 +65,10 @@ const SectionExperiences = memo(() => {
                       alt={exp.name}
                       loading="lazy"
                       decoding="async"
-                      className={`w-full aspect-[4/3] object-cover grayscale rounded-2xl ${
-                        shouldReduceAnimations 
-                          ? '' 
+                      className={`w-full aspect-[4/3] object-cover grayscale rounded-2xl ${shouldReduceAnimations
+                          ? ''
                           : 'hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105'
-                      }`}
+                        }`}
                     />
                     {!shouldReduceAnimations && (
                       <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -83,9 +84,8 @@ const SectionExperiences = memo(() => {
                   <span className="inline-block text-accent text-sm sm:text-base tracking-widest mb-2 sm:mb-3 opacity-60">
                     0{index + 1}
                   </span>
-                  <h3 className={`font-accent text-2xl sm:text-3xl md:text-4xl text-foreground italic mb-2 ${
-                    shouldReduceAnimations ? '' : 'hover:text-accent transition-colors duration-300'
-                  }`}>
+                  <h3 className={`font-accent text-2xl sm:text-3xl md:text-4xl text-foreground italic mb-2 ${shouldReduceAnimations ? '' : 'hover:text-accent transition-colors duration-300'
+                    }`}>
                     {exp.name}
                   </h3>
                   <p className="text-body text-muted-foreground tracking-wide mb-4">

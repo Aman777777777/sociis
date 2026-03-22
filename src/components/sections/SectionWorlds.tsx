@@ -10,7 +10,7 @@ const SectionWorlds = () => {
     },
     {
       title: "Humanity",
-      description: "Sustainability has institutional legitimacy only when humanity remains at its centre. Culture, education and philanthropy anchor the institutional mission.",
+      description: "Sustainability has institutional legitimacy only when humanity remains at its centre. Culture, connection and philanthropy anchor the institutional mission.",
     },
   ];
 

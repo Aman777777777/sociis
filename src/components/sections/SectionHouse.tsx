@@ -4,7 +4,7 @@ const SectionHouse = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
-            Public Learning
+            Connection
           </p>
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
             Sociis House™
@@ -12,7 +12,8 @@ const SectionHouse = () => {
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
           <p className="text-body text-muted-foreground mb-8">
-            Sociis House™ is the public learning platform of SociisGroup, where behavioural standards are translated into journeys, films and deep conversations guided by the LIME Code.
+            Sociis House™ is where Sociis stay connected, through conversations, signals and shared narratives.<br />
+            Behaviour in motion.
           </p>
 
           <p className="text-body text-muted-foreground mb-10">
