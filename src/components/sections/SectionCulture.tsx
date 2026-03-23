@@ -33,17 +33,13 @@ const SectionCulture = memo(() => {
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-12"></div>
 
-          <p className="text-body-lg text-foreground mb-12">
-            Culture moves faster than governance.
-          </p>
-
-          {/* Block 1: Cultural Distribution Channels */}
+          {/* Block 1: Cultural Distribution Platforms */}
           <div className="mb-12">
             <h3 className="font-sans text-lg text-foreground font-medium mb-4">
-              Cultural Distribution Channels
+              Cultural Distribution Platforms
             </h3>
             <p className="text-body text-muted-foreground mb-6">
-              SociisGroup collaborates with selected cultural channels to distribute the Sustainable Behavioural Standard (SBS™) through immersive and large-scale formats.
+              SociisGroup collaborates with selected cultural platforms to distribute the Sustainable Behavioural Standard (SBS™) through immersive and large-scale formats.
             </p>
             <ul className="space-y-2">
               <li className="text-body text-muted-foreground flex items-start gap-3">

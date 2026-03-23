@@ -42,8 +42,8 @@ const SectionExperiences = memo(() => {
             <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
               Sociis Experiences
             </h2>
-            <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent"></div>
-            <p className="text-body-lg text-muted-foreground mt-8">
+            <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-8"></div>
+            <p className="text-body text-muted-foreground max-w-2xl">
               Sociis Experiences™ are where Sociis meet in person. These are controlled environments where behaviour is tested under real conditions.
             </p>
           </div>
@@ -66,8 +66,8 @@ const SectionExperiences = memo(() => {
                       loading="lazy"
                       decoding="async"
                       className={`w-full aspect-[4/3] object-cover grayscale rounded-2xl ${shouldReduceAnimations
-                          ? ''
-                          : 'hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105'
+                        ? ''
+                        : 'hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105'
                         }`}
                     />
                     {!shouldReduceAnimations && (

@@ -11,9 +11,8 @@ const SectionImpactDetail = () => {
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
-          <p className="text-body text-muted-foreground mb-8">
-            Sociis Impact™ develops and governs <span className="text-foreground font-medium">SBS</span>,
-            the Sustainable Behavioural Standard, the institutional framework that makes leadership conduct visible, accountable and repeatable.
+          <p className="text-body-lg text-foreground mb-8">
+            SBS defines the framework. BEE makes behaviour actionable.
           </p>
 
           <p className="text-body text-muted-foreground mb-8">

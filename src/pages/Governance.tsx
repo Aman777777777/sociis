@@ -56,7 +56,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Dominique Debecker",
-    role: "Chief Behavioural Officer, SBS",
+    role: "Chief Behavioural Officer",
     image: dominiqueD,
     category: "leadership",
     bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™, the division responsible for developing and deploying the Sustainable Behavioural Standard (SBS™). With deep expertise in behavioural science, organisational psychology, and brain-based leadership methodologies, she ensures that every initiative within the institution is grounded in integrity, ethical conduct, and meaningful transformation. Her work focuses on translating complex behavioural frameworks into practical tools that organisations can embed into their governance structures. She oversees BEE™, the Behavioural Engine of Ethics, which provides signals, patterns, and dashboards showing how leaders and organisations behave over time, not how they present themselves."
@@ -176,7 +176,7 @@ const teamMembers: TeamMember[] = [
     category: "council",
   },
   {
-    name: "Tatjana Dragović Andersen, EdD",
+    name: "Tatjana Dragović Andersen, PhD",
     role: "Associate Professor",
     image: tatiana,
     category: "council",

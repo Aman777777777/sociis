@@ -12,12 +12,11 @@ const SectionHouse = () => {
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
           <p className="text-body text-muted-foreground mb-8">
-            Sociis House™ is where Sociis stay connected, through conversations, signals and shared narratives.<br />
-            Behaviour in motion.
+            Sociis House™ is where Sociis stay connected, through conversations, signals and shared narratives.
           </p>
 
           <p className="text-body text-muted-foreground mb-10">
-            House content (audio, stories, reflections) is distributed through strategic media collaborations, including <span className="text-foreground font-medium">Podeo</span>, extending institutional reach beyond sovereign gatherings.
+            Not education. Behaviour in motion.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

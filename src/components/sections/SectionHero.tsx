@@ -130,8 +130,8 @@ const SectionHero = memo(() => {
             <div
               ref={markRef}
               className={`mt-6 lg:mt-8 text-center max-w-xs sm:max-w-sm px-4 transition-all duration-1000 ease-out ${isMarkVisible
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-4'
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-4'
                 }`}
             >
               <p className={`text-sm sm:text-base tracking-widest text-muted-foreground uppercase mb-3 sm:mb-4 transition-all duration-700 delay-200 ${isMarkVisible ? 'opacity-100' : 'opacity-0'
