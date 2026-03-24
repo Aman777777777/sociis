@@ -16,7 +16,7 @@ const SectionImpactDetail = () => {
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
-            It is supported by <span className="text-foreground font-medium">BEE™</span>. BEE™ identifies behavioural friction in real time and guides clearer decision making under pressure.
+            BEE™, the Behavioural Engine of Ethics, identifies behavioural friction in real time and guides clearer decision making under pressure.
           </p>
 
           <p className="font-accent text-xl sm:text-2xl text-foreground italic">

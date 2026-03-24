@@ -99,7 +99,7 @@ const Footer = () => {
 
         <div className="pt-8 pb-6 border-t border-border">
           <p className="font-sans text-base text-muted-foreground max-w-3xl">
-            We operate on the Sustainable Behavioural Standard (SBS™), measurement (BEE™, the Behavioural Engine of Ethics), connection (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
+            We operate on the Sustainable Behavioural Standard (SBS™), measurement (BEE™, the Behavioural Engine of Ethics), environment (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
           </p>
         </div>
 
