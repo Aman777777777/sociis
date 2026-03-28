@@ -21,7 +21,7 @@ const SectionLeaders = () => {
       description: "Leaders are assessed not by their statements but by their conduct. Behavioural infrastructure makes credibility verifiable.",
     },
     {
-      title: "Behaviour Under Pressure",
+      title: "Behaviour",
       description: "Controlled environments reveal and calibrate leadership conduct, the foundation of sustainable institutional trust.",
     },
   ];

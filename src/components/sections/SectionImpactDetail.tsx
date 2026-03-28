@@ -16,12 +16,7 @@ const SectionImpactDetail = () => {
           </p>
 
           <p className="text-body text-muted-foreground mb-8">
-            BEE™, the Behavioural Engine of Ethics, identifies behavioural friction in real time and guides clearer decision making under pressure.
-          </p>
-
-          <p className="font-accent text-xl sm:text-2xl text-foreground italic">
-            Sustainable behaviour ceases to be a statement
-            and becomes an accountable, institutional asset.
+            BEE™, the Behavioural Engine of Ethics, detects behavioural friction and guides clearer decision making in real time.
           </p>
         </div>
       </div>

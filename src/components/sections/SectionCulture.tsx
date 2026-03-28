@@ -33,67 +33,80 @@ const SectionCulture = memo(() => {
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-12"></div>
 
-          <p className="text-body-lg text-foreground mb-12">
+          <p className="text-body-lg text-foreground mb-4">
             Culture moves faster than governance.
           </p>
+          <p className="text-body text-muted-foreground mb-12">
+            It is how behaviour scales.
+          </p>
 
-          {/* Block 1: Cultural Distribution Channels */}
+          {/* Sociis Rooms */}
           <div className="mb-12">
             <h3 className="font-sans text-lg text-foreground font-medium mb-4">
-              Cultural Distribution Channels
+              Sociis Rooms
             </h3>
-            <p className="text-body text-muted-foreground mb-6">
-              SociisGroup collaborates with selected cultural channels to distribute the Sustainable Behavioural Standard (SBS™) through immersive and large-scale formats.
+            <p className="text-body text-muted-foreground mb-2">
+              Sociis Rooms are controlled environments where behaviour becomes visible.
+            </p>
+            <p className="text-body text-muted-foreground italic mb-6">
+              Not events.<br />
+              Behavioural proof.
             </p>
             <ul className="space-y-2">
               <li className="text-body text-muted-foreground flex items-start gap-3">
                 <span className="text-accent mt-0.5">·</span>
-                Love Tomorrow
+                The 22 — one table, high trust
               </li>
               <li className="text-body text-muted-foreground flex items-start gap-3">
                 <span className="text-accent mt-0.5">·</span>
-                Podeo
+                The 64 — curated institutional room
+              </li>
+              <li className="text-body text-muted-foreground flex items-start gap-3">
+                <span className="text-accent mt-0.5">·</span>
+                The 300 — immersive environment
               </li>
             </ul>
           </div>
 
-          {/* Block 2: Philanthropic & Cultural Support */}
+          {/* Sociis House */}
+          <div className="pt-10 border-t border-border/50 mb-12">
+            <h3 className="font-sans text-lg text-foreground font-medium mb-4">
+              Sociis House
+            </h3>
+            <p className="text-body text-muted-foreground mb-2">
+              Sociis House™ is where Sociis stay connected.
+            </p>
+            <p className="text-body text-muted-foreground mb-2">
+              It is the environment where conversations, signals and shared narratives shape behaviour over time.
+            </p>
+            <p className="text-body text-muted-foreground italic">
+              Not education.<br />
+              Behaviour in motion.
+            </p>
+          </div>
+
+          {/* Cultural Distribution */}
           <div className="pt-10 border-t border-border/50">
             <h3 className="font-sans text-lg text-foreground font-medium mb-4">
-              Philanthropic & Cultural Support
+              Cultural Distribution
             </h3>
-            <p className="text-body text-muted-foreground mb-6">
-              SociisGroup supports selected philanthropic initiatives aligned with its mission.
-            </p>
             <ul className="space-y-2">
               <li className="text-body text-muted-foreground flex items-start gap-3">
                 <span className="text-accent mt-0.5">·</span>
-                Under One Sky
+                Let There Be Light
               </li>
               <li className="text-body text-muted-foreground flex items-start gap-3">
                 <span className="text-accent mt-0.5">·</span>
-                The Diana Award
+                Media
               </li>
               <li className="text-body text-muted-foreground flex items-start gap-3">
                 <span className="text-accent mt-0.5">·</span>
-                We Do It Together
-              </li>
-              <li className="text-body text-muted-foreground flex items-start gap-3">
-                <span className="text-accent mt-0.5">·</span>
-                Global Gift Foundation
+                Cultural platforms
               </li>
             </ul>
-          </div>
 
-          {/* Let There Be Light */}
-          <div className="pt-10 mt-12 border-t border-border/50">
-            <h3 className="font-sans text-lg text-foreground font-medium mb-2">
-              Let There Be Light™
-            </h3>
-            <p className="text-body text-muted-foreground mb-8">
-              A cultural chapter of SociisGroup™ expressing dignity and behavioural leadership through music.
-            </p>
-            <div className="rounded-2xl overflow-hidden">
+            {/* Let There Be Light video */}
+            <div className="mt-10 rounded-2xl overflow-hidden">
               <video
                 ref={videoRef}
                 src={charityVideo}
@@ -104,17 +117,6 @@ const SectionCulture = memo(() => {
                 className="w-full"
               />
             </div>
-          </div>
-
-          <p className="text-body text-foreground mt-12">
-            Sociis Culture makes the Sustainable Behavioural Standard (SBS™) tangible through cultural production.
-          </p>
-
-          <div className="mt-20 text-center border-t border-border pt-16">
-            <p className="font-accent text-xl text-foreground italic">
-              Life is precious.<br />
-              So are you.
-            </p>
           </div>
         </div>
       </div>

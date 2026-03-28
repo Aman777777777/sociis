@@ -83,36 +83,35 @@ const SectionHero = memo(() => {
             </div>
 
             <h1
-              className="font-sans font-extralight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-2 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
+              className="font-sans font-extralight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
             >
-              <span className="inline-block hover:text-accent transition-colors duration-500">SOCIIS</span>
+              <span className="inline-block hover:text-accent transition-colors duration-500">SOCIISGROUP™</span>
             </h1>
 
-            <p className="text-sm text-muted-foreground tracking-wide mb-2 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.3s_forwards]">
-              pronounced "So-chees"
-            </p>
-
-            <p className="text-sm text-muted-foreground/70 italic mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.35s_forwards]">
-              From Latin socius: ally, companion, one who stands with another.
+            <p
+              className="text-body-lg text-foreground mb-4 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.3s_forwards]"
+            >
+              We improve decisions by improving behaviour.
             </p>
 
             <p
-              className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
+              className="text-body text-muted-foreground mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
             >
-              <span className="font-medium">SociisGroup™</span> is a Sovereign Independent Behavioural Institution and Benefit Corporation. It builds behavioural infrastructure for sustainability, hospitality and humanity, making Impact at Scale real and accountable.
+              The first independent behavioural institution.
             </p>
+
             <p
-              className="text-body-lg text-foreground mb-4 lg:mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.5s_forwards]"
+              className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.5s_forwards]"
             >
-              This is not only about business.<br />
-              It is about the standard of behaviour we bring into the world, as citizens of it.
+              SociisGroup builds a behavioural standard and intelligence system that improves how individuals, organisations and institutions make decisions.
             </p>
+
             <p
               className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
             >
-              SociisGroup™ operates on the Sustainable Behavioural Standard (SBS™), supported by BEE™, expressed through Sociis House™, tested in Sociis Experiences™, and distributed through culture.
+              Sociis Impact builds the system.<br />
+              Sociis Culture scales it.
             </p>
-            {/* Join button removed - layout balanced with existing content */}
           </div>
 
           {/* Right: Minimal symbol with subtle animation */}

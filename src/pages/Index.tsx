@@ -7,11 +7,9 @@ import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
 import SectionProblem from "@/components/sections/SectionProblem";
 import SectionWorlds from "@/components/sections/SectionWorlds";
 import SectionWhat from "@/components/sections/SectionWhat";
-
 import SectionImpact from "@/components/sections/SectionImpact";
 import SectionImpactDetail from "@/components/sections/SectionImpactDetail";
 import SectionLeaders from "@/components/sections/SectionLeaders";
-import SectionHouse from "@/components/sections/SectionHouse";
 import SectionExperiences from "@/components/sections/SectionExperiences";
 import SectionCulture from "@/components/sections/SectionCulture";
 import SectionUnconventional from "@/components/sections/SectionUnconventional";
@@ -23,7 +21,6 @@ import SectionMedia from "@/components/sections/SectionMedia";
 import SectionAccess from "@/components/sections/SectionAccess";
 import SectionAmbassadors from "@/components/sections/SectionAmbassadors";
 
-
 const Index = () => {
   return (
     <PageTransition>
@@ -32,32 +29,30 @@ const Index = () => {
         {/* 1. Institutional Definition */}
         <SectionHero />
         <SectionInfrastructure />
-        
+
         {/* 2. What SociisGroup Does */}
         <SectionProblem />
         <SectionWorlds />
         <SectionWhat />
-        
+
         {/* Ambassadors */}
         <SectionAmbassadors />
-        
+
         {/* Institutional Output */}
         <SectionImpact />
         <SectionImpactDetail />
-        
+
         {/* 3. Why It Matters to Power */}
         <SectionLeaders />
-        
+
         {/* 4. Cultural & Experiential Layer */}
         <SectionExperiences />
         <SectionCulture />
         <SectionUnconventional />
-        <SectionHouse />
-        
+
         {/* 5. Governance & Integrity */}
         <SectionLime />
-        
-        
+
         <SectionOneBillion />
         <SectionFlywheel />
 

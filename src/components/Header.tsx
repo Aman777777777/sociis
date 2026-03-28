@@ -19,8 +19,6 @@ const Header = () => {
 
   const navLinks = [
     { name: "Impact", href: "/#impact" },
-    { name: "Experiences", href: "/#experiences" },
-    { name: "House", href: "/#house" },
     { name: "Culture", href: "/#culture" },
     { name: "Governance", href: "/governance", isPage: true },
     { name: "Calendar", href: "/calendar", isPage: true },
@@ -51,11 +49,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
           ? "bg-background/98 backdrop-blur-sm py-4"
           : "bg-transparent py-6"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between">
@@ -63,9 +60,9 @@ const Header = () => {
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <img 
-              src={sociisLogo} 
-              alt="SociisGroup" 
+            <img
+              src={sociisLogo}
+              alt="SociisGroup"
               className="h-10 w-auto brightness-0 invert-0"
             />
           </Link>
@@ -76,9 +73,8 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`font-sans text-base tracking-wide transition-colors ${
-                    location.pathname === link.href ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
-                  }`}
+                  className={`font-sans text-base tracking-wide transition-colors ${location.pathname === link.href ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
+                    }`}
                 >
                   {link.name}
                 </Link>

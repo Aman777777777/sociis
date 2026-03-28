@@ -28,16 +28,6 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/#experiences" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
-                  Experiences
-                </a>
-              </li>
-              <li>
-                <a href="/#house" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
-                  House
-                </a>
-              </li>
-              <li>
                 <a href="/#culture" className="font-sans text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors">
                   Culture
                 </a>
@@ -99,7 +89,10 @@ const Footer = () => {
 
         <div className="pt-8 pb-6 border-t border-border">
           <p className="font-sans text-base text-muted-foreground max-w-3xl">
-            We operate on the Sustainable Behavioural Standard (SBS™), measurement (BEE™, the Behavioural Engine of Ethics), environment (House™), culture, and sovereign alliances to embed accountable conduct into institutions and organisations.
+            SociisGroup™ is an independent behavioural institution.
+          </p>
+          <p className="font-sans text-base text-muted-foreground max-w-3xl mt-2">
+            We operate through Sociis Impact, building the behavioural standard and intelligence system, and Sociis Culture, scaling it through environments, experiences and cultural distribution.
           </p>
         </div>
 

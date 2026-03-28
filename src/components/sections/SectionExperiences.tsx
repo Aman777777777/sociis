@@ -115,40 +115,9 @@ const SectionExperiences = memo(() => {
               </div>
             ))}
           </div>
-
-          {/* Humanity in Action */}
-          <div className={shouldReduceAnimations ? '' : 'opacity-0 animate-[fade-in_0.8s_ease-out_0.6s_forwards]'}>
-            <div className="relative mb-6 sm:mb-8">
-              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                <div className="w-8 sm:w-12 h-px bg-accent"></div>
-                <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase">
-                  Purpose in Practice
-                </p>
-              </div>
-              <h3 className="font-accent text-xl sm:text-2xl md:text-3xl text-foreground italic mb-2">
-                Humanity in Action
-              </h3>
-              <p className="text-body text-muted-foreground max-w-lg">
-                Behaviour translated into lived responsibility through culture and aligned humanitarian collaborations.
-              </p>
-            </div>
-          </div>
-
-          {/* Closing */}
-          <div className="mt-12 sm:mt-20 pt-8 sm:pt-12 border-t border-border/50 opacity-0 animate-[fade-in_0.8s_ease-out_0.8s_forwards]">
-            <div className="flex items-start gap-4 sm:gap-6">
-              <div className="hidden md:block w-12 sm:w-16 h-px bg-gradient-to-r from-accent to-transparent mt-3"></div>
-              <div>
-                <p className="text-body text-muted-foreground italic">
-                  Environments engineered to test and reinforce sustainable behaviour under institutional conditions.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <style>{`
+        <style>{`
         @keyframes slide-right {
           0%, 100% { transform: translateX(-100%); }
           50% { transform: translateX(100%); }
