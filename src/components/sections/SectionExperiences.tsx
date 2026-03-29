@@ -116,8 +116,9 @@ const SectionExperiences = memo(() => {
             ))}
           </div>
         </div>
+      </div>
 
-        <style>{`
+      <style>{`
         @keyframes slide-right {
           0%, 100% { transform: translateX(-100%); }
           50% { transform: translateX(100%); }
