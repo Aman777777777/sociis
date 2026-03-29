@@ -1,3 +1,4 @@
+// v3
 const SectionInfrastructure = () => {
   return (
     <section id="infrastructure" className="py-12 sm:py-20">
