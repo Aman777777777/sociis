@@ -7,6 +7,7 @@ import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
 import SectionProblem from "@/components/sections/SectionProblem";
 import SectionWorlds from "@/components/sections/SectionWorlds";
 import SectionWhat from "@/components/sections/SectionWhat";
+import SectionDecisionImpact from "@/components/sections/SectionDecisionImpact";
 import SectionImpact from "@/components/sections/SectionImpact";
 import SectionImpactDetail from "@/components/sections/SectionImpactDetail";
 import SectionLeaders from "@/components/sections/SectionLeaders";
@@ -34,6 +35,7 @@ const Index = () => {
         <SectionProblem />
         <SectionWorlds />
         <SectionWhat />
+        <SectionDecisionImpact />
 
         {/* Ambassadors */}
         <SectionAmbassadors />

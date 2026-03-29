@@ -26,6 +26,9 @@ const SectionWhat = () => {
                   BEE — the behavioural intelligence platform
                 </li>
               </ul>
+              <p className="text-body text-muted-foreground mt-3">
+                BEE intervenes at the moment decisions are made.
+              </p>
             </div>
 
             <div>

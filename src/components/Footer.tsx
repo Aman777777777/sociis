@@ -89,10 +89,7 @@ const Footer = () => {
 
         <div className="pt-8 pb-6 border-t border-border">
           <p className="font-sans text-base text-muted-foreground max-w-3xl">
-            SociisGroup™ is an independent behavioural institution.
-          </p>
-          <p className="font-sans text-base text-muted-foreground max-w-3xl mt-2">
-            We operate through Sociis Impact, building the behavioural standard and intelligence system, and Sociis Culture, scaling it through environments, experiences and cultural distribution.
+            SociisGroup™ builds decision infrastructure that improves behaviour before outcomes exist.
           </p>
         </div>
 
