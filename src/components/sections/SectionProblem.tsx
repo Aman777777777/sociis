@@ -18,16 +18,13 @@ const SectionProblem = () => {
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r-2 border-b-2 border-accent/30"></div>
           </div>
 
-          {/* Content */}
+          {/* Content — Fix 3: ESG line removed from here, Fix 4: measurement line updated */}
           <div className="order-1 lg:order-2">
-            <p className="font-accent text-2xl sm:text-3xl text-foreground italic mb-8 opacity-0 animate-[fade-in_0.8s_ease-out_forwards]">
-              Behaviour is the missing B in ESG.
-            </p>
             <p className="text-body text-muted-foreground mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_0.15s_forwards]">
-              We do not measure outcomes.
+              We do not measure sustainability outcomes.
             </p>
             <p className="text-body text-muted-foreground opacity-0 animate-[fade-in_0.8s_ease-out_0.25s_forwards]">
-              We intervene before decisions are made.
+              We improve the decisions that create them.
             </p>
           </div>
         </div>

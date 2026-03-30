@@ -31,11 +31,13 @@ const Index = () => {
         <SectionHero />
         <SectionInfrastructure />
 
-        {/* 2. What SociisGroup Does */}
+        {/* 2. Commercial Case — hits first */}
+        <SectionDecisionImpact />
+
+        {/* 3. What SociisGroup Does */}
         <SectionProblem />
         <SectionWorlds />
         <SectionWhat />
-        <SectionDecisionImpact />
 
         {/* Ambassadors */}
         <SectionAmbassadors />

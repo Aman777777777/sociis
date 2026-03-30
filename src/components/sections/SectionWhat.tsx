@@ -23,7 +23,7 @@ const SectionWhat = () => {
                 </li>
                 <li className="text-body text-muted-foreground flex items-start gap-3">
                   <span className="text-accent mt-0.5">·</span>
-                  BEE — the behavioural intelligence platform
+                  BEE — the decision intelligence platform
                 </li>
               </ul>
               <p className="text-body text-muted-foreground mt-3">

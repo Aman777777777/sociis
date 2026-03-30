@@ -12,7 +12,7 @@ const Footer = () => {
               <img src={sociisGroupLogo} alt="SociisGroup" className="h-8 sm:h-10 w-auto" />
             </Link>
             <p className="font-sans text-sm sm:text-base text-muted-foreground max-w-xs">
-              A sovereign independent behavioural institution turning sustainable behaviour into global Impact.
+              An independent behavioural institution turning sustainable behaviour into global Impact.
             </p>
           </div>
 

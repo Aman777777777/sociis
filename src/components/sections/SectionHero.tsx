@@ -97,13 +97,13 @@ const SectionHero = memo(() => {
             <p
               className="text-body text-muted-foreground mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
             >
-              The first independent behavioural institution.
+              The independent behavioural institution.
             </p>
 
             <p
               className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.5s_forwards]"
             >
-              SociisGroup builds a behavioural standard and intelligence system that improves how individuals, organisations and institutions make decisions.
+              SociisGroup builds decision infrastructure for organisations, powered by a behavioural standard (SBS) and scaled through our technology platform BEE.
             </p>
 
             <p
