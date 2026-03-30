@@ -9,7 +9,7 @@ const SectionOneBillion = () => {
       description: "Podeo, audio distribution at scale.",
     },
     {
-      name: "Sociis Experiences",
+      name: "Sociis Rooms",
       description: "22 · 64 · 300, controlled formats generating behavioural proof under pressure.",
     },
     {

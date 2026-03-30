@@ -85,7 +85,7 @@ const Charter = () => {
                         <ul className="space-y-2 pl-6 list-disc">
                           <li>SBS™ — Sustainable Behavioural Standard</li>
                           <li>BEE™ — Behavioural Engine of Ethics (SaaS), impact at scale</li>
-                          <li>Sociis Experiences™ — The 22 / The 64 / The 300</li>
+                          <li>Sociis Rooms — The 22 / The 64 / The 300</li>
                           <li>Sociis Culture™ — Apparel, art, film, Let There Be Light™</li>
                           <li>Sociis House™ — Behavioural literacy, reflection & mindset shift environment</li>
                           <li>Sociis Access™ — Curated proximity architecture</li>
@@ -236,7 +236,7 @@ const Charter = () => {
 
                 {/* 6. Sociis Experiences */}
                 <div>
-                  <h2 className="font-sans text-xl text-foreground font-medium mb-6">6. Sociis Experiences™ — Proof</h2>
+                  <h2 className="font-sans text-xl text-foreground font-medium mb-6">6. Sociis Rooms — Proof</h2>
                   <p className="text-body text-muted-foreground mb-6">Experiences put mindset shifts and subsequent behavioural changes in action. Three formats exist:</p>
                   <div className="space-y-8">
                     <div>
@@ -490,7 +490,7 @@ const Charter = () => {
                       <div><dt className="font-medium text-foreground">Cultural Return</dt><dd>Return generated through meaning, identity, narrative, and symbolic association. Not financial.</dd></div>
                       <div><dt className="font-medium text-foreground">Deployment</dt><dd>Integration of SBS/BEE into companies or sovereigns. Managed by Impact.</dd></div>
                       <div><dt className="font-medium text-foreground">Discernment</dt><dd>One of the LIME Code principles: clear perception before action; resisting binary simplification.</dd></div>
-                      <div><dt className="font-medium text-foreground">Experiences / Sociis Experiences™</dt><dd>Proof environments where behaviour becomes visible. (22/64/300).</dd></div>
+                      <div><dt className="font-medium text-foreground">Sociis Rooms</dt><dd>Proof environments where behaviour becomes visible. (22/64/300).</dd></div>
                       <div><dt className="font-medium text-foreground">Extraction Behaviour</dt><dd>Using proximity to sell, pitch, or farm relationships. Violates Access governance.</dd></div>
                       <div><dt className="font-medium text-foreground">Governance</dt><dd>Rules, standards, and behavioural expectations that ensure institutional integrity and continuity.</dd></div>
                       <div><dt className="font-medium text-foreground">House / Sociis House™</dt><dd>Behavioural adoption and literacy engine. Delivers lenses, psychology, AI ethics, and behavioural connection.</dd></div>

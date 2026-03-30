@@ -95,12 +95,6 @@ const SectionHero = memo(() => {
             </p>
 
             <p
-              className="text-body text-muted-foreground mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.35s_forwards]"
-            >
-              Reducing the cost of inconsistent decisions inside organisations.
-            </p>
-
-            <p
               className="text-body text-muted-foreground mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.4s_forwards]"
             >
               The first independent behavioural institution.
