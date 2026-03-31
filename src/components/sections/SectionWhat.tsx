@@ -27,7 +27,7 @@ const SectionWhat = () => {
                 </li>
               </ul>
               <p className="text-body text-muted-foreground mt-3">
-                BEE intervenes at the moment decisions are made.
+                BEE™, Behavioural Engine of Ethics, improves behaviour at the moment decisions are made, before outcomes exist.
               </p>
             </div>
 

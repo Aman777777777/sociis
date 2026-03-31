@@ -103,7 +103,7 @@ const SectionHero = memo(() => {
             <p
               className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.5s_forwards]"
             >
-              SociisGroup builds decision infrastructure for organisations, powered by a behavioural standard (SBS) and scaled through our technology platform BEE.
+              SociisGroup improves how institutions and their leaders make decisions, through SBS™, the behavioural framework, and BEE™, the decision intelligence platform.
             </p>
 
             <p
@@ -141,7 +141,7 @@ const SectionHero = memo(() => {
                 }`}>
                 <p>Two complete individuals, equal, side by side.</p>
                 <p>No one above, no one below.</p>
-                <p>Impact created with people, not on top of people.</p>
+                <p>Impact is created with people, not on top of people.</p>
               </div>
             </div>
           </div>

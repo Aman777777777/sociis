@@ -89,7 +89,7 @@ const Footer = () => {
 
         <div className="pt-8 pb-6 border-t border-border">
           <p className="font-sans text-base text-muted-foreground max-w-3xl">
-            SociisGroup™ builds decision infrastructure that improves behaviour before outcomes exist.
+            SociisGroup™ improves decisions by improving behaviour.
           </p>
         </div>
 

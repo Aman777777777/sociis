@@ -23,8 +23,8 @@ const SectionExperiences = memo(() => {
     },
     {
       name: "The 300",
-      subtitle: "Immersive Format",
-      description: "A private SociisGroup™ immersive experience for 300 curated leaders.",
+      subtitle: "Immersive Room",
+      description: "A private environment for 300 curated leaders.",
       image: experienceFestival,
       deckUrl: "/the-300-deck.pdf",
     },
@@ -40,11 +40,11 @@ const SectionExperiences = memo(() => {
               Controlled Environments
             </p>
             <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-              Sociis Rooms
+              Sociis Rooms™
             </h2>
             <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-8"></div>
             <p className="text-body text-muted-foreground max-w-2xl">
-              Sociis Rooms are controlled environments where behaviour is tested under real conditions.
+              Sociis Rooms™ are controlled environments where decisions are made and behaviour becomes visible.
             </p>
           </div>
 

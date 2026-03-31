@@ -37,13 +37,13 @@ const SectionCulture = memo(() => {
             Culture moves faster than governance.
           </p>
           <p className="text-body text-muted-foreground mb-12">
-            It is how behaviour scales.
+            Culture distributes behaviour at scale.
           </p>
 
           {/* Sociis Rooms */}
           <div className="mb-12">
             <h3 className="font-sans text-lg text-foreground font-medium mb-4">
-              Sociis Rooms
+              Sociis Rooms™
             </h3>
             <p className="text-body text-muted-foreground mb-2">
               Sociis Rooms are controlled environments where behaviour becomes visible.
