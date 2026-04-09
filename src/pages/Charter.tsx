@@ -54,8 +54,8 @@ const Charter = () => {
                   <div className="space-y-4 text-body text-muted-foreground">
                     <p>Welcome inside SociisGroup™.</p>
                     <p>You are reading this document because you are stepping into a behavioural institution, not a club, not a private network, not a coaching community, not an event brand, not an incubator, not a "mastermind".</p>
-                    <p>SociisGroup exists to ethically support one billion individuals in taking more conscious decisions in how they behave, responsibly and in line with their deep values.</p>
-                    <p>SociisGroup actions are rooted in Sustainability, Hospitality, and Humanity. Together, these domains ensure our work strengthens not only business performance, but also the quality of decisions, relationships, and environments, raising the standard for leadership, culture, and conscience at every level.</p>
+                    <p>SociisGroup exists to ethically support one billion individuals in making more conscious choices in how they behave, responsibly and in line with their deep values.</p>
+                    <p>SociisGroup actions are rooted in Sustainability, Hospitality, and Humanity. Together, these domains ensure our work strengthens not only business performance, but also the quality of relationships, and environments, raising the standard for leadership, culture, and conscience at every level.</p>
                     <p>We are not in a classical "membership" organisation. You are serving a cause and are acting inside an Institution with a mandate and a long-term horizon.</p>
                     <p>This document is designed for onboarding to understand:</p>
                     <ul className="space-y-2 pl-6 list-disc">
@@ -217,9 +217,9 @@ const Charter = () => {
                     <div>
                       <h3 className="font-sans text-lg text-foreground font-medium mb-4">5.2 BEE™ — Behavioural Engine of Ethics</h3>
                       <div className="space-y-4 text-body text-muted-foreground">
-                        <p>BEE™ (Behavioural Engine of Ethics) is the behavioural interface layer that makes SBS tangible in daily decision-making.</p>
+                        <p>BEE™ (Behavioural Engine of Ethics) is the behavioural interface layer that makes SBS tangible in daily conduct.</p>
                         <p>BEE is not a measurement, compliance, or scoring tool.</p>
-                        <p>It is a conversational, AI-assisted interface designed to surface inner tensions, contradictions, and decision conflicts that block alignment with the SBS framework.</p>
+                        <p>It is a conversational, AI-assisted interface designed to surface inner tensions, contradictions, and behavioural conflicts that block alignment with the SBS framework.</p>
                         <p>By making these tensions visible, BEE enables mindset shifts that precede behavioural change.</p>
                         <p>Measurement observes what has already happened. BEE intervenes before behaviour is formed.</p>
                         <p>It:</p>
@@ -252,7 +252,7 @@ const Charter = () => {
                               <li>This rule applies to all formats, on-site and online, before, during, and after the experience.</li>
                             </ul>
                           </li>
-                          <li>Learn and share with key decision makers</li>
+                          <li>Learn and share with key leaders</li>
                           <li>Update on progress</li>
                           <li>Circle can be invited with additional curation</li>
                         </ul>
