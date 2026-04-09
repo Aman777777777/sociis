@@ -2,15 +2,15 @@ const SectionOneBillion = () => {
   const channels = [
     {
       name: "The 300",
-      description: "The 300 Immersive Experience, a private SociisGroup™ cultural moment for curated leaders.",
+      description: "The 300 Immersive Environment. A private SociisGroup™ cultural moment for 300 curated individuals.",
     },
     {
       name: "Podeo",
-      description: "Podeo, audio distribution at scale.",
+      description: "Podeo. Audio distribution at scale.",
     },
     {
       name: "Sociis Rooms",
-      description: "22 · 64 · 300, controlled formats generating behavioural proof under pressure.",
+      description: "Controlled formats generating behavioural proof under pressure.",
     },
     {
       name: "Sociis House",
@@ -18,11 +18,11 @@ const SectionOneBillion = () => {
     },
     {
       name: "Sociis Culture",
-      description: "Anthem, book, objects, cultural anchors that embed the Sustainable Behavioural Standard (SBS™) into daily life.",
+      description: "Anthem, book, objects, cultural anchors that embed the Sociis Behavioural Standard into daily life.",
     },
     {
       name: "Institutional Alliances",
-      description: "Long-term collaborators carrying the Sustainable Behavioural Standard (SBS™) into their own institutions and cultures.",
+      description: "Collaborators who carry the Sociis Behavioural Standard into their own institutions and cultures over the long term.",
     },
     {
       name: "Media",

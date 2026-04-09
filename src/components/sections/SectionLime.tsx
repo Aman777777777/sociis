@@ -17,7 +17,7 @@ const SectionLime = () => {
     "guard the LIME Code",
     "review how SBS is defined and governed",
     "oversee data ethics for BEE",
-    "question any collaboration, event or decision that drifts from institutional standards."
+    "question any collaboration, Room or conduct that drifts from institutional standards."
   ];
 
   return (
@@ -35,10 +35,10 @@ const SectionLime = () => {
           <p className="font-accent text-xl sm:text-2xl text-foreground italic mb-8">
             The balance between Life and Time, and everything in between.
           </p>
-          
+
           <p className="text-body text-muted-foreground mb-8">
             The LIME Code is the ethical and behavioural architecture governing SociisGroup™.
-            It powers SBS, shapes institutional decisions,
+            It powers SBS, shapes institutional conduct,
             and serves as the reference framework for the Sociis Ethical Council.
           </p>
 
@@ -57,8 +57,8 @@ const SectionLime = () => {
             </h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {innerPrinciples.map((principle, index) => (
-                <div 
-                  key={principle.name} 
+                <div
+                  key={principle.name}
                   className="p-6 border border-border/50 hover:border-primary/30 transition-colors animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
@@ -80,8 +80,8 @@ const SectionLime = () => {
             </h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {outerPrinciples.map((principle, index) => (
-                <div 
-                  key={principle.name} 
+                <div
+                  key={principle.name}
                   className="p-6 border border-border/50 hover:border-primary/30 transition-colors animate-fade-in-up"
                   style={{ animationDelay: `${(index + 4) * 0.1}s` }}
                 >
@@ -112,6 +112,9 @@ const SectionLime = () => {
 
           <p className="text-body text-foreground mt-12 pt-8 border-t border-border">
             The LIME Code ensures institutional integrity as SociisGroup scales.
+          </p>
+          <p className="text-body text-muted-foreground mt-4">
+            By 2030, there will be one billion individuals sharing a new behavioural standard based on the LIME Code principles.
           </p>
         </div>
       </div>

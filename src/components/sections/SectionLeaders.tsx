@@ -6,7 +6,7 @@ const SectionLeaders = () => {
     },
     {
       title: "Governance Resilience",
-      description: "The Sustainable Behavioural Standard (SBS™) provides a behavioural layer that strengthens institutional governance beyond disclosure and reporting.",
+      description: "The Sociis Behavioural Standard provides a behavioural layer that strengthens institutional governance beyond disclosure and reporting.",
     },
     {
       title: "Reputation Protection",
@@ -18,11 +18,11 @@ const SectionLeaders = () => {
     },
     {
       title: "Leadership Credibility",
-      description: "Leaders are assessed not by their statements but by their conduct. Behavioural infrastructure makes credibility verifiable.",
+      description: "The most dangerous person in any institution is a leader whose conduct is disconnected from their values.\n\nLeaders are assessed not by their statements but by their conduct. Behavioural infrastructure makes credibility verifiable.",
     },
     {
       title: "Behaviour",
-      description: "Controlled environments reveal and calibrate leadership conduct, the foundation of sustainable institutional trust.",
+      description: "Controlled environments reveal and calibrate leadership conduct. That is the foundation of sustainable institutional trust.",
     },
   ];
 
@@ -48,7 +48,7 @@ const SectionLeaders = () => {
                 <h3 className="font-sans font-medium text-foreground mb-3">
                   {reason.title}
                 </h3>
-                <p className="text-body text-muted-foreground">
+                <p className="text-body text-muted-foreground whitespace-pre-line">
                   {reason.description}
                 </p>
               </div>

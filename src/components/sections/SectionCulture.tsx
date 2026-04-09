@@ -34,7 +34,7 @@ const SectionCulture = memo(() => {
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-12"></div>
 
           <p className="text-body-lg text-foreground mb-4">
-            Culture moves faster than governance.
+            Culture changes people. Rules only contain them.
           </p>
           <p className="text-body text-muted-foreground mb-12">
             Culture distributes behaviour at scale.
@@ -74,7 +74,7 @@ const SectionCulture = memo(() => {
           {/* Sociis House */}
           <div className="pt-10 border-t border-border/50 mb-12">
             <h3 className="font-sans text-lg text-foreground font-medium mb-4">
-              Sociis House
+              Sociis House™
             </h3>
             <p className="text-body text-muted-foreground mb-2">
               Sociis House™ is where Sociis stay connected.

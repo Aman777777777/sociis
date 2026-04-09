@@ -5,7 +5,7 @@ import { useMobilePerformance } from "@/hooks/use-mobile-performance";
 const SectionImpact = memo(() => {
   const { shouldReduceAnimations } = useMobilePerformance();
 
-  const animateClass = (delay: string) => 
+  const animateClass = (delay: string) =>
     shouldReduceAnimations ? '' : `animate-fade-in-up`;
 
   return (
@@ -36,19 +36,19 @@ const SectionImpact = memo(() => {
                   </div>
                 </div>
               </div>
-              
+
               <div className={`group ${animateClass('0.3s')}`}>
                 <div className="flex items-start gap-4">
                   <span className="text-accent text-base mt-1.5">02</span>
                   <div>
                     <p className="text-foreground font-medium mb-1">Impact on Institutions</p>
                     <p className="text-body text-muted-foreground">
-                      How decisions are governed, not merely disclosed.
+                      How conduct is governed, not merely disclosed.
                     </p>
                   </div>
                 </div>
               </div>
-              
+
               <div className={`group ${animateClass('0.4s')}`}>
                 <div className="flex items-start gap-4">
                   <span className="text-accent text-base mt-1.5">03</span>
@@ -64,10 +64,10 @@ const SectionImpact = memo(() => {
 
             <div className={`relative pl-6 border-l-2 border-accent ${animateClass('0.5s')}`}>
               <p className="text-body-lg text-foreground mb-2">
-                SBS, the Sustainable Behavioural Standard
+                SBS. The Sociis Behavioural Standard.
               </p>
               <p className="text-body text-muted-foreground">
-                The institutional framework that makes leadership conduct visible, accountable and repeatable.
+                SBS, the Sociis Behavioural Standard, defines the ethical and behavioural reference frame for conscious decision making across individual, organisational, and institutional contexts. The institutional framework that makes leadership conduct visible, accountable and repeatable.
               </p>
             </div>
           </div>
@@ -80,9 +80,8 @@ const SectionImpact = memo(() => {
                 alt="Governance and measurement"
                 loading="lazy"
                 decoding="async"
-                className={`w-full aspect-[4/5] object-cover grayscale rounded-2xl ${
-                  shouldReduceAnimations ? '' : 'group-hover:grayscale-[50%] transition-all duration-700'
-                }`}
+                className={`w-full aspect-[4/5] object-cover grayscale rounded-2xl ${shouldReduceAnimations ? '' : 'group-hover:grayscale-[50%] transition-all duration-700'
+                  }`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-background/20"></div>
             </div>

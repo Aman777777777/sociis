@@ -59,7 +59,7 @@ const SectionAlliances = () => {
                 </h3>
               </div>
               <p className="font-sans text-base text-muted-foreground leading-relaxed">
-                The Connaught · La Réserve Geneva · Aman · Mandarin Oriental · Le Meurice · Hôtel de Paris Monte-Carlo · Orient Express
+                The Connaught. La Réserve Geneva. Aman. Mandarin Oriental. Le Meurice. Hôtel de Paris Monte Carlo. Orient Express.
               </p>
             </div>
 

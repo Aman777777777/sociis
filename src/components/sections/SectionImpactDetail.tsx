@@ -7,12 +7,12 @@ const SectionImpactDetail = () => {
             Behavioural Intelligence
           </p>
           <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
-            BEE — Behavioural Engine of Ethics
+            BEE. Behavioural Engine of Ethics.
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 
           <p className="text-body text-muted-foreground mb-12">
-            A behavioural intelligence system that intervenes at the moment decisions are made.
+            BEE is a behavioural interface layer powered by AI that helps individuals discover the gap between their judgement and the behaviour they are actually producing.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-8">
@@ -25,13 +25,13 @@ const SectionImpactDetail = () => {
             <div className="border-t border-border/50 pt-6">
               <p className="font-sans font-medium text-foreground mb-2">Guide</p>
               <p className="text-body text-muted-foreground">
-                Reframes decisions in real time.
+                Reframes conduct in real time.
               </p>
             </div>
             <div className="border-t border-border/50 pt-6">
               <p className="font-sans font-medium text-foreground mb-2">Improve</p>
               <p className="text-body text-muted-foreground">
-                Builds better behavioural patterns over time.
+                Builds stronger behavioural patterns over time.
               </p>
             </div>
           </div>

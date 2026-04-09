@@ -16,19 +16,14 @@ const SectionWhat = () => {
               <p className="text-body-lg text-foreground mb-4">
                 Sociis Impact builds:
               </p>
-              <ul className="space-y-2">
-                <li className="text-body text-muted-foreground flex items-start gap-3">
-                  <span className="text-accent mt-0.5">·</span>
-                  SBS — the behavioural framework
+              <ul className="space-y-4">
+                <li className="text-body text-muted-foreground">
+                  <span className="text-foreground font-medium">SBS, the Sociis Behavioural Standard.</span> SBS, the Sociis Behavioural Standard, defines the ethical and behavioural reference frame for conscious decision making across individual, organisational, and institutional contexts.
                 </li>
-                <li className="text-body text-muted-foreground flex items-start gap-3">
-                  <span className="text-accent mt-0.5">·</span>
-                  BEE — the decision intelligence platform
+                <li className="text-body text-muted-foreground">
+                  <span className="text-foreground font-medium">BEE, the Behavioural Engine of Ethics.</span> BEE is a behavioural interface layer powered by AI that helps individuals discover the gap between their judgement and the behaviour they are actually producing.
                 </li>
               </ul>
-              <p className="text-body text-muted-foreground mt-3">
-                BEE™, Behavioural Engine of Ethics, improves behaviour at the moment decisions are made, before outcomes exist.
-              </p>
             </div>
 
             <div>
@@ -38,15 +33,15 @@ const SectionWhat = () => {
               <ul className="space-y-2">
                 <li className="text-body text-muted-foreground flex items-start gap-3">
                   <span className="text-accent mt-0.5">·</span>
-                  Rooms — The 22, The 64, The 300
+                  Rooms — The 22, The 64, The 300. Controlled environments where behaviour becomes visible and is calibrated without public exposure.
                 </li>
                 <li className="text-body text-muted-foreground flex items-start gap-3">
                   <span className="text-accent mt-0.5">·</span>
-                  House — continuous connection
+                  House — The continuous environment where Sociis stay connected through conversations, signals and shared narratives.
                 </li>
                 <li className="text-body text-muted-foreground flex items-start gap-3">
                   <span className="text-accent mt-0.5">·</span>
-                  Culture — media, book, Let There Be Light
+                  Culture — Media, book, Let There Be Light. The cultural channels through which the Sociis Behavioural Standard reaches the world.
                 </li>
               </ul>
             </div>

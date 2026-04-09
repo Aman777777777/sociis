@@ -16,15 +16,15 @@ const SectionExperiences = memo(() => {
     },
     {
       name: "The 64",
-      subtitle: "Sovereign Gathering",
+      subtitle: "Founding Gathering",
       description: "An intentionally limited environment where institutional conduct and culture converge.",
       image: experienceGala,
       deckUrl: "/the-64-deck.pptx",
     },
     {
       name: "The 300",
-      subtitle: "Immersive Room",
-      description: "A private environment for 300 curated leaders.",
+      subtitle: "Immersive Environment",
+      description: "A private environment for 300 curated individuals.",
       image: experienceFestival,
       deckUrl: "/the-300-deck.pdf",
     },
@@ -44,7 +44,13 @@ const SectionExperiences = memo(() => {
             </h2>
             <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-8"></div>
             <p className="text-body text-muted-foreground max-w-2xl">
-              Sociis Rooms™ are controlled environments where decisions are made and behaviour becomes visible.
+              Sociis Rooms™ are controlled environments where behaviour becomes visible.
+            </p>
+            <p className="text-body text-muted-foreground max-w-2xl mt-4">
+              These are not events.
+            </p>
+            <p className="text-body text-muted-foreground max-w-2xl mt-2">
+              A Room puts you in a space with other people who have made the same commitment, to a higher standard, to something beyond the next quarter.
             </p>
           </div>
 

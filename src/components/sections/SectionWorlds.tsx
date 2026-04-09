@@ -2,15 +2,15 @@ const SectionWorlds = () => {
   const worlds = [
     {
       title: "Sustainability",
-      description: "Governance, incentive structures, long-term accountability. SBS converts institutional intent into verifiable behavioural conduct.",
+      description: "Governance, incentive structures, accountability over the long term. The Sociis Behavioural Standard converts institutional intent into verifiable behavioural conduct. What institutions report is no longer sufficient. How they behave is now the standard.",
     },
     {
       title: "Hospitality",
-      description: "Controlled environments where leadership behaviour is observed under pressure, from sovereign gatherings to global immersions.",
+      description: "Controlled environments where leadership behaviour becomes visible under pressure. From sovereign gatherings to global immersions, the institutions SociisGroup engages with provide the physical ground where conduct is observed, tested and shaped.",
     },
     {
       title: "Humanity",
-      description: "Sustainability has institutional legitimacy only when humanity remains at its centre. Culture and humanitarian initiatives anchor the institutional mission.",
+      description: "Sustainability carries institutional legitimacy only when humanity remains at its centre. Culture and humanitarian initiatives anchor the institutional mission. Behaviour that serves only the institution is incomplete. Behaviour that serves humanity endures.",
     },
   ];
 

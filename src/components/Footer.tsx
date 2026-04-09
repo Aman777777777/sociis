@@ -12,7 +12,7 @@ const Footer = () => {
               <img src={sociisGroupLogo} alt="SociisGroup" className="h-8 sm:h-10 w-auto" />
             </Link>
             <p className="font-sans text-sm sm:text-base text-muted-foreground max-w-xs">
-              An independent behavioural institution turning sustainable behaviour into global Impact.
+              An independent behavioural institution changing how the world behaves.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ const Footer = () => {
               </li>
             </ul>
             <p className="font-sans text-sm text-muted-foreground mt-6 sm:mt-8">
-              Sociis are the people. SociisGroup is the governing institute.
+              Sociis are the people. SociisGroup is the independent behavioural institution.
             </p>
             <p className="font-sans text-sm text-muted-foreground mt-2">
               SociisGroup™, Benefit Corporation.
@@ -89,7 +89,7 @@ const Footer = () => {
 
         <div className="pt-8 pb-6 border-t border-border">
           <p className="font-sans text-base text-muted-foreground max-w-3xl">
-            SociisGroup™ improves decisions by improving behaviour.
+            SociisGroup™ changes how the world behaves.
           </p>
         </div>
 

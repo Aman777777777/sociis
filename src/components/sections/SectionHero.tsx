@@ -91,7 +91,7 @@ const SectionHero = memo(() => {
             <p
               className="text-body-lg text-foreground mb-4 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.3s_forwards]"
             >
-              We improve decisions by improving behaviour.
+              We change how the world behaves.
             </p>
 
             <p
@@ -101,16 +101,33 @@ const SectionHero = memo(() => {
             </p>
 
             <p
-              className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.5s_forwards]"
+              className="text-body text-muted-foreground mb-4 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.5s_forwards]"
             >
-              SociisGroup improves how institutions and their leaders make decisions, through SBS™, the behavioural framework, and BEE™, the decision intelligence platform.
+              Humanity is taking more from this planet than it can regenerate.
             </p>
 
             <p
-              className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
+              className="text-body text-muted-foreground mb-4 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.55s_forwards]"
             >
-              Sociis Impact builds the system.<br />
-              Sociis Culture scales it.
+              The problem is not knowledge. Everyone knows what needs to change. The problem is behaviour.
+            </p>
+
+            <p
+              className="text-body text-muted-foreground mb-4 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
+            >
+              Not in training programmes. Not in reports. At the source.
+            </p>
+
+            <p
+              className="text-body text-muted-foreground mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.65s_forwards]"
+            >
+              One billion people. One behavioural standard. By 2030.
+            </p>
+
+            <p
+              className="text-body text-muted-foreground mb-8 lg:mb-10 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.7s_forwards]"
+            >
+              Sociis Impact builds the standard and the platform. Sociis Culture distributes them at scale.
             </p>
           </div>
 
