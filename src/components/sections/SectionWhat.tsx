@@ -33,15 +33,15 @@ const SectionWhat = () => {
               <ul className="space-y-2">
                 <li className="text-body text-muted-foreground flex items-start gap-3">
                   <span className="text-accent mt-0.5">·</span>
-                  Rooms — The 22, The 64, The 300. Controlled environments where behaviour becomes visible and is calibrated without public exposure.
+                  Rooms, The 22, The 64, The 300. Controlled environments where behaviour becomes visible and is calibrated without public exposure.
                 </li>
                 <li className="text-body text-muted-foreground flex items-start gap-3">
                   <span className="text-accent mt-0.5">·</span>
-                  House — The continuous environment where Sociis stay connected through conversations, signals and shared narratives.
+                  House, The continuous environment where Sociis stay connected through conversations, signals and shared narratives.
                 </li>
                 <li className="text-body text-muted-foreground flex items-start gap-3">
                   <span className="text-accent mt-0.5">·</span>
-                  Culture — Media, book, Let There Be Light. The cultural channels through which the Sociis Behavioural Standard reaches the world.
+                  Culture, Media, book, Let There Be Light. The cultural channels through which the Sociis Behavioural Standard reaches the world.
                 </li>
               </ul>
             </div>

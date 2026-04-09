@@ -4,10 +4,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import PageTransition from "@/components/PageTransition";
 import SectionHero from "@/components/sections/SectionHero";
 import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
-import SectionProblem from "@/components/sections/SectionProblem";
 import SectionWorlds from "@/components/sections/SectionWorlds";
 import SectionWhat from "@/components/sections/SectionWhat";
-import SectionDecisionImpact from "@/components/sections/SectionDecisionImpact";
 import SectionImpact from "@/components/sections/SectionImpact";
 import SectionImpactDetail from "@/components/sections/SectionImpactDetail";
 import SectionLeaders from "@/components/sections/SectionLeaders";
@@ -31,11 +29,7 @@ const Index = () => {
         <SectionHero />
         <SectionInfrastructure />
 
-        {/* 2. Commercial Case — hits first */}
-        <SectionDecisionImpact />
-
         {/* 3. What SociisGroup Does */}
-        <SectionProblem />
         <SectionWorlds />
         <SectionWhat />
 

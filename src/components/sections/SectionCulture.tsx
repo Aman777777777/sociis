@@ -58,15 +58,15 @@ const SectionCulture = memo(() => {
             <ul className="space-y-2">
               <li className="text-body text-muted-foreground flex items-start gap-3">
                 <span className="text-accent mt-0.5">·</span>
-                The 22 — one table, high trust
+                The 22, one table, high trust
               </li>
               <li className="text-body text-muted-foreground flex items-start gap-3">
                 <span className="text-accent mt-0.5">·</span>
-                The 64 — curated institutional room
+                The 64, curated institutional room
               </li>
               <li className="text-body text-muted-foreground flex items-start gap-3">
                 <span className="text-accent mt-0.5">·</span>
-                The 300 — immersive environment
+                The 300, immersive environment
               </li>
             </ul>
           </div>
