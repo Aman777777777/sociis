@@ -67,7 +67,7 @@ const SectionImpact = memo(() => {
                 SBS. The Sociis Behavioural Standard.
               </p>
               <p className="text-body text-muted-foreground">
-                SBS, the Sociis Behavioural Standard, defines the ethical and behavioural reference frame for conscious decision making across individual, organisational, and institutional contexts. The institutional framework that makes leadership conduct visible, accountable and repeatable.
+                SBS, the Sociis Behavioural Standard, defines the ethical and behavioural reference frame for how institutions conduct themselves. The institutional framework that makes leadership conduct visible, accountable and repeatable.
               </p>
             </div>
           </div>

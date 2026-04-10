@@ -211,7 +211,7 @@ const Charter = () => {
                         <p>SBS™ (Sustainable Behavioural Standard) is a behavioural framework developed by SociisGroup with the explicit ambition to evolve into a recognised global standard over time.</p>
                         <p>Its transition from framework to standard requires multi-year adoption, sovereign engagement, institutional validation, and lived proof across organisations and cultures.</p>
                         <p>SBS is therefore designed as a progressive standardisation roadmap, not a fixed doctrine.</p>
-                        <p>SBS defines the ethical and behavioural reference frame for conscious decision-making across individual, organisational, and institutional contexts.</p>
+                        <p>SBS defines the ethical and behavioural reference frame for how institutions conduct themselves.</p>
                       </div>
                     </div>
                     <div>

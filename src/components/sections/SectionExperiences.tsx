@@ -107,7 +107,7 @@ const SectionExperiences = memo(() => {
                       rel="noopener noreferrer"
                       className={`inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors ${index % 2 === 1 ? 'md:ml-auto' : ''}`}
                     >
-                      View Experience Deck (PDF)
+                      View Deck (PDF)
                     </a>
                   )}
                   <div className={`mt-6 h-px bg-border overflow-hidden ${index % 2 === 1 ? 'ml-auto' : ''}`} style={{ width: '60px' }}>
