@@ -27,7 +27,7 @@ const Charter = () => {
                   Read the Charter
                 </a>
                 <a
-                  href="/SOCIISGROUP™️ - INSTITUTIONAL CHARTER MARCH26.pdf"
+                  href="/SociisGroup_Institutional_Charter (2).pdf"
                   download="SociisGroup_Institutional_Charter.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 border border-foreground text-foreground font-sans text-base tracking-wide hover:bg-foreground hover:text-background transition-colors"
                 >
@@ -536,7 +536,7 @@ const Charter = () => {
               {/* Download */}
               <div className="pt-8 border-t border-border">
                 <a
-                  href="/SOCIISGROUP™️ - INSTITUTIONAL CHARTER MARCH26.pdf"
+                  href="/SociisGroup_Institutional_Charter (2).pdf"
                   download="SociisGroup_Institutional_Charter.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background font-sans text-base tracking-wide hover:bg-foreground/90 transition-colors"
                 >
