@@ -7,8 +7,10 @@
 @layer base {
   :root {
     /* SOCIIS Brand Colors */
-    --background: 36 35% 91%; /* Cream #F4F0E8 */
-    --foreground: 220 26% 10%; /* Deep Ink #0F1624 */
+    --background: 36 35% 91%;
+    /* Cream #F4F0E8 */
+    --foreground: 220 26% 10%;
+    /* Deep Ink #0F1624 */
 
     --card: 36 35% 91%;
     --card-foreground: 220 26% 10%;
@@ -17,7 +19,8 @@
     --popover-foreground: 220 26% 10%;
 
     /* Dark Gold accent */
-    --primary: 38 58% 39%; /* Dark Gold #9F7D2A */
+    --primary: 38 58% 39%;
+    /* Dark Gold #9F7D2A */
     --primary-foreground: 36 35% 91%;
 
     --secondary: 36 20% 86%;
@@ -26,7 +29,8 @@
     --muted: 36 18% 84%;
     --muted-foreground: 220 10% 38%;
 
-    --accent: 38 58% 39%; /* Dark Gold #9F7D2A */
+    --accent: 38 58% 39%;
+    /* Dark Gold #9F7D2A */
     --accent-foreground: 36 35% 91%;
 
     --destructive: 0 84.2% 60.2%;
@@ -88,10 +92,21 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    @apply font-light tracking-tight;
+    letter-spacing: 0.02em;
+  }
+
+  h4,
+  h5,
+  h6 {
     @apply font-sans font-light tracking-tight;
     letter-spacing: 0.04em;
   }
@@ -102,39 +117,51 @@
     line-height: 1.65;
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   /* Ensure minimum readable text sizes */
   .text-sm {
-    font-size: 0.9375rem; /* 15px min */
+    font-size: 0.9375rem;
+    /* 15px min */
     line-height: 1.6;
   }
-  
+
   .text-xs {
-    font-size: 0.8125rem; /* 13px min */
+    font-size: 0.8125rem;
+    /* 13px min */
     line-height: 1.5;
   }
 
   .text-base {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
+    /* 16px */
     line-height: 1.65;
   }
 
   .text-body {
-    font-size: 1.0625rem; /* 17px */
+    font-size: 1.0625rem;
+    /* 17px */
     line-height: 1.7;
   }
 
   .text-body-sm {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
+    /* 16px */
     line-height: 1.65;
   }
 
   .text-body-lg {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
     line-height: 1.7;
   }
 }
 
 @layer utilities {
+
   /* Brand color utilities */
   .text-ivory {
     color: hsl(var(--ivory));
@@ -180,6 +207,11 @@
     font-family: 'Cormorant Garamond', Georgia, serif;
   }
 
+  /* Display font — Cormorant Garamond for section headings */
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
   /* Subtle animations per brand guidelines */
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
@@ -208,6 +240,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -218,6 +251,7 @@
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -226,19 +260,25 @@
 
 /* Hero animations - optimized for performance */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
 }
 
 @keyframes pulse-slow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.05;
   }
+
   50% {
     transform: scale(1.1);
     opacity: 0.1;
@@ -246,9 +286,12 @@
 }
 
 @keyframes breathe {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.03);
   }
@@ -259,13 +302,16 @@
     transform: scaleY(0);
     transform-origin: top;
   }
+
   50% {
     transform: scaleY(1);
     transform-origin: top;
   }
+
   50.1% {
     transform-origin: bottom;
   }
+
   100% {
     transform: scaleY(0);
     transform-origin: bottom;
@@ -276,6 +322,7 @@
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -285,22 +332,28 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 @keyframes particle-float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) translateX(0);
     opacity: 0;
   }
+
   10% {
     opacity: 0.5;
   }
+
   90% {
     opacity: 0.5;
   }
+
   100% {
     transform: translateY(-80px) translateX(15px);
     opacity: 0;
@@ -308,9 +361,12 @@
 }
 
 @keyframes glow-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 15px hsl(var(--accent) / 0.1);
   }
+
   50% {
     box-shadow: 0 0 30px hsl(var(--accent) / 0.15);
   }
@@ -318,7 +374,10 @@
 
 /* Reduce motion for users who prefer it and mobile devices */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -327,6 +386,7 @@
 
 /* Mobile performance optimizations */
 @media (max-width: 768px) {
+
   .animate-\[breathe_20s_ease-in-out_infinite\],
   .animate-\[shimmer_3s_ease-in-out_infinite\],
   .animate-\[shimmer_2s_ease-in-out_infinite\],
@@ -334,7 +394,7 @@
   .animate-\[scroll-line_2s_ease-in-out_infinite\] {
     animation: none !important;
   }
-  
+
   /* Reduce transform complexity on mobile */
   .group-hover\:scale-105:hover {
     transform: none !important;

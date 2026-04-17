@@ -4,7 +4,7 @@ const SectionCharter = () => {
   return (
     <div className="py-12 border-t border-border/50">
       <div className="max-w-3xl">
-        <h3 className="font-sans text-lg text-foreground font-medium mb-4">
+        <h3 className="font-display text-xl text-foreground font-medium mb-4">
           Institutional Charter
         </h3>
         <p className="text-body text-muted-foreground mb-8">

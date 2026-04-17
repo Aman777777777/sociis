@@ -16,7 +16,7 @@ const SectionMedia = () => {
     <section id="media" className="py-20 sm:py-28 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
+          <h2 className="font-display font-light text-4xl sm:text-5xl text-foreground tracking-tight mb-6">
             Media & Institutional Narrative
           </h2>
           <p className="text-body text-muted-foreground mb-10">

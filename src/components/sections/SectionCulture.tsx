@@ -28,7 +28,7 @@ const SectionCulture = memo(() => {
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
             Culture
           </p>
-          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
+          <h2 className="font-display font-light text-4xl sm:text-5xl text-foreground tracking-tight mb-6">
             Sociis Culture™
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-12"></div>
@@ -42,7 +42,7 @@ const SectionCulture = memo(() => {
 
           {/* Sociis Rooms */}
           <div className="mb-12">
-            <h3 className="font-sans text-lg text-foreground font-medium mb-4">
+            <h3 className="font-display text-xl text-foreground font-medium mb-4">
               Sociis Rooms™
             </h3>
             <p className="text-body text-muted-foreground mb-2">
@@ -73,7 +73,7 @@ const SectionCulture = memo(() => {
 
           {/* Sociis House */}
           <div className="pt-10 border-t border-border/50 mb-12">
-            <h3 className="font-sans text-lg text-foreground font-medium mb-4">
+            <h3 className="font-display text-xl text-foreground font-medium mb-4">
               Sociis House™
             </h3>
             <p className="text-body text-muted-foreground mb-2">
@@ -90,7 +90,7 @@ const SectionCulture = memo(() => {
 
           {/* Cultural Distribution */}
           <div className="pt-10 border-t border-border/50">
-            <h3 className="font-sans text-lg text-foreground font-medium mb-4">
+            <h3 className="font-display text-xl text-foreground font-medium mb-4">
               Cultural Distribution
             </h3>
             <ul className="space-y-2">

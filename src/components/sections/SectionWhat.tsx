@@ -6,7 +6,7 @@ const SectionWhat = () => {
           <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
             THE SYSTEM
           </p>
-          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
+          <h2 className="font-display font-light text-4xl sm:text-5xl text-foreground tracking-tight mb-6">
             How It Works
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>

@@ -83,7 +83,7 @@ const SectionHero = memo(() => {
             </div>
 
             <h1
-              className="font-sans font-extralight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
+              className="font-display font-extralight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground tracking-brand leading-tight mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]"
             >
               <span className="inline-block hover:text-accent transition-colors duration-500">SOCIISGROUP™</span>
             </h1>

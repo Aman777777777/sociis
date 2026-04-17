@@ -19,7 +19,7 @@ const SectionAmbassadors = () => {
     <section id="ambassadors" className="py-20 sm:py-28">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl">
-          <h2 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
+          <h2 className="font-display font-light text-4xl sm:text-5xl text-foreground tracking-tight mb-6">
             Ambassadors
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-12"></div>
@@ -62,7 +62,7 @@ const AmbassadorCard = ({
             </div>
           )}
         </div>
-        <h3 className="font-sans text-lg text-foreground font-medium mb-1 group-hover:text-accent transition-colors duration-300">
+        <h3 className="font-display text-xl text-foreground font-medium mb-1 group-hover:text-accent transition-colors duration-300">
           {ambassador.name}
         </h3>
       </Link>
