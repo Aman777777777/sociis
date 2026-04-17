@@ -11,11 +11,8 @@ const SectionAccess = () => {
           </h2>
 
           <p className="text-body text-muted-foreground mb-8">
-            Access is the selection layer of SociisGroup.
-          </p>
-
-          <p className="text-body text-muted-foreground mb-8">
-            Entry is curated. There are no forms. Human judgement is the filter.
+            This institution is not open to everyone.
+            It is open to those willing to change how they behave.
           </p>
 
           <p className="text-body text-muted-foreground mb-10">

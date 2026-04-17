@@ -109,13 +109,13 @@ const SectionHero = memo(() => {
             <p
               className="text-body text-muted-foreground mb-4 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.55s_forwards]"
             >
-              The problem is not knowledge. Everyone knows what needs to change. The problem is behaviour.
+              The problem is not knowledge. The problem is behaviour.
             </p>
 
             <p
-              className="text-body text-muted-foreground mb-4 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
+              className="text-body text-muted-foreground mb-6 opacity-0 animate-[fade-in-up_0.8s_ease-out_0.6s_forwards]"
             >
-              Not in training programmes. Not in reports. At the source.
+              SociisGroup intervenes at the source — through behavioural systems, environments, and culture.
             </p>
 
             <p

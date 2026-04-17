@@ -1,5 +1,12 @@
-// v6
+// v7
 const SectionInfrastructure = () => {
+  const steps = [
+    { num: "01", label: "Interface", desc: "Behavioural Engine of Ethics (BEE)" },
+    { num: "02", label: "Rooms", desc: "Controlled leadership environments" },
+    { num: "03", label: "Culture", desc: "Film, media, distribution" },
+    { num: "04", label: "Standard", desc: "Sustainable Behavioural Standard (SBS)" },
+  ];
+
   return (
     <section id="infrastructure" className="py-12 sm:py-20">
       <div className="container mx-auto px-6 lg:px-8">
@@ -16,10 +23,23 @@ const SectionInfrastructure = () => {
           <p className="text-body text-foreground">
             SociisGroup intervenes at the source.
           </p>
-          <p className="text-body text-muted-foreground">
-            Through SBS, the Sociis Behavioural Standard, which defines the ethical and behavioural reference frame for how institutions conduct themselves. Through BEE, the Behavioural Engine of Ethics, which surfaces the gap between what people intend and what they actually produce. Through Rooms, controlled environments where leadership conduct becomes visible and is calibrated in private.
-          </p>
-          <p className="text-body text-muted-foreground italic">
+
+          <div className="pt-4 space-y-4">
+            <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-2">
+              How It Works
+            </p>
+            {steps.map((step) => (
+              <div key={step.num} className="flex items-start gap-6">
+                <span className="text-accent text-sm tracking-widest w-8 shrink-0">{step.num}</span>
+                <div>
+                  <p className="text-body text-foreground font-medium">{step.label}</p>
+                  <p className="text-body-sm text-muted-foreground">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-body text-muted-foreground italic pt-2">
             Not in training programmes. Not in reports. At the source.
           </p>
         </div>
@@ -29,3 +49,4 @@ const SectionInfrastructure = () => {
 };
 
 export default SectionInfrastructure;
+

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,74 +7,74 @@
 @layer base {
   :root {
     /* SOCIIS Brand Colors */
-    --background: 40 33% 96%; /* Ivory #FAF7F2 */
-    --foreground: 222 23% 14%; /* Deep Midnight Navy #1A1F2B */
+    --background: 36 35% 91%; /* Cream #F4F0E8 */
+    --foreground: 220 26% 10%; /* Deep Ink #0F1624 */
 
-    --card: 40 33% 96%;
-    --card-foreground: 222 23% 14%;
+    --card: 36 35% 91%;
+    --card-foreground: 220 26% 10%;
 
-    --popover: 40 33% 96%;
-    --popover-foreground: 222 23% 14%;
+    --popover: 36 35% 91%;
+    --popover-foreground: 220 26% 10%;
 
-    /* Muted Gold accent */
-    --primary: 43 50% 62%; /* #D1B46A */
-    --primary-foreground: 222 23% 14%;
+    /* Dark Gold accent */
+    --primary: 38 58% 39%; /* Dark Gold #9F7D2A */
+    --primary-foreground: 36 35% 91%;
 
-    --secondary: 40 20% 92%;
-    --secondary-foreground: 0 0% 25%; /* Slate Grey #404040 */
+    --secondary: 36 20% 86%;
+    --secondary-foreground: 220 10% 38%;
 
-    --muted: 40 15% 90%;
-    --muted-foreground: 0 0% 25%; /* Slate Grey #404040 */
+    --muted: 36 18% 84%;
+    --muted-foreground: 220 10% 38%;
 
-    --accent: 220 100% 55%; /* Electric Blue #1B65FF */
-    --accent-foreground: 40 33% 96%;
+    --accent: 38 58% 39%; /* Dark Gold #9F7D2A */
+    --accent-foreground: 36 35% 91%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 43 50% 62%;
+    --border: 36 20% 82%;
+    --input: 36 20% 82%;
+    --ring: 38 58% 39%;
 
     --radius: 0.25rem;
 
     /* Brand-specific tokens */
-    --ivory: 40 33% 96%;
-    --navy: 222 23% 14%;
-    --slate: 0 0% 25%;
-    --gold: 43 50% 62%;
-    --electric-blue: 220 100% 55%;
+    --ivory: 36 35% 91%;
+    --navy: 220 26% 10%;
+    --slate: 220 10% 38%;
+    --gold: 38 58% 39%;
+    --electric-blue: 38 58% 39%;
 
     /* Sidebar (keeping for compatibility) */
-    --sidebar-background: 40 33% 96%;
-    --sidebar-foreground: 222 23% 14%;
-    --sidebar-primary: 43 50% 62%;
-    --sidebar-primary-foreground: 40 33% 96%;
-    --sidebar-accent: 40 20% 92%;
-    --sidebar-accent-foreground: 222 23% 14%;
-    --sidebar-border: 40 20% 88%;
-    --sidebar-ring: 43 50% 62%;
+    --sidebar-background: 36 35% 91%;
+    --sidebar-foreground: 220 26% 10%;
+    --sidebar-primary: 38 58% 39%;
+    --sidebar-primary-foreground: 36 35% 91%;
+    --sidebar-accent: 36 20% 86%;
+    --sidebar-accent-foreground: 220 26% 10%;
+    --sidebar-border: 36 20% 82%;
+    --sidebar-ring: 38 58% 39%;
   }
 
   .dark {
     /* SOCIIS doesn't use dark mode - keep same as light */
-    --background: 40 33% 96%;
-    --foreground: 222 23% 14%;
-    --card: 40 33% 96%;
-    --card-foreground: 222 23% 14%;
-    --popover: 40 33% 96%;
-    --popover-foreground: 222 23% 14%;
-    --primary: 43 50% 62%;
-    --primary-foreground: 222 23% 14%;
-    --secondary: 40 20% 92%;
-    --secondary-foreground: 0 0% 25%;
-    --muted: 40 15% 90%;
-    --muted-foreground: 0 0% 25%;
-    --accent: 220 100% 55%;
-    --accent-foreground: 40 33% 96%;
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 43 50% 62%;
+    --background: 36 35% 91%;
+    --foreground: 220 26% 10%;
+    --card: 36 35% 91%;
+    --card-foreground: 220 26% 10%;
+    --popover: 36 35% 91%;
+    --popover-foreground: 220 26% 10%;
+    --primary: 38 58% 39%;
+    --primary-foreground: 36 35% 91%;
+    --secondary: 36 20% 86%;
+    --secondary-foreground: 220 10% 38%;
+    --muted: 36 18% 84%;
+    --muted-foreground: 220 10% 38%;
+    --accent: 38 58% 39%;
+    --accent-foreground: 36 35% 91%;
+    --border: 36 20% 82%;
+    --input: 36 20% 82%;
+    --ring: 38 58% 39%;
   }
 }
 
@@ -177,7 +177,7 @@
 
   /* Quote/accent font */
   .font-accent {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
   }
 
   /* Subtle animations per brand guidelines */
