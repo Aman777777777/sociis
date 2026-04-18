@@ -50,8 +50,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-          ? "bg-background/98 backdrop-blur-sm py-4"
-          : "bg-transparent py-6"
+        ? "bg-background/98 backdrop-blur-sm py-4"
+        : "bg-transparent py-6"
         }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
@@ -59,12 +59,9 @@ const Header = () => {
           <Link
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="font-display text-xl text-foreground hover:text-accent transition-colors"
           >
-            <img
-              src={sociisLogo}
-              alt="SociisGroup"
-              className="h-10 w-auto brightness-0 invert-0"
-            />
+            SociisGroup™
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -73,8 +70,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`font-sans text-base tracking-wide transition-colors ${location.pathname === link.href ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
-                    }`}
+                  className={`font-sans text-xs tracking-[0.18em] uppercase transition-colors ${location.pathname === link.href ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
                 >
                   {link.name}
                 </Link>
@@ -86,7 +82,7 @@ const Header = () => {
                     e.preventDefault();
                     handleNavClick(link.href);
                   }}
-                  className="font-sans text-base tracking-wide text-muted-foreground hover:text-foreground transition-colors"
+                  className="font-sans text-xs tracking-[0.18em] uppercase text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.name}
                 </a>
@@ -99,7 +95,7 @@ const Header = () => {
               href="https://www.sociis.house/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-sans text-base tracking-wide hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase hover:bg-foreground/90 transition-colors"
             >
               Enter Sociis House
             </a>
@@ -121,7 +117,7 @@ const Header = () => {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className="font-sans text-lg text-foreground hover:text-primary transition-colors"
+                    className="font-sans text-sm tracking-[0.18em] uppercase text-foreground hover:text-accent transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}
@@ -130,7 +126,7 @@ const Header = () => {
                   <a
                     key={link.name}
                     href={link.href}
-                    className="font-sans text-lg text-foreground hover:text-primary transition-colors"
+                    className="font-sans text-sm tracking-[0.18em] uppercase text-foreground hover:text-accent transition-colors"
                     onClick={(e) => {
                       e.preventDefault();
                       handleNavClick(link.href);
@@ -144,7 +140,7 @@ const Header = () => {
                 href="https://www.sociis.house/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-foreground text-background font-sans text-lg hover:bg-foreground/90 transition-colors mt-4"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase hover:bg-foreground/90 transition-colors mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Enter Sociis House
