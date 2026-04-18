@@ -1,46 +1,20 @@
-// v7
+// Impact section — "Everything starts with behaviour."
 const SectionInfrastructure = () => {
-  const steps = [
-    { num: "01", label: "Interface", desc: "Behavioural Engine of Ethics (BEE)" },
-    { num: "02", label: "Rooms", desc: "Controlled leadership environments" },
-    { num: "03", label: "Culture", desc: "Film, media, distribution" },
-    { num: "04", label: "Standard", desc: "Sustainable Behavioural Standard (SBS)" },
-  ];
-
   return (
-    <section id="infrastructure" className="py-12 sm:py-20">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl space-y-6">
-          <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase">
-            The Source
-          </p>
-          <p className="text-body-lg text-foreground">
-            Everything starts with behaviour.
-          </p>
-          <p className="text-body text-muted-foreground">
-            Every institution that has lost its way did so before the numbers showed it. The cause was always behavioural. What people chose to prioritise, to ignore, to tolerate, and to reward.
-          </p>
-          <p className="text-body text-foreground">
-            SociisGroup intervenes at the source.
-          </p>
+    <section id="impact" className="py-24 sm:py-32">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <h2 className="font-display font-light text-4xl sm:text-5xl text-foreground mb-8 leading-tight">
+          Everything starts with behaviour.
+        </h2>
 
-          <div className="pt-4 space-y-4">
-            <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-2">
-              How It Works
-            </p>
-            {steps.map((step) => (
-              <div key={step.num} className="flex items-start gap-6">
-                <span className="text-accent text-sm tracking-widest w-8 shrink-0">{step.num}</span>
-                <div>
-                  <p className="text-body text-foreground font-medium">{step.label}</p>
-                  <p className="text-body-sm text-muted-foreground">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-body text-muted-foreground italic pt-2">
-            Not in training programmes. Not in reports. At the source.
+        <div className="space-y-6 max-w-2xl">
+          <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Humanity is taking more from this planet than it can regenerate.
+            The problem is not knowledge. The problem is behaviour.
+          </p>
+          <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed">
+            SociisGroup intervenes at the source through behavioural systems,
+            environments, and culture.
           </p>
         </div>
       </div>
@@ -49,4 +23,3 @@ const SectionInfrastructure = () => {
 };
 
 export default SectionInfrastructure;
-

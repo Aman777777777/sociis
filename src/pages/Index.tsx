@@ -4,60 +4,39 @@ import ScrollToTop from "@/components/ScrollToTop";
 import PageTransition from "@/components/PageTransition";
 import SectionHero from "@/components/sections/SectionHero";
 import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
-import SectionWorlds from "@/components/sections/SectionWorlds";
-import SectionWhat from "@/components/sections/SectionWhat";
-import SectionImpact from "@/components/sections/SectionImpact";
-import SectionImpactDetail from "@/components/sections/SectionImpactDetail";
-import SectionLeaders from "@/components/sections/SectionLeaders";
-import SectionExperiences from "@/components/sections/SectionExperiences";
+import SectionMandate from "@/components/sections/SectionMandate";
+import SectionHowItWorks from "@/components/sections/SectionHowItWorks";
 import SectionCulture from "@/components/sections/SectionCulture";
-import SectionUnconventional from "@/components/sections/SectionUnconventional";
-import SectionOneBillion from "@/components/sections/SectionOneBillion";
-import SectionFlywheel from "@/components/sections/SectionFlywheel";
-import SectionAlliances from "@/components/sections/SectionAlliances";
-import SectionLime from "@/components/sections/SectionLime";
-import SectionMedia from "@/components/sections/SectionMedia";
+import SectionSystem from "@/components/sections/SectionSystem";
 import SectionAccess from "@/components/sections/SectionAccess";
-import SectionAmbassadors from "@/components/sections/SectionAmbassadors";
 
 const Index = () => {
   return (
     <PageTransition>
       <main className="min-h-screen bg-background">
         <Header />
-        {/* 1. Institutional Definition */}
+
+        {/* 1. Hero — centered, institutional */}
         <SectionHero />
+
+        {/* 2. Impact — Everything starts with behaviour */}
         <SectionInfrastructure />
 
-        {/* 3. What SociisGroup Does */}
-        <SectionWorlds />
-        <SectionWhat />
+        {/* 3. The Mandate */}
+        <SectionMandate />
 
-        {/* Ambassadors */}
-        <SectionAmbassadors />
+        {/* 4. How It Works — 01–04 */}
+        <SectionHowItWorks />
 
-        {/* Institutional Output */}
-        <SectionImpact />
-        <SectionImpactDetail />
-
-        {/* 3. Why It Matters to Power */}
-        <SectionLeaders />
-
-        {/* 4. Cultural & Experiential Layer */}
-        <SectionExperiences />
+        {/* 5. Culture Scales Behaviour + video */}
         <SectionCulture />
-        <SectionUnconventional />
 
-        {/* 5. Governance & Integrity */}
-        <SectionLime />
+        {/* 6. The System — two divisions */}
+        <SectionSystem />
 
-        <SectionOneBillion />
-        <SectionFlywheel />
-
-        {/* 6. Collaborations & Proof */}
-        <SectionAlliances />
-        <SectionMedia />
+        {/* 7. Access */}
         <SectionAccess />
+
         <Footer />
         <ScrollToTop />
       </main>

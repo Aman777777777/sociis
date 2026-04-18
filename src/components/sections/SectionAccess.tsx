@@ -1,33 +1,25 @@
 const SectionAccess = () => {
   return (
-    <section id="access" className="py-20 sm:py-28">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground uppercase mb-3 sm:mb-4">
-            Institutional Entry
-          </p>
-          <h2 className="font-display font-light text-4xl sm:text-5xl text-foreground tracking-tight mb-6">
-            Access
-          </h2>
+    <section id="access" className="py-24 sm:py-32 border-t border-border/40">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <h2 className="font-display font-light text-4xl sm:text-5xl text-foreground mb-8 leading-tight">
+          Access
+        </h2>
 
-          <p className="text-body text-muted-foreground mb-8">
+        <div className="space-y-6 max-w-2xl">
+          <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed">
             This institution is not open to everyone.
             It is open to those willing to change how they behave.
           </p>
 
-          <p className="text-body text-muted-foreground mb-10">
-            SociisGroup engages only with individuals and institutions whose conduct aligns with the standards it governs.
-          </p>
-
-          <div className="border-t border-border pt-10">
-            <p className="text-body text-muted-foreground mb-4">Contact</p>
+          <p className="font-sans text-base text-muted-foreground mt-6">
             <a
-              href="mailto:info@sociisgroup.com"
-              className="font-sans text-body text-foreground hover:text-primary transition-colors break-all"
+              href="mailto:contact@sociisgroup.com"
+              className="text-foreground hover:text-accent transition-colors"
             >
-              info@sociisgroup.com
+              contact@sociisgroup.com
             </a>
-          </div>
+          </p>
         </div>
       </div>
     </section>
