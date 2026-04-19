@@ -1,46 +1,97 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
-import PageTransition from "@/components/PageTransition";
-import SectionHero from "@/components/sections/SectionHero";
-import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
-import SectionMandate from "@/components/sections/SectionMandate";
-import SectionHowItWorks from "@/components/sections/SectionHowItWorks";
-import SectionCulture from "@/components/sections/SectionCulture";
-import SectionSystem from "@/components/sections/SectionSystem";
-import SectionAccess from "@/components/sections/SectionAccess";
+import { Link } from "react-router-dom";
+import heroEarth from "@/assets/hero-earth-new.jpg";
 
 const Index = () => {
   return (
-    <PageTransition>
-      <main className="min-h-screen bg-background">
-        <Header />
+    <main
+      className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
+      style={{ background: "hsl(36 35% 91%)" }}
+    >
+      {/* Faint earth background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src={heroEarth}
+          alt=""
+          className="w-full h-full object-cover grayscale"
+          style={{ opacity: 0.06 }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+      </div>
 
-        {/* 1. Hero — centered, institutional */}
-        <SectionHero />
+      {/* Content */}
+      <div className="relative z-10 px-6 max-w-xl mx-auto animate-[fade-in-up_0.9s_ease-out_0.1s_both]">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="font-display text-2xl text-foreground mb-16 inline-block"
+          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+        >
+          SociisGroup™
+        </Link>
 
-        {/* 2. Impact — Everything starts with behaviour */}
-        <SectionInfrastructure />
+        {/* Divider */}
+        <div
+          className="mx-auto mb-10 mt-8"
+          style={{ width: "40px", height: "1px", background: "hsl(38 58% 39%)" }}
+        />
 
-        {/* 3. The Mandate */}
-        <SectionMandate />
+        <h1
+          className="font-display font-light leading-tight mb-6"
+          style={{
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+            fontSize: "clamp(2.5rem, 6vw, 4rem)",
+            color: "hsl(220 26% 10%)",
+          }}
+        >
+          Under Maintenance
+        </h1>
 
-        {/* 4. How It Works — 01–04 */}
-        <SectionHowItWorks />
+        <p
+          className="font-sans leading-relaxed mb-4"
+          style={{
+            fontFamily: "'Inter', system-ui, sans-serif",
+            fontSize: "1.0625rem",
+            color: "hsl(220 10% 38%)",
+          }}
+        >
+          We are currently updating the site.
+        </p>
 
-        {/* 5. Culture Scales Behaviour + video */}
-        <SectionCulture />
+        <p
+          className="font-sans leading-relaxed mb-10"
+          style={{
+            fontFamily: "'Inter', system-ui, sans-serif",
+            fontSize: "1.0625rem",
+            color: "hsl(220 10% 38%)",
+          }}
+        >
+          SociisGroup™ — The independent behavioural institution.
+        </p>
 
-        {/* 6. The System — two divisions */}
-        <SectionSystem />
+        {/* Contact */}
+        <a
+          href="mailto:contact@sociisgroup.com"
+          className="font-sans text-sm tracking-widest uppercase transition-colors"
+          style={{
+            fontFamily: "'Inter', system-ui, sans-serif",
+            color: "hsl(38 58% 39%)",
+            letterSpacing: "0.15em",
+          }}
+        >
+          contact@sociisgroup.com
+        </a>
+      </div>
 
-        {/* 7. Access */}
-        <SectionAccess />
-
-        <Footer />
-        <ScrollToTop />
-      </main>
-    </PageTransition>
+      {/* Bottom copyright */}
+      <div
+        className="absolute bottom-8 left-0 right-0 text-center"
+        style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
+      >
+        <p className="font-sans text-xs" style={{ color: "hsl(220 10% 55%)", letterSpacing: "0.05em" }}>
+          © {new Date().getFullYear()} SociisGroup™
+        </p>
+      </div>
+    </main>
   );
 };
 
