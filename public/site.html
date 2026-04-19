@@ -1742,9 +1742,8 @@
     <h2 class="display-m" style="margin-top: 16px;">Voices that carry the standard.</h2>
     <div class="amb-layout">
       <div class="amb-card">
-        <div class="amb-image" data-image-slot="iris-portrait">
-          <div class="amb-image-label">portrait</div>
-          <div class="image-swap-note">IMAGE SLOT · Iris van der Veken portrait · 3:4 ratio</div>
+        <div class="amb-image" data-image-slot="iris-portrait" style="background: #1a1a15;">
+          <img src="/iris-van-der-veken.jpg" alt="Iris van der Veken portrait" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;" />
         </div>
         <div class="amb-name">Iris van der Veken</div>
         <div class="amb-role">Ambassador</div>
@@ -1760,6 +1759,16 @@
         <p class="pull" style="font-size: 20px;">
           The world requires a form of leadership that is collaborative, inclusive, and grounded in humility, courage, and purpose.
         </p>
+        <div style="margin-top: 40px;">
+          <div style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--grey); margin-bottom: 16px;">Let There Be Light · Cultural Anchor</div>
+          <video
+            src="/let-there-be-light.mp4"
+            controls
+            playsinline
+            preload="metadata"
+            style="width:100%; display:block; background:#0d0d08;"
+          ></video>
+        </div>
       </div>
     </div>
   </div>
@@ -1953,11 +1962,14 @@
     <div class="mono-kicker ltbl-kicker">Cultural Anchor · Film</div>
     <h2 class="ltbl-title">Let There Be <em>Light</em>.</h2>
 
-    <div class="ltbl-frame" data-image-slot="ltbl-film" data-video-slot="ltbl-video">
-      <div class="ltbl-frame-title">Let There Be Light · a film by SociisGroup</div>
-      <div class="ltbl-play"></div>
-      <div class="ltbl-frame-label">Play film · 03:42</div>
-      <div class="image-swap-note">FILM SLOT · Jean Bosco Safari still or video · 16:9</div>
+    <div class="ltbl-frame" data-image-slot="ltbl-film" data-video-slot="ltbl-video" style="position:relative; aspect-ratio:16/9; background:#0d0d08; overflow:hidden;">
+      <video
+        src="/let-there-be-light.mp4"
+        controls
+        playsinline
+        preload="metadata"
+        style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"
+      ></video>
     </div>
 
     <div class="ltbl-grid">
