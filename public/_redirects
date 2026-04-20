@@ -2,4 +2,8 @@
 /SociisGroup_Institutional_Charter_v1_0.pdf    /SociisGroup_Institutional_Charter_v1_0.pdf    200
 /the-300-deck.pdf    /the-300-deck.pdf    200
 /the-64-deck.pptx    /the-64-deck.pptx    200
+/site.html    /site.html    200
+/charter.html    /charter.html    200
+/governance.html    /governance.html    200
+/team/*    /team/:splat    200
 /*    /index.html   200
