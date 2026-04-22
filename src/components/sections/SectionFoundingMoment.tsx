@@ -96,8 +96,8 @@ const SectionFoundingMoment = () => {
                   <div className="mt-6">
                     <div className="flex flex-wrap gap-4 mb-3">
                       <a
-                        href="/SociisGroup_Institutional_Charter (2).pdf"
-                        download="SociisGroup_Institutional_Charter.pdf"
+                        href="/SociisGroup_Charter.pdf"
+                        download="SociisGroup_Charter.pdf"
                         className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
                       >
                         Download Institutional Deck
