@@ -18,8 +18,8 @@ const SectionCharter = () => {
             Read the Charter
           </Link>
           <a
-            href="/SociisGroup_Institutional_Charter (2).pdf"
-            download="SociisGroup_Institutional_Charter.pdf"
+            href="/SociisGroup_Charter.pdf"
+            download="SociisGroup_Charter.pdf"
             className="inline-flex items-center gap-2 px-6 py-3 border border-foreground text-foreground font-sans text-base tracking-wide hover:bg-foreground hover:text-background transition-colors"
           >
             Download PDF
