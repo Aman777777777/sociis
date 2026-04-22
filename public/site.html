@@ -60,12 +60,17 @@
     from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  @keyframes reveal-centered {
+    from { opacity: 0; transform: translateX(-50%) translateY(14px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+  }
   .reveal { opacity: 0; animation: reveal 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
   .reveal-1 { animation-delay: 0.1s; }
   .reveal-2 { animation-delay: 0.35s; }
   .reveal-3 { animation-delay: 0.6s; }
   .reveal-4 { animation-delay: 0.85s; }
   .reveal-5 { animation-delay: 1.1s; }
+  .hero-scroll.reveal { animation-name: reveal-centered; }
 
   .scroll-reveal {
     opacity: 0;
@@ -1538,7 +1543,7 @@
     <div class="nav-links">
       <a href="#impact">Impact</a>
       <a href="#culture">Culture</a>
-      <a href="/governance.html">Governance</a>
+      <a href="#governance">Governance</a>
       <a href="#calendar">Calendar</a>
       <a href="#charter">Charter</a>
       <a href="#access">Access</a>
@@ -1650,7 +1655,7 @@
         <div class="mech-num">03</div>
         <div class="mech-name">The Culture</div>
         <div class="mech-body">
-          Film, music, publishing, Let There Be Light, immersive formats. Culture moves faster than governance and reaches further than boardrooms. The mechanism that makes the one billion mandate credible.
+          Film, music, art, publishing, immersive formats. Let There Be Light is the first cultural anchor. Culture moves faster than governance and reaches further than boardrooms. The mechanism that makes the one billion mandate credible.
         </div>
         <div class="mech-arrow">→</div>
       </div>
@@ -1742,8 +1747,9 @@
     <h2 class="display-m" style="margin-top: 16px;">Voices that carry the standard.</h2>
     <div class="amb-layout">
       <div class="amb-card">
-        <div class="amb-image" data-image-slot="iris-portrait" style="background: #1a1a15;">
-          <img src="/iris-van-der-veken.jpg" alt="Iris van der Veken portrait" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;" />
+        <div class="amb-image" data-image-slot="iris-portrait">
+          <div class="amb-image-label">portrait</div>
+          <div class="image-swap-note">IMAGE SLOT · Iris van der Veken portrait · 3:4 ratio</div>
         </div>
         <div class="amb-name">Iris van der Veken</div>
         <div class="amb-role">Ambassador</div>
@@ -1895,7 +1901,7 @@
         <div class="room-format">Founding Gathering · 22 July 2026</div>
       </div>
       <div class="room-desc">An intentionally limited environment where institutional conduct and culture converge.</div>
-      <div class="room-cta"><a href="/the-64-deck.pptx" target="_blank" rel="noopener">View Deck</a></div>
+      <div class="room-cta"><a href="#">View Deck</a></div>
     </div>
     <div class="room-row">
       <div class="room-num">03</div>
@@ -1904,7 +1910,7 @@
         <div class="room-format">Shape Tomorrow Today · Immersive Environment · 23 July 2026</div>
       </div>
       <div class="room-desc">A curated environment for 300 individuals, on the iconic grounds of Tomorrowland, in collaboration with Love Tomorrow.</div>
-      <div class="room-cta"><a href="/the-300-deck.pdf" target="_blank" rel="noopener">View Deck</a></div>
+      <div class="room-cta"><a href="#">View Deck</a></div>
     </div>
   </div>
 
@@ -1952,14 +1958,11 @@
     <div class="mono-kicker ltbl-kicker">Cultural Anchor · Film</div>
     <h2 class="ltbl-title">Let There Be <em>Light</em>.</h2>
 
-    <div class="ltbl-frame" data-image-slot="ltbl-film" data-video-slot="ltbl-video" style="position:relative; aspect-ratio:16/9; background:#0d0d08; overflow:hidden;">
-      <video
-        src="/let-there-be-light.mp4"
-        controls
-        playsinline
-        preload="metadata"
-        style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"
-      ></video>
+    <div class="ltbl-frame" data-image-slot="ltbl-film" data-video-slot="ltbl-video">
+      <div class="ltbl-frame-title">Let There Be Light · a film by SociisGroup</div>
+      <div class="ltbl-play"></div>
+      <div class="ltbl-frame-label">Play film · 03:42</div>
+      <div class="image-swap-note">FILM SLOT · Jean Bosco Safari still or video · 16:9</div>
     </div>
 
     <div class="ltbl-grid">
@@ -2067,7 +2070,6 @@
       <div class="reach-item"><div class="reach-title">Let There Be Light</div><div class="reach-body">The film and song that translates conduct into culture the world can feel.</div></div>
       <div class="reach-item"><div class="reach-title">Institutional Alliances</div><div class="reach-body">Collaborators who carry the Sustainable Behavioural Standard into their own institutions.</div></div>
       <div class="reach-item"><div class="reach-title">Podeo</div><div class="reach-body">Audio distribution at institutional scale.</div></div>
-      <div class="reach-item"><div class="reach-title">Media</div><div class="reach-body">TIME, Financial Times, Bloomberg, Forbes, Monocle, Vanity Fair.</div></div>
     </div>
     <div class="reach-close">
       <p class="pull">One behavioural standard. One institutional language. One billion people by 2030.</p>
@@ -2084,8 +2086,7 @@
     <div class="rule"></div>
     <p class="body-text">SociisGroup collaborates with institutions whose environments, governance and ethics amplify behavioural standards at institutional scale.</p>
     <div class="proof-table">
-      <div class="proof-row"><div class="proof-label">Confirmed Institutional Locations</div><div class="proof-body">Corinthia Grand Hotel Astoria Brussels.</div></div>
-      <div class="proof-row"><div class="proof-label">Institutional Environments</div><div class="proof-body">The Connaught. La Réserve Geneva. Aman. Mandarin Oriental. Le Meurice. Hôtel de Paris Monte Carlo. Orient Express.</div></div>
+      <div class="proof-row"><div class="proof-label">Confirmed Institutional Locations</div><div class="proof-body"><ul style="list-style: none; padding: 0; margin: 0;"><li style="padding: 4px 0;">— Corinthia Grand Hotel Astoria, Brussels</li><li style="padding: 4px 0;">— The iconic grounds of Tomorrowland, in collaboration with Love Tomorrow</li></ul></div></div>
       <div class="proof-row"><div class="proof-label">Cultural and Media Channels</div><div class="proof-body">Podeo.</div></div>
     </div>
     <p class="pull" style="margin-top: 48px;">Each collaboration exists to amplify institutional Impact through behavioural standards.</p>
@@ -2098,10 +2099,6 @@
     <div class="mono-kicker">Media and Institutional Narrative</div>
     <h2 class="display-l" style="margin-top: 20px;">Depth over noise. Conduct over commentary.</h2>
     <div class="rule"></div>
-    <p class="body-text" style="margin-bottom: 16px;"><strong>Editorial Rooms We Respect</strong></p>
-    <div class="editorial-list">
-      <span>TIME</span><span>Financial Times</span><span>Bloomberg</span><span>Forbes</span><span>Monocle</span><span>Vanity Fair</span>
-    </div>
     <p class="body-text" style="margin-top: 40px; margin-bottom: 16px;"><strong>Institutional Media Strategy</strong></p>
     <div class="media-strategy">
       <div class="media-step"><div class="media-step-num">01</div><div class="media-step-body">Deploy institutional conduct and behavioural evidence as source material.</div></div>
@@ -2109,36 +2106,6 @@
       <div class="media-step"><div class="media-step-num">03</div><div class="media-step-body">Communicate behaviour and governance, not personality.</div></div>
     </div>
     <p class="pull" style="margin-top: 56px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">Where others push messages, SociisGroup lets conduct and institutional Impact speak.</p>
-  </div>
-</section>
-
-<!-- ==================== CHARTER ==================== -->
-<section id="charter" style="background: var(--cream-deep); padding: 120px 0; position: relative;">
-  <div class="scroll-reveal" style="max-width: 860px; margin: 0 auto; padding: 0 var(--pad); position: relative; z-index: 2;">
-    <div class="mono-kicker" style="color: var(--gold);">Institutional Document</div>
-    <h2 class="display-l" style="margin-top: 20px;">The Institutional Charter.</h2>
-    <div class="rule" style="margin: 22px 0 32px;"></div>
-    <p class="body-text" style="margin-bottom: 20px;">
-      The Charter sets out the mandate, governance and behavioural standards of SociisGroup. It is the founding document of the institution.
-    </p>
-    <p class="body-text" style="margin-bottom: 40px;">
-      Read it in full, or download the PDF for your records.
-    </p>
-    <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
-      <a href="/charter.html"
-         style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; background: var(--ink); color: var(--cream); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none;">
-        Read the Charter
-      </a>
-      <a href="/SociisGroup_Institutional_Charter.pdf"
-         download="SociisGroup_Institutional_Charter.pdf"
-         target="_blank"
-         rel="noopener"
-         style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; border: 1px solid var(--ink); color: var(--ink); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none;"
-         onmouseover="this.style.background='var(--ink)';this.style.color='var(--cream)';"
-         onmouseout="this.style.background='transparent';this.style.color='var(--ink)';">
-        ↓ Download PDF
-      </a>
-    </div>
   </div>
 </section>
 
@@ -2151,7 +2118,8 @@
     <div class="access-statements">
       <p>Access is the selection layer of SociisGroup.</p>
       <p>Entry is curated. There are no forms. Human judgement is the filter.</p>
-      <p>SociisGroup engages only with individuals and institutions whose conduct aligns with the standards it governs.</p>
+      <p>SociisGroup engages with individuals and institutions whose conduct aligns with the standards it governs.</p>
+      <p style="font-style: italic; margin-top: 24px;">If the institution resonates, the door is at info@sociisgroup.com.</p>
     </div>
     <div class="access-contact">
       <div class="access-contact-label">Contact</div>
@@ -2165,7 +2133,7 @@
   <div class="final-cta-inner scroll-reveal">
     <div class="mono-kicker" style="color: var(--gold-warm); margin-bottom: 32px;">Two ways to engage</div>
     <h2 class="final-cta-lead">
-      SociisGroup engages only with individuals and institutions whose conduct aligns with the standards it governs.
+      SociisGroup engages with individuals and institutions whose conduct aligns with the standards it governs.
     </h2>
     <div class="final-cta-paths">
       <div class="final-cta-path">
@@ -2200,7 +2168,7 @@
         <div class="footer-col-title">Explore</div>
         <a href="#impact">Impact</a>
         <a href="#culture">Culture</a>
-        <a href="/governance.html">Governance</a>
+        <a href="#governance">Governance</a>
         <a href="#calendar">Calendar</a>
         <a href="#charter">Charter</a>
         <a href="#access">Access</a>
