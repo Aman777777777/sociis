@@ -1534,12 +1534,12 @@
   }
 </style>
 </head>
-<body class="design-mode">
+<body class="design-mode" id="top">
 
 <!-- ==================== NAV ==================== -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo">SociisGroup<sup>™</sup></div>
+    <a href="#top" class="nav-logo" style="text-decoration:none;color:inherit;cursor:pointer;" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'});">SociisGroup<sup>™</sup></a>
     <div class="nav-links">
       <a href="#impact">Impact</a>
       <a href="#culture">Culture</a>
@@ -1958,11 +1958,14 @@
     <div class="mono-kicker ltbl-kicker">Cultural Anchor · Film</div>
     <h2 class="ltbl-title">Let There Be <em>Light</em>.</h2>
 
-    <div class="ltbl-frame" data-image-slot="ltbl-film" data-video-slot="ltbl-video">
-      <div class="ltbl-frame-title">Let There Be Light · a film by SociisGroup</div>
-      <div class="ltbl-play"></div>
-      <div class="ltbl-frame-label">Play film · 03:42</div>
-      <div class="image-swap-note">FILM SLOT · Jean Bosco Safari still or video · 16:9</div>
+    <div class="ltbl-frame" style="padding:0;overflow:hidden;border-radius:12px;">
+      <video
+        src="/let-there-be-light.mp4"
+        controls
+        playsinline
+        preload="metadata"
+        style="width:100%;height:100%;display:block;object-fit:cover;background:#000;"
+      ></video>
     </div>
 
     <div class="ltbl-grid">
@@ -2242,5 +2245,23 @@
   updateFloatCta();
 </script>
 
+<!-- Scroll to top button -->
+<button id="scrollTopBtn" aria-label="Scroll to top"
+  style="position:fixed;bottom:24px;right:24px;z-index:9999;width:44px;height:44px;border:none;border-radius:50%;background:var(--ink);color:var(--cream);font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s ease, transform .3s ease;box-shadow:0 4px 16px rgba(15,22,36,0.25);display:flex;align-items:center;justify-content:center;"
+  onclick="window.scrollTo({top:0,behavior:'smooth'});">↑</button>
+<script>
+  (function(){
+    var btn = document.getElementById('scrollTopBtn');
+    if(!btn) return;
+    function onScroll(){
+      var h = document.documentElement;
+      var pct = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      if(pct > 0.25){ btn.style.opacity='0.85'; btn.style.pointerEvents='auto'; }
+      else { btn.style.opacity='0'; btn.style.pointerEvents='none'; }
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
+</script>
 </body>
 </html>
