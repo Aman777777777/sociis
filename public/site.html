@@ -1589,17 +1589,39 @@
 <nav>
   <div class="nav-inner">
     <a href="#top" class="nav-logo" style="text-decoration:none;color:inherit;cursor:pointer;" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'});">SociisGroup<sup>™</sup></a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#impact">Impact</a>
       <a href="#culture">Culture</a>
-      <a href="#governance">Governance</a>
-      <a href="#calendar">Calendar</a>
-      <a href="#charter">Charter</a>
+      <a href="/governance">Governance</a>
+      <a href="/calendar">Calendar</a>
+      <a href="/charter">Charter</a>
       <a href="#access">Access</a>
       <a href="https://sociis.house" class="nav-cta">Enter Sociis House</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<script>
+  (function () {
+    var t = document.getElementById('navToggle');
+    var l = document.getElementById('navLinks');
+    if (!t || !l) return;
+    t.addEventListener('click', function () {
+      var open = l.classList.toggle('open');
+      t.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    l.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        l.classList.remove('open');
+        t.classList.remove('open');
+        t.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 
 <!-- ==================== HERO ==================== -->
 <section class="hero">
