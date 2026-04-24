@@ -193,6 +193,27 @@
     background: var(--gold);
     transform: translateY(-1px);
   }
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+    width: 40px; height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px; height: 1.5px;
+    background: var(--ink);
+    transition: transform 0.3s ease, opacity 0.2s ease;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
   /* ==================== HERO ==================== */
   .hero {
@@ -1513,10 +1534,41 @@
     .room-row { grid-template-columns: 60px 1fr; gap: 20px; }
     .room-desc, .room-cta { grid-column: 1 / -1; text-align: left; }
   }
+  @media (max-width: 880px) {
+    .nav-toggle { display: flex; }
+    .nav-links {
+      position: fixed;
+      top: 64px; left: 0; right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--rule-soft);
+      padding: 12px var(--pad) 24px;
+      transform: translateY(-12px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      box-shadow: 0 12px 30px -20px rgba(0,0,0,0.25);
+    }
+    .nav-links.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .nav-links a {
+      padding: 14px 4px;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .nav-links a:last-child { border-bottom: 0; }
+    .nav-links a.nav-cta {
+      margin-top: 12px;
+      text-align: center;
+    }
+  }
   @media (max-width: 640px) {
     :root { --pad: 24px; }
     section { padding: 72px 0; }
-    .nav-links a:not(.nav-cta) { display: none; }
     .mechanisms-rail, .output-grid, .relevance-grid, .reach-grid, .bee-triplet, .media-strategy, .footer-top, .proof-row, .domains-compact, .final-cta-paths {
       grid-template-columns: 1fr;
     }
@@ -1537,17 +1589,39 @@
 <nav>
   <div class="nav-inner">
     <a href="#top" class="nav-logo" style="text-decoration:none;color:inherit;cursor:pointer;" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'});">SociisGroup<sup>™</sup></a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#impact">Impact</a>
       <a href="#culture">Culture</a>
-      <a href="#governance">Governance</a>
-      <a href="#calendar">Calendar</a>
-      <a href="#charter">Charter</a>
+      <a href="/governance">Governance</a>
+      <a href="/calendar">Calendar</a>
+      <a href="/charter">Charter</a>
       <a href="#access">Access</a>
       <a href="https://sociis.house" class="nav-cta">Enter Sociis House</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<script>
+  (function () {
+    var t = document.getElementById('navToggle');
+    var l = document.getElementById('navLinks');
+    if (!t || !l) return;
+    t.addEventListener('click', function () {
+      var open = l.classList.toggle('open');
+      t.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    l.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        l.classList.remove('open');
+        t.classList.remove('open');
+        t.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 
 <!-- ==================== HERO ==================== -->
 <section class="hero">
