@@ -3,32 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Governance · SociisGroup</title>
-<meta name="description" content="The institutional governance of SociisGroup. Authority, oversight and executive responsibility are intentionally separated to safeguard independence and trust.">
+<title>Governance — SociisGroup</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
   :root {
     --cream: #F4F0E8;
     --cream-deep: #EDE7DA;
     --ink: #0F1624;
-    --ink-soft: #1E2537;
     --ink-text: #1A1A14;
     --ink-text-soft: #2C2C20;
     --gold: #9F7D2A;
-    --gold-soft: #B89A4F;
-    --grey: #7A7468;
     --rule: rgba(15,22,36,0.12);
-    --rule-soft: rgba(15,22,36,0.06);
-    --max: 1080px;
+    --max: 1180px;
     --pad: 56px;
+    --pad-lg: 88px;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-
   body {
-    background: var(--cream);
+    background: var(--cream-deep);
     color: var(--ink-text);
     font-family: 'Inter', sans-serif;
     font-weight: 300;
@@ -36,280 +29,106 @@
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
-
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.3;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.06 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  /* Nav */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(244,240,232,0.92);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--rule-soft);
-  }
-  .nav-inner {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 20px var(--pad);
+  .nav-bar {
+    padding: 28px var(--pad);
+    border-bottom: 1px solid var(--rule);
     display: flex; justify-content: space-between; align-items: center;
+    background: var(--cream);
   }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px; font-weight: 500;
+  .nav-bar a {
+    font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--ink); text-decoration: none;
   }
-  .nav-logo sup { font-size: 0.4em; color: var(--gold); margin-left: 0.05em; }
-  .nav-back {
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink-text);
-    text-decoration: none;
-    display: flex; align-items: center; gap: 10px;
-    transition: color 0.2s ease, gap 0.2s ease;
+  .nav-bar .brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.02em; text-transform: none; }
+  .mono-kicker {
+    font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--gold); font-weight: 500;
   }
-  .nav-back:hover { color: var(--gold); gap: 14px; }
-  .nav-back::before { content: "←"; color: var(--gold); }
-
-  /* Header */
-  header.page-head {
-    padding: 180px var(--pad) 60px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    max-width: var(--max);
-    margin: 0 auto;
-  }
-  .head-kicker {
-    font-size: 10px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 32px;
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .head-kicker::before, .head-kicker::after {
-    content: "";
-    width: 28px; height: 1px;
-    background: var(--gold);
-  }
-  h1.page-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: clamp(44px, 6vw, 76px);
-    line-height: 1;
-    letter-spacing: -0.015em;
-    margin-bottom: 28px;
-  }
-  .head-sub {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: clamp(19px, 1.8vw, 24px);
-    color: var(--ink-text-soft);
-    line-height: 1.5;
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  /* Body */
-  main {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 var(--pad) 140px;
-    position: relative;
-    z-index: 2;
-  }
-
-  section.gov-section {
-    margin-top: 80px;
-    padding-top: 48px;
-    border-top: 1px solid var(--rule);
-  }
-  .section-kicker {
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 14px;
-  }
-  h2.section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: clamp(28px, 3vw, 38px);
-    line-height: 1.15;
+  .display-l {
+    font-family: 'Cormorant Garamond', serif; font-weight: 300;
+    font-size: clamp(40px, 5vw, 64px); line-height: 1.05; color: var(--ink);
     letter-spacing: -0.01em;
-    margin-bottom: 18px;
   }
-  .section-intro {
-    font-size: 15px;
-    color: var(--ink-text-soft);
-    max-width: 720px;
-    margin-bottom: 48px;
-    line-height: 1.7;
+  .rule { width: 80px; height: 1px; background: var(--gold); margin: 28px 0 32px; }
+  .body-text { font-size: 17px; line-height: 1.75; color: var(--ink-text-soft); }
+  section.gov {
+    padding: var(--pad-lg) var(--pad);
   }
-
-  /* Team grid */
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 48px 32px;
+  .inner { max-width: var(--max); margin: 0 auto; }
+  h3.group-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: 28px; color: var(--ink); margin-bottom: 28px;
   }
-  @media (max-width: 880px) {
-    .team-grid { grid-template-columns: repeat(3, 1fr); }
+  .gov-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 28px; margin-bottom: 64px;
   }
-  @media (max-width: 640px) {
-    .team-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 20px; }
-    header.page-head { padding-top: 140px; }
-    main { padding-left: 28px; padding-right: 28px; }
-    .nav-inner { padding: 16px 28px; }
+  .gov-card { margin: 0; }
+  .gov-card img {
+    width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
+    filter: grayscale(100%); transition: filter 0.5s ease;
   }
-
-  .team-card {
-    display: flex;
-    flex-direction: column;
+  .gov-card:hover img { filter: grayscale(0%); }
+  .gov-card figcaption {
+    margin-top: 12px; font-family: 'Inter', sans-serif; font-size: 12px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-text-soft);
   }
-  .team-photo {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 4px;
-    background: var(--cream-deep);
-    margin-bottom: 16px;
-  }
-  .team-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.6s ease, transform 0.6s ease;
-  }
-  .team-card:hover .team-photo img {
-    filter: grayscale(0);
-  }
-  .team-name {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--ink-text);
-    margin-bottom: 4px;
-    line-height: 1.3;
-  }
-  .team-role {
-    font-size: 12px;
-    color: var(--grey);
-    line-height: 1.5;
-    white-space: pre-line;
-  }
-
-  /* Footer */
-  footer {
-    border-top: 1px solid var(--rule);
-    padding: 40px var(--pad);
-    text-align: center;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--grey);
-    position: relative;
-    z-index: 2;
+  @media (max-width: 768px) {
+    .gov-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    section.gov { padding: 56px 24px; }
+    .nav-bar { padding: 20px 24px; }
   }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo">SociisGroup<sup>™</sup></div>
-    <a href="/site.html" class="nav-back">Back</a>
-  </div>
+<nav class="nav-bar">
+  <a href="/site.html" class="brand">SociisGroup</a>
+  <a href="/site.html">← Back</a>
 </nav>
 
-<header class="page-head">
-  <div class="head-kicker">Institutional Structure</div>
-  <h1 class="page-title">Governance</h1>
-  <p class="head-sub">SociisGroup is governed through a defined institutional structure. Authority, oversight and executive responsibility are intentionally separated to safeguard independence, integrity and long-term trust.</p>
-</header>
+<section class="gov">
+  <div class="inner">
+    <div class="mono-kicker">Governance</div>
+    <h2 class="display-l" style="margin-top: 20px;">Institutional Leadership.</h2>
+    <div class="rule"></div>
+    <p class="body-text" style="max-width: 720px; margin-bottom: 56px;">
+      SociisGroup is governed by a small circle of institutional leaders, strategic contributors and an Ethical Council that safeguards the LIME Code.
+    </p>
 
-<main>
-
-  <!-- Institutional Leadership -->
-  <section class="gov-section" style="border-top: none; margin-top: 0; padding-top: 0;">
-    <div class="section-kicker">01 — Institutional Leadership</div>
-    <h2 class="section-title">Institutional Leadership.</h2>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-photo"><img src="/team/jeremie.png" alt="Jeremie Landweer"></div>
-        <div class="team-name">Jeremie Landweer</div>
-        <div class="team-role">Founder &amp; CEO</div>
-      </div>
-      <div class="team-card">
-        <div class="team-photo"><img src="/team/dominique-new.jpg" alt="Dominique Debecker"></div>
-        <div class="team-name">Dominique Debecker</div>
-        <div class="team-role">Chief Behavioural Officer</div>
-      </div>
-      <div class="team-card">
-        <div class="team-photo"><img src="/team/zanele.jpg" alt="Zanele Morrison" style="object-position: center 10%;"></div>
-        <div class="team-name">Zanele Morrison</div>
-        <div class="team-role">Global Engagement</div>
-      </div>
-      <div class="team-card">
-        <div class="team-photo"><img src="/team/luc.jpg" alt="Luc Garguet-Duport"></div>
-        <div class="team-name">Luc Garguet-Duport</div>
-        <div class="team-role">Chief Operating Officer</div>
-      </div>
+    <h3 class="group-title">Institutional Leadership</h3>
+    <div class="gov-grid">
+      <figure class="gov-card"><img src="/team/jeremie.png" alt="Jérémie"><figcaption>Jérémie</figcaption></figure>
+      <figure class="gov-card"><img src="/team/dominique-new.jpg" alt="Dominique"><figcaption>Dominique</figcaption></figure>
+      <figure class="gov-card"><img src="/team/chantal-new.png" alt="Chantal"><figcaption>Chantal</figcaption></figure>
+      <figure class="gov-card"><img src="/team/joost-new.jpeg" alt="Joost"><figcaption>Joost</figcaption></figure>
     </div>
-  </section>
 
-  <!-- Strategic & Institutional Contributors -->
-  <section class="gov-section">
-    <div class="section-kicker">02 — Contributors</div>
-    <h2 class="section-title">Strategic and Institutional Contributors.</h2>
-    <p class="section-intro">Contributors bring independent expertise across systems, culture, governance, capital and institutional development. They support the evolution of SociisGroup while remaining independent from its executive leadership.</p>
-    <div class="team-grid">
-      <div class="team-card"><div class="team-photo"><img src="/team/joost-new.jpeg" alt="Joost Peeters"></div><div class="team-name">Joost Peeters</div><div class="team-role">Institutional Counsel</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/micael-c.jpg" alt="Micael Craenhals" style="object-position: center 25%;"></div><div class="team-name">Micael Craenhals</div><div class="team-role">Production</div></div>
-      
-      <div class="team-card"><div class="team-photo"><img src="/team/marc.jpg" alt="Marc Bogaerts"></div><div class="team-name">Marc Bogaerts</div><div class="team-role">Artistic Director</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/chantal-new.png" alt="Chantal Vervaete"></div><div class="team-name">Chantal Vervaete</div><div class="team-role">Public Company Board Member
-Former Fortune 10 C-Suite Executive</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/karim.jpg" alt="Karim Tousbih"></div><div class="team-name">Karim Tousbih</div><div class="team-role">Value Development</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/eva.jpeg" alt="Eva Vargová"></div><div class="team-name">Eva Vargová</div><div class="team-role">Philanthropy and Social Impact</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/sandrine.jpg" alt="Sandrine Hellinckx"></div><div class="team-name">Sandrine Hellinckx</div><div class="team-role">SBS Foundation</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/jan.jpg" alt="Prof. Jan de Visch"></div><div class="team-name">Prof. Jan de Visch</div><div class="team-role">SBS Foundation</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/richard.jpg" alt="Richard Thommeret"></div><div class="team-name">Richard Thommeret</div><div class="team-role">External Relations and Strategic Communications</div></div>
+    <h3 class="group-title">Strategic & Institutional Contributors</h3>
+    <div class="gov-grid">
+      <figure class="gov-card"><img src="/team/luc.jpg" alt="Luc"><figcaption>Luc</figcaption></figure>
+      <figure class="gov-card"><img src="/team/marc.jpg" alt="Marc"><figcaption>Marc</figcaption></figure>
+      <figure class="gov-card"><img src="/team/karim.jpg" alt="Karim"><figcaption>Karim</figcaption></figure>
+      <figure class="gov-card"><img src="/team/lars.jpg" alt="Lars"><figcaption>Lars</figcaption></figure>
+      <figure class="gov-card"><img src="/team/peter.png" alt="Peter"><figcaption>Peter</figcaption></figure>
+      <figure class="gov-card"><img src="/team/richard.jpg" alt="Richard"><figcaption>Richard</figcaption></figure>
+      <figure class="gov-card"><img src="/team/rudi.png" alt="Rudi"><figcaption>Rudi</figcaption></figure>
+      <figure class="gov-card"><img src="/team/tim.png" alt="Tim"><figcaption>Tim</figcaption></figure>
     </div>
-  </section>
 
-  <!-- Ethical Council -->
-  <section class="gov-section">
-    <div class="section-kicker">03 — Ethical Council</div>
-    <h2 class="section-title">The Sociis Ethical Council.</h2>
-    <p class="section-intro">The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.</p>
-    <div class="team-grid">
-      <div class="team-card"><div class="team-photo"><img src="/team/sarah-m.jpg" alt="Sarah McArthur"></div><div class="team-name">Sarah McArthur</div><div class="team-role">Editor-in-Chief, Leader to Leader Journal
-Advisory Board Member, Frances Hesselbein Leadership Forum</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/peter.png" alt="Peter Somers"></div><div class="team-name">Peter Somers</div><div class="team-role">Former CEO, Emirates Post
-Founder, SprintPack</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/louis.png" alt="Dr. Louis Klein"></div><div class="team-name">Dr. Louis Klein</div><div class="team-role">Dean and Research Director, European School of Governance</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/tim.png" alt="Tim Sanders"></div><div class="team-name">Tim Sanders</div><div class="team-role">Founder &amp; CEO, Silent Donor</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/lars.jpg" alt="Lars Carlstrom"></div><div class="team-name">Lars Carlstrom</div><div class="team-role">Founder &amp; CEO, Italvolt</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/anmarrie.jpg" alt="Annmarie Gorenc Zoran"></div><div class="team-name">Annmarie Gorenc Zoran, PhD</div><div class="team-role">Dean, Faculty of Organisation Studies</div></div>
-      <div class="team-card"><div class="team-photo"><img src="/team/tatiana.png" alt="Tatjana Dragović Andersen"></div><div class="team-name">Tatjana Dragović Andersen, PhD</div><div class="team-role">Associate Professor</div></div>
+    <h3 class="group-title">The Sociis Ethical Council</h3>
+    <div class="gov-grid">
+      <figure class="gov-card"><img src="/team/sarah-m.jpg" alt="Sarah"><figcaption>Sarah</figcaption></figure>
+      <figure class="gov-card"><img src="/team/eva.jpeg" alt="Eva"><figcaption>Eva</figcaption></figure>
+      <figure class="gov-card"><img src="/team/tatiana.png" alt="Tatiana"><figcaption>Tatiana</figcaption></figure>
+      <figure class="gov-card"><img src="/team/zanele.jpg" alt="Zanele"><figcaption>Zanele</figcaption></figure>
+      <figure class="gov-card"><img src="/team/sandrine.jpg" alt="Sandrine"><figcaption>Sandrine</figcaption></figure>
+      <figure class="gov-card"><img src="/team/anmarrie.jpg" alt="Anne-Marie"><figcaption>Anne-Marie</figcaption></figure>
+      <figure class="gov-card"><img src="/team/jan.jpg" alt="Jan"><figcaption>Jan</figcaption></figure>
+      <figure class="gov-card"><img src="/team/micael-c.jpg" alt="Micael"><figcaption>Micael</figcaption></figure>
     </div>
-  </section>
-
-</main>
-
-<footer>SociisGroup<sup>™</sup> · Sovereign Independent Behavioural Institution</footer>
+  </div>
+</section>
 
 </body>
 </html>
