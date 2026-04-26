@@ -2797,11 +2797,14 @@
     <div class="mono-kicker ltbl-kicker">Cultural Anchor · Film</div>
     <h2 class="ltbl-title">Let There Be <em>Light</em>.</h2>
 
-    <div class="ltbl-frame" data-image-slot="ltbl-film" data-video-slot="ltbl-video">
-      <div class="ltbl-frame-title">Let There Be Light · a film by SociisGroup</div>
-      <div class="ltbl-play"></div>
-      <div class="ltbl-frame-label">Play film · 03:42</div>
-      <div class="image-swap-note">FILM SLOT · Jean Bosco Safari still or video · 16:9</div>
+    <div class="ltbl-frame" style="aspect-ratio: 16/9;">
+      <video
+        src="/let-there-be-light.mp4"
+        controls
+        playsinline
+        preload="metadata"
+        style="width:100%; height:100%; object-fit:cover; display:block; border:0;"
+      ></video>
     </div>
 
     <div class="ltbl-grid">
@@ -2839,7 +2842,67 @@
 </section>
 
 <!-- ==================== LIME CODE ==================== -->
-<section class="lime-section" id="governance">
+<!-- ==================== GOVERNANCE (Institutional Leadership) ==================== -->
+<section id="governance" style="padding: var(--pad-lg) var(--pad); background: var(--cream-deep); position: relative; z-index: 2;">
+  <div style="max-width: var(--max); margin: 0 auto;" class="scroll-reveal">
+    <div class="mono-kicker">Governance</div>
+    <h2 class="display-l" style="margin-top: 20px;">Institutional Leadership.</h2>
+    <div class="rule"></div>
+    <p class="body-text" style="max-width: 720px; margin-bottom: 56px;">
+      SociisGroup is governed by a small circle of institutional leaders, strategic contributors and an Ethical Council that safeguards the LIME Code.
+    </p>
+
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 28px; color: var(--ink); margin-bottom: 28px;">Institutional Leadership</h3>
+    <div class="gov-grid" style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-bottom: 64px;">
+      <figure class="gov-card"><img src="/team/jeremie.png" alt="Jérémie"><figcaption>Jérémie</figcaption></figure>
+      <figure class="gov-card"><img src="/team/dominique-new.jpg" alt="Dominique"><figcaption>Dominique</figcaption></figure>
+      <figure class="gov-card"><img src="/team/chantal-new.png" alt="Chantal"><figcaption>Chantal</figcaption></figure>
+      <figure class="gov-card"><img src="/team/joost-new.jpeg" alt="Joost"><figcaption>Joost</figcaption></figure>
+    </div>
+
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 28px; color: var(--ink); margin-bottom: 28px;">Strategic & Institutional Contributors</h3>
+    <div class="gov-grid" style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-bottom: 64px;">
+      <figure class="gov-card"><img src="/team/luc.jpg" alt="Luc"><figcaption>Luc</figcaption></figure>
+      <figure class="gov-card"><img src="/team/marc.jpg" alt="Marc"><figcaption>Marc</figcaption></figure>
+      <figure class="gov-card"><img src="/team/karim.jpg" alt="Karim"><figcaption>Karim</figcaption></figure>
+      <figure class="gov-card"><img src="/team/lars.jpg" alt="Lars"><figcaption>Lars</figcaption></figure>
+      <figure class="gov-card"><img src="/team/peter.png" alt="Peter"><figcaption>Peter</figcaption></figure>
+      <figure class="gov-card"><img src="/team/richard.jpg" alt="Richard"><figcaption>Richard</figcaption></figure>
+      <figure class="gov-card"><img src="/team/rudi.png" alt="Rudi"><figcaption>Rudi</figcaption></figure>
+      <figure class="gov-card"><img src="/team/tim.png" alt="Tim"><figcaption>Tim</figcaption></figure>
+    </div>
+
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 28px; color: var(--ink); margin-bottom: 28px;">The Sociis Ethical Council</h3>
+    <div class="gov-grid" style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 28px;">
+      <figure class="gov-card"><img src="/team/sarah-m.jpg" alt="Sarah"><figcaption>Sarah</figcaption></figure>
+      <figure class="gov-card"><img src="/team/eva.jpeg" alt="Eva"><figcaption>Eva</figcaption></figure>
+      <figure class="gov-card"><img src="/team/tatiana.png" alt="Tatiana"><figcaption>Tatiana</figcaption></figure>
+      <figure class="gov-card"><img src="/team/zanele.jpg" alt="Zanele"><figcaption>Zanele</figcaption></figure>
+      <figure class="gov-card"><img src="/team/sandrine.jpg" alt="Sandrine"><figcaption>Sandrine</figcaption></figure>
+      <figure class="gov-card"><img src="/team/anmarrie.jpg" alt="Anne-Marie"><figcaption>Anne-Marie</figcaption></figure>
+      <figure class="gov-card"><img src="/team/jan.jpg" alt="Jan"><figcaption>Jan</figcaption></figure>
+      <figure class="gov-card"><img src="/team/micael-c.jpg" alt="Micael"><figcaption>Micael</figcaption></figure>
+    </div>
+  </div>
+</section>
+<style>
+  .gov-card { margin: 0; }
+  .gov-card img {
+    width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
+    filter: grayscale(100%); transition: filter 0.5s ease;
+  }
+  .gov-card:hover img { filter: grayscale(0%); }
+  .gov-card figcaption {
+    margin-top: 12px; font-family: 'Inter', sans-serif; font-size: 12px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-text-soft);
+  }
+  @media (max-width: 768px) {
+    #governance .gov-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; }
+  }
+</style>
+
+<!-- ==================== LIME CODE ==================== -->
+<section class="lime-section" id="lime">
   <div class="lime-inner scroll-reveal">
     <div class="mono-kicker">Governance and Integrity</div>
     <h2 class="display-l" style="margin-top: 20px;">The LIME Code.</h2>
