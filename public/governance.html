@@ -73,6 +73,17 @@
     margin-top: 12px; font-family: 'Inter', sans-serif; font-size: 12px;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-text-soft);
   }
+  #scrollTopBtn {
+    position: fixed; bottom: 24px; right: 24px; z-index: 50;
+    width: 40px; height: 40px; border: none; cursor: pointer;
+    background: rgba(15,22,36,0.6); color: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 4px; opacity: 0; transform: translateY(16px);
+    pointer-events: none; transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    font-size: 18px; line-height: 1;
+  }
+  #scrollTopBtn.visible { opacity: 0.6; transform: translateY(0); pointer-events: auto; }
+  #scrollTopBtn.visible:hover { opacity: 1; background: rgba(15,22,36,0.8); }
   @media (max-width: 768px) {
     .gov-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
     section.gov { padding: 56px 24px; }
@@ -129,6 +140,19 @@
     </div>
   </div>
 </section>
+
+<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+<script>
+  (function(){
+    var btn = document.getElementById('scrollTopBtn');
+    function onScroll(){
+      var pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      if (pct > 0.25) btn.classList.add('visible'); else btn.classList.remove('visible');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  })();
+</script>
 
 </body>
 </html>
