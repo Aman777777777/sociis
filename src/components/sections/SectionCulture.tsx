@@ -1,27 +1,8 @@
-import { memo, useRef, useEffect } from "react";
+import { memo } from "react";
 import charityVideo from "@/assets/charity-video.mp4";
 
 // Culture Scales Behaviour — charity video preserved
 const SectionCulture = memo(() => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => { });
-        } else {
-          video.pause();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(video);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section id="culture" className="py-24 sm:py-32 border-t border-border/40">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -39,12 +20,13 @@ const SectionCulture = memo(() => {
         {/* Charity video — preserved */}
         <div className="rounded-2xl overflow-hidden">
           <video
-            ref={videoRef}
             src={charityVideo}
+            autoPlay
             muted
+            loop
             playsInline
             controls
-            preload="metadata"
+            preload="auto"
             className="w-full"
           />
         </div>

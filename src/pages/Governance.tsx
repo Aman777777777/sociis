@@ -214,10 +214,16 @@ const TeamCard = ({
           </div>
         )}
       </div>
-      <h3 className={`font-sans text-foreground text-sm font-medium mb-0.5 transition-colors duration-300 whitespace-pre-line ${isClickable ? 'group-hover:text-accent' : ''}`}>
+      <p
+        className={`font-sans text-foreground text-sm font-medium mb-0.5 transition-colors duration-300 whitespace-pre-line ${isClickable ? 'group-hover:text-accent' : ''}`}
+        style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+      >
         {member.name}
-      </h3>
-      <p className="font-sans text-xs text-muted-foreground leading-relaxed max-w-[140px] whitespace-pre-line">
+      </p>
+      <p
+        className="font-sans text-xs text-muted-foreground leading-relaxed whitespace-pre-line"
+        style={{ fontFamily: 'Inter, system-ui, sans-serif', maxWidth: '160px' }}
+      >
         {member.role}
       </p>
     </div>
@@ -252,7 +258,7 @@ const Governance = () => {
                       />
                     </div>
                     <div>
-                      <DialogTitle className="font-sans text-lg font-medium text-foreground whitespace-pre-line">
+                      <DialogTitle className="font-sans text-lg font-medium text-foreground whitespace-pre-line" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
                         {selectedMember.name}
                       </DialogTitle>
                       <p className="font-sans text-xs text-muted-foreground mt-1 whitespace-pre-line">
@@ -272,7 +278,7 @@ const Governance = () => {
         {/* Hero */}
         <section className="pt-32 pb-16">
           <div className="container mx-auto px-6 lg:px-8">
-            <h1 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6">
+            <h1 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
               Governance
             </h1>
             <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-8"></div>
@@ -285,9 +291,9 @@ const Governance = () => {
         {/* Institutional Leadership */}
         <section className="py-12 border-t border-border/50">
           <div className="container mx-auto px-6 lg:px-8">
-            <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-10">
+            <p className="font-sans text-sm tracking-widest text-foreground uppercase mb-10" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
               Institutional Leadership
-            </h2>
+            </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
               {leadership.map((member, index) => (
                 <TeamCard
@@ -304,11 +310,11 @@ const Governance = () => {
         {/* Strategic & Institutional Contributors */}
         <section className="py-12 border-t border-border/50">
           <div className="container mx-auto px-6 lg:px-8">
-            <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
-              Strategic & Institutional Contributors
-            </h2>
+            <p className="font-sans text-sm tracking-widest text-foreground uppercase mb-2" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+              Strategic &amp; Institutional Contributors
+            </p>
             <p className="font-sans text-sm text-muted-foreground/70 mb-10 max-w-3xl">
-              Strategic & Institutional Contributors bring independent expertise across systems, culture, governance, capital and institutional development. They support the evolution of SociisGroup while remaining independent from its executive leadership.
+              Strategic &amp; Institutional Contributors bring independent expertise across systems, culture, governance, capital and institutional development. They support the evolution of SociisGroup while remaining independent from its executive leadership.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
               {contributors.map((member, index) => (
@@ -321,9 +327,9 @@ const Governance = () => {
         {/* Ethical Council */}
         <section className="py-12 border-t border-border/50">
           <div className="container mx-auto px-6 lg:px-8">
-            <h2 className="font-sans text-sm tracking-widest text-foreground uppercase mb-2">
+            <p className="font-sans text-sm tracking-widest text-foreground uppercase mb-2" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
               Ethical Council
-            </h2>
+            </p>
             <p className="font-sans text-sm text-muted-foreground/70 mb-10">
               The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.
             </p>

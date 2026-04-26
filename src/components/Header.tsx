@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import sociisLogo from "@/assets/sociis-logo.png";
+import sgLogo from "@/assets/sg-logo.jpg";
 
 const Header = () => {
   const location = useLocation();
@@ -59,9 +60,17 @@ const Header = () => {
           <Link
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="font-display text-xl text-foreground hover:text-accent transition-colors"
+            className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
           >
-            SociisGroup™
+            <img
+              src={sgLogo}
+              alt="SociisGroup logo"
+              className="h-8 w-auto"
+              style={{ mixBlendMode: "multiply" }}
+            />
+            <span className="font-display text-xl text-foreground">
+              SociisGroup™
+            </span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
