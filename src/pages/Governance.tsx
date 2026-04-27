@@ -62,16 +62,11 @@ const teamMembers: TeamMember[] = [
     bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™, the division responsible for developing and deploying the Sustainable Behavioural Standard (SBS™). With deep expertise in behavioural science, organisational psychology, and brain-based leadership methodologies, she ensures that every initiative within the institution is grounded in integrity, ethical conduct, and meaningful transformation. Her work focuses on translating complex behavioural frameworks into practical tools that organisations can embed into their governance structures. She oversees BEE™, the Behavioural Engine of Ethics, which provides signals, patterns, and dashboards showing how leaders and organisations behave over time, not how they present themselves."
   },
   {
-    name: "Chantal Vervaete",
-    role: "Institutional Leadership",
-    image: chantalNew,
+    name: "Zanele Morrison",
+    role: "Global Engagement and Institutional Narrative",
+    image: zanele,
     category: "leadership",
-  },
-  {
-    name: "Joost Peeters",
-    role: "Institutional Counsel",
-    image: joost,
-    category: "leadership",
+    imagePosition: "center 10%",
   },
 
   // Strategic & Institutional Contributors
@@ -142,13 +137,6 @@ const teamMembers: TeamMember[] = [
     role: "Associate Professor",
     image: tatiana,
     category: "council",
-  },
-  {
-    name: "Zanele Morrison",
-    role: "Global Engagement",
-    image: zanele,
-    category: "council",
-    imagePosition: "center 10%",
   },
   {
     name: "Sandrine Hellinckx",
