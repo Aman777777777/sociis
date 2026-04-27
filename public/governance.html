@@ -10,69 +10,216 @@
     --cream: #F4F0E8;
     --cream-deep: #EDE7DA;
     --ink: #0F1624;
+    --ink-soft: #1E2537;
     --ink-text: #1A1A14;
     --ink-text-soft: #2C2C20;
     --gold: #9F7D2A;
+    --gold-warm: #C9A85A;
+    --grey: #7A7468;
     --rule: rgba(15,22,36,0.12);
+    --rule-soft: rgba(15,22,36,0.06);
     --max: 1180px;
     --pad: 56px;
-    --pad-lg: 88px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--cream-deep);
+    background: var(--cream);
     color: var(--ink-text);
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
-  .nav-bar {
-    padding: 28px var(--pad);
-    border-bottom: 1px solid var(--rule);
-    display: flex; justify-content: space-between; align-items: center;
-    background: var(--cream);
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.32;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.06 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  .nav-bar a {
-    font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--ink); text-decoration: none;
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(244,240,232,0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--rule-soft);
   }
-  .nav-bar .brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.02em; text-transform: none; }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 20px var(--pad);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+  }
+  .brand img { width: 32px; height: 32px; object-fit: contain; display: block; }
+  .brand sup { font-size: 0.4em; color: var(--gold); margin-left: 0.05em; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a, .nav-back {
+    color: var(--ink);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .nav-links a:hover, .nav-back:hover { color: var(--gold); }
+  header {
+    padding: 170px var(--pad) 86px;
+    border-bottom: 1px solid var(--rule-soft);
+    position: relative;
+    z-index: 2;
+  }
+  .inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 2; }
   .mono-kicker {
-    font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.32em;
-    text-transform: uppercase; color: var(--gold); font-weight: 500;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--grey);
   }
-  .display-l {
-    font-family: 'Cormorant Garamond', serif; font-weight: 300;
-    font-size: clamp(40px, 5vw, 64px); line-height: 1.05; color: var(--ink);
-    letter-spacing: -0.01em;
+  h1, h2, h3, .pull {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--ink);
+    font-weight: 400;
   }
-  .rule { width: 80px; height: 1px; background: var(--gold); margin: 28px 0 32px; }
-  .body-text { font-size: 17px; line-height: 1.75; color: var(--ink-text-soft); }
-  section.gov {
-    padding: var(--pad-lg) var(--pad);
+  h1 {
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin-top: 22px;
   }
-  .inner { max-width: var(--max); margin: 0 auto; }
-  h3.group-title {
-    font-family: 'Cormorant Garamond', serif; font-weight: 400;
-    font-size: 28px; color: var(--ink); margin-bottom: 28px;
+  h2 {
+    font-size: clamp(34px, 4vw, 56px);
+    line-height: 1.08;
+    letter-spacing: -0.012em;
+    margin-top: 18px;
   }
-  .gov-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 28px; margin-bottom: 64px;
+  h3 { font-size: clamp(25px, 2.6vw, 34px); line-height: 1.18; }
+  .rule { width: 44px; height: 1px; background: var(--gold); margin: 22px 0 32px; }
+  .intro { max-width: 760px; color: var(--ink-soft); font-size: 17px; line-height: 1.75; }
+  .pull { font-style: italic; font-size: clamp(20px, 2vw, 26px); line-height: 1.45; color: var(--ink-soft); }
+  section { padding: 86px var(--pad); position: relative; z-index: 2; }
+  section.alt { background: var(--cream-deep); }
+  .section-head {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 72px;
+    align-items: start;
+    margin-bottom: 58px;
   }
-  .gov-card { margin: 0; }
-  .gov-card img {
-    width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
-    filter: grayscale(100%); transition: filter 0.5s ease;
+  .section-copy { color: var(--ink-soft); max-width: 740px; font-size: 16px; line-height: 1.75; }
+  .subgroup { margin-top: 56px; }
+  .subgroup:first-of-type { margin-top: 0; }
+  .subgroup-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 10px;
   }
-  .gov-card:hover img { filter: grayscale(0%); }
-  .gov-card figcaption {
-    margin-top: 12px; font-family: 'Inter', sans-serif; font-size: 12px;
-    letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-text-soft);
+  .subgroup-copy { color: var(--grey); font-size: 14px; max-width: 720px; margin-bottom: 30px; }
+  .people-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 42px 32px;
   }
+  .person { min-width: 0; }
+  .portrait {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--cream-deep);
+    border: 1px solid var(--rule-soft);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+  .person:hover .portrait img { filter: grayscale(0%); transform: scale(1.02); }
+  .initials {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(15,22,36,0.32);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+  }
+  .name {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+  .role {
+    color: var(--grey);
+    font-size: 12px;
+    line-height: 1.55;
+    max-width: 210px;
+  }
+  .charter-card, .access-card {
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--rule);
+    padding: 36px 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: center;
+  }
+  .charter-card p, .access-card p { max-width: 720px; color: var(--ink-soft); font-size: 16px; line-height: 1.75; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 13px 20px;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .btn.primary { background: var(--ink); color: var(--cream); }
+  .btn:hover { background: var(--gold); border-color: var(--gold); color: var(--cream); }
+  footer { background: var(--ink); color: var(--cream); padding: 60px var(--pad) 38px; position: relative; z-index: 2; }
+  .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; display: flex; align-items: center; gap: 10px; }
+  .footer-brand img { width: 28px; height: 28px; object-fit: contain; filter: invert(1); }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a { color: rgba(244,240,232,0.7); text-decoration: none; font-size: 12px; }
+  .footer-links a:hover { color: var(--gold-warm); }
   #scrollTopBtn {
     position: fixed; bottom: 24px; right: 24px; z-index: 50;
     width: 40px; height: 40px; border: none; cursor: pointer;
@@ -84,78 +231,178 @@
   }
   #scrollTopBtn.visible { opacity: 0.6; transform: translateY(0); pointer-events: auto; }
   #scrollTopBtn.visible:hover { opacity: 1; background: rgba(15,22,36,0.8); }
-  @media (max-width: 768px) {
-    .gov-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    section.gov { padding: 56px 24px; }
-    .nav-bar { padding: 20px 24px; }
+  @media (max-width: 960px) {
+    :root { --pad: 32px; }
+    .nav-links { gap: 18px; }
+    .section-head { grid-template-columns: 1fr; gap: 26px; }
+    .people-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .charter-card, .access-card { grid-template-columns: 1fr; gap: 26px; }
+  }
+  @media (max-width: 720px) {
+    :root { --pad: 24px; }
+    .nav-inner { padding: 16px var(--pad); align-items: flex-start; }
+    .nav-links { display: none; }
+    header { padding-top: 130px; }
+    section { padding-top: 64px; padding-bottom: 64px; }
+    .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 18px; }
+    .role { font-size: 11px; }
   }
 </style>
 </head>
 <body>
 
-<nav class="nav-bar">
-  <a href="/site.html" class="brand" style="display:flex; align-items:center; gap:10px;">
-    <img src="/sg-logo.jpg" alt="SG" style="width:28px; height:28px; object-fit:contain; display:block;">
-    <span>SociisGroup</span>
-  </a>
-  <a href="/site.html">← Back</a>
+<nav>
+  <div class="nav-inner">
+    <a href="/site.html" class="brand"><img src="/sg-logo.jpg" alt="SG"><span>SociisGroup<sup>™</sup></span></a>
+    <div class="nav-links">
+      <a href="#board">Board</a>
+      <a href="#council">The Council</a>
+      <a href="#advisors">Trusted Advisors</a>
+      <a href="#charter">Charter</a>
+    </div>
+    <a href="/site.html" class="nav-back">← Back</a>
+  </div>
 </nav>
 
-<section class="gov">
+<header>
   <div class="inner">
     <div class="mono-kicker">Governance</div>
-    <h2 class="display-l" style="margin-top: 20px;">Institutional Leadership.</h2>
+    <h1>Institutional governance.</h1>
     <div class="rule"></div>
-    <p class="body-text" style="max-width: 720px; margin-bottom: 56px;">
-      SociisGroup is governed by a small circle of institutional leaders, strategic contributors and an Ethical Council that safeguards the LIME Code.
-    </p>
+    <p class="intro">SociisGroup is governed through a defined institutional structure. Authority, oversight and executive responsibility are intentionally separated to safeguard independence, integrity and long-term trust.</p>
+  </div>
+</header>
 
-    <h3 class="group-title">Institutional Leadership</h3>
-    <div class="gov-grid">
-      <figure class="gov-card"><img src="/team/jeremie.png" alt="Jérémie"><figcaption>Jérémie</figcaption></figure>
-      <figure class="gov-card"><img src="/team/dominique-new.jpg" alt="Dominique"><figcaption>Dominique</figcaption></figure>
-      <figure class="gov-card"><img src="/team/chantal-new.png" alt="Chantal"><figcaption>Chantal</figcaption></figure>
-      <figure class="gov-card"><img src="/team/joost-new.jpeg" alt="Joost"><figcaption>Joost</figcaption></figure>
+<section id="board">
+  <div class="inner">
+    <div class="section-head">
+      <div>
+        <div class="mono-kicker">Board</div>
+        <h2>Board.</h2>
+        <div class="rule"></div>
+      </div>
+      <p class="section-copy">The Board holds institutional direction, executive responsibility and long-term development of SociisGroup.</p>
     </div>
 
-    <h3 class="group-title">Strategic & Institutional Contributors</h3>
-    <div class="gov-grid">
-      <figure class="gov-card"><img src="/team/luc.jpg" alt="Luc"><figcaption>Luc</figcaption></figure>
-      <figure class="gov-card"><img src="/team/marc.jpg" alt="Marc"><figcaption>Marc</figcaption></figure>
-      <figure class="gov-card"><img src="/team/karim.jpg" alt="Karim"><figcaption>Karim</figcaption></figure>
-      <figure class="gov-card"><img src="/team/lars.jpg" alt="Lars"><figcaption>Lars</figcaption></figure>
-      <figure class="gov-card"><img src="/team/peter.png" alt="Peter"><figcaption>Peter</figcaption></figure>
-      <figure class="gov-card"><img src="/team/richard.jpg" alt="Richard"><figcaption>Richard</figcaption></figure>
-      <figure class="gov-card"><img src="/team/rudi.png" alt="Rudi"><figcaption>Rudi</figcaption></figure>
-      <figure class="gov-card"><img src="/team/tim.png" alt="Tim"><figcaption>Tim</figcaption></figure>
+    <div class="subgroup">
+      <div class="subgroup-title">Executive Leadership Team</div>
+      <p class="subgroup-copy">Members of the Board with executive responsibility for institutional direction and execution.</p>
+      <div class="people-grid">
+        <article class="person"><div class="portrait"><img src="/team/jeremie.png" alt="Jeremie Landweer"></div><div class="name">Jeremie Landweer</div><div class="role">Founder &amp; CEO</div></article>
+        <article class="person"><div class="portrait"><img src="/team/dominique-new.jpg" alt="Dominique Debecker"></div><div class="name">Dominique Debecker</div><div class="role">Chief Behavioural Officer</div></article>
+        <article class="person"><div class="portrait"><img src="/team/zanele.jpg" alt="Zanele Morrison" style="object-position:center 10%;"></div><div class="name">Zanele Morrison</div><div class="role">Global Engagement &amp; Institutional Narrative</div></article>
+        <article class="person"><div class="portrait"><img src="/team/luc.jpg" alt="Luc Garguet-Duport"></div><div class="name">Luc Garguet-Duport</div><div class="role">Chief Operating Officer</div></article>
+      </div>
     </div>
 
-    <h3 class="group-title">The Sociis Ethical Council</h3>
-    <div class="gov-grid">
-      <figure class="gov-card"><img src="/team/sarah-m.jpg" alt="Sarah"><figcaption>Sarah</figcaption></figure>
-      <figure class="gov-card"><img src="/team/eva.jpeg" alt="Eva"><figcaption>Eva</figcaption></figure>
-      <figure class="gov-card"><img src="/team/tatiana.png" alt="Tatiana"><figcaption>Tatiana</figcaption></figure>
-      <figure class="gov-card"><img src="/team/zanele.jpg" alt="Zanele"><figcaption>Zanele</figcaption></figure>
-      <figure class="gov-card"><img src="/team/sandrine.jpg" alt="Sandrine"><figcaption>Sandrine</figcaption></figure>
-      <figure class="gov-card"><img src="/team/anmarrie.jpg" alt="Anne-Marie"><figcaption>Anne-Marie</figcaption></figure>
-      <figure class="gov-card"><img src="/team/jan.jpg" alt="Jan"><figcaption>Jan</figcaption></figure>
-      <figure class="gov-card"><img src="/team/micael-c.jpg" alt="Micael"><figcaption>Micael</figcaption></figure>
+    <div class="subgroup">
+      <div class="subgroup-title">Board Members</div>
+      <p class="subgroup-copy">Board members contributing to governance, strategy and institutional development.</p>
+      <div class="people-grid">
+        <article class="person"><div class="portrait"><div class="initials">JP</div></div><div class="name">Joost Peeters</div><div class="role">Institutional Counsel</div></article>
+        <article class="person"><div class="portrait"><img src="/team/micael-c.jpg" alt="Micael Craenhals" style="object-position:center 25%;"></div><div class="name">Micael Craenhals</div><div class="role">Production</div></article>
+        <article class="person"><div class="portrait"><img src="/team/rudi.png" alt="Rudi Plettinx"></div><div class="name">Rudi Plettinx</div><div class="role">Strategic Introductions</div></article>
+        <article class="person"><div class="portrait"><img src="/team/marc.jpg" alt="Marc Bogaerts"></div><div class="name">Marc Bogaerts</div><div class="role">Chief Commercial Officer (CCO)</div></article>
+      </div>
     </div>
   </div>
 </section>
+
+<section class="alt" id="council">
+  <div class="inner">
+    <div class="section-head">
+      <div>
+        <div class="mono-kicker">Governance</div>
+        <h2>The Council.</h2>
+        <div class="rule"></div>
+      </div>
+      <p class="section-copy">The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.</p>
+    </div>
+    <div class="people-grid">
+      <article class="person"><div class="portrait"><img src="/team/sarah-m.jpg" alt="Sarah McArthur"></div><div class="name">Sarah McArthur</div><div class="role">Editor-in-Chief, Leader to Leader Journal</div></article>
+      <article class="person"><div class="portrait"><img src="/team/peter.png" alt="Peter Somers"></div><div class="name">Peter Somers</div><div class="role">Former CEO, Emirates Post · Founder, SprintPack</div></article>
+      <article class="person"><div class="portrait"><img src="/team/louis.png" alt="Dr. Louis Klein"></div><div class="name">Dr. Louis Klein</div><div class="role">Dean &amp; Research Director, European School of Governance</div></article>
+      <article class="person"><div class="portrait"><img src="/team/tim.png" alt="Tim Sanders"></div><div class="name">Tim Sanders</div><div class="role">Founder &amp; CEO, Silent Donor</div></article>
+      <article class="person"><div class="portrait"><img src="/team/anmarrie.jpg" alt="Annmarie Gorenc Zoran, PhD"></div><div class="name">Annmarie Gorenc Zoran, PhD</div><div class="role">Dean, Faculty of Organisation Studies</div></article>
+      <article class="person"><div class="portrait"><img src="/team/tatiana.png" alt="Tatjana Dragović Andersen, EdD"></div><div class="name">Tatjana Dragović Andersen, EdD</div><div class="role">Corporate educator, executive coach, associate professor</div></article>
+      <article class="person"><div class="portrait"><img src="/team/lars.jpg" alt="Lars Carlstrom"></div><div class="name">Lars Carlstrom</div><div class="role">Founder &amp; CEO, Italvolt</div></article>
+    </div>
+  </div>
+</section>
+
+<section id="advisors">
+  <div class="inner">
+    <div class="section-head">
+      <div>
+        <div class="mono-kicker">Trusted Advisors</div>
+        <h2>Trusted Advisors.</h2>
+        <div class="rule"></div>
+      </div>
+      <p class="section-copy">Trusted Advisors provide independent, non-binding guidance across strategy, sustainability, systems and institutional development. They do not govern the institution.</p>
+    </div>
+    <div class="people-grid">
+      <article class="person"><div class="portrait"><img src="/team/chantal-new.png" alt="Chantal Vervaete"></div><div class="name">Chantal Vervaete</div><div class="role">Public Company Board Member · Former Fortune 10 C-Suite Executive</div></article>
+      <article class="person"><div class="portrait"><img src="/team/karim.jpg" alt="Karim Tousbih"></div><div class="name">Karim Tousbih</div><div class="role">Value Development</div></article>
+      <article class="person"><div class="portrait"><img src="/team/eva.jpeg" alt="Eva Vargová"></div><div class="name">Eva Vargová</div><div class="role">Philanthropy &amp; Social Impact</div></article>
+      <article class="person"><div class="portrait"><img src="/team/sandrine.jpg" alt="Sandrine Hellinckx"></div><div class="name">Sandrine Hellinckx</div><div class="role">SBS Foundation</div></article>
+      <article class="person"><div class="portrait"><img src="/team/jan.jpg" alt="Prof. Jan de Visch"></div><div class="name">Prof. Jan de Visch</div><div class="role">SBS Foundation</div></article>
+      <article class="person"><div class="portrait"><img src="/team/richard.jpg" alt="Richard Thommeret"></div><div class="name">Richard Thommeret</div><div class="role">External Relations &amp; Strategic Communications</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="charter">
+  <div class="inner">
+    <div class="charter-card">
+      <div>
+        <div class="mono-kicker">Institutional Charter</div>
+        <h3 style="margin:12px 0 16px;">Institutional Charter.</h3>
+        <p>The governing document that defines SociisGroup’s mandate, safeguards and institutional structure. It clarifies authority, oversight, and the protection of long-term trust.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="/charter.html">Read the Charter</a>
+        <a class="btn" href="/SociisGroup_Charter.pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="inner">
+    <div class="access-card">
+      <div>
+        <div class="mono-kicker">Access</div>
+        <p class="pull" style="margin-top:14px;">Access is handled through the main page. There are no forms. Human judgement is the filter.</p>
+      </div>
+      <div class="actions"><a class="btn primary" href="/site.html#access">Request Access</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="/sg-logo.jpg" alt="SG"><span>SociisGroup<sup style="font-size:0.4em;color:var(--gold-warm);">™</sup></span></div>
+    <div class="footer-links">
+      <a href="/site.html">Home</a>
+      <a href="/charter.html">Charter</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
 
 <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 <script>
   (function(){
     var btn = document.getElementById('scrollTopBtn');
     function onScroll(){
-      var pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? window.scrollY / max : 0;
       if (pct > 0.25) btn.classList.add('visible'); else btn.classList.remove('visible');
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    onScroll();
   })();
 </script>
-
 </body>
 </html>
