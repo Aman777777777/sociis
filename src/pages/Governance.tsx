@@ -62,37 +62,23 @@ const teamMembers: TeamMember[] = [
     bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™, the division responsible for developing and deploying the Sustainable Behavioural Standard (SBS™). With deep expertise in behavioural science, organisational psychology, and brain-based leadership methodologies, she ensures that every initiative within the institution is grounded in integrity, ethical conduct, and meaningful transformation. Her work focuses on translating complex behavioural frameworks into practical tools that organisations can embed into their governance structures. She oversees BEE™, the Behavioural Engine of Ethics, which provides signals, patterns, and dashboards showing how leaders and organisations behave over time, not how they present themselves."
   },
   {
-    name: "Zanele Morrison",
-    role: "Global Engagement",
-    image: zanele,
+    name: "Chantal Vervaete",
+    role: "Institutional Leadership",
+    image: chantalNew,
     category: "leadership",
-    imagePosition: "center 10%",
   },
   {
-    name: "Luc Garguet-Duport",
-    role: "Chief Operating Officer",
-    image: luc,
+    name: "Joost Peeters",
+    role: "Institutional Counsel",
+    image: joost,
     category: "leadership",
   },
 
   // Strategic & Institutional Contributors
   {
-    name: "Joost Peeters",
-    role: "Institutional Counsel",
-    image: joost,
-    category: "contributor",
-  },
-  {
-    name: "Micael Craenhals",
-    role: "Production",
-    image: micaelC,
-    category: "contributor",
-    imagePosition: "center 25%",
-  },
-  {
-    name: "Rudi Plettinx",
-    role: "Strategic Introductions",
-    image: rudi,
+    name: "Luc Garguet-Duport",
+    role: "Strategic Contributor",
+    image: luc,
     category: "contributor",
   },
   {
@@ -102,71 +88,72 @@ const teamMembers: TeamMember[] = [
     category: "contributor",
   },
   {
-    name: "Chantal Vervaete",
-    role: "Public Company Board Member\nFormer Fortune 10 C-Suite Executive",
-    image: chantalNew,
-    category: "contributor",
-  },
-  {
     name: "Karim Tousbih",
     role: "Value Development",
     image: karim,
     category: "contributor",
   },
   {
-    name: "Eva Vargová",
-    role: "Philanthropy & Social Impact",
-    image: eva,
+    name: "Lars Carlstrom",
+    role: "Strategic Contributor",
+    image: lars,
     category: "contributor",
   },
   {
-    name: "Sandrine Hellinckx",
-    role: "SBS Foundation",
-    image: sandrine,
-    category: "contributor",
-  },
-  {
-    name: "Prof. Jan de Visch",
-    role: "SBS Foundation",
-    image: jan,
+    name: "Peter Somers",
+    role: "Strategic Contributor",
+    image: peter,
     category: "contributor",
   },
   {
     name: "Richard Thommeret",
-    role: "External Relations & Strategic Communications",
+    role: "Strategic Communications",
     image: richard,
+    category: "contributor",
+  },
+  {
+    name: "Rudi Plettinx",
+    role: "Strategic Introductions",
+    image: rudi,
+    category: "contributor",
+  },
+  {
+    name: "Tim Sanders",
+    role: "Strategic Contributor",
+    image: tim,
     category: "contributor",
   },
 
   // Ethical Council
   {
     name: "Sarah McArthur",
-    role: "Editor-in-Chief, Leader to Leader Journal\nAdvisory Board Member, Frances Hesselbein Leadership Forum",
+    role: "Ethical Council",
     image: sarahM,
     category: "council",
   },
   {
-    name: "Peter Somers",
-    role: "Former CEO, Emirates Post\nFounder, SprintPack",
-    image: peter,
+    name: "Eva Vargová",
+    role: "Ethical Council",
+    image: eva,
     category: "council",
   },
   {
-    name: "Dr. Louis Klein",
-    role: "Dean & Research Director, European School of Governance",
-    image: louis,
+    name: "Tatjana Dragović Andersen, PhD",
+    role: "Associate Professor",
+    image: tatiana,
     category: "council",
   },
   {
-    name: "Tim Sanders",
-    role: "Founder & CEO, Silent Donor",
-    image: tim,
+    name: "Zanele Morrison",
+    role: "Global Engagement",
+    image: zanele,
     category: "council",
+    imagePosition: "center 10%",
   },
   {
-    name: "Lars Carlstrom",
-    role: "Founder & CEO, Italvolt",
-    image: lars,
+    name: "Sandrine Hellinckx",
+    role: "SBS Foundation",
+    image: sandrine,
     category: "council",
   },
   {
@@ -176,10 +163,17 @@ const teamMembers: TeamMember[] = [
     category: "council",
   },
   {
-    name: "Tatjana Dragović Andersen, PhD",
-    role: "Associate Professor",
-    image: tatiana,
+    name: "Prof. Jan de Visch",
+    role: "SBS Foundation",
+    image: jan,
     category: "council",
+  },
+  {
+    name: "Micael Craenhals",
+    role: "Production",
+    image: micaelC,
+    category: "council",
+    imagePosition: "center 25%",
   },
 ];
 
@@ -200,7 +194,7 @@ const TeamCard = ({
       style={{ animationDelay: `${index * 0.08}s` }}
       onClick={isClickable ? onClick : undefined}
     >
-      <div className="relative overflow-hidden mb-4 w-[140px] h-[140px] aspect-square bg-muted/30 rounded-xl">
+      <div className="relative overflow-hidden mb-4 w-full aspect-square bg-muted/30 rounded-xl">
         {member.image ? (
           <img
             src={member.image}
@@ -215,14 +209,12 @@ const TeamCard = ({
         )}
       </div>
       <p
-        className={`font-sans text-foreground text-sm font-medium mb-0.5 transition-colors duration-300 whitespace-pre-line ${isClickable ? 'group-hover:text-accent' : ''}`}
-        style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+        className={`font-sans text-foreground text-xs tracking-widest uppercase font-medium mb-1 transition-colors duration-300 ${isClickable ? 'group-hover:text-accent' : ''}`}
       >
         {member.name}
       </p>
       <p
-        className="font-sans text-xs text-muted-foreground leading-relaxed whitespace-pre-line"
-        style={{ fontFamily: 'Inter, system-ui, sans-serif', maxWidth: '160px' }}
+        className="font-sans text-[10px] tracking-wider text-muted-foreground uppercase leading-relaxed"
       >
         {member.role}
       </p>
@@ -240,7 +232,7 @@ const Governance = () => {
   return (
     <PageTransition>
       <Header />
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background pt-32 pb-24">
 
         {/* Bio Dialog */}
         <Dialog open={!!selectedMember} onOpenChange={() => setSelectedMember(null)}>
@@ -258,88 +250,70 @@ const Governance = () => {
                       />
                     </div>
                     <div>
-                      <DialogTitle className="font-sans text-lg font-medium text-foreground whitespace-pre-line" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+                      <DialogTitle className="font-sans text-lg font-medium text-foreground">
                         {selectedMember.name}
                       </DialogTitle>
-                      <p className="font-sans text-xs text-muted-foreground mt-1 whitespace-pre-line">
+                      <p className="font-sans text-xs text-muted-foreground mt-1 uppercase tracking-wider">
                         {selectedMember.role}
                       </p>
                     </div>
                   </div>
                 </DialogHeader>
-                <p className="font-sans text-base text-foreground leading-relaxed">
+                <div className="font-sans text-base text-foreground leading-relaxed">
                   {selectedMember.bio}
-                </p>
+                </div>
               </>
             )}
           </DialogContent>
         </Dialog>
 
-        {/* Hero */}
-        <section className="pt-32 pb-16">
-          <div className="container mx-auto px-6 lg:px-8">
-            <h1 className="font-sans font-light text-3xl sm:text-4xl text-foreground tracking-tight mb-6" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-              Governance
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <div className="mono-kicker mb-4">Governance</div>
+            <h1 className="text-4xl sm:text-5xl text-foreground mb-6">
+              Institutional Leadership.
             </h1>
-            <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-8"></div>
-            <p className="text-body text-muted-foreground max-w-2xl">
+            <div className="rule mb-12"></div>
+            <p className="text-body text-muted-foreground max-w-2xl mb-24">
               SociisGroup is governed through a defined institutional structure. Authority, oversight and executive responsibility are intentionally separated to safeguard independence, integrity and long-term trust.
             </p>
-          </div>
-        </section>
 
-        {/* Institutional Leadership */}
-        <section className="py-12 border-t border-border/50">
-          <div className="container mx-auto px-6 lg:px-8">
-            <p className="font-sans text-sm tracking-widest text-foreground uppercase mb-10" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-              Institutional Leadership
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-              {leadership.map((member, index) => (
-                <TeamCard
-                  key={member.name}
-                  member={member}
-                  index={index}
-                  onClick={() => setSelectedMember(member)}
-                />
-              ))}
+            {/* Institutional Leadership */}
+            <div className="mb-24">
+              <h3 className="group-title text-2xl mb-10">Institutional Leadership</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
+                {leadership.map((member, index) => (
+                  <TeamCard
+                    key={member.name}
+                    member={member}
+                    index={index}
+                    onClick={() => setSelectedMember(member)}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Strategic & Institutional Contributors */}
+            <div className="mb-24">
+              <h3 className="group-title text-2xl mb-10">Strategic & Institutional Contributors</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
+                {contributors.map((member, index) => (
+                  <TeamCard key={member.name} member={member} index={index} />
+                ))}
+              </div>
+            </div>
+
+            {/* Ethical Council */}
+            <div className="mb-12">
+              <h3 className="group-title text-2xl mb-10">The Sociis Ethical Council</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
+                {council.map((member, index) => (
+                  <TeamCard key={member.name} member={member} index={index} />
+                ))}
+              </div>
             </div>
           </div>
-        </section>
-
-        {/* Strategic & Institutional Contributors */}
-        <section className="py-12 border-t border-border/50">
-          <div className="container mx-auto px-6 lg:px-8">
-            <p className="font-sans text-sm tracking-widest text-foreground uppercase mb-2" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-              Strategic & Institutional Contributors
-            </p>
-            <p className="font-sans text-sm text-muted-foreground/70 mb-10 max-w-3xl">
-              Strategic & Institutional Contributors bring independent expertise across systems, culture, governance, capital and institutional development. They support the evolution of SociisGroup while remaining independent from its executive leadership.
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-              {contributors.map((member, index) => (
-                <TeamCard key={member.name} member={member} index={index} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Ethical Council */}
-        <section className="py-12 border-t border-border/50">
-          <div className="container mx-auto px-6 lg:px-8">
-            <p className="font-sans text-sm tracking-widest text-foreground uppercase mb-2" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-              Ethical Council
-            </p>
-            <p className="font-sans text-sm text-muted-foreground/70 mb-10">
-              The Council acts as guardian of ethical conduct, institutional integrity and long-term trust.
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-              {council.map((member, index) => (
-                <TeamCard key={member.name} member={member} index={index} />
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
 
         <Footer />
       </main>
