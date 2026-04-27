@@ -40,13 +40,13 @@ interface TeamMember {
   name: string;
   role: string;
   image: string;
-  category: "leadership" | "contributor" | "council";
+  category: "leadership" | "contributor" | "council" | "new_contributor";
   imagePosition?: string;
   bio?: string;
 }
 
 const teamMembers: TeamMember[] = [
-  // Institutional Leadership
+  // Executive Leadership Team
   {
     name: "Jeremie Landweer",
     role: "Founder & CEO",
@@ -68,80 +68,95 @@ const teamMembers: TeamMember[] = [
     category: "leadership",
     imagePosition: "center 10%",
   },
-
-  // Strategic & Institutional Contributors
   {
     name: "Luc Garguet-Duport",
-    role: "Strategic Contributor",
+    role: "Chief Operating Officer",
     image: luc,
+    category: "leadership",
+  },
+
+  // Board Members
+  {
+    name: "Joost Peeters",
+    role: "Institutional Counsel",
+    image: joost,
     category: "contributor",
   },
   {
+    name: "Micael Craenhals",
+    role: "Production",
+    image: micaelC,
+    category: "contributor",
+    imagePosition: "center 25%",
+  },
+  {
     name: "Marc Bogaerts",
-    role: "Artistic Director",
+    role: "Chief Commercial Officer",
     image: marc,
     category: "contributor",
+  },
+
+  // Contributors.
+  {
+    name: "Chantal Vervaete",
+    role: "Public Company Board Member · Former Fortune 10 C-Suite Executive",
+    image: chantalNew,
+    category: "new_contributor",
   },
   {
     name: "Karim Tousbih",
     role: "Value Development",
     image: karim,
-    category: "contributor",
+    category: "new_contributor",
   },
   {
-    name: "Lars Carlstrom",
-    role: "Strategic Contributor",
-    image: lars,
-    category: "contributor",
+    name: "Eva Vargová",
+    role: "Philanthropy & Social Impact",
+    image: eva,
+    category: "new_contributor",
   },
   {
-    name: "Peter Somers",
-    role: "Strategic Contributor",
-    image: peter,
-    category: "contributor",
+    name: "Sandrine Helinckx",
+    role: "SBS Foundation",
+    image: sandrine,
+    category: "new_contributor",
+  },
+  {
+    name: "Prof. Jan de Visch",
+    role: "SBS Foundation",
+    image: jan,
+    category: "new_contributor",
   },
   {
     name: "Richard Thommeret",
-    role: "Strategic Communications",
+    role: "External Relations & Strategic Communications",
     image: richard,
-    category: "contributor",
-  },
-  {
-    name: "Rudi Plettinx",
-    role: "Strategic Introductions",
-    image: rudi,
-    category: "contributor",
-  },
-  {
-    name: "Tim Sanders",
-    role: "Strategic Contributor",
-    image: tim,
-    category: "contributor",
+    category: "new_contributor",
   },
 
-  // Ethical Council
+  // The Council.
   {
     name: "Sarah McArthur",
-    role: "Ethical Council",
+    role: "Editor-in-Chief, Leader to Leader Journal",
     image: sarahM,
     category: "council",
   },
   {
-    name: "Eva Vargová",
-    role: "Ethical Council",
-    image: eva,
+    name: "Peter Somers",
+    role: "Former CEO, Emirates Post · Founder, SprintPack",
+    image: peter,
     category: "council",
   },
   {
-    name: "Tatjana Dragović Andersen, PhD",
-    role: "Associate Professor",
-    image: tatiana,
+    name: "Dr Louis Klein",
+    role: "Dean & Research Director, European School of Governance",
+    image: louis,
     category: "council",
   },
   {
-    name: "Sandrine Hellinckx",
-    role: "SBS Foundation",
-    image: sandrine,
+    name: "Tim Sanders",
+    role: "Founder & CEO, Silent Donor",
+    image: tim,
     category: "council",
   },
   {
@@ -151,17 +166,16 @@ const teamMembers: TeamMember[] = [
     category: "council",
   },
   {
-    name: "Prof. Jan de Visch",
-    role: "SBS Foundation",
-    image: jan,
+    name: "Tatjana Dragović Andersen, EdD",
+    role: "Corporate educator, executive coach, associate professor",
+    image: tatiana,
     category: "council",
   },
   {
-    name: "Micael Craenhals",
-    role: "Production",
-    image: micaelC,
+    name: "Lars Carlstrom",
+    role: "Founder & CEO, Italvolt",
+    image: lars,
     category: "council",
-    imagePosition: "center 25%",
   },
 ];
 
@@ -214,7 +228,8 @@ const Governance = () => {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   const leadership = teamMembers.filter(m => m.category === "leadership");
-  const contributors = teamMembers.filter(m => m.category === "contributor");
+  const board = teamMembers.filter(m => m.category === "contributor");
+  const contributors = teamMembers.filter(m => m.category === "new_contributor");
   const council = teamMembers.filter(m => m.category === "council");
 
   return (
@@ -259,16 +274,16 @@ const Governance = () => {
           <div className="max-w-4xl">
             <div className="mono-kicker mb-4">Governance</div>
             <h1 className="text-4xl sm:text-5xl text-foreground mb-6">
-              Institutional Leadership.
+              Executive Leadership Team.
             </h1>
             <div className="rule mb-12"></div>
             <p className="text-body text-muted-foreground max-w-2xl mb-24">
               SociisGroup is governed through a defined institutional structure. Authority, oversight and executive responsibility are intentionally separated to safeguard independence, integrity and long-term trust.
             </p>
 
-            {/* Institutional Leadership */}
+            {/* Executive Leadership Team */}
             <div className="mb-24">
-              <h3 className="group-title text-2xl mb-10">Institutional Leadership</h3>
+              <h3 className="group-title text-2xl mb-10">Executive Leadership Team</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {leadership.map((member, index) => (
                   <TeamCard
@@ -281,9 +296,19 @@ const Governance = () => {
               </div>
             </div>
 
-            {/* Strategic & Institutional Contributors */}
+            {/* Board Members */}
             <div className="mb-24">
-              <h3 className="group-title text-2xl mb-10">Strategic & Institutional Contributors</h3>
+              <h3 className="group-title text-2xl mb-10">Board Members</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
+                {board.map((member, index) => (
+                  <TeamCard key={member.name} member={member} index={index} />
+                ))}
+              </div>
+            </div>
+
+            {/* Contributors. */}
+            <div className="mb-24">
+              <h3 className="group-title text-2xl mb-10">Contributors.</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {contributors.map((member, index) => (
                   <TeamCard key={member.name} member={member} index={index} />
@@ -291,9 +316,9 @@ const Governance = () => {
               </div>
             </div>
 
-            {/* Ethical Council */}
+            {/* The Council. */}
             <div className="mb-12">
-              <h3 className="group-title text-2xl mb-10">The Sociis Ethical Council</h3>
+              <h3 className="group-title text-2xl mb-10">The Council.</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {council.map((member, index) => (
                   <TeamCard key={member.name} member={member} index={index} />
