@@ -311,10 +311,10 @@ const Governance = () => {
         <section className="py-12 border-t border-border/50">
           <div className="container mx-auto px-6 lg:px-8">
             <p className="font-sans text-sm tracking-widest text-foreground uppercase mb-2" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-              Strategic &amp; Institutional Contributors
+              Strategic & Institutional Contributors
             </p>
             <p className="font-sans text-sm text-muted-foreground/70 mb-10 max-w-3xl">
-              Strategic &amp; Institutional Contributors bring independent expertise across systems, culture, governance, capital and institutional development. They support the evolution of SociisGroup while remaining independent from its executive leadership.
+              Strategic & Institutional Contributors bring independent expertise across systems, culture, governance, capital and institutional development. They support the evolution of SociisGroup while remaining independent from its executive leadership.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
               {contributors.map((member, index) => (
