@@ -179,7 +179,13 @@
     vertical-align: super;
     color: var(--gold);
   }
-  .nav-links { display: flex; gap: 34px; align-items: center; }
+  .nav-links { display: flex; gap: 28px; align-items: center; flex-wrap: nowrap; }
+  @media (max-width: 1100px) {
+    .nav-inner { padding: 18px 32px; }
+    .nav-links { gap: 20px; }
+    .nav-logo { font-size: 18px; gap: 10px; }
+    .nav-logo img { width: 26px !important; height: 26px !important; }
+  }
   .nav-links a {
     text-decoration: none;
     color: var(--ink);
@@ -1040,6 +1046,17 @@
     transition: transform 0.4s ease;
   }
   .ltbl-frame:hover { transform: scale(1.005); }
+  /* When the frame contains a real video, hide all decorative overlays so the video shows through */
+  .ltbl-frame--video::before,
+  .ltbl-frame--video::after { display: none !important; content: none !important; }
+  .ltbl-frame--video { background: #000; cursor: default; }
+  .ltbl-frame--video:hover { transform: none; }
+  .ltbl-frame--video video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; display: block; border: 0;
+    z-index: 4;
+  }
   .ltbl-frame::before {
     content: "";
     position: absolute;
@@ -2797,7 +2814,7 @@
     <div class="mono-kicker ltbl-kicker">Cultural Anchor · Film</div>
     <h2 class="ltbl-title">Let There Be <em>Light</em>.</h2>
 
-    <div class="ltbl-frame" style="aspect-ratio: 16/9; position: relative; overflow: hidden;">
+    <div class="ltbl-frame ltbl-frame--video">
       <video
         src="/let-there-be-light.mp4"
         autoplay
@@ -2806,7 +2823,6 @@
         playsinline
         controls
         preload="auto"
-        style="width:100%; height:100%; object-fit:cover; display:block; border:0;"
       ></video>
     </div>
 
