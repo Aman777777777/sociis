@@ -1,100 +1,87 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import PageTransition from "@/components/PageTransition";
+import SectionHero from "@/components/sections/SectionHero";
+import SectionInfrastructure from "@/components/sections/SectionInfrastructure";
+import SectionMandate from "@/components/sections/SectionMandate";
+import SectionDefinitional from "@/components/sections/SectionDefinitional";
+import SectionHowItWorks from "@/components/sections/SectionHowItWorks";
+import SectionDomains from "@/components/sections/SectionDomains";
+import SectionSystem from "@/components/sections/SectionSystem";
+import SectionAmbassadors from "@/components/sections/SectionAmbassadors";
+import SectionSBS from "@/components/sections/SectionSBS";
+import SectionBEE from "@/components/sections/SectionBEE";
+import SectionInvestors from "@/components/sections/SectionInvestors";
+import SectionRelevance from "@/components/sections/SectionRelevance";
+import SectionExperiences from "@/components/sections/SectionExperiences";
+import SectionCalendar from "@/components/sections/SectionCalendar";
+import SectionHouse from "@/components/sections/SectionHouse";
+import SectionFoundingMoment from "@/components/sections/SectionFoundingMoment";
+import SectionAccess from "@/components/sections/SectionAccess";
+
 const Index = () => {
   return (
-    <main
-      className="min-h-screen bg-background flex flex-col items-center justify-center px-6"
-      style={{ fontFamily: "'Inter', sans-serif" }}
-    >
-      {/* SG Mark */}
-      <div className="mb-10 flex flex-col items-center gap-5">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="22" stroke="#9F7D2A" strokeWidth="1.2" fill="none" />
-          <circle cx="24" cy="24" r="17" stroke="#9F7D2A" strokeWidth="0.6" strokeDasharray="2 4" fill="none" />
-          <line x1="24" y1="8" x2="24" y2="40" stroke="#0F1624" strokeWidth="1.5" strokeLinecap="square" />
-          <line x1="8" y1="24" x2="40" y2="24" stroke="#0F1624" strokeWidth="1.5" strokeLinecap="square" />
-        </svg>
-        <p
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "22px",
-            fontWeight: 400,
-            letterSpacing: "0.01em",
-            color: "#0F1624",
-          }}
-        >
-          SociisGroup<sup style={{ fontSize: "0.4em", color: "#9F7D2A", verticalAlign: "super" }}>™</sup>
-        </p>
-      </div>
+    <PageTransition>
+      <main className="min-h-screen bg-background">
+        <Header />
 
-      {/* Divider */}
-      <div style={{ width: "44px", height: "1px", background: "#9F7D2A", marginBottom: "40px" }} />
+        {/* 1. Hero — centered, institutional */}
+        <SectionHero />
 
-      {/* Headline */}
-      <h1
-        style={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "clamp(28px, 4vw, 48px)",
-          fontWeight: 400,
-          lineHeight: 1.15,
-          color: "#0F1624",
-          textAlign: "center",
-          maxWidth: "560px",
-          marginBottom: "24px",
-          letterSpacing: "-0.01em",
-        }}
-      >
-        Under Maintenance.
-      </h1>
+        {/* 2. The Source — Everything starts with behaviour */}
+        <SectionInfrastructure />
 
-      {/* Body */}
-      <p
-        style={{
-          fontFamily: "'Inter', sans-serif",
-          fontSize: "15px",
-          lineHeight: 1.75,
-          color: "#4A4A3A",
-          textAlign: "center",
-          maxWidth: "440px",
-          marginBottom: "48px",
-        }}
-      >
-        The institution is currently undergoing scheduled updates. We will return shortly.
-      </p>
+        {/* 3. The Mandate — One billion people */}
+        <SectionMandate />
 
-      {/* Contact */}
-      <a
-        href="mailto:info@sociisgroup.com"
-        style={{
-          fontFamily: "'Inter', sans-serif",
-          fontSize: "10px",
-          letterSpacing: "0.28em",
-          textTransform: "uppercase",
-          color: "#9F7D2A",
-          textDecoration: "none",
-          borderBottom: "1px solid #9F7D2A",
-          paddingBottom: "2px",
-        }}
-      >
-        info@sociisgroup.com
-      </a>
+        {/* 4. Definitional — What SociisGroup is */}
+        <SectionDefinitional />
 
-      {/* Footer note */}
-      <p
-        style={{
-          position: "fixed",
-          bottom: "28px",
-          fontFamily: "'Inter', sans-serif",
-          fontSize: "10px",
-          letterSpacing: "0.22em",
-          textTransform: "uppercase",
-          color: "#9F7D2A",
-          opacity: 0.6,
-        }}
-      >
-        SociisGroup™ — The independent behavioural institution
-      </p>
-    </main>
+        {/* 5. How SociisGroup Works — Four mechanisms */}
+        <SectionHowItWorks />
+
+        {/* 6. The Three Domains — Sustainability, Hospitality, Humanity */}
+        <SectionDomains />
+
+        {/* 7. The System — Impact builds, Culture scales */}
+        <SectionSystem />
+
+        {/* 8. Ambassadors — Iris van der Veken */}
+        <SectionAmbassadors />
+
+        {/* 9. SBS — The Sustainable Behavioural Standard */}
+        <SectionSBS />
+
+        {/* 10. BEE — Behavioural Engine of Ethics */}
+        <SectionBEE />
+
+        {/* 11. Investor Band — For those who allocate capital */}
+        <SectionInvestors />
+
+        {/* 12. Relevance & Participation — Why you engage / Six ways in */}
+        <SectionRelevance />
+
+        {/* 13. Rooms — Controlled environments */}
+        <SectionExperiences />
+
+        {/* 14. Calendar — The Institutional Arc */}
+        <SectionCalendar />
+
+        {/* 15. Culture & House — Digital and Cultural distribution */}
+        <SectionHouse />
+
+        {/* 16. Let There Be Light — Cultural anchor film */}
+        <SectionFoundingMoment />
+
+        {/* 17. Access — Four steps to belonging */}
+        <SectionAccess />
+
+        <Footer />
+        <ScrollToTop />
+      </main>
+    </PageTransition>
   );
 };
 
 export default Index;
-
