@@ -2192,6 +2192,20 @@
     }
     .float-cta-main { font-size: 15px; }
   }
+  /* ===== Filled media overrides ===== */
+  .amb-image.amb-image--filled::before,
+  .amb-image.amb-image--filled .amb-image-label,
+  .amb-image.amb-image--filled .image-swap-note { display: none !important; }
+  .amb-image.amb-image--filled { background: #1a1a15; }
+
+  .ltbl-frame.ltbl-frame--video::before,
+  .ltbl-frame.ltbl-frame--video::after,
+  .ltbl-frame.ltbl-frame--video .ltbl-frame-title,
+  .ltbl-frame.ltbl-frame--video .ltbl-frame-label,
+  .ltbl-frame.ltbl-frame--video .ltbl-play,
+  .ltbl-frame.ltbl-frame--video .image-swap-note { display: none !important; }
+  .ltbl-frame.ltbl-frame--video { background: #000; }
+  .ltbl-frame.ltbl-frame--video video { z-index: 3; }
 </style>
 </head>
 <body class="design-mode">
