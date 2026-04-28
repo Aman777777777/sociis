@@ -179,13 +179,7 @@
     vertical-align: super;
     color: var(--gold);
   }
-  .nav-links { display: flex; gap: 28px; align-items: center; flex-wrap: nowrap; }
-  @media (max-width: 1100px) {
-    .nav-inner { padding: 18px 32px; }
-    .nav-links { gap: 20px; }
-    .nav-logo { font-size: 18px; gap: 10px; }
-    .nav-logo img { width: 26px !important; height: 26px !important; }
-  }
+  .nav-links { display: flex; gap: 34px; align-items: center; }
   .nav-links a {
     text-decoration: none;
     color: var(--ink);
@@ -1046,17 +1040,6 @@
     transition: transform 0.4s ease;
   }
   .ltbl-frame:hover { transform: scale(1.005); }
-  /* When the frame contains a real video, hide all decorative overlays so the video shows through */
-  .ltbl-frame--video::before,
-  .ltbl-frame--video::after { display: none !important; content: none !important; }
-  .ltbl-frame--video { background: #000; cursor: default; }
-  .ltbl-frame--video:hover { transform: none; }
-  .ltbl-frame--video video {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover; display: block; border: 0;
-    z-index: 4;
-  }
   .ltbl-frame::before {
     content: "";
     position: absolute;
@@ -2216,16 +2199,15 @@
 <!-- ==================== NAV ==================== -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo" style="display:flex; align-items:center; gap:12px;">
-      <img src="/sg-logo.jpg" alt="SG" style="width:32px; height:32px; object-fit:contain; display:block;">
+    <div class="nav-logo">
       <span>SociisGroup<sup>™</sup></span>
     </div>
     <div class="nav-links">
       <a href="#impact">Impact</a>
       <a href="#culture">Culture</a>
-      <a href="/governance.html">Governance</a>
+      <a href="/governance">Governance</a>
       <a href="#calendar">Calendar</a>
-      <a href="/charter.html">Charter</a>
+      <a href="/charter">Charter</a>
       <a href="#access">Access</a>
       <a href="https://sociis.house" class="nav-cta">Enter Sociis House</a>
     </div>
@@ -2422,7 +2404,8 @@
     <div class="amb-layout">
       <div class="amb-card">
         <div class="amb-image" data-image-slot="iris-portrait">
-          <img src="/iris-van-der-veken.jpg" alt="Iris van der Veken portrait" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+          <div class="amb-image-label">portrait</div>
+          <div class="image-swap-note">IMAGE SLOT · Iris van der Veken portrait · 3:4 ratio</div>
         </div>
         <div class="amb-name">Iris van der Veken</div>
         <div class="amb-role">Ambassador</div>
@@ -2814,16 +2797,11 @@
     <div class="mono-kicker ltbl-kicker">Cultural Anchor · Film</div>
     <h2 class="ltbl-title">Let There Be <em>Light</em>.</h2>
 
-    <div class="ltbl-frame ltbl-frame--video">
-      <video
-        src="/let-there-be-light.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        controls
-        preload="auto"
-      ></video>
+    <div class="ltbl-frame" data-image-slot="ltbl-film" data-video-slot="ltbl-video">
+      <div class="ltbl-frame-title">Let There Be Light · a film by SociisGroup</div>
+      <div class="ltbl-play"></div>
+      <div class="ltbl-frame-label">Play film · 03:42</div>
+      <div class="image-swap-note">FILM SLOT · Jean Bosco Safari still or video · 16:9</div>
     </div>
 
     <div class="ltbl-grid">
@@ -2861,11 +2839,7 @@
 </section>
 
 <!-- ==================== LIME CODE ==================== -->
-<!-- ==================== GOVERNANCE (Institutional Leadership) ==================== -->
-<!-- Governance section moved to /governance.html -->
-
-<!-- ==================== LIME CODE ==================== -->
-<section class="lime-section" id="lime">
+<section class="lime-section" id="governance">
   <div class="lime-inner scroll-reveal">
     <div class="mono-kicker">Governance and Integrity</div>
     <h2 class="display-l" style="margin-top: 20px;">The LIME Code.</h2>
@@ -2966,34 +2940,32 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-brand" style="display:flex; align-items:center; gap:10px;">
-          <img src="/sg-logo.jpg" alt="SG" style="width:28px; height:28px; object-fit:contain; filter:invert(1); display:block;">
-          <span>SociisGroup<sup style="font-size:0.4em;color:var(--gold-warm);">™</sup></span>
-        </div>
+        <div class="footer-brand">SociisGroup<sup style="font-size:0.4em;color:var(--gold-warm);">™</sup></div>
         <div class="footer-tag">An independent behavioural institution changing how the world behaves.</div>
       </div>
       <div>
         <div class="footer-col-title">Explore</div>
         <a href="#impact">Impact</a>
         <a href="#culture">Culture</a>
-        <a href="/governance.html">Governance</a>
+        <a href="/governance">Governance</a>
         <a href="#calendar">Calendar</a>
-        <a href="/charter.html">Charter</a>
+        <a href="/charter">Charter</a>
         <a href="#access">Access</a>
       </div>
       <div>
         <div class="footer-col-title">Institution</div>
-        <a href="#lime">LIME Code</a>
-        <a href="/governance.html">Ethical Council</a>
-        <a href="#ambassadors">Ambassadors</a>
+        <a href="#">The Mark</a>
+        <a href="#">LIME Code</a>
+        <a href="#">Ethical Council</a>
+        <a href="#">Ambassadors</a>
         <a href="#">Let There Be Light</a>
         <a href="https://sociis.house">Sociis House</a>
       </div>
       <div>
         <div class="footer-col-title">Legal</div>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/privacy.html#terms">Terms of Service</a>
-        <a href="/privacy.html#cookies">Cookie Policy</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
         <div class="footer-identity" style="margin-top: 24px;">
           Sociis are the people.<br>
           SociisGroup is the independent behavioural institution.<br><br>
