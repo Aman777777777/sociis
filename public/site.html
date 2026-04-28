@@ -2192,6 +2192,20 @@
     }
     .float-cta-main { font-size: 15px; }
   }
+  /* ===== Filled media overrides ===== */
+  .amb-image.amb-image--filled::before,
+  .amb-image.amb-image--filled .amb-image-label,
+  .amb-image.amb-image--filled .image-swap-note { display: none !important; }
+  .amb-image.amb-image--filled { background: #1a1a15; }
+
+  .ltbl-frame.ltbl-frame--video::before,
+  .ltbl-frame.ltbl-frame--video::after,
+  .ltbl-frame.ltbl-frame--video .ltbl-frame-title,
+  .ltbl-frame.ltbl-frame--video .ltbl-frame-label,
+  .ltbl-frame.ltbl-frame--video .ltbl-play,
+  .ltbl-frame.ltbl-frame--video .image-swap-note { display: none !important; }
+  .ltbl-frame.ltbl-frame--video { background: #000; }
+  .ltbl-frame.ltbl-frame--video video { z-index: 3; }
 </style>
 </head>
 <body class="design-mode">
@@ -2403,9 +2417,8 @@
     <h2 class="display-m" style="margin-top: 16px;">Voices that carry the standard.</h2>
     <div class="amb-layout">
       <div class="amb-card">
-        <div class="amb-image" data-image-slot="iris-portrait">
-          <div class="amb-image-label">portrait</div>
-          <div class="image-swap-note">IMAGE SLOT · Iris van der Veken portrait · 3:4 ratio</div>
+        <div class="amb-image amb-image--filled" data-image-slot="iris-portrait">
+          <img src="/iris-van-der-veken.jpg" alt="Iris van der Veken, Ambassador of SociisGroup" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
         </div>
         <div class="amb-name">Iris van der Veken</div>
         <div class="amb-role">Ambassador</div>
@@ -2797,11 +2810,18 @@
     <div class="mono-kicker ltbl-kicker">Cultural Anchor · Film</div>
     <h2 class="ltbl-title">Let There Be <em>Light</em>.</h2>
 
-    <div class="ltbl-frame" data-image-slot="ltbl-film" data-video-slot="ltbl-video">
-      <div class="ltbl-frame-title">Let There Be Light · a film by SociisGroup</div>
-      <div class="ltbl-play"></div>
-      <div class="ltbl-frame-label">Play film · 03:42</div>
-      <div class="image-swap-note">FILM SLOT · Jean Bosco Safari still or video · 16:9</div>
+    <div class="ltbl-frame ltbl-frame--video" data-video-slot="ltbl-video">
+      <video
+        src="/let-there-be-light.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+        preload="metadata"
+        poster="/iris-van-der-veken.jpg"
+        style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; z-index:3;"
+      ></video>
     </div>
 
     <div class="ltbl-grid">
