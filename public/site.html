@@ -2277,13 +2277,17 @@
     <div class="nav-logo">
       <span>SociisGroup<sup>™</sup></span>
     </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
     <div class="nav-links">
-      <a href="#impact">Impact</a>
-      <a href="#culture">Culture</a>
+      <a href="#impact" onclick="document.getElementById('nav-toggle').checked=false">Impact</a>
+      <a href="#culture" onclick="document.getElementById('nav-toggle').checked=false">Culture</a>
       <a href="/governance">Governance</a>
-      <a href="#calendar">Calendar</a>
+      <a href="#calendar" onclick="document.getElementById('nav-toggle').checked=false">Calendar</a>
       <a href="/charter">Charter</a>
-      <a href="#access">Access</a>
+      <a href="#access" onclick="document.getElementById('nav-toggle').checked=false">Access</a>
       <a href="https://sociis.house" class="nav-cta">Enter Sociis House</a>
     </div>
   </div>
