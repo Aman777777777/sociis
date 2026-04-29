@@ -2169,28 +2169,89 @@
     .access-path-step:nth-child(2) { border-bottom: 1px solid var(--rule); }
   }
   @media (max-width: 640px) {
-    :root { --pad: 24px; }
-    section { padding: 72px 0; }
+    :root { --pad: 20px; --pad-lg: 32px; }
+    section { padding: 64px 0; }
+
+    /* Nav: compact, allow CTA to stay on one line */
+    .nav-inner { padding: 14px var(--pad); gap: 12px; }
+    .nav-logo { font-size: 17px; gap: 8px; }
+    .nav-links { gap: 0; }
     .nav-links a:not(.nav-cta) { display: none; }
-    .mechanisms-rail, .output-grid, .relevance-grid, .reach-grid, .bee-triplet, .media-strategy, .footer-top, .proof-row, .domains-compact, .final-cta-paths {
-      grid-template-columns: 1fr;
+    .nav-cta { padding: 9px 14px; font-size: 9px !important; letter-spacing: 0.16em !important; white-space: nowrap; }
+
+    /* Hero: tighter vertical rhythm so it fits on small screens */
+    .hero { padding: 130px 0 80px; min-height: auto; }
+    .hero-est { margin-bottom: 28px; }
+    .hero-wordmark { margin-bottom: 28px; }
+    .hero-statement { margin-bottom: 28px; font-size: clamp(34px, 9vw, 48px); }
+    .hero-scroll { display: none; }
+
+    /* Prevent serif headings from clipping past viewport */
+    .display-xl, .display-l, .display-m, .hero-statement, .hero-wordmark,
+    .mech-name, .domain-title, .amb-name, .definitional-line, h1, h2, h3 {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      hyphens: auto;
     }
-    .mech { border-right: none !important; padding-right: 0 !important; }
+
+    /* Stack all multi-column grids to single column */
+    .mechanisms-rail, .output-grid, .relevance-grid, .reach-grid, .bee-triplet,
+    .media-strategy, .footer-top, .proof-row, .domains-compact, .final-cta-paths,
+    .domains-grid, .system-grid, .calendar-track, .lime-grid {
+      grid-template-columns: 1fr !important;
+      gap: 32px;
+    }
+
+    /* Mechanisms: align card padding with container */
+    .mech {
+      border-right: none !important;
+      padding: 28px 0 !important;
+    }
+    .mech:first-child { padding-top: 8px !important; }
+    .mech-num { margin-bottom: 14px; }
+    .mech-name { font-size: 26px; margin-bottom: 14px; }
+    .mech-arrow { display: none !important; }
+
+    /* Domain / system items */
+    .domain-title { font-size: 24px; }
+
+    /* Council */
     .council-members-grid { grid-template-columns: 1fr; }
-    .council-member { min-height: auto; padding: 28px 24px; }
+    .council-member { min-height: auto; padding: 24px 20px; }
+
+    /* Partners */
     .founding-partners-categories { grid-template-columns: 1fr; }
     .partner-categories { grid-template-columns: 1fr; }
-    .partner-tier { padding: 28px 24px; }
+    .partner-tier { padding: 24px 20px; }
+
+    /* Ambassador image: cap height so the dark portrait does not dominate the screen */
+    .amb-image { aspect-ratio: 4/5; max-height: 70vh; }
+
+    /* Let There Be Light: keep video readable */
+    .ltbl-frame { aspect-ratio: 16/10; }
+
+    /* Access path */
+    .access-path { padding: 56px var(--pad) 0; }
     .access-path-steps { grid-template-columns: 1fr; }
-    .access-path-step { border-right: none !important; border-bottom: 1px solid var(--rule); }
-    .access-path-step:last-child { border-bottom: none; }
-    .float-cta {
-      bottom: 16px;
-      right: 16px;
-      left: 16px;
-      padding: 12px 16px;
+    .access-path-step {
+      border-right: none !important;
+      border-bottom: 1px solid var(--rule);
+      padding: 24px 0 !important;
     }
-    .float-cta-main { font-size: 15px; }
+    .access-path-step:last-child { border-bottom: none; }
+
+    /* Floating CTA: smaller, leave content room above it */
+    .float-cta {
+      bottom: 12px;
+      right: 12px;
+      left: 12px;
+      padding: 10px 14px;
+    }
+    .float-cta-main { font-size: 13px; }
+    .float-cta-sub { font-size: 11px; }
+
+    /* Body padding so floating CTA never permanently covers the last paragraph */
+    body { padding-bottom: 80px; }
   }
   /* ===== Filled media overrides ===== */
   .amb-image.amb-image--filled::before,
