@@ -180,6 +180,12 @@
     color: var(--gold);
   }
   .nav-links { display: flex; gap: 34px; align-items: center; }
+  .nav-toggle { display: none; }
+  .nav-burger { display: none; cursor: pointer; width: 28px; height: 22px; flex-direction: column; justify-content: space-between; }
+  .nav-burger span { display: block; height: 1.5px; width: 100%; background: var(--ink); transition: transform 0.25s ease, opacity 0.2s ease; transform-origin: center; }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
   .nav-links a {
     text-decoration: none;
     color: var(--ink);
@@ -2175,8 +2181,45 @@
     /* Nav: compact, allow CTA to stay on one line */
     .nav-inner { padding: 14px var(--pad); gap: 12px; }
     .nav-logo { font-size: 17px; gap: 8px; }
-    .nav-links { gap: 0; }
-    .nav-links a:not(.nav-cta) { display: none; }
+    .nav-burger { display: flex; }
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: 0 12px 24px rgba(15,22,36,0.08);
+      padding: 12px var(--pad) 20px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+      pointer-events: none;
+    }
+    .nav-toggle:checked ~ .nav-links {
+      max-height: 80vh;
+      opacity: 1;
+      padding: 16px var(--pad) 24px;
+      pointer-events: auto;
+    }
+    .nav-links a:not(.nav-cta) {
+      display: block;
+      padding: 14px 0;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .nav-links a:not(.nav-cta)::after { display: none; }
+    .nav-links .nav-cta {
+      display: inline-block;
+      margin-top: 16px;
+      align-self: flex-start;
+      padding: 12px 18px;
+    }
     .nav-cta { padding: 9px 14px; font-size: 9px !important; letter-spacing: 0.16em !important; white-space: nowrap; }
 
     /* Hero: tighter vertical rhythm so it fits on small screens */
@@ -2277,13 +2320,17 @@
     <div class="nav-logo">
       <span>SociisGroup<sup>™</sup></span>
     </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
     <div class="nav-links">
-      <a href="#impact">Impact</a>
-      <a href="#culture">Culture</a>
+      <a href="#impact" onclick="document.getElementById('nav-toggle').checked=false">Impact</a>
+      <a href="#culture" onclick="document.getElementById('nav-toggle').checked=false">Culture</a>
       <a href="/governance">Governance</a>
-      <a href="#calendar">Calendar</a>
+      <a href="#calendar" onclick="document.getElementById('nav-toggle').checked=false">Calendar</a>
       <a href="/charter">Charter</a>
-      <a href="#access">Access</a>
+      <a href="#access" onclick="document.getElementById('nav-toggle').checked=false">Access</a>
       <a href="https://sociis.house" class="nav-cta">Enter Sociis House</a>
     </div>
   </div>
