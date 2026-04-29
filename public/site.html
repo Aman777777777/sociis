@@ -3117,6 +3117,86 @@
   <div class="float-cta-arrow">→</div>
 </a>
 
+<!-- ==================== COOKIE BANNER ==================== -->
+<style>
+  .cookie-banner {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 200;
+    max-width: 520px;
+    background: var(--ink);
+    color: var(--cream);
+    border: 1px solid rgba(159,125,42,0.3);
+    padding: 20px 22px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+    transform: translateY(140%);
+    opacity: 0;
+    transition: transform 0.45s cubic-bezier(0.2,0.7,0.2,1), opacity 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  .cookie-banner.visible { transform: translateY(0); opacity: 1; }
+  .cookie-banner-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: var(--cream);
+  }
+  .cookie-banner-text {
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(244,240,232,0.78);
+    margin-bottom: 14px;
+  }
+  .cookie-banner-text a {
+    color: var(--gold-warm);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .cookie-banner-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .cookie-btn {
+    background: var(--cream);
+    color: var(--ink);
+    border: none;
+    padding: 10px 18px;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .cookie-btn:hover { background: var(--gold-warm); color: var(--ink); }
+  .cookie-btn-secondary {
+    background: transparent;
+    color: rgba(244,240,232,0.7);
+    border: 1px solid rgba(244,240,232,0.25);
+  }
+  .cookie-btn-secondary:hover { background: rgba(244,240,232,0.08); color: var(--cream); }
+  @media (max-width: 640px) {
+    .cookie-banner { left: 12px; right: 12px; bottom: 12px; padding: 16px 18px; }
+    .cookie-banner-actions { flex-wrap: wrap; }
+    .cookie-btn { flex: 1; min-width: 120px; padding: 12px 14px; }
+  }
+</style>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie notice">
+  <div class="cookie-banner-title">Cookies</div>
+  <div class="cookie-banner-text">
+    SociisGroup uses essential cookies only. No tracking, no advertising, no third parties. See our <a href="/privacy.html">Privacy Policy</a>.
+  </div>
+  <div class="cookie-banner-actions">
+    <button class="cookie-btn" id="cookieAccept">Accept</button>
+    <button class="cookie-btn cookie-btn-secondary" id="cookieDecline">Decline</button>
+  </div>
+</div>
+
 <script>
   // Scroll-triggered reveals
   const observer = new IntersectionObserver((entries) => {
