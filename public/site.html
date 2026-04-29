@@ -3227,6 +3227,28 @@
   window.addEventListener('scroll', updateFloatCta, { passive: true });
   window.addEventListener('resize', updateFloatCta);
   updateFloatCta();
+
+  // Cookie banner: essential-only, persists choice in localStorage
+  (function() {
+    const banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+    let stored = null;
+    try { stored = localStorage.getItem('sociis-cookie-consent'); } catch (e) {}
+    if (!stored) {
+      setTimeout(() => {
+        banner.classList.add('visible');
+        if (floatCta) floatCta.style.bottom = (banner.offsetHeight + 28) + 'px';
+      }, 800);
+    }
+    function dismiss(value) {
+      try { localStorage.setItem('sociis-cookie-consent', value); } catch (e) {}
+      banner.classList.remove('visible');
+      if (floatCta) floatCta.style.bottom = '';
+      setTimeout(() => { banner.style.display = 'none'; }, 500);
+    }
+    document.getElementById('cookieAccept').addEventListener('click', () => dismiss('accepted'));
+    document.getElementById('cookieDecline').addEventListener('click', () => dismiss('declined'));
+  })();
 </script>
 
 </body>
