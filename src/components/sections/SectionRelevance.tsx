@@ -29,24 +29,21 @@ const SectionRelevance = () => {
   const tiers = [
     {
       name: "Sovereign Partners",
-      price: "€150,000",
-      meta: "Annual · Excl. VAT",
+      meta: "Apex · Flag Holders",
       cap: "Eight institutions. The flag holders.",
       color: "border-primary bg-primary/5",
       accent: "text-primary"
     },
     {
       name: "Founding Partners",
-      price: "€75,000",
-      meta: "Annual · Excl. VAT",
+      meta: "Annual · Category Visibility",
       cap: "Four categories. Visible all year.",
       color: "border-border",
       accent: "text-foreground"
     },
     {
       name: "Circle Members",
-      price: "€15,000",
-      meta: "Annual · Excl. VAT",
+      meta: "Annual · Practitioners",
       cap: "Twenty-two individuals.",
       color: "border-border",
       accent: "text-foreground"
