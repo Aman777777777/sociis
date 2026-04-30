@@ -10,7 +10,7 @@ import CookieBanner from "./components/CookieBanner";
 import Index from "./pages/Index";
 import Governance from "./pages/Governance";
 import AmbassadorProfile from "./pages/AmbassadorProfile";
-import Charter from "./pages/Charter";
+
 import Calendar from "./pages/Calendar";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
