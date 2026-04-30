@@ -2144,6 +2144,7 @@
     color: var(--grey);
     text-align: center;
     font-weight: 500;
+  }
   .tier-deck-btn {
     display: inline-block;
     padding: 10px 18px;
@@ -2162,7 +2163,8 @@
   .tier-sovereign .tier-deck-btn:hover,
   .tier-room22 .tier-deck-btn:hover { background: var(--cream); color: var(--ink); }
 
-    .source-inner, .system-grid, .sbs-inner, .culture-layout, .council-inner, .investor-inner, .lime-intro, .ltbl-grid, .amb-layout, .rooms-primary-cta {
+  @media (max-width: 1024px) {
+
       grid-template-columns: 1fr;
       gap: 40px;
     }
