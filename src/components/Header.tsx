@@ -23,7 +23,7 @@ const Header = () => {
     { name: "Culture", href: "/#culture" },
     { name: "Governance", href: "/governance", isPage: true },
     { name: "Calendar", href: "/calendar", isPage: true },
-    { name: "Charter", href: "/charter", isPage: true },
+    
     { name: "Access", href: "/#access" },
   ];
 
