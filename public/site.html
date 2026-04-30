@@ -2144,9 +2144,24 @@
     color: var(--grey);
     text-align: center;
     font-weight: 500;
+  .tier-deck-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    background: transparent;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
   }
+  .tier-deck-btn:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+  .tier-sovereign .tier-deck-btn,
+  .tier-room22 .tier-deck-btn { color: var(--cream); border-color: rgba(244,240,232,0.4); }
+  .tier-sovereign .tier-deck-btn:hover,
+  .tier-room22 .tier-deck-btn:hover { background: var(--cream); color: var(--ink); }
 
-  @media (max-width: 1024px) {
     .source-inner, .system-grid, .sbs-inner, .culture-layout, .council-inner, .investor-inner, .lime-intro, .ltbl-grid, .amb-layout, .rooms-primary-cta {
       grid-template-columns: 1fr;
       gap: 40px;
