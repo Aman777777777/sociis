@@ -81,7 +81,7 @@ const App = () => {
             <Route path="/governance" element={<Governance />} />
             <Route path="/team" element={<Governance />} />
             <Route path="/ambassadors/:slug" element={<AmbassadorProfile />} />
-            <Route path="/charter" element={<Charter />} />
+            
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
