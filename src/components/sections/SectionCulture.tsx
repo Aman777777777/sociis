@@ -12,8 +12,13 @@ const SectionCulture = memo(() => {
 
         <div className="space-y-6 max-w-2xl mb-16">
           <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Culture reaches billions faster than governance.
-            It is the mechanism that makes global behavioural change possible.
+            Culture is how SociisGroup reaches one billion individuals for higher sustainability standards.
+            The Rooms gather hundreds. Culture reaches the orders of magnitude the Standard requires.
+            It moves faster than governance and reaches further than boardrooms.
+          </p>
+          <p className="font-sans text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Most institutions use culture as marketing. SociisGroup holds every cultural object it produces
+            to the LIME Code that governs the institution itself.
           </p>
         </div>
 
