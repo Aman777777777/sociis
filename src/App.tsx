@@ -10,7 +10,7 @@ import CookieBanner from "./components/CookieBanner";
 import Index from "./pages/Index";
 import Governance from "./pages/Governance";
 import AmbassadorProfile from "./pages/AmbassadorProfile";
-import Charter from "./pages/Charter";
+
 import Calendar from "./pages/Calendar";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -81,7 +81,7 @@ const App = () => {
             <Route path="/governance" element={<Governance />} />
             <Route path="/team" element={<Governance />} />
             <Route path="/ambassadors/:slug" element={<AmbassadorProfile />} />
-            <Route path="/charter" element={<Charter />} />
+            
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />

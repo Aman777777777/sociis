@@ -2145,6 +2145,23 @@
     text-align: center;
     font-weight: 500;
   }
+  .tier-deck-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    background: transparent;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .tier-deck-btn:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+  .tier-sovereign .tier-deck-btn,
+  .tier-room22 .tier-deck-btn { color: var(--cream); border-color: rgba(244,240,232,0.4); }
+  .tier-sovereign .tier-deck-btn:hover,
+  .tier-room22 .tier-deck-btn:hover { background: var(--cream); color: var(--ink); }
 
   @media (max-width: 1024px) {
     .source-inner, .system-grid, .sbs-inner, .culture-layout, .council-inner, .investor-inner, .lime-intro, .ltbl-grid, .amb-layout, .rooms-primary-cta {
@@ -2329,7 +2346,6 @@
       <a href="#culture" onclick="document.getElementById('nav-toggle').checked=false">Culture</a>
       <a href="/governance">Governance</a>
       <a href="#calendar" onclick="document.getElementById('nav-toggle').checked=false">Calendar</a>
-      <a href="/charter">Charter</a>
       <a href="#access" onclick="document.getElementById('nav-toggle').checked=false">Access</a>
       <a href="https://sociis.house" class="nav-cta">Enter Sociis House</a>
     </div>
@@ -2638,8 +2654,6 @@
         <div class="partner-tier tier-sovereign">
           <div class="tier-marker">Apex · Flag Holders</div>
           <div class="tier-name">Sovereign Partners</div>
-          <div class="tier-price">€150,000</div>
-          <div class="tier-price-meta">Annual · Excl. VAT</div>
           <div class="tier-cap">Eight institutions. The flag holders.</div>
           <div class="tier-body">
             <p>Sovereign Partners <span class="accent">co-develop</span> SBS at the frame level. They carry the standard into their own institutions and across the network. They stand with the Founder on the Sovereign Assembly.</p>
@@ -2661,8 +2675,6 @@
         <div class="partner-tier tier-founding">
           <div class="tier-marker">Annual · Category Visibility</div>
           <div class="tier-name">Founding Partners</div>
-          <div class="tier-price">€75,000</div>
-          <div class="tier-price-meta">Annual · Excl. VAT</div>
           <div class="tier-cap">Four categories. Visible all year.</div>
           <div class="tier-body">
             <p>Founding Partners carry <span class="accent">visible category leadership</span> across the annual Rooms programme. One chair per category, renewable each year.</p>
@@ -2690,8 +2702,6 @@
         <div class="partner-tier tier-circle">
           <div class="tier-marker">Annual · Practitioners</div>
           <div class="tier-name">Circle Members</div>
-          <div class="tier-price">€15,000</div>
-          <div class="tier-price-meta">Annual · Excl. VAT</div>
           <div class="tier-cap">Twenty-two individuals.</div>
           <div class="tier-body">
             <p>Circle Members are the <span class="accent">practitioners</span>. They use BEE. They sit in the Rooms. Their behaviour produces the evidence that feeds SBS as it forms into a standard.</p>
@@ -2719,8 +2729,6 @@
         <div class="partner-tier tier-room22">
           <div class="tier-marker">Leadership Table</div>
           <div class="tier-name">The 22</div>
-          <div class="tier-price private">Private enquiry</div>
-          <div class="tier-price-meta">By invitation · Excl. VAT</div>
           <div class="tier-cap">One table. One conversation.</div>
           <div class="tier-body">
             <p>Like-minded leaders preparing the conditions for a more sustainable humanity, in private.</p>
@@ -2740,12 +2748,9 @@
         <div class="partner-tier tier-room64">
           <div class="tier-marker">Founding Gathering · 22 July 2026</div>
           <div class="tier-name">The 64</div>
-          <div class="tier-price">From €2,500</div>
-          <div class="tier-price-meta">Seat · Table · Arc Package</div>
           <div class="tier-cap">Corinthia Brussels. 64 seats.</div>
           <div class="tier-body">
             <p>An intentionally limited environment where institutional behaviour and culture converge.</p>
-            <p style="margin-top: 10px;"><strong>Seat</strong> · €2,500<br><strong>Table of eight</strong> · €20,000<br><strong>48-Hour Arc Table</strong> · €30,000</p>
           </div>
           <div class="tier-returns">
             <div class="tier-returns-label">Proximity to</div>
@@ -2753,8 +2758,11 @@
               <li>Sovereign and Founding Partners at the founding moment</li>
               <li>Visibility at the Corinthia Brussels gathering</li>
               <li>Prospecting across capital, media, technology, mobility</li>
-              <li>The Arc Table carries both days: table of eight at The 64, table of ten at The 300, Founding Wall, founder moment</li>
+              <li>The Arc Table carries both days, including The 300, the Founding Wall and the founder moment</li>
             </ul>
+          </div>
+          <div class="tier-cta-row" style="margin-top: 20px;">
+            <a href="/the-64-deck.pptx" target="_blank" rel="noopener" class="tier-deck-btn">View Deck</a>
           </div>
           <div class="tier-note">Request access at info@sociisgroup.com.</div>
         </div>
@@ -2762,12 +2770,9 @@
         <div class="partner-tier tier-room300">
           <div class="tier-marker">Shape Tomorrow Today · 23 July 2026</div>
           <div class="tier-name">The 300</div>
-          <div class="tier-price">From €850</div>
-          <div class="tier-price-meta">Seat · Table of ten</div>
           <div class="tier-cap">On the iconic grounds of Tomorrowland, in collaboration with Love Tomorrow.</div>
           <div class="tier-body">
             <p>A curated environment for 300 individuals. The premiere of Let There Be Light.</p>
-            <p style="margin-top: 10px;"><strong>Seat</strong> · €850<br><strong>Table of ten</strong> · €8,500</p>
           </div>
           <div class="tier-returns">
             <div class="tier-returns-label">Proximity to</div>
@@ -2778,13 +2783,15 @@
               <li>The Sociis Culture programme at institutional scale</li>
             </ul>
           </div>
+          <div class="tier-cta-row" style="margin-top: 20px;">
+            <a href="/the-300-deck.pdf" target="_blank" rel="noopener" class="tier-deck-btn">View Deck</a>
+          </div>
           <div class="tier-note">Request access at info@sociisgroup.com.</div>
         </div>
 
       </div>
 
       <p class="partners-note">All participation is annual or event-based, renewable. Sovereign and Founding Partners by direct invitation of the Founder. Circle Members and Room access by invitation or direct enquiry.</p>
-      <div class="partners-vat">All amounts stated exclusive of 21% Belgian VAT</div>
     </div>
   </div>
 </section>
@@ -3055,7 +3062,7 @@
         <div>
           <div class="fcp-num">02</div>
           <div class="fcp-title">Take a seat in a Room.</div>
-          <div class="fcp-desc">The 64 on 22 July 2026 in Brussels. The 300 on 23 July 2026 on the iconic grounds of Tomorrowland. The 22 by private enquiry. Seat, table or access, by deck and secure payment.</div>
+          <div class="fcp-desc">The 64 on 22 July 2026 in Brussels. The 300 on 23 July 2026 on the iconic grounds of Tomorrowland. The 22 by private enquiry.</div>
         </div>
         <a href="mailto:info@sociisgroup.com?subject=Rooms%20%C2%B7%20July%202026%20enquiry" class="fcp-link">Request access &nbsp;→</a>
       </div>
@@ -3077,7 +3084,7 @@
         <a href="#culture">Culture</a>
         <a href="/governance">Governance</a>
         <a href="#calendar">Calendar</a>
-        <a href="/charter">Charter</a>
+        
         <a href="#access">Access</a>
       </div>
       <div>

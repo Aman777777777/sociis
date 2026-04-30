@@ -29,24 +29,21 @@ const SectionRelevance = () => {
   const tiers = [
     {
       name: "Sovereign Partners",
-      price: "€150,000",
-      meta: "Annual · Excl. VAT",
+      meta: "Apex · Flag Holders",
       cap: "Eight institutions. The flag holders.",
       color: "border-primary bg-primary/5",
       accent: "text-primary"
     },
     {
       name: "Founding Partners",
-      price: "€75,000",
-      meta: "Annual · Excl. VAT",
+      meta: "Annual · Category Visibility",
       cap: "Four categories. Visible all year.",
       color: "border-border",
       accent: "text-foreground"
     },
     {
       name: "Circle Members",
-      price: "€15,000",
-      meta: "Annual · Excl. VAT",
+      meta: "Annual · Practitioners",
       cap: "Twenty-two individuals.",
       color: "border-border",
       accent: "text-foreground"
@@ -94,14 +91,13 @@ const SectionRelevance = () => {
                   <p className="font-sans text-[10px] font-medium tracking-[0.2em] text-muted-foreground uppercase">{tier.meta}</p>
                   <h4 className="font-display text-2xl text-foreground">{tier.name}</h4>
                 </div>
-                <div className="text-3xl font-display font-light text-primary">{tier.price}</div>
                 <p className="text-sm text-muted-foreground leading-relaxed italic">{tier.cap}</p>
               </div>
             ))}
           </div>
-          
+
           <p className="text-xs text-muted-foreground text-center mt-12 italic">
-            Request access at info@sociisgroup.com · All amounts stated exclusive of 21% Belgian VAT
+            Request access at info@sociisgroup.com
           </p>
         </div>
       </div>

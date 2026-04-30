@@ -182,8 +182,7 @@ const SlideWhatYouReceive = () => (
           <p className="font-sans text-[0.95rem] text-white/40 mt-1">Belgium</p>
         </div>
         <div className="text-right">
-          <p className="font-sans text-[2rem] font-light text-white/80">€850</p>
-          <p className="font-sans text-[0.85rem] text-white/35 mt-1">incl. full immersive experience</p>
+          <p className="font-sans text-[0.85rem] text-white/35 mt-1">By private confirmation</p>
         </div>
       </div>
     </div>
