@@ -179,8 +179,8 @@
     vertical-align: super;
     color: var(--gold);
   }
-  .nav-links { display: flex; gap: 34px; align-items: center; position: absolute; left: 50%; transform: translateX(-50%); }
-  .nav-cta { position: absolute; right: var(--pad); top: 50%; transform: translateY(-50%); }
+  .nav-inner { position: relative; }
+  .nav-links { display: flex; gap: 34px; align-items: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
   .nav-toggle { display: none; }
   .nav-burger { display: none; cursor: pointer; width: 28px; height: 22px; flex-direction: column; justify-content: space-between; }
   .nav-burger span { display: block; height: 1.5px; width: 100%; background: var(--ink); transition: transform 0.25s ease, opacity 0.2s ease; transform-origin: center; }
