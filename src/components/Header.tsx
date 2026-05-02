@@ -62,12 +62,6 @@ const Header = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
           >
-            <img
-              src={sgLogo}
-              alt="SociisGroup logo"
-              className="h-8 w-auto"
-              style={{ mixBlendMode: "multiply" }}
-            />
             <span className="font-display text-xl text-foreground">
               SociisGroup™
             </span>
