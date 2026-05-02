@@ -7,7 +7,7 @@ const SectionImpactDetail = () => {
             Behavioural Intelligence
           </p>
           <h2 className="font-display font-light text-4xl sm:text-5xl text-foreground tracking-tight mb-6">
-            BEE. Behavioural Engine of Ethics.
+            BEE. Behavioural Engine with Ethics.
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-accent to-transparent mb-10"></div>
 

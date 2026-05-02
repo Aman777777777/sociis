@@ -1,6 +1,6 @@
 const SectionHowItWorks = () => {
     const steps = [
-        { num: "01", label: "Interface", desc: "Behavioural Engine of Ethics (BEE)" },
+        { num: "01", label: "Interface", desc: "Behavioural Engine with Ethics (BEE)" },
         { num: "02", label: "Rooms", desc: "Controlled leadership environments" },
         { num: "03", label: "Culture", desc: "Film, media, distribution" },
         { num: "04", label: "Standard", desc: "Sustainable Behavioural Standard (SBS)" },

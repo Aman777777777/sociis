@@ -21,7 +21,7 @@ const SectionWhat = () => {
                   <span className="text-foreground font-medium">SBS, the Sociis Behavioural Standard.</span> SBS, the Sociis Behavioural Standard, defines the ethical and behavioural reference frame for how institutions conduct themselves.
                 </li>
                 <li className="text-body text-muted-foreground">
-                  <span className="text-foreground font-medium">BEE, the Behavioural Engine of Ethics.</span> BEE is a behavioural interface layer powered by AI that helps individuals discover the gap between their judgement and the behaviour they are actually producing.
+                  <span className="text-foreground font-medium">BEE, the Behavioural Engine with Ethics.</span> BEE is a behavioural interface layer powered by AI that helps individuals discover the gap between their judgement and the behaviour they are actually producing.
                 </li>
               </ul>
             </div>
