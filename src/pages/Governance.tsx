@@ -91,7 +91,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Marc Bogaerts",
-    role: "Chief Commercial Officer",
+    role: "Artistic Advisor",
     image: marc,
     category: "contributor",
   },
