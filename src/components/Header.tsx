@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import sociisLogo from "@/assets/sociis-logo.png";
-import sgLogo from "@/assets/sg-logo.jpg";
+
 
 const Header = () => {
   const location = useLocation();
@@ -21,10 +21,9 @@ const Header = () => {
   const navLinks = [
     { name: "Impact", href: "/#impact" },
     { name: "Culture", href: "/#culture" },
-    { name: "Governance", href: "/governance", isPage: true },
     { name: "Calendar", href: "/calendar", isPage: true },
-    
     { name: "Access", href: "/#access" },
+    { name: "Governance", href: "/governance", isPage: true },
   ];
 
   const handleNavClick = (href: string) => {
@@ -62,12 +61,6 @@ const Header = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
           >
-            <img
-              src={sgLogo}
-              alt="SociisGroup logo"
-              className="h-8 w-auto"
-              style={{ mixBlendMode: "multiply" }}
-            />
             <span className="font-display text-xl text-foreground">
               SociisGroup™
             </span>
