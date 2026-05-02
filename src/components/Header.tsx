@@ -55,7 +55,7 @@ const Header = () => {
         }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
-        <nav className="flex items-center justify-between">
+        <nav className="relative flex items-center justify-between">
           <Link
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -66,7 +66,7 @@ const Header = () => {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => (
               link.isPage ? (
                 <Link
@@ -92,7 +92,7 @@ const Header = () => {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6 ml-auto">
             <a
               href="https://www.sociis.house/"
               target="_blank"
