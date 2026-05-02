@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import sociisLogo from "@/assets/sociis-logo.png";
-import sgLogo from "@/assets/sg-logo.jpg";
+
 
 const Header = () => {
   const location = useLocation();
