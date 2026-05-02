@@ -5,7 +5,7 @@ const SectionBEE = () => {
         <div className="max-w-4xl">
           <div className="mono-kicker mb-6">Behavioural Intelligence</div>
           <h2 className="font-display font-light text-4xl sm:text-5xl text-foreground mb-8">
-            BEE.<br />Behavioural Engine of Ethics.
+            BEE.<br />Behavioural Engine with Ethics.
           </h2>
           <div className="rule mb-12"></div>
           <p className="text-body-lg text-muted-foreground max-w-2xl mb-16">
