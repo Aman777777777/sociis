@@ -21,10 +21,9 @@ const Header = () => {
   const navLinks = [
     { name: "Impact", href: "/#impact" },
     { name: "Culture", href: "/#culture" },
-    { name: "Governance", href: "/governance", isPage: true },
     { name: "Calendar", href: "/calendar", isPage: true },
-    
     { name: "Access", href: "/#access" },
+    { name: "Governance", href: "/governance", isPage: true },
   ];
 
   const handleNavClick = (href: string) => {
