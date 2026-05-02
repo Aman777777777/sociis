@@ -78,7 +78,7 @@ const teamMembers: TeamMember[] = [
   // Board Members
   {
     name: "Joost Peeters",
-    role: "Institutional Counsel",
+    role: "Legal Advisor",
     image: joost,
     category: "contributor",
   },
