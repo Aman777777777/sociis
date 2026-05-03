@@ -326,6 +326,8 @@ const Governance = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
 
         <Footer />
       </main>
