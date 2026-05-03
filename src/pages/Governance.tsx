@@ -26,6 +26,7 @@ import eva from "@/assets/team/eva.jpeg";
 import sandrine from "@/assets/team/sandrine.jpg";
 import jan from "@/assets/team/jan.jpg";
 import richard from "@/assets/team/richard.jpg";
+import baldwin from "@/assets/team/baldwin.jpeg";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -131,6 +132,12 @@ const teamMembers: TeamMember[] = [
     name: "Richard Thommeret",
     role: "External Relations & Strategic Communications",
     image: richard,
+    category: "new_contributor",
+  },
+  {
+    name: "Baldwin Berges",
+    role: "Narrative & Communications",
+    image: baldwin,
     category: "new_contributor",
   },
 
