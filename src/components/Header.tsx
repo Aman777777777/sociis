@@ -54,7 +54,7 @@ const Header = () => {
         : "bg-transparent py-6"
         }`}
     >
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="w-full px-6 lg:px-8">
         <nav className="relative flex items-center justify-between">
           <Link
             to="/"
