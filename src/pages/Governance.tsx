@@ -76,31 +76,41 @@ const teamMembers: TeamMember[] = [
     category: "leadership",
   },
 
-  // Board Members
+  // Contributors.
+  {
+    name: "Richard Thommeret",
+    role: "External Relations & Strategic Communications",
+    image: richard,
+    category: "new_contributor",
+  },
+  {
+    name: "Baldwin Berges",
+    role: "Capital Strategist",
+    image: baldwin,
+    category: "new_contributor",
+  },
   {
     name: "Joost Peeters",
     role: "Legal Advisor",
     image: joost,
-    category: "contributor",
-  },
-  {
-    name: "Micael Craenhals",
-    role: "Production",
-    image: micaelC,
-    category: "contributor",
-    imagePosition: "center 25%",
+    category: "new_contributor",
   },
   {
     name: "Marc Bogaerts",
     role: "Artistic Advisor",
     image: marc,
-    category: "contributor",
+    category: "new_contributor",
   },
-
-  // Contributors.
+  {
+    name: "Micaël Craenhals",
+    role: "Production",
+    image: micaelC,
+    category: "new_contributor",
+    imagePosition: "center 25%",
+  },
   {
     name: "Chantal Vervaete",
-    role: "Public Company Board Member · Former Fortune 10 C-Suite Executive",
+    role: "Public Company Board Member, Former Fortune 10 C-Suite Executive",
     image: chantalNew,
     category: "new_contributor",
   },
@@ -126,18 +136,6 @@ const teamMembers: TeamMember[] = [
     name: "Prof. Jan de Visch",
     role: "SBS Foundation",
     image: jan,
-    category: "new_contributor",
-  },
-  {
-    name: "Richard Thommeret",
-    role: "External Relations & Strategic Communications",
-    image: richard,
-    category: "new_contributor",
-  },
-  {
-    name: "Baldwin Berges",
-    role: "Narrative & Communications",
-    image: baldwin,
     category: "new_contributor",
   },
 
@@ -303,19 +301,12 @@ const Governance = () => {
               </div>
             </div>
 
-            {/* Board Members */}
-            <div className="mb-24">
-              <h3 className="group-title text-2xl mb-10">Board Members</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
-                {board.map((member, index) => (
-                  <TeamCard key={member.name} member={member} index={index} />
-                ))}
-              </div>
-            </div>
-
             {/* Contributors. */}
             <div className="mb-24">
-              <h3 className="group-title text-2xl mb-10">Contributors.</h3>
+              <h3 className="group-title text-2xl mb-4">Contributors</h3>
+              <p className="text-body text-muted-foreground max-w-2xl mb-10">
+                Independent collaborators across legal, production, artistic, value, philanthropy, standard-setting and external relations.
+              </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {contributors.map((member, index) => (
                   <TeamCard key={member.name} member={member} index={index} />
@@ -325,7 +316,10 @@ const Governance = () => {
 
             {/* The Council. */}
             <div className="mb-12">
-              <h3 className="group-title text-2xl mb-10">The Council.</h3>
+              <h3 className="group-title text-2xl mb-4">The Council</h3>
+              <p className="text-body text-muted-foreground max-w-2xl mb-10">
+                The Sociis Ethical Council. Independent figures who watch over the institution, safeguarding its integrity, conduct and long-term direction.
+              </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {council.map((member, index) => (
                   <TeamCard key={member.name} member={member} index={index} />
