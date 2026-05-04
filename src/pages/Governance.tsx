@@ -76,41 +76,31 @@ const teamMembers: TeamMember[] = [
     category: "leadership",
   },
 
-  // Contributors.
-  {
-    name: "Richard Thommeret",
-    role: "External Relations & Strategic Communications",
-    image: richard,
-    category: "new_contributor",
-  },
-  {
-    name: "Baldwin Berges",
-    role: "",
-    image: baldwin,
-    category: "new_contributor",
-  },
+  // Board Members
   {
     name: "Joost Peeters",
     role: "Legal Advisor",
     image: joost,
-    category: "new_contributor",
+    category: "contributor",
+  },
+  {
+    name: "Micael Craenhals",
+    role: "Production",
+    image: micaelC,
+    category: "contributor",
+    imagePosition: "center 25%",
   },
   {
     name: "Marc Bogaerts",
     role: "Artistic Advisor",
     image: marc,
-    category: "new_contributor",
+    category: "contributor",
   },
-  {
-    name: "Micaël Craenhals",
-    role: "Production",
-    image: micaelC,
-    category: "new_contributor",
-    imagePosition: "center 25%",
-  },
+
+  // Contributors.
   {
     name: "Chantal Vervaete",
-    role: "Public Company Board Member, Former Fortune 10 C-Suite Executive",
+    role: "Public Company Board Member · Former Fortune 10 C-Suite Executive",
     image: chantalNew,
     category: "new_contributor",
   },
@@ -136,6 +126,18 @@ const teamMembers: TeamMember[] = [
     name: "Prof. Jan de Visch",
     role: "SBS Foundation",
     image: jan,
+    category: "new_contributor",
+  },
+  {
+    name: "Richard Thommeret",
+    role: "External Relations & Strategic Communications",
+    image: richard,
+    category: "new_contributor",
+  },
+  {
+    name: "Baldwin Berges",
+    role: "Narrative & Communications",
+    image: baldwin,
     category: "new_contributor",
   },
 
@@ -279,7 +281,7 @@ const Governance = () => {
           <div className="max-w-4xl">
             <div className="mono-kicker mb-4">Governance</div>
             <h1 className="text-4xl sm:text-5xl text-foreground mb-6">
-              Governance.
+              Executive Leadership Team.
             </h1>
             <div className="rule mb-12"></div>
             <p className="text-body text-muted-foreground max-w-2xl mb-24">
@@ -301,12 +303,19 @@ const Governance = () => {
               </div>
             </div>
 
+            {/* Board Members */}
+            <div className="mb-24">
+              <h3 className="group-title text-2xl mb-10">Board Members</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
+                {board.map((member, index) => (
+                  <TeamCard key={member.name} member={member} index={index} />
+                ))}
+              </div>
+            </div>
+
             {/* Contributors. */}
             <div className="mb-24">
-              <h3 className="group-title text-2xl mb-4">Contributors</h3>
-              <p className="text-body text-muted-foreground max-w-2xl mb-10">
-                Independent collaborators across legal, production, artistic, value, philanthropy, standard-setting and external relations.
-              </p>
+              <h3 className="group-title text-2xl mb-10">Contributors.</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {contributors.map((member, index) => (
                   <TeamCard key={member.name} member={member} index={index} />
@@ -316,10 +325,7 @@ const Governance = () => {
 
             {/* The Council. */}
             <div className="mb-12">
-              <h3 className="group-title text-2xl mb-4">The Council</h3>
-              <p className="text-body text-muted-foreground max-w-2xl mb-10">
-                The Sociis Ethical Council. Independent figures who watch over the institution, safeguarding its integrity, conduct and long-term direction.
-              </p>
+              <h3 className="group-title text-2xl mb-10">The Council.</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {council.map((member, index) => (
                   <TeamCard key={member.name} member={member} index={index} />
