@@ -1719,6 +1719,51 @@
     gap: 16px;
   }
 
+  /* Switch nav to burger before centered links collide with right-pinned CTA */
+  @media (max-width: 900px) {
+    .nav-burger { display: flex; }
+    .nav-cta-wrap { display: none; }
+    .nav-cta-mobile { display: inline-block !important; }
+    .nav-links {
+      transform: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: 0 12px 24px rgba(15,22,36,0.08);
+      padding: 12px var(--pad) 20px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+      pointer-events: none;
+    }
+    .nav-toggle:checked ~ .nav-links {
+      max-height: 80vh;
+      opacity: 1;
+      padding: 16px var(--pad) 24px;
+      pointer-events: auto;
+    }
+    .nav-links a:not(.nav-cta) {
+      display: block;
+      padding: 14px 0;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .nav-links a:not(.nav-cta)::after { display: none; }
+    .nav-links .nav-cta {
+      display: inline-block;
+      margin-top: 16px;
+      align-self: flex-start;
+      padding: 12px 18px;
+    }
+  }
 
   /* ==================== RESPONSIVE ==================== */
   /* ==================== COUNCIL MEMBERS GRID (new) ==================== */
