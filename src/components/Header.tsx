@@ -92,12 +92,12 @@ const Header = () => {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-6 ml-auto">
+          <div className="hidden lg:flex items-center ml-auto">
             <a
               href="https://www.sociis.house/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase whitespace-nowrap hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase whitespace-nowrap rounded-none hover:bg-foreground/90 transition-colors"
             >
               Enter Sociis House
             </a>
