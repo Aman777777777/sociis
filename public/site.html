@@ -147,8 +147,9 @@
     transition: background 0.3s ease;
   }
   .nav-inner {
-    max-width: var(--max);
-    margin: 0 auto;
+    max-width: none;
+    width: 100%;
+    margin: 0;
     padding: 20px var(--pad);
     display: flex; justify-content: space-between; align-items: center;
   }
@@ -181,6 +182,8 @@
   }
   .nav-inner { position: relative; }
   .nav-links { display: flex; gap: 34px; align-items: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+  .nav-cta-wrap { margin-left: auto; display: flex; align-items: center; }
+  .nav-cta-mobile { display: none !important; }
   .nav-toggle { display: none; }
   .nav-burger { display: none; cursor: pointer; width: 28px; height: 22px; flex-direction: column; justify-content: space-between; }
   .nav-burger span { display: block; height: 1.5px; width: 100%; background: var(--ink); transition: transform 0.25s ease, opacity 0.2s ease; transform-origin: center; }
@@ -215,6 +218,11 @@
     padding: 11px 20px;
     letter-spacing: 0.2em !important;
     font-size: 10px !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    border-radius: 0;
     transition: background 0.2s ease, transform 0.2s ease;
   }
   .nav-cta:hover {
@@ -1711,6 +1719,51 @@
     gap: 16px;
   }
 
+  /* Switch nav to burger before centered links collide with right-pinned CTA */
+  @media (max-width: 900px) {
+    .nav-burger { display: flex; }
+    .nav-cta-wrap { display: none; }
+    .nav-cta-mobile { display: inline-block !important; }
+    .nav-links {
+      transform: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: 0 12px 24px rgba(15,22,36,0.08);
+      padding: 12px var(--pad) 20px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+      pointer-events: none;
+    }
+    .nav-toggle:checked ~ .nav-links {
+      max-height: 80vh;
+      opacity: 1;
+      padding: 16px var(--pad) 24px;
+      pointer-events: auto;
+    }
+    .nav-links a:not(.nav-cta) {
+      display: block;
+      padding: 14px 0;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .nav-links a:not(.nav-cta)::after { display: none; }
+    .nav-links .nav-cta {
+      display: inline-block;
+      margin-top: 16px;
+      align-self: flex-start;
+      padding: 12px 18px;
+    }
+  }
 
   /* ==================== RESPONSIVE ==================== */
   /* ==================== COUNCIL MEMBERS GRID (new) ==================== */
@@ -2239,7 +2292,9 @@
       align-self: flex-start;
       padding: 12px 18px;
     }
+    .nav-cta-mobile { display: inline-block !important; }
     .nav-cta { padding: 9px 14px; font-size: 9px !important; letter-spacing: 0.16em !important; white-space: nowrap; }
+    .nav-cta-wrap { display: none; }
 
     /* Hero: tighter vertical rhythm so it fits on small screens */
     .hero { padding: 130px 0 80px; min-height: auto; }
@@ -2349,6 +2404,9 @@
       <a href="/governance">Governance</a>
       <a href="#calendar" onclick="document.getElementById('nav-toggle').checked=false">Calendar</a>
       <a href="#access" onclick="document.getElementById('nav-toggle').checked=false">Access</a>
+      <a href="https://sociis.house" class="nav-cta nav-cta-mobile">Enter Sociis House</a>
+    </div>
+    <div class="nav-cta-wrap">
       <a href="https://sociis.house" class="nav-cta">Enter Sociis House</a>
     </div>
   </div>
