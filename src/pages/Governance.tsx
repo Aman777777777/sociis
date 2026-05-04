@@ -233,7 +233,6 @@ const Governance = () => {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   const leadership = teamMembers.filter(m => m.category === "leadership");
-  const board = teamMembers.filter(m => m.category === "contributor");
   const contributors = teamMembers.filter(m => m.category === "new_contributor");
   const council = teamMembers.filter(m => m.category === "council");
 
