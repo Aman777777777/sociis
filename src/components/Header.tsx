@@ -66,13 +66,13 @@ const Header = () => {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => (
               link.isPage ? (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`font-sans text-xs tracking-[0.18em] uppercase transition-colors ${location.pathname === link.href ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+                  className={`font-sans text-xs tracking-[0.18em] uppercase whitespace-nowrap transition-colors ${location.pathname === link.href ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
                 >
                   {link.name}
                 </Link>
@@ -84,7 +84,7 @@ const Header = () => {
                     e.preventDefault();
                     handleNavClick(link.href);
                   }}
-                  className="font-sans text-xs tracking-[0.18em] uppercase text-muted-foreground hover:text-foreground transition-colors"
+                  className="font-sans text-xs tracking-[0.18em] uppercase whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.name}
                 </a>
@@ -97,7 +97,7 @@ const Header = () => {
               href="https://www.sociis.house/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase whitespace-nowrap hover:bg-foreground/90 transition-colors"
             >
               Enter Sociis House
             </a>
