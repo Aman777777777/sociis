@@ -140,48 +140,29 @@
   /* ==================== NAV ==================== */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(244,240,232,0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(244,240,232,0.98);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--rule-soft);
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, padding 0.3s ease;
   }
   .nav-inner {
     max-width: none;
     width: 100%;
     margin: 0;
-    padding: 20px var(--pad);
+    padding: 16px var(--pad);
     display: flex; justify-content: space-between; align-items: center;
   }
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px; font-weight: 500;
     letter-spacing: 0.01em;
-    display: flex; align-items: center; gap: 14px;
-  }
-  .nav-mark {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-  }
-  .nav-mark circle {
-    fill: none;
-    stroke: var(--gold);
-    stroke-width: 1.2;
-  }
-  .nav-mark line {
-    stroke: var(--ink);
-    stroke-width: 1.5;
-    stroke-linecap: square;
-  }
-  .nav-logo sup {
-    font-size: 0.4em;
-    font-weight: 400;
-    vertical-align: super;
-    color: var(--gold);
+    color: var(--ink);
+    text-decoration: none;
+    display: flex; align-items: center;
   }
   .nav-inner { position: relative; }
-  .nav-links { display: flex; gap: 34px; align-items: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+  .nav-links { display: flex; gap: 28px; align-items: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
   .nav-cta-wrap { margin-left: auto; display: flex; align-items: center; }
   .nav-cta-mobile { display: none !important; }
   .nav-toggle { display: none; }
@@ -192,42 +173,31 @@
   .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
   .nav-links a {
     text-decoration: none;
-    color: var(--ink);
-    font-size: 11px;
+    color: var(--grey);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
     font-weight: 400;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    white-space: nowrap;
     transition: color 0.2s ease;
-    position: relative;
   }
-  .nav-links a:not(.nav-cta):hover { color: var(--gold); }
-  .nav-links a:not(.nav-cta)::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 1px;
-    background: var(--gold);
-    transition: width 0.3s ease;
-  }
-  .nav-links a:not(.nav-cta):hover::after { width: 100%; }
+  .nav-links a:not(.nav-cta):hover { color: var(--ink); }
   .nav-cta {
     background: var(--ink);
     color: var(--cream) !important;
-    padding: 11px 20px;
-    letter-spacing: 0.2em !important;
-    font-size: 10px !important;
+    padding: 12px 24px;
+    letter-spacing: 0.15em !important;
+    font-size: 12px !important;
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none !important;
     white-space: nowrap;
     border-radius: 0;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s ease;
   }
   .nav-cta:hover {
-    background: var(--gold);
-    transform: translateY(-1px);
+    background: var(--ink-soft);
   }
 
   /* ==================== HERO ==================== */
@@ -2391,9 +2361,9 @@
 <!-- ==================== NAV ==================== -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo">
-      <span>SociisGroup<sup>™</sup></span>
-    </div>
+    <a href="/" class="nav-logo">
+      <span>SociisGroup™</span>
+    </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
     <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -3316,7 +3286,7 @@
   })();
 </script>
 
-<button id="scrollTopBtn" aria-label="Scroll to top" style="position:fixed;bottom:24px;right:24px;z-index:9999;width:42px;height:42px;border:none;background:rgba(20,20,20,0.7);color:#fff;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s ease, background .3s ease;display:flex;align-items:center;justify-content:center;border-radius:4px;font-size:18px;line-height:1;" onmouseover="this.style.background='rgba(20,20,20,0.95)'" onmouseout="this.style.background='rgba(20,20,20,0.7)'">↑</button>
+<button id="scrollTopBtn" aria-label="Scroll to top" style="position:fixed;bottom:24px;left:24px;z-index:9999;width:42px;height:42px;border:none;background:rgba(20,20,20,0.7);color:#fff;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s ease, background .3s ease;display:flex;align-items:center;justify-content:center;border-radius:4px;font-size:18px;line-height:1;" onmouseover="this.style.background='rgba(20,20,20,0.95)'" onmouseout="this.style.background='rgba(20,20,20,0.7)'">↑</button>
 <script>
 (function(){
   var btn = document.getElementById('scrollTopBtn');
