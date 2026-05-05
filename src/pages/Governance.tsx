@@ -178,7 +178,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Lars Carlstrom",
-    role: "Founder & CEO, Italvolt",
+    role: "Founder & CEO, Statetron",
     image: lars,
     category: "council",
   },
