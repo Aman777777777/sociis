@@ -97,7 +97,7 @@ const Header = () => {
               href="https://www.sociis.house/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase whitespace-nowrap rounded-none hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase whitespace-nowrap rounded-none hover:bg-gold transition-colors"
             >
               Enter Sociis House
             </a>
@@ -142,7 +142,7 @@ const Header = () => {
                 href="https://www.sociis.house/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase hover:bg-foreground/90 transition-colors mt-4"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase hover:bg-gold transition-colors mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Enter Sociis House
