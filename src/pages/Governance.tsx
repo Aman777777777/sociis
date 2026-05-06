@@ -27,6 +27,7 @@ import sandrine from "@/assets/team/sandrine.jpg";
 import jan from "@/assets/team/jan.jpg";
 import richard from "@/assets/team/richard.jpg";
 import baldwin from "@/assets/team/baldwin.jpeg";
+import chrisBenardis from "@/assets/team/chris-benardis.jpg";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -74,6 +75,13 @@ const teamMembers: TeamMember[] = [
     role: "Chief Operating Officer",
     image: luc,
     category: "leadership",
+  },
+  {
+    name: "Chris Benardis",
+    role: "Chief Financial Officer",
+    image: chrisBenardis,
+    category: "leadership",
+    bio: "Chris Benardis is a finance executive with nearly 30 years of international experience, including a long tenure leading corporate finance, sustainability, and governance for a major global automotive group across the United States, Japan, and Europe. He prioritises embedding sustainability and stakeholder considerations into financial decision-making to generate long-term value. Chris is GRI G4 certified and holds an MBA from the David Eccles School of Business and dual Bachelor's degrees in Chemistry and Accounting, graduating Magna Cum Laude.",
   },
 
   // Contributors.
