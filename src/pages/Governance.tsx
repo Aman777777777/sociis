@@ -71,17 +71,17 @@ const teamMembers: TeamMember[] = [
     imagePosition: "center 10%",
   },
   {
-    name: "Luc Garguet-Duport",
-    role: "Chief Operating Officer",
-    image: luc,
-    category: "leadership",
-  },
-  {
     name: "Chris Benardis",
     role: "Chief Financial Officer",
     image: chrisBenardis,
     category: "leadership",
     bio: "Chris Benardis is a finance executive with nearly 30 years of international experience, including a long tenure leading corporate finance, sustainability, and governance for a major global automotive group across the United States, Japan, and Europe. He prioritises embedding sustainability and stakeholder considerations into financial decision-making to generate long-term value. Chris is GRI G4 certified and holds an MBA from the David Eccles School of Business and dual Bachelor's degrees in Chemistry and Accounting, graduating Magna Cum Laude.",
+  },
+  {
+    name: "Luc Garguet-Duport",
+    role: "Chief Operating Officer",
+    image: luc,
+    category: "leadership",
   },
 
   // Contributors.
