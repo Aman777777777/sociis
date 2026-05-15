@@ -296,7 +296,7 @@ const Governance = () => {
             {/* Executive Leadership Team */}
             <div className="mb-24">
               <h3 className="group-title text-2xl mb-10">Executive Leadership Team</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 sm:gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {leadership.map((member, index) => (
                   <TeamCard
                     key={member.name}
