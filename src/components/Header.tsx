@@ -134,15 +134,6 @@ const Header = () => {
                   </a>
                 )
               ))}
-              <a
-                href="https://www.sociis.house/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase hover:bg-gold transition-colors mt-4"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Enter Sociis House
-              </a>
             </div>
           </div>
         )}
