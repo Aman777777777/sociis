@@ -30,18 +30,14 @@ const Header = () => {
     setIsMobileMenuOpen(false);
     if (href.startsWith("/#")) {
       const id = href.substring(2);
-      if (location.pathname !== "/") {
-        navigate("/");
-        setTimeout(() => {
-          const element = document.getElementById(id);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
+      if (location.pathname !== "/" && location.pathname !== "/site.html") {
+        window.location.href = `/site.html#${id}`;
       } else {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
+        } else {
+           window.location.href = `/site.html#${id}`;
         }
       }
     }

@@ -140,7 +140,6 @@
   /* ==================== NAV ==================== */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-<<<<<<< HEAD
     background: transparent;
     transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
@@ -155,19 +154,6 @@
     max-width: var(--max);
     margin: 0 auto;
     padding: 24px var(--pad);
-=======
-    background: rgba(244,240,232,0.98);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--rule-soft);
-    transition: background 0.3s ease, padding 0.3s ease;
-  }
-  .nav-inner {
-    max-width: none;
-    width: 100%;
-    margin: 0;
-    padding: 16px var(--pad);
->>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
     display: flex; justify-content: space-between; align-items: center;
     position: relative;
     transition: padding 0.5s ease;
@@ -179,7 +165,6 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px; font-weight: 500;
     letter-spacing: 0.01em;
-<<<<<<< HEAD
     display: flex; align-items: center; gap: 14px;
     text-decoration: none;
     color: var(--ink);
@@ -217,16 +202,6 @@
     align-items: center;
     gap: 24px;
   }
-=======
-    color: var(--ink);
-    text-decoration: none;
-    display: flex; align-items: center;
-  }
-  .nav-inner { position: relative; }
-  .nav-links { display: flex; gap: 28px; align-items: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
-  .nav-cta-wrap { margin-left: auto; display: flex; align-items: center; }
-  .nav-cta-mobile { display: none !important; }
->>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
   .nav-toggle { display: none; }
   .nav-burger { display: none; cursor: pointer; width: 28px; height: 22px; flex-direction: column; justify-content: space-between; }
   .nav-burger span { display: block; height: 1.5px; width: 100%; background: var(--ink); transition: transform 0.25s ease, opacity 0.2s ease; transform-origin: center; }
@@ -236,31 +211,20 @@
   .nav-links a:not(.nav-cta) {
     text-decoration: none;
     color: var(--grey);
-<<<<<<< HEAD
-=======
     font-family: 'Inter', sans-serif;
->>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-<<<<<<< HEAD
     transition: color 0.3s ease;
     position: relative;
   }
   .nav-links a:not(.nav-cta):hover { color: var(--ink); }
 
-=======
-    white-space: nowrap;
-    transition: color 0.2s ease;
-  }
-  .nav-links a:not(.nav-cta):hover { color: var(--ink); }
->>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
   .nav-cta {
     background: var(--ink);
     color: var(--cream) !important;
     padding: 12px 24px;
-<<<<<<< HEAD
     letter-spacing: 0.18em !important;
     font-size: 10px !important;
     font-family: 'Inter', sans-serif;
@@ -273,19 +237,6 @@
     background: var(--ink-soft);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(15,22,36,0.15);
-=======
-    letter-spacing: 0.15em !important;
-    font-size: 12px !important;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-decoration: none !important;
-    white-space: nowrap;
-    border-radius: 0;
-    transition: background 0.2s ease;
-  }
-  .nav-cta:hover {
-    background: var(--gold-warm);
->>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
   }
 
   /* ==================== HERO ==================== */
@@ -2505,11 +2456,7 @@
 <!-- ==================== NAV ==================== -->
 <nav id="mainNav">
   <div class="nav-inner">
-<<<<<<< HEAD
     <a href="/site.html" class="nav-logo">
-=======
-    <a href="/" class="nav-logo">
->>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
       <span>SociisGroup™</span>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -2519,21 +2466,14 @@
     <div class="nav-links">
       <a href="#impact" onclick="document.getElementById('nav-toggle').checked=false">Impact</a>
       <a href="#culture" onclick="document.getElementById('nav-toggle').checked=false">Culture</a>
-      <a href="#calendar" onclick="document.getElementById('nav-toggle').checked=false">Calendar</a>
+      <a href="/calendar">Calendar</a>
       <a href="#access" onclick="document.getElementById('nav-toggle').checked=false">Access</a>
       <a href="/governance">Governance</a>
-<<<<<<< HEAD
       <!-- Mobile only CTA -->
       <a href="https://sociis.house" class="nav-cta mobile-only" style="margin-top: 20px;">Enter Sociis House</a>
     </div>
     <div class="nav-actions">
       <a href="https://sociis.house" class="nav-cta desktop-only">Enter Sociis House</a>
-=======
-      <a href="https://sociis.house" class="nav-cta nav-cta-mobile">Enter Sociis House</a>
-    </div>
-    <div class="nav-cta-wrap">
-      <a href="https://sociis.house" class="nav-cta">Enter Sociis House</a>
->>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
     </div>
   </div>
 </nav>
