@@ -140,6 +140,7 @@
   /* ==================== NAV ==================== */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+<<<<<<< HEAD
     background: transparent;
     transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
@@ -154,6 +155,19 @@
     max-width: var(--max);
     margin: 0 auto;
     padding: 24px var(--pad);
+=======
+    background: rgba(244,240,232,0.98);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule-soft);
+    transition: background 0.3s ease, padding 0.3s ease;
+  }
+  .nav-inner {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 16px var(--pad);
+>>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
     display: flex; justify-content: space-between; align-items: center;
     position: relative;
     transition: padding 0.5s ease;
@@ -165,6 +179,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px; font-weight: 500;
     letter-spacing: 0.01em;
+<<<<<<< HEAD
     display: flex; align-items: center; gap: 14px;
     text-decoration: none;
     color: var(--ink);
@@ -202,6 +217,16 @@
     align-items: center;
     gap: 24px;
   }
+=======
+    color: var(--ink);
+    text-decoration: none;
+    display: flex; align-items: center;
+  }
+  .nav-inner { position: relative; }
+  .nav-links { display: flex; gap: 28px; align-items: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+  .nav-cta-wrap { margin-left: auto; display: flex; align-items: center; }
+  .nav-cta-mobile { display: none !important; }
+>>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
   .nav-toggle { display: none; }
   .nav-burger { display: none; cursor: pointer; width: 28px; height: 22px; flex-direction: column; justify-content: space-between; }
   .nav-burger span { display: block; height: 1.5px; width: 100%; background: var(--ink); transition: transform 0.25s ease, opacity 0.2s ease; transform-origin: center; }
@@ -211,19 +236,31 @@
   .nav-links a:not(.nav-cta) {
     text-decoration: none;
     color: var(--grey);
+<<<<<<< HEAD
+=======
+    font-family: 'Inter', sans-serif;
+>>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+<<<<<<< HEAD
     transition: color 0.3s ease;
     position: relative;
   }
   .nav-links a:not(.nav-cta):hover { color: var(--ink); }
 
+=======
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+  .nav-links a:not(.nav-cta):hover { color: var(--ink); }
+>>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
   .nav-cta {
     background: var(--ink);
     color: var(--cream) !important;
     padding: 12px 24px;
+<<<<<<< HEAD
     letter-spacing: 0.18em !important;
     font-size: 10px !important;
     font-family: 'Inter', sans-serif;
@@ -236,6 +273,19 @@
     background: var(--ink-soft);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(15,22,36,0.15);
+=======
+    letter-spacing: 0.15em !important;
+    font-size: 12px !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    border-radius: 0;
+    transition: background 0.2s ease;
+  }
+  .nav-cta:hover {
+    background: var(--gold-warm);
+>>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
   }
 
   /* ==================== HERO ==================== */
@@ -1727,6 +1777,51 @@
     gap: 16px;
   }
 
+  /* Switch nav to burger before centered links collide with right-pinned CTA */
+  @media (max-width: 900px) {
+    .nav-burger { display: flex; }
+    .nav-cta-wrap { display: none; }
+    .nav-cta-mobile { display: inline-block !important; }
+    .nav-links {
+      transform: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: 0 12px 24px rgba(15,22,36,0.08);
+      padding: 12px var(--pad) 20px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+      pointer-events: none;
+    }
+    .nav-toggle:checked ~ .nav-links {
+      max-height: 80vh;
+      opacity: 1;
+      padding: 16px var(--pad) 24px;
+      pointer-events: auto;
+    }
+    .nav-links a:not(.nav-cta) {
+      display: block;
+      padding: 14px 0;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .nav-links a:not(.nav-cta)::after { display: none; }
+    .nav-links .nav-cta {
+      display: inline-block;
+      margin-top: 16px;
+      align-self: flex-start;
+      padding: 12px 18px;
+    }
+  }
 
   /* ==================== RESPONSIVE ==================== */
   /* ==================== COUNCIL MEMBERS GRID (new) ==================== */
@@ -2162,6 +2257,10 @@
     text-align: center;
     font-weight: 500;
   }
+  .tier-cta-row {
+    margin-top: auto;
+    padding-top: 20px;
+  }
   .tier-deck-btn {
     display: inline-block;
     padding: 10px 18px;
@@ -2255,7 +2354,9 @@
       align-self: flex-start;
       padding: 12px 18px;
     }
+    .nav-cta-mobile { display: inline-block !important; }
     .nav-cta { padding: 9px 14px; font-size: 9px !important; letter-spacing: 0.16em !important; white-space: nowrap; }
+    .nav-cta-wrap { display: none; }
 
     /* Hero: tighter vertical rhythm so it fits on small screens */
     .hero { padding: 130px 0 80px; min-height: auto; }
@@ -2404,7 +2505,11 @@
 <!-- ==================== NAV ==================== -->
 <nav id="mainNav">
   <div class="nav-inner">
+<<<<<<< HEAD
     <a href="/site.html" class="nav-logo">
+=======
+    <a href="/" class="nav-logo">
+>>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
       <span>SociisGroup™</span>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -2417,11 +2522,18 @@
       <a href="#calendar" onclick="document.getElementById('nav-toggle').checked=false">Calendar</a>
       <a href="#access" onclick="document.getElementById('nav-toggle').checked=false">Access</a>
       <a href="/governance">Governance</a>
+<<<<<<< HEAD
       <!-- Mobile only CTA -->
       <a href="https://sociis.house" class="nav-cta mobile-only" style="margin-top: 20px;">Enter Sociis House</a>
     </div>
     <div class="nav-actions">
       <a href="https://sociis.house" class="nav-cta desktop-only">Enter Sociis House</a>
+=======
+      <a href="https://sociis.house" class="nav-cta nav-cta-mobile">Enter Sociis House</a>
+    </div>
+    <div class="nav-cta-wrap">
+      <a href="https://sociis.house" class="nav-cta">Enter Sociis House</a>
+>>>>>>> 254cc58f5f54d077d03dbc3db6d677e392171495
     </div>
   </div>
 </nav>
@@ -2833,10 +2945,10 @@
               <li>The Arc Table carries both days, including The 300, the Founding Wall and the founder moment</li>
             </ul>
           </div>
-          <div class="tier-cta-row" style="margin-top: 20px;">
+          <div class="tier-cta-row">
             <a href="/the-64-deck.pptx" target="_blank" rel="noopener" class="tier-deck-btn">View Deck</a>
           </div>
-          <div class="tier-note">Request access at info@sociisgroup.com.</div>
+          <div class="tier-note">Request access at hello@sociisgroup.com.</div>
         </div>
 
         <div class="partner-tier tier-room300">
@@ -2855,10 +2967,10 @@
               <li>The Sociis Culture programme at institutional scale</li>
             </ul>
           </div>
-          <div class="tier-cta-row" style="margin-top: 20px;">
-            <a href="/the-300-deck.pdf" target="_blank" rel="noopener" class="tier-deck-btn">View Deck</a>
+          <div class="tier-cta-row">
+            <a href="/the-300-deck.pptx" target="_blank" rel="noopener" class="tier-deck-btn">View Deck</a>
           </div>
-          <div class="tier-note">Request access at info@sociisgroup.com.</div>
+          <div class="tier-note">Request access at hello@sociisgroup.com.</div>
         </div>
 
       </div>
@@ -2886,7 +2998,7 @@
       <div class="rooms-primary-cta-kicker">July 2026 · Brussels and on the iconic grounds of Tomorrowland</div>
       <div class="rooms-primary-cta-title">Reserve your place in the Rooms.</div>
     </div>
-    <a href="mailto:info@sociisgroup.com?subject=Rooms%20%C2%B7%20July%202026%20enquiry" class="rooms-primary-cta-btn">
+    <a href="mailto:hello@sociisgroup.com?subject=Rooms%20%C2%B7%20July%202026%20enquiry" class="rooms-primary-cta-btn">
       Request access
     </a>
   </div>
@@ -2900,7 +3012,7 @@
       <div class="access-path-step">
         <div class="aps-num">01</div>
         <div class="aps-title">You write.</div>
-        <div class="aps-body">A single line to info@sociisgroup.com. Which Room. Why you.</div>
+        <div class="aps-body">A single line to hello@sociisgroup.com. Which Room. Why you.</div>
       </div>
       <div class="access-path-step">
         <div class="aps-num">02</div>
@@ -3105,11 +3217,11 @@
       <p>Access is the selection layer of SociisGroup.</p>
       <p>Entry is curated. There are no forms. Human judgement is the filter.</p>
       <p>SociisGroup engages with individuals and communities whose conduct aligns with the standards it governs.</p>
-      <p style="font-style: italic; margin-top: 24px;">If the institution resonates, the door is at info@sociisgroup.com.</p>
+      
     </div>
     <div class="access-contact">
       <div class="access-contact-label">Contact</div>
-      <a href="mailto:info@sociisgroup.com">info@sociisgroup.com</a>
+      <a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a>
     </div>
   </div>
 </section>
@@ -3136,7 +3248,7 @@
           <div class="fcp-title">Take a seat in a Room.</div>
           <div class="fcp-desc">The 64 on 22 July 2026 in Brussels. The 300 on 23 July 2026 on the iconic grounds of Tomorrowland. The 22 by private enquiry.</div>
         </div>
-        <a href="mailto:info@sociisgroup.com?subject=Rooms%20%C2%B7%20July%202026%20enquiry" class="fcp-link">Request access &nbsp;→</a>
+        <a href="mailto:hello@sociisgroup.com?subject=Rooms%20%C2%B7%20July%202026%20enquiry" class="fcp-link">Request access &nbsp;→</a>
       </div>
     </div>
   </div>
@@ -3154,10 +3266,10 @@
         <div class="footer-col-title">Explore</div>
         <a href="#impact">Impact</a>
         <a href="#culture">Culture</a>
-        <a href="/governance">Governance</a>
         <a href="#calendar">Calendar</a>
         
         <a href="#access">Access</a>
+        <a href="/governance">Governance</a>
       </div>
       <div>
         <div class="footer-col-title">Institution</div>
@@ -3361,5 +3473,21 @@
   });
 </script>
 
+<button id="scrollTopBtn" aria-label="Scroll to top" style="position:fixed;bottom:24px;left:24px;z-index:9999;width:42px;height:42px;border:none;background:rgba(20,20,20,0.7);color:#fff;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s ease, background .3s ease;display:flex;align-items:center;justify-content:center;border-radius:4px;font-size:18px;line-height:1;" onmouseover="this.style.background='rgba(20,20,20,0.95)'" onmouseout="this.style.background='rgba(20,20,20,0.7)'">↑</button>
+<script>
+(function(){
+  var btn = document.getElementById('scrollTopBtn');
+  if(!btn) return;
+  function toggle(){
+    var doc = document.documentElement;
+    var pct = window.scrollY / (doc.scrollHeight - window.innerHeight || 1);
+    if(pct > 0.25){ btn.style.opacity = '0.85'; btn.style.pointerEvents = 'auto'; }
+    else { btn.style.opacity = '0'; btn.style.pointerEvents = 'none'; }
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  toggle();
+})();
+</script>
 </body>
 </html>

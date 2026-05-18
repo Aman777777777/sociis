@@ -27,6 +27,7 @@ import sandrine from "@/assets/team/sandrine.jpg";
 import jan from "@/assets/team/jan.jpg";
 import richard from "@/assets/team/richard.jpg";
 import baldwin from "@/assets/team/baldwin.jpeg";
+import chrisBenardis from "@/assets/team/chris-benardis.jpg";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -70,6 +71,13 @@ const teamMembers: TeamMember[] = [
     imagePosition: "center 10%",
   },
   {
+    name: "Chris Benardis",
+    role: "Chief Financial Officer",
+    image: chrisBenardis,
+    category: "leadership",
+    bio: "Chris Benardis is a finance executive with nearly 30 years of international experience, including a long tenure leading corporate finance, sustainability, and governance for a major global automotive group across the United States, Japan, and Europe. He prioritises embedding sustainability and stakeholder considerations into financial decision-making to generate long-term value. Chris is GRI G4 certified and holds an MBA from the David Eccles School of Business and dual Bachelor's degrees in Chemistry and Accounting, graduating Magna Cum Laude.",
+  },
+  {
     name: "Luc Garguet-Duport",
     role: "Chief Operating Officer",
     image: luc,
@@ -85,7 +93,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Baldwin Berges",
-    role: "",
+    role: "Capital Strategist",
     image: baldwin,
     category: "new_contributor",
     bio: "Baldwin Berges is a seasoned finance professional with over 30 years of experience bridging private capital with public development initiatives. As the CEO of Abaris Advisors and a recurring Team Leader for the EU Global Gateway, he specializes in sustainable finance, blended instruments, and impact investing across emerging markets.\n\nHis extensive career includes serving as a Founding Partner at Silk Invest, a leading sustainable investment boutique, and holding senior institutional leadership roles at Standard Bank and Invesco. Baldwin’s expertise spans the full range of financial instruments—from structured finance and fintech innovation to credit and equity.\n\nA polyglot fluent in five languages, he has managed complex projects for the European Commission and International Financial Institutions across Sub-Saharan Africa, Asia, and Latin America. At Sociis Group, Baldwin aligns this deep technical background with the mission of integrating behavioral governance into ESG frameworks, driving systemic change for a more prosperous global society."
@@ -179,7 +187,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Lars Carlstrom",
-    role: "Founder & CEO, Italvolt",
+    role: "Founder & CEO, Statetron",
     image: lars,
     category: "council",
   },
@@ -234,7 +242,6 @@ const Governance = () => {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   const leadership = teamMembers.filter(m => m.category === "leadership");
-  const board = teamMembers.filter(m => m.category === "contributor");
   const contributors = teamMembers.filter(m => m.category === "new_contributor");
   const council = teamMembers.filter(m => m.category === "council");
 
@@ -280,7 +287,7 @@ const Governance = () => {
           <div className="max-w-4xl">
             <div className="mono-kicker mb-4">Governance</div>
             <h1 className="text-4xl sm:text-5xl text-foreground mb-6">
-              Governance.
+              Executive Leadership Team.
             </h1>
             <div className="rule mb-12"></div>
             <p className="text-body text-muted-foreground max-w-2xl mb-24">
@@ -290,7 +297,7 @@ const Governance = () => {
             {/* Executive Leadership Team */}
             <div className="mb-24">
               <h3 className="group-title text-2xl mb-10">Executive Leadership Team</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-12">
                 {leadership.map((member, index) => (
                   <TeamCard
                     key={member.name}
