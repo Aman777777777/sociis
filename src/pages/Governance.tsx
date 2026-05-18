@@ -335,7 +335,12 @@ const Governance = () => {
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {contributors.map((member, index) => (
-                  <TeamCard key={member.name} member={member} index={index} />
+                  <TeamCard 
+                    key={member.name} 
+                    member={member} 
+                    index={index} 
+                    onClick={() => setSelectedMember(member)}
+                  />
                 ))}
               </div>
             </div>
@@ -348,7 +353,12 @@ const Governance = () => {
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
                 {council.map((member, index) => (
-                  <TeamCard key={member.name} member={member} index={index} />
+                  <TeamCard 
+                    key={member.name} 
+                    member={member} 
+                    index={index} 
+                    onClick={() => setSelectedMember(member)}
+                  />
                 ))}
               </div>
             </div>
