@@ -29,6 +29,8 @@ const queryClient = new QueryClient({
   },
 });
 
+import ScrollToTop from "./components/ScrollToTop";
+
 const App = () => {
   const [showPreloader, setShowPreloader] = useState(() => {
     const hasLoaded = sessionStorage.getItem("sociis-loaded");
@@ -76,6 +78,7 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <ScrollToTopOnMount />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/governance" element={<Governance />} />
@@ -96,5 +99,6 @@ const App = () => {
     </QueryClientProvider>
   );
 };
+
 
 export default App;

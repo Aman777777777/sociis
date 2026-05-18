@@ -88,6 +88,7 @@ const teamMembers: TeamMember[] = [
     role: "",
     image: baldwin,
     category: "new_contributor",
+    bio: "Baldwin Berges is a seasoned finance professional with over 30 years of experience bridging private capital with public development initiatives. As the CEO of Abaris Advisors and a recurring Team Leader for the EU Global Gateway, he specializes in sustainable finance, blended instruments, and impact investing across emerging markets.\n\nHis extensive career includes serving as a Founding Partner at Silk Invest, a leading sustainable investment boutique, and holding senior institutional leadership roles at Standard Bank and Invesco. Baldwin’s expertise spans the full range of financial instruments—from structured finance and fintech innovation to credit and equity.\n\nA polyglot fluent in five languages, he has managed complex projects for the European Commission and International Financial Institutions across Sub-Saharan Africa, Asia, and Latin America. At Sociis Group, Baldwin aligns this deep technical background with the mission of integrating behavioral governance into ESG frameworks, driving systemic change for a more prosperous global society."
   },
   {
     name: "Joost Peeters",
@@ -193,7 +194,7 @@ const TeamCard = ({
   index: number;
   onClick?: () => void;
 }) => {
-  const isClickable = member.category === "leadership" && member.bio;
+  const isClickable = !!member.bio;
 
   return (
     <div
@@ -267,7 +268,7 @@ const Governance = () => {
                     </div>
                   </div>
                 </DialogHeader>
-                <div className="font-sans text-base text-foreground leading-relaxed">
+                <div className="font-sans text-base text-foreground leading-relaxed whitespace-pre-wrap">
                   {selectedMember.bio}
                 </div>
               </>

@@ -220,32 +220,57 @@
   .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
   .footer-links a { color: rgba(244,240,232,0.7); text-decoration: none; font-size: 12px; }
   .footer-links a:hover { color: var(--gold-warm); }
-  #scrollTopBtn {
-    position: fixed; bottom: 24px; right: 24px; z-index: 50;
-    width: 40px; height: 40px; border: none; cursor: pointer;
-    background: rgba(15,22,36,0.6); color: var(--cream);
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 4px; opacity: 0; transform: translateY(16px);
-    pointer-events: none; transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
-    font-size: 18px; line-height: 1;
+  /* ==================== SCROLL UP BUTTON ==================== */
+  .scroll-up-btn {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    z-index: 95;
+    width: 48px;
+    height: 48px;
+    background: rgba(244,240,232,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(159,125,42,0.25);
+    border-radius: 50%;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    pointer-events: none;
+    box-shadow: 0 4px 20px rgba(15,22,36,0.06);
   }
-  #scrollTopBtn.visible { opacity: 0.6; transform: translateY(0); pointer-events: auto; }
-  #scrollTopBtn.visible:hover { opacity: 1; background: rgba(15,22,36,0.8); }
-  @media (max-width: 960px) {
-    :root { --pad: 32px; }
-    .nav-links { gap: 18px; }
-    .section-head { grid-template-columns: 1fr; gap: 26px; }
-    .people-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .charter-card, .access-card { grid-template-columns: 1fr; gap: 26px; }
+  .scroll-up-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
-  @media (max-width: 720px) {
-    :root { --pad: 24px; }
-    .nav-inner { padding: 16px var(--pad); align-items: flex-start; }
-    .nav-links { display: none; }
-    header { padding-top: 130px; }
-    section { padding-top: 64px; padding-bottom: 64px; }
-    .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 18px; }
-    .role { font-size: 11px; }
+  .scroll-up-btn:hover {
+    background: var(--cream);
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(15,22,36,0.12);
+  }
+  .scroll-up-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease;
+  }
+  .scroll-up-btn:hover svg {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .scroll-up-btn { bottom: 24px; left: 24px; width: 42px; height: 42px; }
   }
 </style>
 </head>
@@ -390,14 +415,14 @@
   </div>
 </footer>
 
-<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+<button class="scroll-up-btn" id="scrollUpBtn" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
 <script>
   (function(){
-    var btn = document.getElementById('scrollTopBtn');
+    var btn = document.getElementById('scrollUpBtn');
     function onScroll(){
-      var max = document.documentElement.scrollHeight - window.innerHeight;
-      var pct = max > 0 ? window.scrollY / max : 0;
-      if (pct > 0.25) btn.classList.add('visible'); else btn.classList.remove('visible');
+      if (window.scrollY > 500) btn.classList.add('visible'); else btn.classList.remove('visible');
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });

@@ -73,6 +73,59 @@
     main { padding: 56px 24px; }
     .nav-bar { padding: 20px 24px; }
   }
+
+  /* ==================== SCROLL UP BUTTON ==================== */
+  .scroll-up-btn {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    z-index: 95;
+    width: 48px;
+    height: 48px;
+    background: rgba(244,240,232,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(159,125,42,0.25);
+    border-radius: 50%;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    pointer-events: none;
+    box-shadow: 0 4px 20px rgba(15,22,36,0.06);
+  }
+  .scroll-up-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .scroll-up-btn:hover {
+    background: var(--cream);
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(15,22,36,0.12);
+  }
+  .scroll-up-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease;
+  }
+  .scroll-up-btn:hover svg {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .scroll-up-btn { bottom: 24px; left: 24px; width: 42px; height: 42px; }
+  }
 </style>
 </head>
 <body>
@@ -148,5 +201,21 @@
   </div>
 </main>
 
+<!-- Scroll Up Button -->
+<button class="scroll-up-btn" id="scrollUpBtn" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+
+<script>
+  (function(){
+    var btn = document.getElementById('scrollUpBtn');
+    function onScroll(){
+      if (window.scrollY > 500) btn.classList.add('visible'); else btn.classList.remove('visible');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    onScroll();
+  })();
+</script>
 </body>
 </html>
