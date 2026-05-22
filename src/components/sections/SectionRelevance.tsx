@@ -97,7 +97,7 @@ const SectionRelevance = () => {
           </div>
 
           <p className="text-xs text-muted-foreground text-center mt-12 italic">
-            Request access at info@sociisgroup.com
+            Request access at hello@sociisgroup.com
           </p>
         </div>
       </div>

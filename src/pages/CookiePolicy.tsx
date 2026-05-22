@@ -98,7 +98,7 @@ const CookiePolicy = () => {
                   <br />
                   Brussels, Belgium
                   <br />
-                  info@sociisgroup.com
+                  hello@sociisgroup.com
                 </p>
               </section>
             </div>

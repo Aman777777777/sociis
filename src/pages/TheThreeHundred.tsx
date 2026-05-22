@@ -214,8 +214,8 @@ const SlideClose = () => (
       </h2>
       <p className="font-sans text-[1.3rem] font-light text-white/50">The 300.</p>
       <p className="font-sans text-[0.85rem] text-white/25 mt-16">
-        <a href="mailto:info@sociisgroup.com" className="hover:text-white/40 transition-colors">
-          info@sociisgroup.com
+        <a href="mailto:hello@sociisgroup.com" className="hover:text-white/40 transition-colors">
+          hello@sociisgroup.com
         </a>
       </p>
     </div>

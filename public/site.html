@@ -1870,26 +1870,56 @@
     max-width: 640px;
     margin-top: 24px;
   }
+  .calendar-group {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 72px;
+  }
+  .calendar-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--gold-warm);
+    letter-spacing: 0.05em;
+    padding-top: 40px;
+    border-top: 1px solid rgba(201,168,90,0.15);
+  }
   .calendar-track {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
     padding-top: 40px;
-    margin-top: 72px;
+    margin-top: 0;
+    border-top: 1px solid rgba(201,168,90,0.15);
   }
-  .calendar-track::before {
+  .track-2026::before {
     content: "";
     position: absolute;
-    top: 54px;
+    top: 46px;
     left: 6px;
     right: 6px;
     height: 1px;
     background: linear-gradient(90deg,
       rgba(201,168,90,0.75) 0%,
-      rgba(201,168,90,0.75) 38%,
-      rgba(201,168,90,0.28) 42%,
+      rgba(201,168,90,0.75) 50%,
+      rgba(201,168,90,0.28) 55%,
       rgba(201,168,90,0.28) 100%);
+  }
+  .track-2027::before {
+    content: "";
+    position: absolute;
+    top: 46px;
+    left: 6px;
+    right: 33.3%;
+    height: 1px;
+    background: rgba(201,168,90,0.28);
+  }
+  .cal-item.empty {
+    pointer-events: none;
+    visibility: hidden;
   }
   .cal-item {
     padding: 0 24px 0 0;
@@ -2246,9 +2276,28 @@
     .room-desc, .room-cta, .room-price { grid-column: 1 / -1; text-align: left; }
     .room-tiers { grid-template-columns: 1fr; }
     .council-members-grid { grid-template-columns: repeat(2, 1fr); }
-    .calendar-track { grid-template-columns: 1fr 1fr; gap: 48px 0; }
-    .calendar-track::before { display: none; }
-    .cal-item { padding-right: 0; padding-bottom: 24px; }
+    .calendar-group {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .calendar-year {
+      padding-top: 0;
+      border-top: none;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .calendar-track {
+      grid-template-columns: 1fr !important;
+      gap: 32px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(201,168,90,0.15);
+    }
+    .track-2026::before,
+    .track-2027::before {
+      display: none;
+    }
+    .cal-item { padding-right: 0; padding-bottom: 0; }
     .founding-partners-block { grid-template-columns: 1fr; gap: 32px; }
     .partners-tiers { grid-template-columns: 1fr; }
     .partner-tier { min-height: auto; }
@@ -2977,40 +3026,57 @@
     <div class="mono-kicker">The Institutional Arc</div>
     <h2 class="display-l" style="margin-top: 20px;">Calendar.</h2>
     <div class="rule"></div>
-    <p class="calendar-lede">July is where the institution begins. Cape Town and London carry it forward. Six Rooms across three cities, over two years.</p>
+    <p class="calendar-lede">July is where the institution begins. The arc carries forward across four countries, over two years.</p>
 
-    <div class="calendar-track">
-      <div class="cal-item">
-        <div class="cal-dot"></div>
-        <div class="cal-date">22 July 2026</div>
-        <div class="cal-city">Brussels</div>
-        <div class="cal-format">The 64 · Founding Gathering</div>
-        <div class="cal-venue">Corinthia Grand Hotel Astoria</div>
-      </div>
-      <div class="cal-item">
-        <div class="cal-dot"></div>
-        <div class="cal-date">23 July 2026</div>
-        <div class="cal-city">Boom</div>
-        <div class="cal-format">The 300 · Shape Tomorrow Today</div>
-        <div class="cal-venue">In collaboration with Love Tomorrow, on the iconic grounds of Tomorrowland</div>
-      </div>
-      <div class="cal-item future">
-        <div class="cal-dot"></div>
-        <div class="cal-date">Autumn 2026</div>
-        <div class="cal-city">Cape Town</div>
-        <div class="cal-format">The 22 · The 64</div>
-        <div class="cal-venue">Mount Nelson, A Belmond Hotel</div>
-      </div>
-      <div class="cal-item future">
-        <div class="cal-dot"></div>
-        <div class="cal-date">Spring 2027</div>
-        <div class="cal-city">London</div>
-        <div class="cal-format">The 22 · The 64</div>
-        <div class="cal-venue">The Connaught, Mayfair</div>
+    <div class="calendar-group">
+      <div class="calendar-year">2026</div>
+      <div class="calendar-track track-2026">
+        <div class="cal-item">
+          <div class="cal-dot"></div>
+          <div class="cal-date">Wednesday 22 July 2026</div>
+          <div class="cal-city">Brussels</div>
+          <div class="cal-format">The 64 · Founding Gathering</div>
+          <div class="cal-venue">Corinthia Grand Hotel Astoria</div>
+        </div>
+        <div class="cal-item">
+          <div class="cal-dot"></div>
+          <div class="cal-date">Thursday 23 July 2026</div>
+          <div class="cal-city">Boom</div>
+          <div class="cal-format">The 300 · Shape Tomorrow Today</div>
+          <div class="cal-venue">On the iconic grounds of Tomorrowland, in collaboration with Love Tomorrow</div>
+        </div>
+        <div class="cal-item future">
+          <div class="cal-dot"></div>
+          <div class="cal-date">Sunday 18 October 2026</div>
+          <div class="cal-city">Cape Town</div>
+          <div class="cal-format">The 22 · The 64</div>
+          <div class="cal-venue">Mount Nelson, A Belmond Hotel</div>
+        </div>
       </div>
     </div>
 
-    <p class="calendar-closer">Six Rooms. Three cities. Two years. One institution. Behaviour made visible, one environment at a time.</p>
+    <div class="calendar-group">
+      <div class="calendar-year">2027</div>
+      <div class="calendar-track track-2027">
+        <div class="cal-item future">
+          <div class="cal-dot"></div>
+          <div class="cal-date">Sunday 14 March 2027</div>
+          <div class="cal-city">Madrid</div>
+          <div class="cal-format">The 22 · The 64</div>
+          <div class="cal-venue">Mandarin Oriental Ritz</div>
+        </div>
+        <div class="cal-item future">
+          <div class="cal-dot"></div>
+          <div class="cal-date">Sunday 16 May 2027</div>
+          <div class="cal-city">London</div>
+          <div class="cal-format">The 22 · The 64</div>
+          <div class="cal-venue">The Lanesborough and The Twenty Two</div>
+        </div>
+        <div class="cal-item empty"></div>
+      </div>
+    </div>
+
+    <p class="calendar-closer">Eight Rooms. Four countries. Two years. One institution. Behaviour made visible, one environment at a time.</p>
   </div>
 </section>
 
