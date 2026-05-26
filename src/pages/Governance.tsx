@@ -116,19 +116,19 @@ const teamMembers: TeamMember[] = [
     bio: "Marc Bogaerts is a renowned Belgian choreographer and artistic director whose interdisciplinary work seamlessly blends dance, sports, circus arts, and opera. Having worked with all three major opera houses in Berlin and over 50 companies worldwide, his unconventional approach has earned him global recognition, including a Knighthood in the Order of Merit. He frequently utilizes artistic expression to address sensitive social issues and cultural narratives.",
   },
   {
-    name: "Micaël Craenhals",
+    name: "Micael Craenhals",
     role: "Production",
     image: micaelC,
     category: "new_contributor",
     imagePosition: "center 25%",
-    bio: "Micaël Craenhals is a Belgian entrepreneur with a diverse background bridging traditional industries and modern ventures. Hailing from a prominent business family, he brings a deeply ingrained understanding of operational dynamics, resource management, and strategic production to the institution.",
+    bio: "Micael Craenhals is a Belgian entrepreneur with a diverse background bridging traditional industries and modern ventures. Hailing from a prominent business family, he brings a deeply ingrained understanding of operational dynamics, resource management, and strategic production to the institution.",
   },
   {
-    name: "Chantal Vervaete",
+    name: "Chantal Veevaete",
     role: "Public Company Board Member, Former Fortune 10 C-Suite Executive",
     image: chantalNew,
     category: "new_contributor",
-    bio: "Chantal Vervaete is a highly experienced C-suite executive and independent board member, recognized for her tenure as Chief Human Resources Officer across Fortune 10, 100, and 1000 organizations, including Phillips 66. Holding dual citizenship in Belgium and the US, she brings a global, multicultural perspective to leadership development, high-performing team dynamics, and human capital strategy.",
+    bio: "Chantal Veevaete is a highly experienced C-suite executive and independent board member, recognized for her tenure as Chief Human Resources Officer across Fortune 10, 100, and 1000 organizations, including Phillips 66. Holding dual citizenship in Belgium and the US, she brings a global, multicultural perspective to leadership development, high-performing team dynamics, and human capital strategy.",
   },
   {
     name: "Karim Tousbih",
