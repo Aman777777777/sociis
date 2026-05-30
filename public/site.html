@@ -669,76 +669,7 @@
     color: var(--ink-soft);
   }
 
-  /* ==================== AMBASSADORS ==================== */
-  .ambassadors-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 var(--pad);
-    position: relative;
-    z-index: 2;
-  }
-  .amb-layout {
-    display: grid;
-    grid-template-columns: 420px 1fr;
-    gap: 72px;
-    margin-top: 48px;
-    align-items: start;
-  }
-  .amb-card {}
-  .amb-image {
-    width: 100%;
-    aspect-ratio: 3/4;
-    background:
-      radial-gradient(ellipse at 40% 35%, rgba(244,240,232,0.08), transparent 55%),
-      linear-gradient(135deg, #2a2a25 0%, #1a1a15 60%, #0d0d08 100%);
-    margin-bottom: 24px;
-    position: relative;
-    overflow: hidden;
-  }
-  .amb-image::before {
-    content: "IRIS VAN DER VEKEN";
-    position: absolute;
-    left: 24px; bottom: 24px;
-    font-size: 9px; letter-spacing: 0.3em;
-    color: rgba(244,240,232,0.25);
-  }
-  .amb-image-label {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(244,240,232,0.12);
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 14px;
-  }
-  .amb-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 4px;
-  }
-  .amb-role {
-    font-size: 11px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--grey);
-  }
-  .amb-bio {
-    padding-top: 20px;
-  }
-  .amb-bio .body-text {
-    font-size: 15px;
-  }
-  .amb-statement-label {
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-top: 32px;
-    margin-bottom: 14px;
-  }
+
 
   /* ==================== OUTPUT ==================== */
   .output-header { max-width: 860px; margin-bottom: 56px; }
@@ -2403,8 +2334,7 @@
     .partner-categories { grid-template-columns: 1fr; }
     .partner-tier { padding: 24px 20px; }
 
-    /* Ambassador image: cap height so the dark portrait does not dominate the screen */
-    .amb-image { aspect-ratio: 4/5; max-height: 70vh; }
+
 
     /* Let There Be Light: keep video readable */
     .ltbl-frame { aspect-ratio: 16/10; }
@@ -2433,10 +2363,7 @@
     body { padding-bottom: 80px; }
   }
   /* ===== Filled media overrides ===== */
-  .amb-image.amb-image--filled::before,
-  .amb-image.amb-image--filled .amb-image-label,
-  .amb-image.amb-image--filled .image-swap-note { display: none !important; }
-  .amb-image.amb-image--filled { background: #1a1a15; }
+
 
   .ltbl-frame.ltbl-frame--video::before,
   .ltbl-frame.ltbl-frame--video::after,
@@ -2705,34 +2632,6 @@
   </div>
 </section>
 
-<!-- ==================== AMBASSADORS ==================== -->
-<section class="tight">
-  <div class="ambassadors-inner scroll-reveal">
-    <div class="mono-kicker">Ambassadors</div>
-    <h2 class="display-m" style="margin-top: 16px;">Voices that carry the standard.</h2>
-    <div class="amb-layout">
-      <div class="amb-card">
-        <div class="amb-image amb-image--filled" data-image-slot="iris-portrait">
-          <img src="/iris-van-der-veken.jpg" alt="Iris van der Veken, Ambassador of SociisGroup" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
-        </div>
-        <div class="amb-name">Iris van der Veken</div>
-        <div class="amb-role">Ambassador</div>
-      </div>
-      <div class="amb-bio">
-        <p class="body-text">
-          Iris van der Veken is Executive Director and Secretary General of the Watch and Jewellery Initiative 2030, co-founded by Kering and Cartier and delegated by Richemont. She is also a member of the Inclusive Leadership Council of 100 Women at Davos, and served as the first Chairwoman of UN Global Compact Belgium.
-        </p>
-        <p class="body-text" style="margin-top: 18px;">
-          With a background in law, public affairs and sustainability, Iris brings over 25 years of international experience across India, China, Africa, Thailand and Sri Lanka. A recognised coalition builder, she has played a key role in advancing gender equality within the industry through collaborations with UN Women.
-        </p>
-        <div class="amb-statement-label">Ambassador Statement</div>
-        <p class="pull" style="font-size: 20px;">
-          The world requires a form of leadership that is collaborative, inclusive, and grounded in humility, courage, and purpose.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ==================== SBS ==================== -->
 <section class="sbs-block">
@@ -3280,7 +3179,6 @@
         <a href="#">The Mark</a>
         <a href="#">LIME Code</a>
         <a href="#">Ethical Council</a>
-        <a href="#">Ambassadors</a>
         <a href="#">Let There Be Light</a>
         <a href="https://sociis.house">Sociis House</a>
       </div>
