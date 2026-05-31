@@ -35,7 +35,7 @@ const SectionRelevance = () => {
       accent: "text-primary"
     },
     {
-      name: "Founding Partners",
+      name: "Strategic Partners",
       meta: "Annual · Category Visibility",
       cap: "Four categories. Visible all year.",
       color: "border-border",
