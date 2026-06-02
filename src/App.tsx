@@ -17,6 +17,7 @@ import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 import TheThreeHundred from "./pages/TheThreeHundred";
+import TheThreeHundredStatic from "./pages/TheThreeHundredStatic";
 
 const queryClient = new QueryClient({
   defaultOptions: {
