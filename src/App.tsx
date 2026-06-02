@@ -92,6 +92,7 @@ const App = () => {
             <Route path="/cookie-policy" element={<CookiePolicy />} />
             <Route path="/who-is-inside" element={<Governance />} />
             <Route path="/the-300" element={<TheThreeHundred />} />
+            <Route path="/the300" element={<TheThreeHundredStatic />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieBanner />
