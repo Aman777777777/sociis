@@ -65,7 +65,15 @@ const Header = () => {
 
           <div className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => (
-              link.isPage ? (
+              link.isExternal ? (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="font-sans text-xs tracking-[0.18em] uppercase whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.name}
+                </a>
+              ) : link.isPage ? (
                 <Link
                   key={link.name}
                   to={link.href}
