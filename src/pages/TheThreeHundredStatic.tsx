@@ -1,9 +1,10 @@
-const TheThreeHundredStatic = () => (
-  <iframe
-    src="/the300.html"
-    title="The 300"
-    style={{ position: "fixed", inset: 0, width: "100%", height: "100%", border: "none" }}
-  />
-);
+import { useEffect } from "react";
+
+const TheThreeHundredStatic = () => {
+  useEffect(() => {
+    window.location.replace("/the300.html");
+  }, []);
+  return null;
+};
 
 export default TheThreeHundredStatic;
