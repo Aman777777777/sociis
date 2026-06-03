@@ -3019,8 +3019,9 @@
         muted
         loop
         playsinline
+        webkit-playsinline
         controls
-        preload="metadata"
+        preload="auto"
         poster="/iris-van-der-veken.jpg"
         style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; z-index:3;"
       ></video>
@@ -3296,6 +3297,42 @@
 </div>
 
 <script>
+  // Fix mobile video autoplay and interaction playback
+  (function() {
+    const video = document.querySelector('.ltbl-frame video');
+    if (video) {
+      // Force critical attributes programmatically for iOS/Android compatibility
+      video.setAttribute('playsinline', '');
+      video.setAttribute('webkit-playsinline', '');
+      video.muted = true;
+      
+      // Explicitly trigger play when DOM is ready
+      const playVideo = () => {
+        video.play().catch(err => {
+          console.log("Autoplay blocked, waiting for interaction:", err);
+        });
+      };
+      
+      if (document.readyState === 'complete') {
+        playVideo();
+      } else {
+        window.addEventListener('load', playVideo);
+      }
+
+      // Fallback: User interaction (click/touch) plays the video
+      const frame = video.closest('.ltbl-frame');
+      if (frame) {
+        const handleInteraction = () => {
+          if (video.paused) {
+            video.play().catch(err => console.log("Interaction play failed:", err));
+          }
+        };
+        frame.addEventListener('click', handleInteraction);
+        frame.addEventListener('touchstart', handleInteraction, { passive: true });
+      }
+    }
+  })();
+
   // Scroll-triggered reveals
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
