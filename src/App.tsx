@@ -18,6 +18,7 @@ import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 import TheThreeHundred from "./pages/TheThreeHundred";
 import TheThreeHundredStatic from "./pages/TheThreeHundredStatic";
+import Maintenance from "./pages/Maintenance";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -70,6 +71,20 @@ const App = () => {
       window.removeEventListener("error", handleError);
     };
   }, []);
+
+  const isMaintenanceMode = true;
+
+  if (isMaintenanceMode) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <Maintenance />
+        </TooltipProvider>
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
