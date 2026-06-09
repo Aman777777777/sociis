@@ -22,6 +22,7 @@ const Header = () => {
     { name: "Impact", href: "/#impact" },
     { name: "Culture", href: "/#culture" },
     { name: "Calendar", href: "/calendar", isPage: true },
+    { name: "The 300", href: "/the300.html", isExternal: true },
     { name: "Access", href: "/#access" },
     { name: "Governance", href: "/governance", isPage: true },
   ];
@@ -72,6 +73,14 @@ const Header = () => {
                 >
                   {link.name}
                 </Link>
+              ) : link.isExternal ? (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="font-sans text-xs tracking-[0.18em] uppercase whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.name}
+                </a>
               ) : (
                 <a
                   key={link.name}
@@ -120,6 +129,15 @@ const Header = () => {
                   >
                     {link.name}
                   </Link>
+                ) : link.isExternal ? (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="font-sans text-sm tracking-[0.18em] uppercase text-foreground hover:text-accent transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </a>
                 ) : (
                   <a
                     key={link.name}
