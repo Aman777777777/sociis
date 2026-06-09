@@ -22,7 +22,6 @@ const Header = () => {
     { name: "Impact", href: "/#impact" },
     { name: "Culture", href: "/#culture" },
     { name: "Calendar", href: "/calendar", isPage: true },
-    { name: "The 300", href: "/the300", isExternal: true },
     { name: "Access", href: "/#access" },
     { name: "Governance", href: "/governance", isPage: true },
   ];
@@ -64,16 +63,8 @@ const Header = () => {
           </Link>
 
           <div className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2">
-            {navLinks.map((link) => (
-              link.isExternal ? (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="font-sans text-xs tracking-[0.18em] uppercase whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {link.name}
-                </a>
-              ) : link.isPage ? (
+          {navLinks.map((link) => (
+              link.isPage ? (
                 <Link
                   key={link.name}
                   to={link.href}
@@ -120,16 +111,7 @@ const Header = () => {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background py-8 px-6 animate-fade-in border-t border-border shadow-lg">
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
-                link.isExternal ? (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="font-sans text-sm tracking-[0.18em] uppercase text-foreground hover:text-accent transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                ) : link.isPage ? (
+                link.isPage ? (
                   <Link
                     key={link.name}
                     to={link.href}

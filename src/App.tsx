@@ -16,8 +16,6 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
-import TheThreeHundred from "./pages/TheThreeHundred";
-import TheThreeHundredStatic from "./pages/TheThreeHundredStatic";
 import Maintenance from "./pages/Maintenance";
 
 const queryClient = new QueryClient({
@@ -106,8 +104,6 @@ const App = () => {
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
             <Route path="/who-is-inside" element={<Governance />} />
-            <Route path="/the-300" element={<TheThreeHundred />} />
-            <Route path="/the300" element={<TheThreeHundredStatic />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieBanner />
