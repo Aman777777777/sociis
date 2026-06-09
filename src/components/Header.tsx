@@ -129,6 +129,15 @@ const Header = () => {
                   >
                     {link.name}
                   </Link>
+                ) : link.isExternal ? (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="font-sans text-sm tracking-[0.18em] uppercase text-foreground hover:text-accent transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </a>
                 ) : (
                   <a
                     key={link.name}
