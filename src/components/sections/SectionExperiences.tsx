@@ -19,7 +19,8 @@ const SectionExperiences = memo(() => {
       name: "The 64",
       subtitle: "Founding Gathering",
       description: "An intentionally limited environment where institutional conduct and culture converge.",
-      image: experienceGala,
+      image: the64Hero.url,
+      naturalImage: true,
       deckUrl: "/the-64-deck.pptx",
     },
     {
