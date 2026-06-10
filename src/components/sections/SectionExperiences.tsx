@@ -2,6 +2,7 @@ import { memo } from "react";
 import experienceDinner from "@/assets/experience-dinner.jpg";
 import experienceGala from "@/assets/experience-gala.jpg";
 import experienceFestival from "@/assets/experience-festival.jpg";
+import the64Hero from "@/assets/the-64-hero.png.asset.json";
 import { useMobilePerformance } from "@/hooks/use-mobile-performance";
 
 const SectionExperiences = memo(() => {
@@ -18,7 +19,8 @@ const SectionExperiences = memo(() => {
       name: "The 64",
       subtitle: "Founding Gathering",
       description: "An intentionally limited environment where institutional conduct and culture converge.",
-      image: experienceGala,
+      image: the64Hero.url,
+      naturalImage: true,
       deckUrl: "/the-64-deck.pptx",
     },
     {
@@ -71,9 +73,9 @@ const SectionExperiences = memo(() => {
                       alt={exp.name}
                       loading="lazy"
                       decoding="async"
-                      className={`w-full aspect-[4/3] object-cover grayscale rounded-2xl ${shouldReduceAnimations
+                      className={`w-full aspect-[4/3] object-cover rounded-2xl ${exp.naturalImage ? '' : 'grayscale'} ${shouldReduceAnimations
                         ? ''
-                        : 'hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105'
+                        : `${exp.naturalImage ? '' : 'hover:grayscale-0'} transition-all duration-700 ease-out group-hover:scale-105`
                         }`}
                     />
                     {!shouldReduceAnimations && (
