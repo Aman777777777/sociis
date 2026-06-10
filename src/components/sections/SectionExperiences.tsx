@@ -2,6 +2,7 @@ import { memo } from "react";
 import experienceDinner from "@/assets/experience-dinner.jpg";
 import experienceGala from "@/assets/experience-gala.jpg";
 import experienceFestival from "@/assets/experience-festival.jpg";
+import the64Hero from "@/assets/the-64-hero.png.asset.json";
 import { useMobilePerformance } from "@/hooks/use-mobile-performance";
 
 const SectionExperiences = memo(() => {
