@@ -245,44 +245,6 @@
            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0"></video>
   </div>
 
-  <script>
-  /* CHANGE 3 (FIXED): Play button opens lightbox with Drive iframe.
-     src is set on click (not on load) so autoplay is allowed by the browser. */
-  (function(){
-    var DRIVE_URL = 'https://drive.google.com/file/d/1egvtLQ8xeSyYnG7X09ImuVtgKzZ4X6Ea/preview';
-    var lightbox  = document.getElementById('videoLightbox');
-    var frame     = document.getElementById('videoFrame');
-    var playBtn   = document.getElementById('playBtn');
-    var closeBtn  = document.getElementById('videoClose');
-    var container = document.getElementById('videoContainer');
-
-    function openVideo(e) {
-      if (e) e.stopPropagation();
-      frame.src = DRIVE_URL;           // Drive preview — starts playing automatically
-      lightbox.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      // Hide thumbnail and play button once video opens
-      var thumb = document.getElementById('videoThumb');
-      var play  = document.getElementById('playBtn');
-      if (thumb) thumb.style.display = 'none';
-      if (play)  play.style.display  = 'none';
-    }
-
-    function closeVideo() {
-      frame.src = '';                  // Stop playback immediately
-      lightbox.style.display = 'none';
-      document.body.style.overflow = '';
-    }
-
-    playBtn.addEventListener('click', openVideo);
-    container.addEventListener('click', openVideo);
-    closeBtn.addEventListener('click', closeVideo);
-    // Close on backdrop click
-    lightbox.addEventListener('click', function(e){ if(e.target === lightbox) closeVideo(); });
-    // Close on Escape key
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeVideo(); });
-  })();
-  </script>
 </section>
 
 <!-- ============ THE GALA LUNCH (ANCHOR) ============ -->
