@@ -7,6 +7,8 @@
 /site.html    /site.html    200
 /the300    /the300.html    200
 /the300.html    /the300.html    200
+/the64    /the64.html    200
+/the64.html    /the64.html    200
 
 /governance.html    /governance.html    200
 /team/*    /team/:splat    200
