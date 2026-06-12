@@ -18,7 +18,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+  const navLinks: { name: string; href: string; isPage?: boolean; isExternal?: boolean }[] = [
     { name: "Impact", href: "/#impact" },
     { name: "Culture", href: "/#culture" },
     { name: "Calendar", href: "/calendar", isPage: true },
