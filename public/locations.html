@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Locations — SociisGroup</title>
+<meta name="description" content="SociisGroup global map. Home in Belgium, a network of houses on four continents, each screened by our Venue and Place Standard." />
+<style>
+  body{margin:0;background:#F4F0E7;color:#1D1913;font-family:'Inter',system-ui,-apple-system,sans-serif;}
+  .sg-wrap{max-width:1120px;margin:0 auto;padding:120px 24px 80px;}
+  .sg-back{display:inline-block;margin-bottom:24px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#574E42;text-decoration:none;}
+  .sg-back:hover{color:#1D1913;}
+</style>
+</head>
+<body>
+<div class="sg-wrap">
+  <a class="sg-back" href="/">← Back</a>
+
+<div id="sg-events-map">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&display=swap');
+    #sg-events-map{--paper:#F4F0E7;--ink:#1D1913;--soft:#574E42;--muted:#8A8073;--line:#E4DCCD;--gold:#9C7A2E;
+      font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);max-width:1120px;margin:0 auto;padding:6px 0 0;}
+    #sg-events-map *{box-sizing:border-box;}
+    #sg-events-map .sg-cap{font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
+    #sg-events-map .sg-h{font-family:'Lora',Georgia,serif;font-weight:600;font-size:30px;color:var(--ink);margin:6px 0 8px;line-height:1.1;}
+    #sg-events-map .sg-lede{font-size:17px;color:var(--soft);max-width:66ch;line-height:1.55;margin:0;}
+    #sg-events-map .sg-legend{display:flex;flex-wrap:wrap;gap:16px;margin:16px 0 10px;}
+    #sg-events-map .sg-lg{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+    #sg-events-map .sg-dt{width:13px;height:13px;border-radius:50%;display:inline-block;border:1px solid #3a2f12;}
+    #sg-events-map .sg-home{background:var(--gold);box-shadow:0 0 0 3px rgba(156,122,46,.25);}
+    #sg-events-map .sg-host{background:var(--gold);}
+    #sg-events-map .sg-engage{background:#fff;border:2px solid #9a9a9a;}
+    #sg-events-map #sg-map{height:600px;border:1px solid var(--line);border-radius:12px;background:#dfe9ee;}
+    #sg-events-map .sg-foot{font-size:10.5px;font-weight:500;letter-spacing:.05em;color:var(--muted);text-transform:uppercase;margin-top:12px;}
+    @media(max-width:640px){#sg-events-map #sg-map{height:440px;}#sg-events-map .sg-h{font-size:24px;}}
+  </style>
+
+  <div class="sg-cap">Where the institution gathers</div>
+  <h2 class="sg-h">The global map</h2>
+  <p class="sg-lede">Home in Belgium. A network of houses on four continents, each screened by our Venue &amp; Place Standard, one house per city. We engage the world, and host where our people are safe.</p>
+
+  <div class="sg-legend">
+    <span class="sg-lg"><span class="sg-dt sg-home"></span>Home</span>
+    <span class="sg-lg"><span class="sg-dt sg-host"></span>Host</span>
+    <span class="sg-lg"><span class="sg-dt sg-engage"></span>Engage</span>
+  </div>
+
+  <div id="sg-map"></div>
+  <div class="sg-foot">A selection of houses screened by our Standard. The location of each gathering is confirmed before it is announced.</div>
+</div>
+
+<script>
+(function(){
+  var places=[
+   {nm:"Corinthia Grand Astoria",city:"Brussels",t:"home",st:"Home · The 64",lat:50.8511628,lng:4.3650924},
+   {nm:"Tomorrowland grounds",city:"Boom",t:"home",st:"Home · The 300",lat:51.0879335,lng:4.3815363},
+   {nm:"Beau-Rivage",city:"Geneva",t:"host",st:"Host · independent since 1865",lat:46.2090193,lng:6.1496532},
+   {nm:"The Lanesborough",city:"London",t:"host",st:"Host · Oetker family",lat:51.5026616,lng:-0.1527196},
+   {nm:"Le Bristol",city:"Paris",t:"host",st:"Host · Oetker family",lat:48.8716864,lng:2.3147996},
+   {nm:"Hôtel de Paris",city:"Monaco",t:"host",st:"Host · Monte-Carlo SBM",lat:43.7390048,lng:7.4274645},
+   {nm:"Hôtel du Cap-Eden-Roc",city:"Antibes",t:"host",st:"Host · Oetker family",lat:43.5483462,lng:7.1216027},
+   {nm:"Brenners Park-Hotel",city:"Baden-Baden",t:"host",st:"Host · Oetker family",lat:48.7560282,lng:8.2400338},
+   {nm:"Orient Express La Minerva",city:"Rome",t:"host",st:"Host · Accor + LVMH",lat:41.8977272,lng:12.4775802},
+   {nm:"Hotel Cipriani",city:"Venice",t:"host",st:"Host · Belmond / LVMH",lat:45.4264169,lng:12.3412924},
+   {nm:"The Carlyle",city:"New York",t:"host",st:"Host · Rosewood",lat:40.774416,lng:-73.9631559},
+   {nm:"Mount Nelson",city:"Cape Town",t:"host",st:"Host · Belmond / LVMH",lat:-33.9321081,lng:18.4112568},
+   {nm:"Capella",city:"Singapore",t:"host",st:"Host · Kwee family",lat:1.2497222,lng:103.8241667},
+   {nm:"Palace Hotel",city:"Tokyo",t:"host",st:"Host · diligence pending",lat:35.6845024,lng:139.7612295},
+   {nm:"The Taj Mahal Palace",city:"Mumbai",t:"host",st:"Host · Tata",lat:18.9216631,lng:72.8332028},
+   {nm:"Capella",city:"Sydney",t:"host",st:"Host · Kwee family",lat:-33.8638571,lng:151.2104059},
+   {nm:"Shanghai",city:"China",t:"engage",st:"Engage · no flagship Room",lat:31.2304,lng:121.4737},
+   {nm:"Hong Kong",city:"China",t:"engage",st:"Engage · no flagship Room",lat:22.3193,lng:114.1694},
+   {nm:"Abu Dhabi",city:"UAE",t:"engage",st:"Engage · no flagship Room",lat:24.4539,lng:54.3773},
+   {nm:"Doha",city:"Qatar",t:"engage",st:"Engage · no flagship Room",lat:25.2854,lng:51.531},
+   {nm:"Riyadh",city:"Saudi Arabia",t:"engage",st:"Engage · highest diligence",lat:24.7136,lng:46.6753},
+   {nm:"Dubai",city:"UAE",t:"engage",st:"Engage · clean operator only",lat:25.2048,lng:55.2708}
+  ];
+  function dot(t){
+    if(t==='engage') return {path:google.maps.SymbolPath.CIRCLE,scale:6,fillColor:'#ffffff',fillOpacity:1,strokeColor:'#8a8a8a',strokeWeight:2};
+    return {path:google.maps.SymbolPath.CIRCLE,scale:(t==='home'?9:7),fillColor:'#9C7A2E',fillOpacity:1,strokeColor:'#3a2f12',strokeWeight:1};
+  }
+  window.initSGMap=function(){
+    var map=new google.maps.Map(document.getElementById('sg-map'),{
+      center:{lat:28,lng:14}, zoom:2, mapTypeControl:false, streetViewControl:false,
+      fullscreenControl:false, gestureHandling:'cooperative', minZoom:2
+    });
+    var iw=new google.maps.InfoWindow();
+    places.forEach(function(p){
+      var m=new google.maps.Marker({position:{lat:p.lat,lng:p.lng},map:map,icon:dot(p.t),title:p.city+' — '+p.nm});
+      m.addListener('click',function(){
+        iw.setContent('<div style="width:226px;font-family:Inter,system-ui,sans-serif;">'+
+          '<div style="padding:9px 4px 2px;">'+
+          '<div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9C7A2E;">'+p.city+'</div>'+
+          '<div style="font-family:Lora,serif;font-size:17px;color:#1D1913;margin:2px 0 3px;">'+p.nm+'</div>'+
+          '<div style="font-size:11px;font-weight:500;letter-spacing:.03em;text-transform:uppercase;color:#8A8073;">'+p.st+'</div>'+
+          '</div></div>');
+        iw.open(map,m);
+      });
+    });
+  };
+})();
+</script>
+<!-- Replace YOUR_GOOGLE_MAPS_API_KEY with the production Google Maps JavaScript API key (restrict to sociisgroup.com in Google Cloud console). -->
+<script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initSGMap"></script>
+
+</div>
+</body>
+</html>
