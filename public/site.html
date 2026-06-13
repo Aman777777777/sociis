@@ -3317,18 +3317,6 @@
       } else {
         window.addEventListener('load', playVideo);
       }
-
-      // Fallback: User interaction (click/touch) plays the video
-      const frame = video.closest('.ltbl-frame');
-      if (frame) {
-        const handleInteraction = () => {
-          if (video.paused) {
-            video.play().catch(err => console.log("Interaction play failed:", err));
-          }
-        };
-        frame.addEventListener('click', handleInteraction);
-        frame.addEventListener('touchstart', handleInteraction, { passive: true });
-      }
     }
   })();
 
