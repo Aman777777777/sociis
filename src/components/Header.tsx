@@ -21,7 +21,6 @@ const Header = () => {
   const navLinks: { name: string; href: string; isPage?: boolean; isExternal?: boolean }[] = [
     { name: "Impact", href: "/#impact" },
     { name: "Culture", href: "/#culture" },
-    { name: "Calendar", href: "/calendar", isPage: true },
     { name: "Events", href: "/events", isPage: true },
     { name: "Locations", href: "/locations.html", isExternal: true },
     { name: "Access", href: "/#access" },

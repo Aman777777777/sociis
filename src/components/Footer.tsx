@@ -28,8 +28,6 @@ const Footer = () => {
                   { label: "Impact", href: "/#impact", isPage: false },
                   { label: "Culture", href: "/#culture", isPage: false },
                   { label: "Governance", href: "/governance", isPage: true },
-                  { label: "Calendar", href: "/calendar", isPage: true },
-                  
                   { label: "Access", href: "/#access", isPage: false },
                 ].map(({ label, href, isPage }) => (
                   <li key={label}>
