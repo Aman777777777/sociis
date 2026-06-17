@@ -9,12 +9,14 @@ const Events = () => {
     {
       title: "The 64",
       subtitle: "Founding Gathering",
+      date: "22 & 23 July 2026",
       href: "/the64.html",
       image: the64Hero.url,
     },
     {
       title: "The 300",
       subtitle: "Shape Tomorrow Today™",
+      date: "23 July 2026",
       href: "/the300.html",
       image: the300Hero.url,
     },
@@ -50,6 +52,9 @@ const Events = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 transition-opacity duration-500 group-hover:from-black/90" />
                   <div className="relative h-full flex flex-col justify-end p-8 lg:p-10 text-white">
+                    <p className="font-sans text-[10px] tracking-[0.28em] uppercase opacity-60 mb-2">
+                      {event.date}
+                    </p>
                     <p className="font-sans text-xs tracking-[0.28em] uppercase opacity-80 mb-3">
                       {event.subtitle}
                     </p>
