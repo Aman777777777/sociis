@@ -9,7 +9,7 @@ const Events = () => {
     {
       title: "The 64",
       subtitle: "Founding Gathering",
-      date: "22 & 23 July 2026",
+      date: "22 July 2026",
       href: "/the64.html",
       image: the64Hero.url,
     },
