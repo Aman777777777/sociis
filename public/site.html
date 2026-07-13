@@ -3305,6 +3305,22 @@
       video.setAttribute('webkit-playsinline', '');
       video.muted = true;
       
+      // Remove thumbnail/poster in mobile view
+      const updatePoster = () => {
+        if (window.innerWidth <= 768) {
+          if (video.hasAttribute('poster')) {
+            video.removeAttribute('poster');
+          }
+        } else {
+          if (!video.hasAttribute('poster')) {
+            video.setAttribute('poster', 'iris-van-der-veken.jpg');
+          }
+        }
+      };
+
+      window.addEventListener('resize', updatePoster);
+      updatePoster();
+      
       // Explicitly trigger play when DOM is ready
       const playVideo = () => {
         video.play().catch(err => {
