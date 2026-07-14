@@ -1661,7 +1661,9 @@
 
   /* Switch nav to burger before centered links collide with right-pinned CTA */
   @media (max-width: 900px) {
-    .nav-burger { display: flex; }
+    .nav-logo { order: 1; }
+    .nav-actions { order: 2; margin-left: auto !important; }
+    .nav-burger { display: flex; order: 3; margin-left: 0; }
     .nav-cta-wrap { display: none; }
     .nav-cta-mobile { display: inline-block !important; }
     .nav-links {
