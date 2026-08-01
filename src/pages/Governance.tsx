@@ -28,6 +28,7 @@ import jan from "@/assets/team/jan.jpg";
 import richard from "@/assets/team/richard.jpg";
 import baldwin from "@/assets/team/baldwin.jpeg";
 import chrisBenardis from "@/assets/team/chris-benardis.jpg";
+import olivier from "@/assets/team/olivier.png";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
@@ -157,6 +158,13 @@ const teamMembers: TeamMember[] = [
     image: jan,
     category: "new_contributor",
     bio: "Prof. Jan De Visch is an organizational psychologist and Executive Professor at Flanders Business School, specializing in Human Capital Management. With over thirty years of experience managing organizational development, he focuses on collaborative intelligence and cognitive development, employing frameworks like the Constructive Developmental Framework to guide leaders through complex change.",
+  },
+  {
+    name: "Olivier Begerem",
+    role: "AI & IT Strategy",
+    image: olivier,
+    category: "new_contributor",
+    bio: "Olivier Begerem is a technology entrepreneur and co-founder of Sensie, an AI-powered agricultural technology platform. He specializes in bridging advanced sensors, IoT architectures, and data intelligence to build sustainable technology infrastructure. With extensive experience in global expansion and scaling technology startups, he advises the institution on AI applications, IT strategy, and digital systems."
   },
 
   // The Council.
