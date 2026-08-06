@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "sociis-luxury-redesign",
+      "version": "0.1.0",
+      "title": "Sociis Luxury Redesign"
+    },
+    "tools": [
+      {
+        "name": "get_section",
+        "title": "Get section",
+        "description": "Read the published institutional text for one section of the SociisGroup site, or list every available section.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Section slug, for example overview, impact, culture, lime-code, governance, house, access, places. Omit to list all sections."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_governance",
+        "title": "List governance",
+        "description": "List the people in SociisGroup's published governance structure: the Executive Leadership Team, contributors, and the advisory council.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "group": {
+              "type": "string",
+              "enum": [
+                "leadership",
+                "contributors",
+                "council",
+                "all"
+              ],
+              "default": "all",
+              "description": "Which part of the governance structure to return."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_places",
+        "title": "List places",
+        "description": "List the cities and houses in SociisGroup's published place map, with stewardship, wave and status. Houses named are screened candidates.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "home",
+                "confirmed",
+                "candidate",
+                "all"
+              ],
+              "default": "all",
+              "description": "Filter by place status."
+            },
+            "query": {
+              "type": "string",
+              "description": "Optional case-insensitive match on city, country or house name."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_experiences",
+        "title": "List experiences",
+        "description": "List SociisGroup's published gatherings, The 64 and The 300, with their place, page and deck links.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
