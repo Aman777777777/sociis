@@ -2496,8 +2496,11 @@
   @media (max-width: 768px) { .brandfilm-sound { bottom: 14px; right: 14px; padding: 10px 14px; } }
 </style>
 <section class="brandfilm" id="brandfilm">
-  <video id="brandfilmVideo" playsinline webkit-playsinline autoplay loop preload="auto">
-    <source src="/__l5e/assets-v1/8516bf97-2a2b-4958-bff5-edc34f53415a/sociis-brandfilm.mp4" type="video/mp4">
+  <video id="brandfilmVideo" playsinline webkit-playsinline autoplay loop preload="auto" poster="iris-van-der-veken.jpg">
+    <!-- Primary: real brand film. Drop your file at public/sociis-brandfilm.mp4 to use it. -->
+    <source src="/sociis-brandfilm.mp4" type="video/mp4">
+    <!-- Fallback so the hero always plays until a real brand film is added. -->
+    <source src="let-there-be-light.mp4" type="video/mp4">
   </video>
   <button class="brandfilm-sound" id="brandfilmSound" hidden>Tap for sound</button>
 </section>
