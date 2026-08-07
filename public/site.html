@@ -3465,14 +3465,21 @@
 
   // Nav scroll effect
   const mainNav = document.getElementById('mainNav');
+  const brandfilm = document.getElementById('brandfilm');
   function updateNav() {
     if (window.scrollY > 50) {
       mainNav.classList.add('scrolled');
     } else {
       mainNav.classList.remove('scrolled');
     }
+    if (brandfilm && window.scrollY < brandfilm.offsetHeight - 80) {
+      mainNav.classList.add('over-dark');
+    } else {
+      mainNav.classList.remove('over-dark');
+    }
   }
   window.addEventListener('scroll', updateNav, { passive: true });
+  window.addEventListener('resize', updateNav);
   updateNav();
 
   // Cookie banner: essential-only, persists choice in localStorage
