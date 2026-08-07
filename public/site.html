@@ -2455,6 +2455,76 @@
   </div>
 </nav>
 
+<!-- ==================== BRAND FILM ==================== -->
+<style>
+  .brandfilm { position: relative; width: 100%; background: #000; line-height: 0; }
+  .brandfilm video { width: 100%; height: auto; display: block; }
+  .brandfilm-sound {
+    position: absolute; bottom: 24px; right: 24px; z-index: 3;
+    font-family: inherit; font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    padding: 12px 20px; border: 1px solid rgba(255,255,255,.5); background: rgba(0,0,0,.35);
+    color: #fff; cursor: pointer; border-radius: 0; backdrop-filter: blur(6px);
+    transition: color .25s ease, border-color .25s ease;
+  }
+  .brandfilm-sound:hover { color: #C9A34E; border-color: #C9A34E; }
+  .brandfilm-sound[hidden] { display: none; }
+  @media (max-width: 768px) { .brandfilm-sound { bottom: 14px; right: 14px; padding: 10px 14px; } }
+</style>
+<section class="brandfilm" id="brandfilm">
+  <video id="brandfilmVideo" playsinline webkit-playsinline autoplay loop preload="auto">
+    <source src="/__l5e/assets-v1/8516bf97-2a2b-4958-bff5-edc34f53415a/sociis-brandfilm.mp4" type="video/mp4">
+  </video>
+  <button class="brandfilm-sound" id="brandfilmSound" hidden>Tap for sound</button>
+</section>
+<script>
+(function () {
+  var v = document.getElementById('brandfilmVideo');
+  var btn = document.getElementById('brandfilmSound');
+  if (!v) return;
+
+  function showBtn(label) { btn.textContent = label; btn.hidden = false; }
+
+  function tryUnmuted() {
+    v.muted = false;
+    v.volume = 1;
+    var p = v.play();
+    if (p && p.catch) {
+      p.catch(function () {
+        // Browser blocked audio: fall back to muted autoplay + manual unmute
+        v.muted = true;
+        v.play().catch(function () {});
+        showBtn('Tap for sound');
+      });
+    }
+  }
+
+  tryUnmuted();
+  v.addEventListener('loadedmetadata', function () { if (v.paused) tryUnmuted(); });
+  v.addEventListener('canplay', function () { if (v.paused) tryUnmuted(); });
+
+  btn.addEventListener('click', function () {
+    v.muted = !v.muted;
+    if (!v.muted) { v.volume = 1; }
+    v.play().catch(function () {});
+    btn.hidden = !v.muted ? true : false;
+    if (v.muted) showBtn('Tap for sound');
+  });
+
+  // First user gesture anywhere enables sound if it was blocked
+  function onFirstGesture() {
+    if (v.muted) {
+      v.muted = false;
+      v.volume = 1;
+      v.play().then(function () { btn.hidden = true; }).catch(function () { v.muted = true; });
+    }
+    document.removeEventListener('click', onFirstGesture);
+    document.removeEventListener('touchstart', onFirstGesture);
+  }
+  document.addEventListener('click', onFirstGesture);
+  document.addEventListener('touchstart', onFirstGesture);
+})();
+</script>
+
 <!-- ==================== HERO ==================== -->
 <section class="hero">
   <div class="hero-inner">
