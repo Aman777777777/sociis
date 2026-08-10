@@ -2476,7 +2476,7 @@
     .brandfilm { height: 100svh; min-height: 100svh; }
   }
   /* Scale the 16:9 player to cover the viewport so no black bars remain */
-  .brandfilm iframe {
+  .brandfilm video {
     border: none;
     position: absolute;
     top: 50%;
@@ -2488,6 +2488,7 @@
     min-height: 100vh;
     display: block;
     pointer-events: none;
+    object-fit: cover;
   }
   @supports (height: 100svh) {
     .brandfilm iframe { min-width: 177.78svh; min-height: 100svh; }
@@ -2503,7 +2504,7 @@
   .brandfilm-toggle svg { width: 16px; height: 16px; fill: currentColor; }
   @media (max-width: 768px) {
     .brandfilm { height: 100dvh; min-height: 100dvh; }
-    .brandfilm iframe {
+    .brandfilm video {
       width: 177.78dvh;
       height: 100dvh;
       min-width: 100vw;
@@ -2514,54 +2515,57 @@
   }
 </style>
 <section class="brandfilm" id="brandfilm">
-  <iframe
-    id="brandfilmFrame"
-    src="https://iframe.videodelivery.net/0641f8dd995ed6ca347f069193040767?autoplay=true&muted=true&loop=true&controls=false&playsinline=true&preload=auto&poster=https%3A%2F%2Fcustomer-odk7l2yhch7daj9v.cloudflarestream.com%2F0641f8dd995ed6ca347f069193040767%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
-    loading="eager"
-    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-    allowfullscreen="true"
-    title="SociisGroup brand film"
-  ></iframe>
+  <video
+    id="brandfilmVideo"
+    muted
+    autoplay
+    loop
+    playsinline
+    webkit-playsinline
+    preload="auto"
+    poster="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/thumbnails/thumbnail.jpg?time=&height=600"
+    aria-label="SociisGroup brand film"
+  ></video>
   <button class="brandfilm-toggle" id="brandfilmToggle" aria-label="Pause film">
     <svg id="brandfilmIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
   </button>
 </section>
-<script src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
 <script>
 (function () {
-  var frame = document.getElementById('brandfilmFrame');
+  var video = document.getElementById('brandfilmVideo');
   var btn = document.getElementById('brandfilmToggle');
   var icon = document.getElementById('brandfilmIcon');
+  var source = 'https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/manifest/video.m3u8';
   var PAUSE = 'M6 5h4v14H6zM14 5h4v14h-4z';
   var PLAY = 'M8 5v14l11-7z';
   function setIcon(playing) {
     icon.innerHTML = '<path d="' + (playing ? PAUSE : PLAY) + '"/>';
     btn.setAttribute('aria-label', playing ? 'Pause film' : 'Play film');
   }
-  if (!frame || !btn) return;
-  function initialise(attempt) {
-    if (typeof Stream !== 'function') {
-      if (attempt < 20) window.setTimeout(function () { initialise(attempt + 1); }, 150);
-      return;
-    }
-    var player = Stream(frame);
-    function playFilm() {
-      var result = player.play();
-      if (result && typeof result.catch === 'function') result.catch(function () { setIcon(false); });
-    }
-    player.addEventListener('play', function () { setIcon(true); });
-    player.addEventListener('playing', function () { setIcon(true); });
-    player.addEventListener('pause', function () { setIcon(false); });
-    player.addEventListener('loadedmetadata', playFilm);
-    btn.addEventListener('click', function () {
-      if (player.paused) playFilm(); else player.pause();
-    });
-    document.addEventListener('visibilitychange', function () {
-      if (!document.hidden && player.paused) playFilm();
-    });
-    playFilm();
+  if (!video || !btn) return;
+  function playFilm() {
+    var result = video.play();
+    if (result && typeof result.catch === 'function') result.catch(function () { setIcon(false); });
   }
-  initialise(0);
+  if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = source;
+  } else if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+    var hls = new Hls({ startLevel: -1 });
+    hls.loadSource(source);
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, playFilm);
+  }
+  video.addEventListener('play', function () { setIcon(true); });
+  video.addEventListener('playing', function () { setIcon(true); });
+  video.addEventListener('pause', function () { setIcon(false); });
+  video.addEventListener('canplay', playFilm, { once: true });
+  btn.addEventListener('click', function () {
+    if (video.paused) playFilm(); else video.pause();
+  });
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden && video.paused) playFilm();
+  });
 })();
 </script>
 
