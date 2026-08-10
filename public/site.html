@@ -2505,13 +2505,37 @@
 </style>
 <section class="brandfilm" id="brandfilm">
   <iframe
-    src="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/iframe?autoplay=true&poster=https%3A%2F%2Fcustomer-odk7l2yhch7daj9v.cloudflarestream.com%2F0641f8dd995ed6ca347f069193040767%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
-    loading="lazy"
+    id="brandfilmFrame"
+    src="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/iframe?autoplay=true&muted=true&loop=true&controls=false&poster=https%3A%2F%2Fcustomer-odk7l2yhch7daj9v.cloudflarestream.com%2F0641f8dd995ed6ca347f069193040767%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
     allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
     allowfullscreen="true"
     title="SociisGroup brand film"
   ></iframe>
+  <button class="brandfilm-toggle" id="brandfilmToggle" aria-label="Pause film">
+    <svg id="brandfilmIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+  </button>
 </section>
+<script src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
+<script>
+(function () {
+  var frame = document.getElementById('brandfilmFrame');
+  var btn = document.getElementById('brandfilmToggle');
+  var icon = document.getElementById('brandfilmIcon');
+  if (!frame || !btn || typeof Stream !== 'function') return;
+  var player = Stream(frame);
+  var PAUSE = 'M6 5h4v14H6zM14 5h4v14h-4z';
+  var PLAY = 'M8 5v14l11-7z';
+  function setIcon(playing) {
+    icon.innerHTML = '<path d="' + (playing ? PAUSE : PLAY) + '"/>';
+    btn.setAttribute('aria-label', playing ? 'Pause film' : 'Play film');
+  }
+  player.addEventListener('play', function () { setIcon(true); });
+  player.addEventListener('pause', function () { setIcon(false); });
+  btn.addEventListener('click', function () {
+    if (player.paused) { player.play(); } else { player.pause(); }
+  });
+})();
+</script>
 
 <!-- ==================== HERO ==================== -->
 <section class="hero">
