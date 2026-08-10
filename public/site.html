@@ -2475,83 +2475,24 @@
   @supports (height: 100svh) {
     .brandfilm { height: 100svh; min-height: 100svh; }
   }
-  .brandfilm video {
+  .brandfilm iframe {
+    border: none;
     position: absolute;
-    inset: 0;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
     display: block;
   }
-  .brandfilm-sound {
-    position: absolute; bottom: 24px; right: 24px; z-index: 3;
-    font-family: inherit; font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
-    padding: 12px 20px; border: 1px solid rgba(255,255,255,.5); background: rgba(0,0,0,.35);
-    color: #fff; cursor: pointer; border-radius: 0; backdrop-filter: blur(6px);
-    transition: color .25s ease, border-color .25s ease;
-  }
-  .brandfilm-sound:hover { color: #C9A34E; border-color: #C9A34E; }
-  .brandfilm-sound[hidden] { display: none; }
-  @media (max-width: 768px) { .brandfilm-sound { bottom: 14px; right: 14px; padding: 10px 14px; } }
 </style>
 <section class="brandfilm" id="brandfilm">
-  <video id="brandfilmVideo" playsinline webkit-playsinline autoplay loop preload="auto">
-    <!-- Primary: real brand film. Drop your file at public/sociis-brandfilm.mp4 to use it. -->
-    <source src="/sociis-brandfilm.mp4" type="video/mp4">
-    <!-- Fallback so the hero always plays until a real brand film is added. -->
-    <source src="let-there-be-light.mp4" type="video/mp4">
-  </video>
-  <button class="brandfilm-sound" id="brandfilmSound" hidden>Tap for sound</button>
+  <iframe
+    src="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/iframe?autoplay=true&poster=https%3A%2F%2Fcustomer-odk7l2yhch7daj9v.cloudflarestream.com%2F0641f8dd995ed6ca347f069193040767%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+    loading="lazy"
+    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+    allowfullscreen="true"
+    title="SociisGroup brand film"
+  ></iframe>
 </section>
-<script>
-(function () {
-  var v = document.getElementById('brandfilmVideo');
-  var btn = document.getElementById('brandfilmSound');
-  if (!v) return;
-
-  function showBtn(label) { btn.textContent = label; btn.hidden = false; }
-
-  function tryUnmuted() {
-    v.muted = false;
-    v.volume = 1;
-    var p = v.play();
-    if (p && p.catch) {
-      p.catch(function () {
-        // Browser blocked audio: fall back to muted autoplay + manual unmute
-        v.muted = true;
-        v.play().catch(function () {});
-        showBtn('Tap for sound');
-      });
-    }
-  }
-
-  tryUnmuted();
-  v.addEventListener('loadedmetadata', function () { if (v.paused) tryUnmuted(); });
-  v.addEventListener('canplay', function () { if (v.paused) tryUnmuted(); });
-
-  btn.addEventListener('click', function () {
-    v.muted = !v.muted;
-    if (!v.muted) { v.volume = 1; }
-    v.play().catch(function () {});
-    btn.hidden = !v.muted ? true : false;
-    if (v.muted) showBtn('Tap for sound');
-  });
-
-  // First user gesture anywhere enables sound if it was blocked
-  function onFirstGesture() {
-    if (v.muted) {
-      v.muted = false;
-      v.volume = 1;
-      v.play().then(function () { btn.hidden = true; }).catch(function () { v.muted = true; });
-    }
-    document.removeEventListener('click', onFirstGesture);
-    document.removeEventListener('touchstart', onFirstGesture);
-  }
-  document.addEventListener('click', onFirstGesture);
-  document.addEventListener('touchstart', onFirstGesture);
-})();
-</script>
 
 <!-- ==================== HERO ==================== -->
 <section class="hero">
