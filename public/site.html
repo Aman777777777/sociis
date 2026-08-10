@@ -2501,12 +2501,23 @@
   }
   .brandfilm-toggle:hover { color: #C9A34E; border-color: #C9A34E; }
   .brandfilm-toggle svg { width: 16px; height: 16px; fill: currentColor; }
-  @media (max-width: 768px) { .brandfilm-toggle { bottom: 14px; right: 14px; width: 42px; height: 42px; } }
+  @media (max-width: 768px) {
+    .brandfilm { height: 100dvh; min-height: 100dvh; }
+    .brandfilm iframe {
+      width: 177.78dvh;
+      height: 100dvh;
+      min-width: 100vw;
+      min-height: 56.25vw;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    .brandfilm-toggle { bottom: 14px; right: 14px; width: 42px; height: 42px; }
+  }
 </style>
 <section class="brandfilm" id="brandfilm">
   <iframe
     id="brandfilmFrame"
-    src="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/iframe?autoplay=true&muted=true&loop=true&controls=false&poster=https%3A%2F%2Fcustomer-odk7l2yhch7daj9v.cloudflarestream.com%2F0641f8dd995ed6ca347f069193040767%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+    src="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/iframe?autoplay=true&muted=true&loop=true&controls=false&playsinline=true&preload=auto&poster=https%3A%2F%2Fcustomer-odk7l2yhch7daj9v.cloudflarestream.com%2F0641f8dd995ed6ca347f069193040767%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+    loading="eager"
     allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
     allowfullscreen="true"
     title="SociisGroup brand film"
@@ -2521,19 +2532,36 @@
   var frame = document.getElementById('brandfilmFrame');
   var btn = document.getElementById('brandfilmToggle');
   var icon = document.getElementById('brandfilmIcon');
-  if (!frame || !btn || typeof Stream !== 'function') return;
-  var player = Stream(frame);
   var PAUSE = 'M6 5h4v14H6zM14 5h4v14h-4z';
   var PLAY = 'M8 5v14l11-7z';
   function setIcon(playing) {
     icon.innerHTML = '<path d="' + (playing ? PAUSE : PLAY) + '"/>';
     btn.setAttribute('aria-label', playing ? 'Pause film' : 'Play film');
   }
-  player.addEventListener('play', function () { setIcon(true); });
-  player.addEventListener('pause', function () { setIcon(false); });
-  btn.addEventListener('click', function () {
-    if (player.paused) { player.play(); } else { player.pause(); }
-  });
+  if (!frame || !btn) return;
+  function initialise(attempt) {
+    if (typeof Stream !== 'function') {
+      if (attempt < 20) window.setTimeout(function () { initialise(attempt + 1); }, 150);
+      return;
+    }
+    var player = Stream(frame);
+    function playFilm() {
+      var result = player.play();
+      if (result && typeof result.catch === 'function') result.catch(function () { setIcon(false); });
+    }
+    player.addEventListener('play', function () { setIcon(true); });
+    player.addEventListener('playing', function () { setIcon(true); });
+    player.addEventListener('pause', function () { setIcon(false); });
+    player.addEventListener('loadedmetadata', playFilm);
+    btn.addEventListener('click', function () {
+      if (player.paused) playFilm(); else player.pause();
+    });
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && player.paused) playFilm();
+    });
+    playFilm();
+  }
+  initialise(0);
 })();
 </script>
 
