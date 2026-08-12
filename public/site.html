@@ -2497,10 +2497,21 @@
   }
   .brandfilm-toggle:hover { color: #C9A34E; border-color: #C9A34E; }
   .brandfilm-toggle svg { width: 16px; height: 16px; fill: currentColor; }
+  /* Mobile: portrait full-bleed framing, no letterboxing */
   @media (max-width: 768px) {
     .brandfilm { height: 100dvh; min-height: 100dvh; }
+    .brandfilm video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 45%;
+    }
     .brandfilm-toggle { bottom: 14px; right: 14px; width: 42px; height: 42px; }
   }
+  @media (max-width: 768px) and (orientation: portrait) {
+    .brandfilm video { object-position: 50% 42%; }
+  }
+
 
 </style>
 <section class="brandfilm" id="brandfilm">
@@ -2547,6 +2558,17 @@
   document.addEventListener('visibilitychange', function () {
     if (!document.hidden && video.paused) playFilm();
   });
+  // Autoplay hardening: mobile browsers only allow muted inline playback
+  video.muted = true;
+  video.defaultMuted = true;
+  video.setAttribute('muted', '');
+  ['touchstart', 'click', 'scroll'].forEach(function (evt) {
+    document.addEventListener(evt, function once() {
+      if (video.paused) playFilm();
+      document.removeEventListener(evt, once);
+    }, { passive: true });
+  });
+
 
   // Native HLS (Safari / iOS): fastest path, no extra JS payload
   if (video.canPlayType('application/vnd.apple.mpegurl')) {
