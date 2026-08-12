@@ -2511,52 +2511,76 @@
     loop
     playsinline
     webkit-playsinline
-    preload="auto"
-    poster="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/thumbnails/thumbnail.jpg?time=&height=600"
+    preload="metadata"
+    poster="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/thumbnails/thumbnail.jpg?time=1s&height=720"
     aria-label="SociisGroup brand film"
   ></video>
   <button class="brandfilm-toggle" id="brandfilmToggle" aria-label="Pause film">
     <svg id="brandfilmIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
   </button>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
+<link rel="preconnect" href="https://customer-odk7l2yhch7daj9v.cloudflarestream.com" crossorigin>
 <script>
 (function () {
   var video = document.getElementById('brandfilmVideo');
   var btn = document.getElementById('brandfilmToggle');
   var icon = document.getElementById('brandfilmIcon');
-  var source = 'https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/manifest/video.m3u8';
+  var base = 'https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/manifest/video.m3u8';
   var PAUSE = 'M6 5h4v14H6zM14 5h4v14h-4z';
   var PLAY = 'M8 5v14l11-7z';
+  if (!video || !btn) return;
   function setIcon(playing) {
     icon.innerHTML = '<path d="' + (playing ? PAUSE : PLAY) + '"/>';
     btn.setAttribute('aria-label', playing ? 'Pause film' : 'Play film');
   }
-  if (!video || !btn) return;
   function playFilm() {
     var result = video.play();
     if (result && typeof result.catch === 'function') result.catch(function () { setIcon(false); });
   }
-  if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = source;
-  } else if (typeof Hls !== 'undefined' && Hls.isSupported()) {
-    var hls = new Hls({ startLevel: -1 });
-    hls.loadSource(source);
-    hls.attachMedia(video);
-    hls.on(Hls.Events.MANIFEST_PARSED, playFilm);
-  }
   video.addEventListener('play', function () { setIcon(true); });
   video.addEventListener('playing', function () { setIcon(true); });
   video.addEventListener('pause', function () { setIcon(false); });
-  video.addEventListener('canplay', playFilm, { once: true });
+  video.addEventListener('loadeddata', playFilm, { once: true });
   btn.addEventListener('click', function () {
     if (video.paused) playFilm(); else video.pause();
   });
   document.addEventListener('visibilitychange', function () {
     if (!document.hidden && video.paused) playFilm();
   });
+
+  // Native HLS (Safari / iOS): fastest path, no extra JS payload
+  if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = base;
+    playFilm();
+    return;
+  }
+
+  // Elsewhere: load hls.js lazily and start at a low rendition for a fast first frame
+  var s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js';
+  s.async = true;
+  s.onload = function () {
+    if (typeof Hls === 'undefined' || !Hls.isSupported()) return;
+    var dpr = window.devicePixelRatio || 1;
+    var smallScreen = Math.min(window.innerWidth, window.innerHeight) <= 768;
+    var hls = new Hls({
+      startLevel: 0,               // start on the lightest rendition, then upshift
+      capLevelToPlayerSize: true,  // never fetch more pixels than the screen needs
+      maxBufferLength: smallScreen ? 8 : 15,
+      maxMaxBufferLength: smallScreen ? 20 : 40,
+      backBufferLength: 10,
+      abrEwmaDefaultEstimate: smallScreen ? 800000 : 2500000
+    });
+    hls.loadSource(base);
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, playFilm);
+    // keep quality sensible for high-DPR phones
+    if (smallScreen && dpr > 2) hls.autoLevelCapping = 2;
+  };
+  document.head.appendChild(s);
 })();
 </script>
+
 
 <!-- ==================== HERO ==================== -->
 <section class="hero">
