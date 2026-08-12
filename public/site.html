@@ -2475,23 +2475,18 @@
   @supports (height: 100svh) {
     .brandfilm { height: 100svh; min-height: 100svh; }
   }
-  /* Scale the 16:9 player to cover the viewport so no black bars remain */
+  /* True cover: no black bars, no vh math that over-crops on mobile */
   .brandfilm video {
     border: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 56.25vw;
-    min-width: 177.78vh;
-    min-height: 100vh;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     display: block;
     pointer-events: none;
     object-fit: cover;
-  }
-  @supports (height: 100svh) {
-    .brandfilm iframe { min-width: 177.78svh; min-height: 100svh; }
+    object-position: center center;
+    background: #000;
   }
   .brandfilm-toggle {
     position: absolute; bottom: 24px; right: 24px; z-index: 3;
@@ -2504,15 +2499,9 @@
   .brandfilm-toggle svg { width: 16px; height: 16px; fill: currentColor; }
   @media (max-width: 768px) {
     .brandfilm { height: 100dvh; min-height: 100dvh; }
-    .brandfilm video {
-      width: 177.78dvh;
-      height: 100dvh;
-      min-width: 100vw;
-      min-height: 56.25vw;
-      transform: translate3d(-50%, -50%, 0);
-    }
     .brandfilm-toggle { bottom: 14px; right: 14px; width: 42px; height: 42px; }
   }
+
 </style>
 <section class="brandfilm" id="brandfilm">
   <video
