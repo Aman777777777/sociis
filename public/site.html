@@ -2497,19 +2497,16 @@
   }
   .brandfilm-toggle:hover { color: #C9A34E; border-color: #C9A34E; }
   .brandfilm-toggle svg { width: 16px; height: 16px; fill: currentColor; }
-  /* Mobile: portrait full-bleed framing, no letterboxing */
+  /* Mobile: fill the portrait screen edge to edge, centred framing */
   @media (max-width: 768px) {
     .brandfilm { height: 100dvh; min-height: 100dvh; }
     .brandfilm video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 50% 45%;
+      object-position: 50% 50%;
     }
     .brandfilm-toggle { bottom: 14px; right: 14px; width: 42px; height: 42px; }
-  }
-  @media (max-width: 768px) and (orientation: portrait) {
-    .brandfilm video { object-position: 50% 42%; }
   }
 
 
@@ -2522,10 +2519,11 @@
     loop
     playsinline
     webkit-playsinline
-    preload="metadata"
-    poster="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/thumbnails/thumbnail.jpg?time=1s&height=720"
+    preload="auto"
+    poster="https://customer-odk7l2yhch7daj9v.cloudflarestream.com/0641f8dd995ed6ca347f069193040767/thumbnails/thumbnail.jpg?time=2s&height=1080"
     aria-label="SociisGroup brand film"
   ></video>
+
   <button class="brandfilm-toggle" id="brandfilmToggle" aria-label="Pause film">
     <svg id="brandfilmIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
   </button>
