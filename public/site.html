@@ -2559,9 +2559,14 @@
     var result = video.play();
     if (result && typeof result.catch === 'function') result.catch(function () { setIcon(false); });
   }
-  // Try to start with sound; browsers that block it fall back to muted autoplay
-  function playWithSound() {
+  // Start with sound automatically; if the browser blocks audio, keep playing
+  // muted and let the visitor unmute manually with the sound button.
+  var soundAttempted = false;
+  function tryUnmute() {
+    if (soundAttempted) return;
+    soundAttempted = true;
     video.muted = false;
+    video.defaultMuted = false;
     video.volume = 1;
     var result = video.play();
     if (result && typeof result.catch === 'function') {
@@ -2573,9 +2578,17 @@
       });
     }
     setSoundIcon();
+    // Some browsers silently re-mute or stall; verify shortly after
+    setTimeout(function () {
+      if (video.paused) { video.muted = true; setSoundIcon(); playFilm(); }
+    }, 400);
+  }
+  function playWithSound() {
+    playFilm();
+    tryUnmute();
   }
   video.addEventListener('play', function () { setIcon(true); });
-  video.addEventListener('playing', function () { setIcon(true); });
+  video.addEventListener('playing', function () { setIcon(true); tryUnmute(); });
   video.addEventListener('pause', function () { setIcon(false); });
   video.addEventListener('volumechange', setSoundIcon);
   video.addEventListener('loadeddata', playWithSound, { once: true });
@@ -2584,7 +2597,9 @@
   });
   if (soundBtn) {
     soundBtn.addEventListener('click', function () {
+      soundAttempted = true;
       video.muted = !video.muted;
+      video.defaultMuted = video.muted;
       if (!video.muted) video.volume = 1;
       setSoundIcon();
       if (video.paused) playFilm();
@@ -2594,14 +2609,14 @@
     if (!document.hidden && video.paused) playFilm();
   });
   setSoundIcon();
-  // Autoplay hardening: if sound was blocked, unmute on the first user gesture
+  // Keep playback alive on first interaction, but leave muting to the visitor
   ['touchstart', 'click', 'keydown', 'scroll'].forEach(function (evt) {
     document.addEventListener(evt, function once() {
-      if (video.muted) { video.muted = false; video.volume = 1; setSoundIcon(); }
       if (video.paused) playFilm();
       document.removeEventListener(evt, once);
     }, { passive: true });
   });
+
 
 
 
