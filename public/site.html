@@ -2662,6 +2662,20 @@
   document.head.appendChild(s);
 })();
 </script>
+<script>
+  // Brand film plays automatically with sound; every other video on the page is muted automatically.
+  (function () {
+    var brand = document.getElementById('brandfilmVideo');
+    var els = document.querySelectorAll('video');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      // The brand film keeps sound so it can autoplay unmuted where allowed.
+      if (el !== brand) {
+        el.muted = true; // all other videos are silent by default
+      }
+    }
+  })();
+</script>
 
 
 <!-- ==================== HERO ==================== -->
