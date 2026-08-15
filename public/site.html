@@ -2562,6 +2562,7 @@
   // Start with sound automatically; if the browser blocks audio, keep playing
   // muted and let the visitor unmute manually with the sound button.
   var soundAttempted = false;
+  var userChoseMute = false;
   function tryUnmute() {
     if (soundAttempted) return;
     soundAttempted = true;
