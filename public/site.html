@@ -3551,22 +3551,18 @@
           window.addEventListener(evt, unmuteAndPlay, { once: true, passive: true, capture: true });
         });
       };
-      // Explicitly trigger play when DOM is ready
+       // Explicitly trigger play when DOM is ready
       const playVideo = () => {
-        // Try unmuted autoplay first
-        video.muted = false;
+        // Start muted to guarantee autoplay works on all browsers
+        video.muted = true;
         video.play().then(() => {
-          // Unmuted autoplay succeeded! Remove interaction listeners
-          unmutedInteractionTriggered = true;
+          console.log("Muted autoplay started successfully.");
         }).catch(err => {
-          console.log("Unmuted autoplay blocked, falling back to muted autoplay:", err);
-          video.muted = true;
-          video.play().catch(e => {
-            console.log("Muted autoplay also blocked:", e);
-          });
-          // Setup listeners to unmute on first user interaction
-          setupInteractionListeners();
+          console.log("Muted autoplay blocked, waiting for user gesture:", err);
         });
+
+        // Register interaction listeners to unmute once user interacts
+        setupInteractionListeners();
       };
       
       if (document.readyState === 'complete') {

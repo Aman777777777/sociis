@@ -275,21 +275,15 @@
       var muteIcon = btn.querySelector('.mute-icon');
       var unmuteIcon = btn.querySelector('.unmute-icon');
 
-      // Default is unmuted
-      v.muted = false;
+      // Default is muted to guarantee autoplay works on all browsers
+      v.muted = true;
+      muteIcon.style.display = 'block';
+      unmuteIcon.style.display = 'none';
 
       var tryPlay = function(){
-        var p = v.play();
-        if(p && p.catch) {
-          p.catch(function(err) {
-            // If unmuted autoplay fails, fallback to muted autoplay
-            v.muted = true;
-            muteIcon.style.display = 'block';
-            unmuteIcon.style.display = 'none';
-            v.play().catch(function(){});
-            setupInteractionListeners();
-          });
-        }
+        v.play().catch(function(err) {
+          console.log("Muted autoplay blocked, waiting for user gesture:", err);
+        });
       };
 
       var unmutedInteractionTriggered = false;
@@ -318,6 +312,7 @@
       v.addEventListener('loadedmetadata', tryPlay);
       v.addEventListener('canplay', tryPlay);
       tryPlay();
+      setupInteractionListeners();
 
       btn.addEventListener('click', function(e) {
         e.stopPropagation();
