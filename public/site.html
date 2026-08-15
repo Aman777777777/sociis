@@ -3227,6 +3227,7 @@
       <video
         src="let-there-be-light.mp4"
         autoplay
+        muted
         loop
         playsinline
         webkit-playsinline
@@ -3505,13 +3506,15 @@
 </div>
 
 <script>
-  // Fix mobile video autoplay and interaction playback with automatic audio unmute
+  // Fix mobile video autoplay and interaction playback
   (function() {
     const video = document.querySelector('.ltbl-frame video');
     if (video) {
       // Force critical attributes programmatically for iOS/Android compatibility
       video.setAttribute('playsinline', '');
       video.setAttribute('webkit-playsinline', '');
+      video.muted = true;
+      
       // Remove thumbnail/poster in mobile view
       const updatePoster = () => {
         if (window.innerWidth <= 768) {
@@ -3527,42 +3530,12 @@
 
       window.addEventListener('resize', updatePoster);
       updatePoster();
-
-      let unmutedInteractionTriggered = false;
-      const unmuteAndPlay = () => {
-        if (unmutedInteractionTriggered) return;
-        unmutedInteractionTriggered = true;
-        
-        video.muted = false;
-        video.play().catch(err => {
-          console.log("Play failed on interaction:", err);
-        });
-
-        // Clean up listeners
-        interactionEvents.forEach(evt => {
-          window.removeEventListener(evt, unmuteAndPlay, { capture: true });
-        });
-      };
-
-      const interactionEvents = ['click', 'touchstart', 'keydown', 'mousedown'];
-
-      const setupInteractionListeners = () => {
-        interactionEvents.forEach(evt => {
-          window.addEventListener(evt, unmuteAndPlay, { once: true, passive: true, capture: true });
-        });
-      };
-       // Explicitly trigger play when DOM is ready
+      
+      // Explicitly trigger play when DOM is ready
       const playVideo = () => {
-        // Start muted to guarantee autoplay works on all browsers
-        video.muted = true;
-        video.play().then(() => {
-          console.log("Muted autoplay started successfully.");
-        }).catch(err => {
-          console.log("Muted autoplay blocked, waiting for user gesture:", err);
+        video.play().catch(err => {
+          console.log("Autoplay blocked, waiting for interaction:", err);
         });
-
-        // Register interaction listeners to unmute once user interacts
-        setupInteractionListeners();
       };
       
       if (document.readyState === 'complete') {
