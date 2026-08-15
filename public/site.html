@@ -2608,7 +2608,7 @@
   // Native HLS (Safari / iOS): fastest path, no extra JS payload
   if (video.canPlayType('application/vnd.apple.mpegurl')) {
     video.src = base;
-    playFilm();
+    playWithSound();
     return;
   }
 
@@ -2630,7 +2630,7 @@
     });
     hls.loadSource(base);
     hls.attachMedia(video);
-    hls.on(Hls.Events.MANIFEST_PARSED, playFilm);
+    hls.on(Hls.Events.MANIFEST_PARSED, playWithSound);
     // keep quality sensible for high-DPR phones
     if (smallScreen && dpr > 2) hls.autoLevelCapping = 2;
   };
