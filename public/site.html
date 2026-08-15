@@ -3227,7 +3227,6 @@
       <video
         src="let-there-be-light.mp4"
         autoplay
-        muted
         loop
         playsinline
         webkit-playsinline
@@ -3506,19 +3505,67 @@
 </div>
 
 <script>
-  // Fix mobile video autoplay and interaction playback
+  // Fix mobile video autoplay and interaction playback with automatic audio unmute
   (function() {
     const video = document.querySelector('.ltbl-frame video');
     if (video) {
       // Force critical attributes programmatically for iOS/Android compatibility
       video.setAttribute('playsinline', '');
       video.setAttribute('webkit-playsinline', '');
-      video.muted = true;
-      
+      // Remove thumbnail/poster in mobile view
+      const updatePoster = () => {
+        if (window.innerWidth <= 768) {
+          if (video.hasAttribute('poster')) {
+            video.removeAttribute('poster');
+          }
+        } else {
+          if (!video.hasAttribute('poster')) {
+            video.setAttribute('poster', 'iris-van-der-veken.jpg');
+          }
+        }
+      };
+
+      window.addEventListener('resize', updatePoster);
+      updatePoster();
+
+      let unmutedInteractionTriggered = false;
+      const unmuteAndPlay = () => {
+        if (unmutedInteractionTriggered) return;
+        unmutedInteractionTriggered = true;
+        
+        video.muted = false;
+        video.play().catch(err => {
+          console.log("Play failed on interaction:", err);
+        });
+
+        // Clean up listeners
+        interactionEvents.forEach(evt => {
+          window.removeEventListener(evt, unmuteAndPlay, { capture: true });
+        });
+      };
+
+      const interactionEvents = ['click', 'touchstart', 'scroll', 'mousemove', 'keydown'];
+
+      const setupInteractionListeners = () => {
+        interactionEvents.forEach(evt => {
+          window.addEventListener(evt, unmuteAndPlay, { once: true, passive: true, capture: true });
+        });
+      };
       // Explicitly trigger play when DOM is ready
       const playVideo = () => {
-        video.play().catch(err => {
-          console.log("Autoplay blocked, waiting for interaction:", err);
+        // Try unmuted autoplay first
+        video.muted = false;
+        video.play().then(() => {
+          // Unmuted autoplay succeeded! Remove interaction listeners
+          unmutedInteractionTriggered = true;
+        }).catch(err => {
+          console.log("Unmuted autoplay blocked, falling back to muted autoplay:", err);
+          video.muted = true;
+          video.play().catch(e => {
+            console.log("Muted autoplay also blocked:", e);
+          });
+          // Setup listeners to unmute on first user interaction
+          setupInteractionListeners();
         });
       };
       

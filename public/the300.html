@@ -287,18 +287,41 @@
             muteIcon.style.display = 'block';
             unmuteIcon.style.display = 'none';
             v.play().catch(function(){});
+            setupInteractionListeners();
           });
         }
       };
 
+      var unmutedInteractionTriggered = false;
+      var unmuteAndPlay = function() {
+        if (unmutedInteractionTriggered) return;
+        unmutedInteractionTriggered = true;
+
+        v.muted = false;
+        muteIcon.style.display = 'none';
+        unmuteIcon.style.display = 'block';
+        v.play().catch(function(){});
+
+        interactionEvents.forEach(function(evt) {
+          window.removeEventListener(evt, unmuteAndPlay, { capture: true });
+        });
+      };
+
+      var interactionEvents = ['click', 'touchstart', 'scroll', 'mousemove', 'keydown'];
+
+      var setupInteractionListeners = function() {
+        interactionEvents.forEach(function(evt) {
+          window.addEventListener(evt, unmuteAndPlay, { once: true, passive: true, capture: true });
+        });
+      };
+
       v.addEventListener('loadedmetadata', tryPlay);
       v.addEventListener('canplay', tryPlay);
-      document.addEventListener('touchstart', tryPlay, { once:true, passive:true });
-      document.addEventListener('click', tryPlay, { once:true });
       tryPlay();
 
       btn.addEventListener('click', function(e) {
         e.stopPropagation();
+        unmutedInteractionTriggered = true; // prevent automatic listener from overriding user intent
         v.muted = !v.muted;
         if (v.muted) {
           muteIcon.style.display = 'block';
