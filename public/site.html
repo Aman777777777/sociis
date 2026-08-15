@@ -2662,20 +2662,6 @@
   document.head.appendChild(s);
 })();
 </script>
-<script>
-  // Brand film plays automatically with sound; every other video on the page is muted automatically.
-  (function () {
-    var brand = document.getElementById('brandfilmVideo');
-    var els = document.querySelectorAll('video');
-    for (var i = 0; i < els.length; i++) {
-      var el = els[i];
-      // The brand film keeps sound so it can autoplay unmuted where allowed.
-      if (el !== brand) {
-        el.muted = true; // all other videos are silent by default
-      }
-    }
-  })();
-</script>
 
 
 <!-- ==================== HERO ==================== -->
@@ -3241,7 +3227,6 @@
       <video
         src="let-there-be-light.mp4"
         autoplay
-        muted
         loop
         playsinline
         webkit-playsinline
@@ -3520,15 +3505,13 @@
 </div>
 
 <script>
-  // Fix mobile video autoplay and interaction playback
+  // Fix mobile video autoplay and interaction playback with automatic audio unmute
   (function() {
     const video = document.querySelector('.ltbl-frame video');
     if (video) {
       // Force critical attributes programmatically for iOS/Android compatibility
       video.setAttribute('playsinline', '');
       video.setAttribute('webkit-playsinline', '');
-      video.muted = true;
-      
       // Remove thumbnail/poster in mobile view
       const updatePoster = () => {
         if (window.innerWidth <= 768) {
@@ -3544,12 +3527,42 @@
 
       window.addEventListener('resize', updatePoster);
       updatePoster();
-      
-      // Explicitly trigger play when DOM is ready
-      const playVideo = () => {
+
+      let unmutedInteractionTriggered = false;
+      const unmuteAndPlay = () => {
+        if (unmutedInteractionTriggered) return;
+        unmutedInteractionTriggered = true;
+        
+        video.muted = false;
         video.play().catch(err => {
-          console.log("Autoplay blocked, waiting for interaction:", err);
+          console.log("Play failed on interaction:", err);
         });
+
+        // Clean up listeners
+        interactionEvents.forEach(evt => {
+          window.removeEventListener(evt, unmuteAndPlay, { capture: true });
+        });
+      };
+
+      const interactionEvents = ['click', 'touchstart', 'keydown', 'mousedown'];
+
+      const setupInteractionListeners = () => {
+        interactionEvents.forEach(evt => {
+          window.addEventListener(evt, unmuteAndPlay, { once: true, passive: true, capture: true });
+        });
+      };
+       // Explicitly trigger play when DOM is ready
+      const playVideo = () => {
+        // Start muted to guarantee autoplay works on all browsers
+        video.muted = true;
+        video.play().then(() => {
+          console.log("Muted autoplay started successfully.");
+        }).catch(err => {
+          console.log("Muted autoplay blocked, waiting for user gesture:", err);
+        });
+
+        // Register interaction listeners to unmute once user interacts
+        setupInteractionListeners();
       };
       
       if (document.readyState === 'complete') {
