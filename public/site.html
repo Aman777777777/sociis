@@ -2562,6 +2562,7 @@
   // Start with sound automatically; if the browser blocks audio, keep playing
   // muted and let the visitor unmute manually with the sound button.
   var soundAttempted = false;
+  var userChoseMute = false;
   function tryUnmute() {
     if (soundAttempted) return;
     soundAttempted = true;
@@ -2598,6 +2599,7 @@
   if (soundBtn) {
     soundBtn.addEventListener('click', function () {
       soundAttempted = true;
+      userChoseMute = true;
       video.muted = !video.muted;
       video.defaultMuted = video.muted;
       if (!video.muted) video.volume = 1;
@@ -2609,13 +2611,21 @@
     if (!document.hidden && video.paused) playFilm();
   });
   setSoundIcon();
-  // Keep playback alive on first interaction, but leave muting to the visitor
-  ['touchstart', 'click', 'keydown', 'scroll'].forEach(function (evt) {
+  // Browsers block unmuted autoplay, so unmute on the very first interaction
+  // unless the visitor has already made their own choice with the sound button
+  ['touchstart', 'pointerdown', 'click', 'keydown', 'scroll', 'wheel', 'mousemove'].forEach(function (evt) {
     document.addEventListener(evt, function once() {
+      if (video.muted && !userChoseMute) {
+        video.muted = false;
+        video.defaultMuted = false;
+        video.volume = 1;
+        setSoundIcon();
+      }
       if (video.paused) playFilm();
       document.removeEventListener(evt, once);
     }, { passive: true });
   });
+
 
 
 
