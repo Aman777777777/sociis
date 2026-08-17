@@ -12,31 +12,21 @@ import {
 // Import team photos - Leadership
 import jeremie from "@/assets/team/jeremie.png";
 import dominiqueD from "@/assets/team/dominique-new.jpg";
-import zanele from "@/assets/team/zanele.jpg";
+import luc from "@/assets/team/luc.jpg";
+import chrisBenardis from "@/assets/team/chris-benardis.jpg";
 
 // Import team photos - Contributors
-import luc from "@/assets/team/luc.jpg";
 import joost from "@/assets/team/joost-new.jpeg";
 import micaelC from "@/assets/team/micael-c.jpg";
 import rudi from "@/assets/team/rudi.png";
-import marc from "@/assets/team/marc.jpg";
-import chantalNew from "@/assets/team/chantal-new.png";
 import karim from "@/assets/team/karim.jpg";
-import eva from "@/assets/team/eva.jpeg";
 import sandrine from "@/assets/team/sandrine.jpg";
 import jan from "@/assets/team/jan.jpg";
-import richard from "@/assets/team/richard.jpg";
-import baldwin from "@/assets/team/baldwin.jpeg";
-import chrisBenardis from "@/assets/team/chris-benardis.jpg";
 import olivier from "@/assets/team/olivier.png";
 
 // Import team photos - Council
-import sarahM from "@/assets/team/sarah-m.jpg";
 import peter from "@/assets/team/peter.png";
-import louis from "@/assets/team/louis.png";
 import tim from "@/assets/team/tim.png";
-import anmarrie from "@/assets/team/anmarrie.jpg";
-import tatiana from "@/assets/team/tatiana.png";
 import lars from "@/assets/team/lars.jpg";
 
 interface TeamMember {
