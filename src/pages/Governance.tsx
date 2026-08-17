@@ -18,7 +18,6 @@ import zanele from "@/assets/team/zanele.jpg";
 import luc from "@/assets/team/luc.jpg";
 import joost from "@/assets/team/joost-new.jpeg";
 import micaelC from "@/assets/team/micael-c.jpg";
-import rudi from "@/assets/team/rudi.png";
 import marc from "@/assets/team/marc.jpg";
 import chantalNew from "@/assets/team/chantal-new.png";
 import karim from "@/assets/team/karim.jpg";
@@ -32,7 +31,6 @@ import olivier from "@/assets/team/olivier.png";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
-import peter from "@/assets/team/peter.png";
 import louis from "@/assets/team/louis.png";
 import tim from "@/assets/team/tim.png";
 import anmarrie from "@/assets/team/anmarrie.jpg";
@@ -174,13 +172,6 @@ const teamMembers: TeamMember[] = [
     image: sarahM,
     category: "council",
     bio: "Sarah McArthur is an esteemed editor, writer, and leadership thinker who served as the COO of Marshall Goldsmith Inc. for over two decades. A founding member of the '100 Coaches' project and editor-in-chief of the Leader to Leader journal, she has authored and edited numerous influential books on executive coaching and management, working alongside the world's foremost business leaders.",
-  },
-  {
-    name: "Peter Somers",
-    role: "Former CEO, Emirates Post · Founder, SprintPack",
-    image: peter,
-    category: "council",
-    bio: "Peter Somers is an experienced executive and strategic leader in the global transport and logistics sector. As the founder of SprintPack and former CEO of Emirates Post, where he led a major organizational transformation, he possesses deep expertise in change management, e-commerce innovation, and people-driven leadership. He actively serves as a board member and advisor for multiple international enterprises.",
   },
   {
     name: "Dr Louis Klein",
