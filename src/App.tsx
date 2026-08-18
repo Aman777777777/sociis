@@ -11,7 +11,6 @@ import Index from "./pages/Index";
 import Governance from "./pages/Governance";
 import AmbassadorProfile from "./pages/AmbassadorProfile";
 
-import Calendar from "./pages/Calendar";
 import Events from "./pages/Events";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -100,7 +99,6 @@ const App = () => {
             <Route path="/team" element={<Governance />} />
             <Route path="/ambassadors/:slug" element={<AmbassadorProfile />} />
             
-            <Route path="/calendar" element={<Calendar />} />
             <Route path="/events" element={<Events />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
