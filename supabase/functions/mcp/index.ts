@@ -13,25 +13,17 @@ import { z } from "npm:zod@^3.25.76";
 var PEOPLE = [
   { name: "Jeremie Landweer", role: "Founder & CEO", group: "leadership" },
   { name: "Dominique Debecker", role: "Chief Behavioural Officer", group: "leadership" },
-  { name: "Zanele Morrison", role: "Global Engagement and Institutional Narrative", group: "leadership" },
-  { name: "Chris Benardis", role: "Chief Financial Officer", group: "leadership" },
   { name: "Luc Garguet-Duport", role: "Chief Operating Officer", group: "leadership" },
+  { name: "Chris Benardis", role: "Chief Financial Officer", group: "leadership" },
   { name: "Richard Thommeret", role: "External Relations & Strategic Communications", group: "contributors" },
-  { name: "Baldwin Berges", role: "Capital Strategist", group: "contributors" },
   { name: "Joost Peeters", role: "Legal Advisor", group: "contributors" },
-  { name: "Marc Bogaerts", role: "Artistic Advisor", group: "contributors" },
   { name: "Micael Craenhals", role: "Production", group: "contributors" },
-  { name: "Chantal Veevaete", role: "Public Company Board Member, Former Fortune 10 C-Suite Executive", group: "contributors" },
   { name: "Karim Tousbih", role: "Value Development", group: "contributors" },
-  { name: "Eva Vargov\xE1", role: "Philanthropy & Social Impact", group: "contributors" },
   { name: "Sandrine Helinckx", role: "SBS Foundation", group: "contributors" },
   { name: "Prof. Jan de Visch", role: "SBS Foundation", group: "contributors" },
   { name: "Olivier Begerem", role: "AI & IT Strategy", group: "contributors" },
   { name: "Sarah McArthur", role: "Editor-in-Chief, Leader to Leader Journal", group: "council" },
-  { name: "Dr Louis Klein", role: "Dean & Research Director, European School of Governance", group: "council" },
   { name: "Tim Sanders", role: "Founder & CEO, Silent Donor", group: "council" },
-  { name: "Annmarie Gorenc Zoran, PhD", role: "Dean, Faculty of Organisation Studies", group: "council" },
-  { name: "Tatjana Dragovi\u0107 Andersen, EdD", role: "Corporate educator, executive coach, associate professor", group: "council" },
   { name: "Lars Carlstrom", role: "Founder & CEO, Statetron", group: "council" }
 ];
 var PLACES = [

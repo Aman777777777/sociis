@@ -12,29 +12,21 @@ import {
 // Import team photos - Leadership
 import jeremie from "@/assets/team/jeremie.png";
 import dominiqueD from "@/assets/team/dominique-new.jpg";
-import zanele from "@/assets/team/zanele.jpg";
 
 // Import team photos - Contributors
 import luc from "@/assets/team/luc.jpg";
 import joost from "@/assets/team/joost-new.jpeg";
 import micaelC from "@/assets/team/micael-c.jpg";
-import marc from "@/assets/team/marc.jpg";
-import chantalNew from "@/assets/team/chantal-new.png";
 import karim from "@/assets/team/karim.jpg";
-import eva from "@/assets/team/eva.jpeg";
 import sandrine from "@/assets/team/sandrine.jpg";
 import jan from "@/assets/team/jan.jpg";
 import richard from "@/assets/team/richard.jpg";
-import baldwin from "@/assets/team/baldwin.jpeg";
 import chrisBenardis from "@/assets/team/chris-benardis.jpg";
 import olivier from "@/assets/team/olivier.png";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
-import louis from "@/assets/team/louis.png";
 import tim from "@/assets/team/tim.png";
-import anmarrie from "@/assets/team/anmarrie.jpg";
-import tatiana from "@/assets/team/tatiana.png";
 import lars from "@/assets/team/lars.jpg";
 
 interface TeamMember {
@@ -63,12 +55,11 @@ const teamMembers: TeamMember[] = [
     bio: "Dominique Debecker serves as Chief Behavioural Officer and leads Sociis Impact™, the division responsible for developing and deploying the Sustainable Behavioural Standard (SBS™). With deep expertise in behavioural science, organisational psychology, and brain-based leadership methodologies, she ensures that every initiative within the institution is grounded in integrity, ethical conduct, and meaningful transformation. Her work focuses on translating complex behavioural frameworks into practical tools that organisations can embed into their governance structures. She oversees BEE™, the Behavioural Engine with Ethics, which provides signals, patterns, and dashboards showing how leaders and organisations behave over time, not how they present themselves."
   },
   {
-    name: "Zanele Morrison",
-    role: "Global Engagement and Institutional Narrative",
-    image: zanele,
+    name: "Luc Garguet-Duport",
+    role: "Chief Operating Officer",
+    image: luc,
     category: "leadership",
-    imagePosition: "center 10%",
-    bio: "Zanele Morrison is a multifaceted professional with over 20 years of experience across public and private sectors, specializing in leadership development, organizational transformation, and corporate communications. She serves as a business anchor for CNBC Africa and has held significant roles such as Director of Marketing and Corporate Affairs at the Johannesburg Stock Exchange (JSE). A passionate advocate for diversity and inclusion, she is a board member for Corporate & Institutional Integrity (CII) Africa and frequently works with executive teams to improve performance and ethical culture.",
+    bio: "Luc Garguet-Duport is a purpose-driven business transformation leader and executive coach with over 25 years of international experience. He specializes in corporate strategy, supply chain management, and sustainable practices, having held high-level roles within the automotive industry, including the Renault-Nissan Alliance and Faurecia. With a strong academic background in materials science (PhD), he brings resilience, authenticity, and a human-centric approach to guiding organizational change.",
   },
   {
     name: "Chris Benardis",
@@ -76,13 +67,6 @@ const teamMembers: TeamMember[] = [
     image: chrisBenardis,
     category: "leadership",
     bio: "Chris Benardis is a finance executive with nearly 30 years of international experience, including a long tenure leading corporate finance, sustainability, and governance for a major global automotive group across the United States, Japan, and Europe. He prioritises embedding sustainability and stakeholder considerations into financial decision-making to generate long-term value. Chris is GRI G4 certified and holds an MBA from the David Eccles School of Business and dual Bachelor's degrees in Chemistry and Accounting, graduating Magna Cum Laude.",
-  },
-  {
-    name: "Luc Garguet-Duport",
-    role: "Chief Operating Officer",
-    image: luc,
-    category: "leadership",
-    bio: "Luc Garguet-Duport is a purpose-driven business transformation leader and executive coach with over 25 years of international experience. He specializes in corporate strategy, supply chain management, and sustainable practices, having held high-level roles within the automotive industry, including the Renault-Nissan Alliance and Faurecia. With a strong academic background in materials science (PhD), he brings resilience, authenticity, and a human-centric approach to guiding organizational change.",
   },
 
   // Contributors.
@@ -94,25 +78,11 @@ const teamMembers: TeamMember[] = [
     bio: "Richard Thommeret is an engineer and former researcher with deep expertise in materials science and strategic communication. He has extensive experience representing major industrial organizations, such as Solvay, to professional associations, driving the promotion and development of innovative products. He combines his technical background with strategic relations to foster institutional alignment.",
   },
   {
-    name: "Baldwin Berges",
-    role: "Capital Strategist",
-    image: baldwin,
-    category: "new_contributor",
-    bio: "Baldwin Berges is a seasoned finance professional with over 30 years of experience bridging private capital with public development initiatives. As the CEO of Abaris Advisors and a recurring Team Leader for the EU Global Gateway, he specializes in sustainable finance, blended instruments, and impact investing across emerging markets.\n\nHis extensive career includes serving as a Founding Partner at Silk Invest, a leading sustainable investment boutique, and holding senior institutional leadership roles at Standard Bank and Invesco. Baldwin’s expertise spans the full range of financial instruments—from structured finance and fintech innovation to credit and equity.\n\nA polyglot fluent in five languages, he has managed complex projects for the European Commission and International Financial Institutions across Sub-Saharan Africa, Asia, and Latin America. At Sociis Group, Baldwin aligns this deep technical background with the mission of integrating behavioral governance into ESG frameworks, driving systemic change for a more prosperous global society."
-  },
-  {
     name: "Joost Peeters",
     role: "Legal Advisor",
     image: joost,
     category: "new_contributor",
     bio: "Joost Peeters is a distinguished legal professional and co-founder of the law firm STUDIO | LEGALE, based in Antwerp, Belgium. Called to the bar in 2001, he brings extensive expertise in business, corporate, and contract law. A certified mediator and collaborative negotiator, he also holds specialized credentials in data protection. His broad, multidisciplinary practice provides robust legal foundations for institutional governance.",
-  },
-  {
-    name: "Marc Bogaerts",
-    role: "Artistic Advisor",
-    image: marc,
-    category: "new_contributor",
-    bio: "Marc Bogaerts is a renowned Belgian choreographer and artistic director whose interdisciplinary work seamlessly blends dance, sports, circus arts, and opera. Having worked with all three major opera houses in Berlin and over 50 companies worldwide, his unconventional approach has earned him global recognition, including a Knighthood in the Order of Merit. He frequently utilizes artistic expression to address sensitive social issues and cultural narratives.",
   },
   {
     name: "Micael Craenhals",
@@ -123,25 +93,11 @@ const teamMembers: TeamMember[] = [
     bio: "Micael Craenhals is a Belgian entrepreneur with a diverse background bridging traditional industries and modern ventures. Hailing from a prominent business family, he brings a deeply ingrained understanding of operational dynamics, resource management, and strategic production to the institution.",
   },
   {
-    name: "Chantal Veevaete",
-    role: "Public Company Board Member, Former Fortune 10 C-Suite Executive",
-    image: chantalNew,
-    category: "new_contributor",
-    bio: "Chantal Veevaete is a highly experienced C-suite executive and independent board member, recognized for her tenure as Chief Human Resources Officer across Fortune 10, 100, and 1000 organizations, including Phillips 66. Holding dual citizenship in Belgium and the US, she brings a global, multicultural perspective to leadership development, high-performing team dynamics, and human capital strategy.",
-  },
-  {
     name: "Karim Tousbih",
     role: "Value Development",
     image: karim,
     category: "new_contributor",
     bio: "Karim Tousbih is a versatile consultant, creative director, and project manager who specializes in translating strategic vision into tangible execution. With experience spanning brand building, real estate, and digital media, he acts as a key connector for value development, ensuring that institutional goals are effectively operationalized and communicated.",
-  },
-  {
-    name: "Eva Vargová",
-    role: "Philanthropy & Social Impact",
-    image: eva,
-    category: "new_contributor",
-    bio: "Eva Vargová dedicates her expertise to advancing philanthropic initiatives and social impact strategies. With a focus on sustainable development, education, and community resilience, she actively bridges organizational resources with meaningful societal outcomes, ensuring that institutional actions create lasting, positive change.",
   },
   {
     name: "Sandrine Helinckx",
@@ -174,32 +130,11 @@ const teamMembers: TeamMember[] = [
     bio: "Sarah McArthur is an esteemed editor, writer, and leadership thinker who served as the COO of Marshall Goldsmith Inc. for over two decades. A founding member of the '100 Coaches' project and editor-in-chief of the Leader to Leader journal, she has authored and edited numerous influential books on executive coaching and management, working alongside the world's foremost business leaders.",
   },
   {
-    name: "Dr Louis Klein",
-    role: "Dean & Research Director, European School of Governance",
-    image: louis,
-    category: "council",
-    bio: "Dr. Louis Klein is an internationally recognized systems scientist and cybernetician serving as the Dean of the European School of Governance (EUSG) in Berlin. With a PhD in sociology focused on systems theory, he specializes in systemic governance and complex project management, holding key leadership roles in global organizations such as the International Federation for Systems Research.",
-  },
-  {
     name: "Tim Sanders",
     role: "Founder & CEO, Silent Donor",
     image: tim,
     category: "council",
     bio: "Tim Sanders is the founder and CEO of Silent Donor, a pioneering technology platform that enables fully anonymous, tax-deductible charitable giving. With a background in international development and philanthropic consulting, he created the platform to protect donor privacy, facilitating millions of dollars in contributions to global causes such as the Malala Fund and United24.",
-  },
-  {
-    name: "Annmarie Gorenc Zoran, PhD",
-    role: "Dean, Faculty of Organisation Studies",
-    image: anmarrie,
-    category: "council",
-    bio: "Dr. Annmarie Gorenc Zoran is a Full Professor and Dean at the Faculty of Organizational Studies in Novo mesto, Slovenia. A dedicated social scientist, her research employs mixed-method approaches to explore leadership, quality management, and organizational behavior. She has extensive experience leading international research projects focused on workplace well-being and institutional dynamics.",
-  },
-  {
-    name: "Tatjana Dragović Andersen, EdD",
-    role: "Corporate educator, executive coach, associate professor",
-    image: tatiana,
-    category: "council",
-    bio: "Dr. Tatjana Dragović Andersen is an accomplished academic, educator, and executive coach affiliated with the University of Cambridge. Holding a Doctorate in Education, she specializes in dialogic teaching, creative leadership, and continuing professional development. She is the co-founder of the Human Communications Centre, providing international coaching and professional training programs.",
   },
   {
     name: "Lars Carlstrom",
