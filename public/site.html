@@ -3226,6 +3226,7 @@
         src="let-there-be-light.mp4"
         autoplay
         loop
+        muted
         playsinline
         webkit-playsinline
         controls
@@ -3525,41 +3526,12 @@
       window.addEventListener('resize', updatePoster);
       updatePoster();
 
-      let unmutedInteractionTriggered = false;
-      const unmuteAndPlay = () => {
-        if (unmutedInteractionTriggered) return;
-        unmutedInteractionTriggered = true;
-        
-        video.muted = false;
-        video.play().catch(err => {
-          console.log("Play failed on interaction:", err);
-        });
-
-        // Clean up listeners
-        interactionEvents.forEach(evt => {
-          window.removeEventListener(evt, unmuteAndPlay, { capture: true });
-        });
-      };
-
-      const interactionEvents = ['click', 'touchstart', 'keydown', 'mousedown'];
-
-      const setupInteractionListeners = () => {
-        interactionEvents.forEach(evt => {
-          window.addEventListener(evt, unmuteAndPlay, { once: true, passive: true, capture: true });
-        });
-      };
        // Explicitly trigger play when DOM is ready
       const playVideo = () => {
-        // Start muted to guarantee autoplay works on all browsers
+        // Start muted and stay muted — this video must never produce sound
+        // on its own. Audio remains available via the native controls.
         video.muted = true;
-        video.play().then(() => {
-          console.log("Muted autoplay started successfully.");
-        }).catch(err => {
-          console.log("Muted autoplay blocked, waiting for user gesture:", err);
-        });
-
-        // Register interaction listeners to unmute once user interacts
-        setupInteractionListeners();
+        video.play().then(() => {}).catch(() => {});
       };
       
       if (document.readyState === 'complete') {
