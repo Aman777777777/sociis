@@ -23,6 +23,7 @@ var PEOPLE = [
   { name: "Prof. Jan de Visch", role: "SBS Foundation", group: "contributors" },
   { name: "Olivier Begerem", role: "AI & IT Strategy", group: "contributors" },
   { name: "Sarah McArthur", role: "Editor-in-Chief, Leader to Leader Journal", group: "council" },
+  { name: "Peter Somers", role: "Former CEO, Emirates Post \xB7 Founder, SprintPack", group: "council" },
   { name: "Tim Sanders", role: "Founder & CEO, Silent Donor", group: "council" },
   { name: "Lars Carlstrom", role: "Founder & CEO, Statetron", group: "council" }
 ];

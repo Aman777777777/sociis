@@ -26,6 +26,7 @@ export const PEOPLE: readonly Person[] = [
   { name: "Olivier Begerem", role: "AI & IT Strategy", group: "contributors" },
 
   { name: "Sarah McArthur", role: "Editor-in-Chief, Leader to Leader Journal", group: "council" },
+  { name: "Peter Somers", role: "Former CEO, Emirates Post · Founder, SprintPack", group: "council" },
   { name: "Tim Sanders", role: "Founder & CEO, Silent Donor", group: "council" },
   { name: "Lars Carlstrom", role: "Founder & CEO, Statetron", group: "council" },
 ];
