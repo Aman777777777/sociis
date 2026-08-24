@@ -245,15 +245,6 @@ const Governance = () => {
 
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl">
-            <div className="mono-kicker mb-4">Governance</div>
-            <h1 className="text-4xl sm:text-5xl text-foreground mb-6">
-              Executive Leadership Team.
-            </h1>
-            <div className="rule mb-12"></div>
-            <p className="text-body text-muted-foreground max-w-2xl mb-24">
-              SociisGroup is governed through a defined institutional structure. Authority, oversight and executive responsibility are intentionally separated to safeguard independence, integrity and long-term trust.
-            </p>
-
             {/* Executive Leadership Team */}
             <div className="mb-24">
               <h3 className="group-title text-2xl mb-10">Executive Leadership Team</h3>
