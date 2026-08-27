@@ -2567,6 +2567,7 @@
     soundAttempted = true;
     video.muted = false;
     video.defaultMuted = false;
+    video.removeAttribute('muted');
     video.volume = 1;
     var result = video.play();
     if (result && typeof result.catch === 'function') {
@@ -2617,6 +2618,7 @@
       if (video.muted && !userChoseMute) {
         video.muted = false;
         video.defaultMuted = false;
+        video.removeAttribute('muted');
         video.volume = 1;
         setSoundIcon();
       }
@@ -2629,35 +2631,56 @@
 
 
 
-  // Native HLS (Safari / iOS): fastest path, no extra JS payload
-  if (video.canPlayType('application/vnd.apple.mpegurl')) {
+  // ------------------------------------------------------------------
+  // Streaming bootstrap
+  // Goal: the film OPENS on the highest rendition (never pixelated) and
+  // tries to play WITH sound. hls.js is used wherever it is supported so
+  // the start quality is pinned deterministically; native HLS is kept as
+  // the fallback for browsers without MSE (e.g. older iOS Safari).
+  // ------------------------------------------------------------------
+  function startNative() {
     video.src = base;
     playWithSound();
-    return;
   }
 
-  // Elsewhere: load hls.js lazily and start at a low rendition for a fast first frame
-  var s = document.createElement('script');
-  s.src = 'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js';
-  s.async = true;
-  s.onload = function () {
-    if (typeof Hls === 'undefined' || !Hls.isSupported()) return;
-    var dpr = window.devicePixelRatio || 1;
-    var smallScreen = Math.min(window.innerWidth, window.innerHeight) <= 768;
+  function startHls() {
+    if (typeof Hls === 'undefined' || !Hls.isSupported()) { startNative(); return; }
     var hls = new Hls({
-      startLevel: 0,               // start on the lightest rendition, then upshift
-      capLevelToPlayerSize: true,  // never fetch more pixels than the screen needs
-      maxBufferLength: smallScreen ? 8 : 15,
-      maxMaxBufferLength: smallScreen ? 20 : 40,
-      backBufferLength: 10,
-      abrEwmaDefaultEstimate: smallScreen ? 800000 : 2500000
+      capLevelToPlayerSize: true,  // never fetch more pixels than the screen can show
+      maxBufferLength: 30,
+      maxMaxBufferLength: 60,
+      backBufferLength: 30,
+      // Assume a fast pipe until real measurements say otherwise, so the
+      // adaptive logic never downshifts to a pixelated rendition first.
+      abrEwmaDefaultEstimate: 50000000
     });
     hls.loadSource(base);
     hls.attachMedia(video);
-    hls.on(Hls.Events.MANIFEST_PARSED, playWithSound);
-    // keep quality sensible for high-DPR phones
-    if (smallScreen && dpr > 2) hls.autoLevelCapping = 2;
-  };
+    hls.on(Hls.Events.MANIFEST_PARSED, function () {
+      // Pin the very first fragment to the highest-bitrate rendition.
+      // This is what stops the film from opening pixelated.
+      var top = hls.levels.length - 1;
+      hls.startLevel = top;
+      hls.currentLevel = top;
+      playWithSound();
+    });
+    hls.on(Hls.Events.FRAG_CHANGED, function once() {
+      // The first top-quality fragment is on screen; hand control back to
+      // the adaptive bitrate logic so genuinely slow connections adapt
+      // down instead of stalling (the 50 Mbps seed keeps it pinned to the
+      // top rendition whenever the network is fast).
+      hls.currentLevel = -1;
+    });
+    hls.on(Hls.Events.ERROR, function (event, data) {
+      if (data && data.fatal) { hls.destroy(); startNative(); }
+    });
+  }
+
+  var s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js';
+  s.async = true;
+  s.onload = startHls;
+  s.onerror = startNative;
   document.head.appendChild(s);
 })();
 </script>
