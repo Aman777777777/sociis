@@ -2579,14 +2579,15 @@
       });
     }
     setSoundIcon();
-    // Some browsers silently re-mute or stall; verify shortly after
-    setTimeout(function () {
-      if (video.paused) { video.muted = true; setSoundIcon(); playFilm(); }
-    }, 400);
   }
   function playWithSound() {
-    playFilm();
+    // Attempt the audible start FIRST so the very first play() request is an
+    // unmuted one — the best chance of sound from the first frame. If the
+    // browser blocks audible autoplay, tryUnmute() itself falls back to a
+    // muted start (never re-mute on a timer: while buffering, paused is true,
+    // and re-muting then kills sound on browsers that allowed it).
     tryUnmute();
+    playFilm();
   }
   video.addEventListener('play', function () { setIcon(true); });
   video.addEventListener('playing', function () { setIcon(true); tryUnmute(); });
@@ -2646,30 +2647,33 @@
   function startHls() {
     if (typeof Hls === 'undefined' || !Hls.isSupported()) { startNative(); return; }
     var hls = new Hls({
+      // Don't start loading until the top rendition is pinned below — this
+      // guarantees the first (and only) playlist fetched is the 1080p one.
+      autoStartLoad: false,
       capLevelToPlayerSize: true,  // never fetch more pixels than the screen can show
       maxBufferLength: 30,
-      maxMaxBufferLength: 60,
-      backBufferLength: 30,
-      // Assume a fast pipe until real measurements say otherwise, so the
-      // adaptive logic never downshifts to a pixelated rendition first.
+      maxMaxBufferLength: 600,
+      // Keep the whole film buffered: the loop restarts instantly from cache
+      // with no re-fetch, removing the stutter at the loop point.
+      backBufferLength: 600,
+      maxBufferSize: 200 * 1000 * 1000,
+      // Assume a fast pipe until real measurements say otherwise, so ABR
+      // stays on the top rendition (never dips to a pixelated one) and only
+      // adapts down if the network genuinely cannot sustain 1080p.
       abrEwmaDefaultEstimate: 50000000
     });
-    hls.loadSource(base);
+    // Attach media BEFORE loading the source, so the first play() call (in
+    // MANIFEST_PARSED) is never made against an element without a source —
+    // that rejection is what stopped the video from starting by itself.
     hls.attachMedia(video);
+    hls.loadSource(base);
     hls.on(Hls.Events.MANIFEST_PARSED, function () {
-      // Pin the very first fragment to the highest-bitrate rendition.
-      // This is what stops the film from opening pixelated.
-      var top = hls.levels.length - 1;
-      hls.startLevel = top;
-      hls.currentLevel = top;
+      // Pin the first fragment to the highest rendition BEFORE any loading
+      // starts. No forced level switching happens at all, so the film opens
+      // sharp and stays sharp with no quality jitter.
+      hls.startLevel = hls.levels.length - 1;
+      hls.startLoad();
       playWithSound();
-    });
-    hls.on(Hls.Events.FRAG_CHANGED, function once() {
-      // The first top-quality fragment is on screen; hand control back to
-      // the adaptive bitrate logic so genuinely slow connections adapt
-      // down instead of stalling (the 50 Mbps seed keeps it pinned to the
-      // top rendition whenever the network is fast).
-      hls.currentLevel = -1;
     });
     hls.on(Hls.Events.ERROR, function (event, data) {
       if (data && data.fatal) { hls.destroy(); startNative(); }
