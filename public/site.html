@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SociisGroup — The independent behavioural institution</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://customer-odk7l2yhch7daj9v.cloudflarestream.com" crossorigin>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
@@ -2562,6 +2564,7 @@
   // muted and let the visitor unmute manually with the sound button.
   var soundAttempted = false;
   var userChoseMute = false;
+  var userPaused = false; // visitor paused via the button — never auto-resume over their choice
   function tryUnmute() {
     if (soundAttempted) return;
     soundAttempted = true;
@@ -2595,7 +2598,8 @@
   video.addEventListener('volumechange', setSoundIcon);
   video.addEventListener('loadeddata', playWithSound, { once: true });
   btn.addEventListener('click', function () {
-    if (video.paused) playFilm(); else video.pause();
+    if (video.paused) { userPaused = false; playFilm(); }
+    else { userPaused = true; video.pause(); }
   });
   if (soundBtn) {
     soundBtn.addEventListener('click', function () {
@@ -2609,21 +2613,26 @@
     });
   }
   document.addEventListener('visibilitychange', function () {
-    if (!document.hidden && video.paused) playFilm();
+    if (!document.hidden && video.paused && !userPaused) playFilm();
   });
   setSoundIcon();
   // Browsers block unmuted autoplay, so unmute on the very first interaction
   // unless the visitor has already made their own choice with the sound button
   ['touchstart', 'pointerdown', 'click', 'keydown', 'scroll', 'wheel', 'mousemove'].forEach(function (evt) {
     document.addEventListener(evt, function once() {
-      if (video.muted && !userChoseMute) {
-        video.muted = false;
-        video.defaultMuted = false;
-        video.removeAttribute('muted');
-        video.volume = 1;
-        setSoundIcon();
+      // Respect an explicit pause: if the visitor's first interaction was
+      // the pause button, this same click bubbles up here and must not
+      // resume the film they just paused.
+      if (!userPaused) {
+        if (video.muted && !userChoseMute) {
+          video.muted = false;
+          video.defaultMuted = false;
+          video.removeAttribute('muted');
+          video.volume = 1;
+          setSoundIcon();
+        }
+        if (video.paused) playFilm();
       }
-      if (video.paused) playFilm();
       document.removeEventListener(evt, once);
     }, { passive: true });
   });
@@ -2675,8 +2684,20 @@
       hls.startLoad();
       playWithSound();
     });
+    var netRetries = 0, mediaRetries = 0;
     hls.on(Hls.Events.ERROR, function (event, data) {
-      if (data && data.fatal) { hls.destroy(); startNative(); }
+      if (!data || !data.fatal) return;
+      // Standard hls.js recovery: retry network faults, recover media
+      // faults (bounded so a permanent failure can't loop forever), and
+      // only drop to native HLS as a last resort (native HLS does not
+      // exist on Chrome/Edge/Firefox, so it is never the first answer).
+      if (data.type === Hls.ErrorTypes.MEDIA_ERROR && mediaRetries < 2) {
+        mediaRetries++; hls.recoverMediaError(); return;
+      }
+      if (data.type === Hls.ErrorTypes.NETWORK_ERROR && netRetries < 3) {
+        netRetries++; hls.startLoad(); return;
+      }
+      hls.destroy(); startNative();
     });
   }
 
