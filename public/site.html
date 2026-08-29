@@ -2646,21 +2646,6 @@
   var userChoseMute = false;
   var userPaused = false;
 
-  function tryAudibleStart() {
-    if (soundAttempted) return;
-    soundAttempted = true;
-    fadeInVolume(1, 800);
-    var result = video.play();
-    if (result && typeof result.catch === 'function') {
-      result.catch(function () {
-        video.muted = true;
-        video.defaultMuted = true;
-        setSoundIcon();
-        playFilm();
-      });
-    }
-  }
-
   function handleFirstUserInteraction() {
     if (!userPaused && !userChoseMute && (video.muted || video.volume === 0)) {
       soundAttempted = true;
@@ -2676,7 +2661,7 @@
   });
   video.addEventListener('loadeddata', function () {
     video.classList.add('is-playing');
-    tryAudibleStart();
+    playFilm();
   });
   video.addEventListener('pause', function () { setIcon(false); });
   video.addEventListener('volumechange', setSoundIcon);
@@ -2723,7 +2708,7 @@
     if (!document.hidden && video.paused && !userPaused) playFilm();
   });
 
-  // Enable sound on cursor movement (mousemove, pointermove, mouseover) or user interaction
+  // Turn on sound smoothly on cursor movement (mousemove, pointermove, mouseover) or interaction
   ['mousemove', 'pointermove', 'mouseover', 'touchstart', 'pointerdown', 'click', 'keydown', 'scroll'].forEach(function (evt) {
     document.addEventListener(evt, function once(e) {
       if (e && e.target && (e.target.closest('#brandfilmToggle') || e.target.closest('#brandfilmSound'))) {
@@ -2736,8 +2721,10 @@
 
   setSoundIcon();
 
-  // Primary: Attempt unmuted start with sound immediately
-  tryAudibleStart();
+  // Guaranteed instant autoplay start on load
+  video.muted = true;
+  video.defaultMuted = true;
+  playFilm();
 
   // Secondary HLS stream fallback for browsers that require HLS streaming
   function startHlsFallback() {
@@ -2754,7 +2741,7 @@
     hls.loadSource(hlsBase);
     hls.on(Hls.Events.MANIFEST_PARSED, function () {
       hls.startLevel = hls.levels.length - 1;
-      tryAudibleStart();
+      playFilm();
     });
   }
 
