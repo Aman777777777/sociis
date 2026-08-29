@@ -2606,15 +2606,28 @@
     }
   }
 
-  // Smooth Volume Fade-In (prevents abrupt audio jumps)
+  // Smooth Volume Fade-In (prevents abrupt audio jumps and guarantees non-stop playback)
   var fadeTimer = null;
   function fadeInVolume(targetVol, durationMs) {
     if (fadeTimer) clearInterval(fadeTimer);
     targetVol = targetVol || 1;
     durationMs = durationMs || 600;
+
     video.muted = false;
     video.defaultMuted = false;
     video.removeAttribute('muted');
+
+    // Ensure playback never pauses or stops when unmuting
+    var playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(function () {
+        // If unmuting is restricted on this event, keep video muted and playing continuously
+        video.muted = true;
+        video.defaultMuted = true;
+        setSoundIcon();
+        if (video.paused && !userPaused) playFilm();
+      });
+    }
 
     var startVol = video.volume;
     var steps = 20;
@@ -2650,7 +2663,9 @@
     if (!userPaused && !userChoseMute && (video.muted || video.volume === 0)) {
       soundAttempted = true;
       fadeInVolume(1, 600);
-      if (video.paused) playFilm();
+    }
+    if (video.paused && !userPaused) {
+      playFilm();
     }
   }
 
