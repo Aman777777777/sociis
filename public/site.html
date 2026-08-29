@@ -2676,7 +2676,7 @@
   });
   video.addEventListener('loadeddata', function () {
     video.classList.add('is-playing');
-    playFilm();
+    tryAudibleStart();
   });
   video.addEventListener('pause', function () { setIcon(false); });
   video.addEventListener('volumechange', setSoundIcon);
@@ -2737,8 +2737,8 @@
 
   setSoundIcon();
 
-  // Try immediate play with smooth start
-  playFilm();
+  // Primary: Attempt unmuted start with sound immediately
+  tryAudibleStart();
 
   // Secondary HLS stream fallback for browsers that require HLS streaming
   function startHlsFallback() {
@@ -2755,7 +2755,7 @@
     hls.loadSource(hlsBase);
     hls.on(Hls.Events.MANIFEST_PARSED, function () {
       hls.startLevel = hls.levels.length - 1;
-      playFilm();
+      tryAudibleStart();
     });
   }
 
