@@ -2723,11 +2723,10 @@
     if (!document.hidden && video.paused && !userPaused) playFilm();
   });
 
-  // Only trigger sound on EXPLICIT user intent (click, tap, keypress) - NOT mousemove or scroll!
-  ['click', 'touchstart', 'pointerdown', 'keydown'].forEach(function (evt) {
+  // Enable sound on cursor movement (mousemove, pointermove, mouseover) or user interaction
+  ['mousemove', 'pointermove', 'mouseover', 'touchstart', 'pointerdown', 'click', 'keydown', 'scroll'].forEach(function (evt) {
     document.addEventListener(evt, function once(e) {
-      // Don't trigger if user clicked pause or mute button
-      if (e.target && (e.target.closest('#brandfilmToggle') || e.target.closest('#brandfilmSound'))) {
+      if (e && e.target && (e.target.closest('#brandfilmToggle') || e.target.closest('#brandfilmSound'))) {
         return;
       }
       handleFirstUserInteraction();
