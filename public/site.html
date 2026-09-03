@@ -248,6 +248,16 @@
   nav.over-dark .nav-links a:not(.nav-cta):hover { color: var(--gold-warm); }
   nav.over-dark .nav-burger span { background: var(--cream); }
 
+  /* Menu open (mobile): solid nav so logo + close icon stay readable over any video frame */
+  nav.menu-open {
+    background: rgba(244,240,232,0.98) !important;
+    border-bottom: 1px solid var(--rule-soft) !important;
+    box-shadow: 0 4px 20px rgba(15,22,36,0.04) !important;
+  }
+  nav.menu-open .nav-logo { color: var(--ink) !important; }
+  nav.menu-open .nav-logo sup { color: var(--gold) !important; }
+  nav.menu-open .nav-burger span { background: var(--ink) !important; }
+
   /* ==================== HERO ==================== */
   .hero {
     min-height: 100vh;
@@ -1684,7 +1694,7 @@
       background: var(--cream);
       border-bottom: 1px solid var(--rule);
       box-shadow: 0 12px 24px rgba(15,22,36,0.08);
-      padding: 12px var(--pad) 20px;
+      padding: 0 var(--pad);
       flex-direction: column;
       align-items: stretch;
       gap: 0;
@@ -1706,6 +1716,16 @@
       font-size: 12px;
       letter-spacing: 0.2em;
       border-bottom: 1px solid var(--rule-soft);
+    }
+    /* Dropdown panel is cream — links must stay dark even when the nav is in its
+       transparent over-dark state above the hero video (which colours them cream) */
+    nav .nav-links a:not(.nav-cta),
+    nav.over-dark .nav-links a:not(.nav-cta) {
+      color: var(--grey);
+    }
+    nav .nav-links a:not(.nav-cta):hover,
+    nav.over-dark .nav-links a:not(.nav-cta):hover {
+      color: var(--ink);
     }
     .nav-links a:not(.nav-cta)::after { display: none; }
     .nav-links .nav-cta {
@@ -2266,7 +2286,7 @@
       background: var(--cream);
       border-bottom: 1px solid var(--rule);
       box-shadow: 0 12px 24px rgba(15,22,36,0.08);
-      padding: 12px var(--pad) 20px;
+      padding: 0 var(--pad);
       flex-direction: column;
       align-items: stretch;
       gap: 0;
@@ -2288,6 +2308,15 @@
       font-size: 12px;
       letter-spacing: 0.2em;
       border-bottom: 1px solid var(--rule-soft);
+    }
+    /* Same over-dark guard as above (duplicate of the 900px block for this breakpoint) */
+    nav .nav-links a:not(.nav-cta),
+    nav.over-dark .nav-links a:not(.nav-cta) {
+      color: var(--grey);
+    }
+    nav .nav-links a:not(.nav-cta):hover,
+    nav.over-dark .nav-links a:not(.nav-cta):hover {
+      color: var(--ink);
     }
     .nav-links a:not(.nav-cta)::after { display: none; }
     .nav-links .nav-cta {
@@ -3700,6 +3729,14 @@
   window.addEventListener('scroll', updateNav, { passive: true });
   window.addEventListener('resize', updateNav);
   updateNav();
+
+  // Solid nav + dark icons while the mobile menu is open (keeps header readable over the video)
+  const navToggleInput = document.getElementById('nav-toggle');
+  if (navToggleInput) {
+    navToggleInput.addEventListener('change', function() {
+      mainNav.classList.toggle('menu-open', navToggleInput.checked);
+    });
+  }
 
   // Cookie banner: essential-only, persists choice in localStorage
   (function() {
