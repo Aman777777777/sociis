@@ -1,3 +1,11 @@
+/privacy-policy    /privacy-policy.html    200
+/terms-of-service   /terms-of-service.html   200
+/cookie-policy      /cookie-policy.html      200
+/governance         /#governance             302
+/bee                /#bee                    302
+/media              /#gatherings             302
+/api/analytics-config /api/analytics-config  200
+
 /charter.pdf    /SociisGroup_Charter.pdf    200
 /SociisGroup_Charter.pdf    /SociisGroup_Charter.pdf    200
 /SociisGroup_Institutional_Charter_v1_0.pdf    /SociisGroup_Charter.pdf    200

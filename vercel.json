@@ -1,8 +1,15 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ]
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/governance", "destination": "/#governance", "permanent": false },
+    { "source": "/bee", "destination": "/#bee", "permanent": false },
+    { "source": "/media", "destination": "/#gatherings", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/terms-of-service", "destination": "/terms-of-service.html" },
+    { "source": "/cookie-policy", "destination": "/cookie-policy.html" },
+    { "source": "/api/analytics-config", "destination": "/api/analytics-config" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
