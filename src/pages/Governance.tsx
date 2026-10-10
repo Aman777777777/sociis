@@ -26,7 +26,7 @@ import olivier from "@/assets/team/olivier.png";
 
 // Import team photos - Council
 import sarahM from "@/assets/team/sarah-m.jpg";
-import peter from "@/assets/team/peter.png";
+import sarahM from "@/assets/team/sarah-m.jpg";
 import tim from "@/assets/team/tim.png";
 import lars from "@/assets/team/lars.jpg";
 
@@ -71,6 +71,13 @@ const teamMembers: TeamMember[] = [
   },
 
   // Contributors.
+  {
+    name: "Richard Thommeret",
+    role: "External Relations & Strategic Communications",
+    image: richard,
+    category: "new_contributor",
+    bio: "Richard Thommeret is an engineer and former researcher with deep expertise in materials science and strategic communication. He has extensive experience representing major industrial organizations, such as Solvay, to professional associations, driving the promotion and development of innovative products. He combines his technical background with strategic relations to foster institutional alignment.",
+  },
   {
     name: "Richard Thommeret",
     role: "External Relations & Strategic Communications",
@@ -131,11 +138,11 @@ const teamMembers: TeamMember[] = [
     bio: "Sarah McArthur is an esteemed editor, writer, and leadership thinker who served as the COO of Marshall Goldsmith Inc. for over two decades. A founding member of the '100 Coaches' project and editor-in-chief of the Leader to Leader journal, she has authored and edited numerous influential books on executive coaching and management, working alongside the world's foremost business leaders.",
   },
   {
-    name: "Peter Somers",
-    role: "Former CEO, Emirates Post · Founder, SprintPack",
-    image: peter,
+    name: "Sarah McArthur",
+    role: "Editor-in-Chief, Leader to Leader Journal",
+    image: sarahM,
     category: "council",
-    bio: "Peter Somers is an experienced executive and strategic leader in the global transport and logistics sector. As the founder of SprintPack and former CEO of Emirates Post, where he led a major organizational transformation, he possesses deep expertise in change management, e-commerce innovation, and people-driven leadership. He actively serves as a board member and advisor for multiple international enterprises.",
+    bio: "Sarah McArthur is an esteemed editor, writer, and leadership thinker who served as the COO of Marshall Goldsmith Inc. for over two decades. A founding member of the '100 Coaches' project and editor-in-chief of the Leader to Leader journal, she has authored and edited numerous influential books on executive coaching and management, working alongside the world's foremost business leaders.",
   },
   {
     name: "Tim Sanders",
