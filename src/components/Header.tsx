@@ -101,9 +101,11 @@ const Header = () => {
               href="https://www.sociis.house/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-foreground text-background font-sans text-xs tracking-[0.15em] uppercase whitespace-nowrap rounded-none hover:bg-gold transition-colors"
+              className="v4-header-house inline-flex items-center gap-1.5 font-sans text-xs tracking-[0.15em] uppercase whitespace-nowrap text-foreground hover:opacity-70 transition-opacity"
             >
-              Enter Sociis House
+              <span>Sociis House</span>
+              <span aria-hidden="true">↗</span>
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </div>
 
@@ -151,6 +153,17 @@ const Header = () => {
                   </a>
                 )
               ))}
+              <a
+                href="https://www.sociis.house/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-sans text-sm tracking-[0.18em] uppercase text-foreground hover:opacity-70 transition-opacity"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span>Sociis House</span>
+                <span aria-hidden="true">↗</span>
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
             </div>
           </div>
         )}
