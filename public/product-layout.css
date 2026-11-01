@@ -1,0 +1,30 @@
+/* Restore a substantial product photograph while keeping its example visible. */
+.bee .bee-photo img{height:clamp(320px,24vw,350px);max-height:none;aspect-ratio:auto;object-fit:cover;object-position:center 45%;border-radius:4px}
+.bee .bee-photo figcaption{position:static;margin-top:8px;font-size:10px;line-height:1.6}
+.bee .bee-demo{align-self:start}
+@media(min-width:1001px){
+ .bee.section{padding:36px 0}
+ .bee .section-intro{margin-bottom:22px}
+ .bee .section-note{margin-top:0}
+ #bee-example{display:grid;grid-template-columns:1.05fr 1fr;column-gap:25px;padding:18px 24px;margin:16px 0 0}
+ #bee-example>.demo-heading{grid-column:1/-1;grid-row:1}
+ #bee-example>.example-question{grid-column:1;grid-row:2/4;align-self:start;margin-top:12px}
+ #bee-example>.example-support{grid-column:2;grid-row:2;border-top:0;padding-top:0;margin-top:12px}
+ #bee-example>.example-decision{grid-column:2;grid-row:3;margin-top:12px}
+ #bee-example>.demo-note{grid-column:1/-1;grid-row:4;margin-top:12px;padding-top:11px}
+ #bee-example .choice-question{font-size:26px;line-height:1.13;min-height:0}
+}
+@media(min-width:1001px) and (max-height:820px){
+ .bee.section{padding:24px 0}
+ .bee .section-intro{margin-bottom:18px}
+ .bee .bee-photo img{height:280px}
+ #bee-example{padding:18px 20px;column-gap:20px}
+ #bee-example .demo-heading h3{font-size:27px}
+ #bee-example .choice-question{font-size:24px;line-height:1.15}
+ #bee-example>.example-question,#bee-example>.example-support{margin-top:14px}
+ #bee-example>.demo-note{margin-top:13px;padding-top:10px}
+}
+@media(max-width:760px){
+ .bee .bee-photo img{height:auto;aspect-ratio:4/3;max-height:340px;object-position:center 45%}
+ .bee .bee-photo figcaption{font-size:10px;line-height:1.6}
+}
