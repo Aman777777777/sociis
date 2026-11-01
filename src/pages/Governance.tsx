@@ -79,13 +79,6 @@ const teamMembers: TeamMember[] = [
     bio: "Richard Thommeret is an engineer and former researcher with deep expertise in materials science and strategic communication. He has extensive experience representing major industrial organizations, such as Solvay, to professional associations, driving the promotion and development of innovative products. He combines his technical background with strategic relations to foster institutional alignment.",
   },
   {
-    name: "Richard Thommeret",
-    role: "External Relations & Strategic Communications",
-    image: richard,
-    category: "new_contributor",
-    bio: "Richard Thommeret is an engineer and former researcher with deep expertise in materials science and strategic communication. He has extensive experience representing major industrial organizations, such as Solvay, to professional associations, driving the promotion and development of innovative products. He combines his technical background with strategic relations to foster institutional alignment.",
-  },
-  {
     name: "Joost Peeters",
     role: "Legal Advisor",
     image: joost,
@@ -130,13 +123,6 @@ const teamMembers: TeamMember[] = [
   },
 
   // The Council.
-  {
-    name: "Sarah McArthur",
-    role: "Editor-in-Chief, Leader to Leader Journal",
-    image: sarahM,
-    category: "council",
-    bio: "Sarah McArthur is an esteemed editor, writer, and leadership thinker who served as the COO of Marshall Goldsmith Inc. for over two decades. A founding member of the '100 Coaches' project and editor-in-chief of the Leader to Leader journal, she has authored and edited numerous influential books on executive coaching and management, working alongside the world's foremost business leaders.",
-  },
   {
     name: "Sarah McArthur",
     role: "Editor-in-Chief, Leader to Leader Journal",
