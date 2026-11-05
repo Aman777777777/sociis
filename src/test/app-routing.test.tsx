@@ -22,4 +22,12 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).toBe("/flow-concept");
   });
+
+  it("matches the Invitation page instead of falling back to not found", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/invitation");
+
+    expect(matches.at(-1)?.routeId).toBe("/invitation");
+  });
 });
