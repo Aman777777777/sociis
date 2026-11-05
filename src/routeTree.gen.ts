@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as FlowConceptRouteImport } from './routes/flow-concept'
+import { Route as InvitationRouteImport } from './routes/invitation'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const FlowConceptRoute = FlowConceptRouteImport.update({
   path: '/flow-concept',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InvitationRoute = InvitationRouteImport.update({
+  id: '/invitation',
+  path: '/invitation',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/flow-concept': typeof FlowConceptRoute
+  '/invitation': typeof InvitationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/flow-concept': typeof FlowConceptRoute
+  '/invitation': typeof InvitationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/flow-concept': typeof FlowConceptRoute
+  '/invitation': typeof InvitationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/flow-concept'
+  fullPaths: '/' | '/flow-concept' | '/invitation'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/flow-concept'
-  id: '__root__' | '/' | '/flow-concept'
+  to: '/' | '/flow-concept' | '/invitation'
+  id: '__root__' | '/' | '/flow-concept' | '/invitation'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FlowConceptRoute: typeof FlowConceptRoute
+  InvitationRoute: typeof InvitationRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FlowConceptRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/invitation': {
+      id: '/invitation'
+      path: '/invitation'
+      fullPath: '/invitation'
+      preLoaderRoute: typeof InvitationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FlowConceptRoute: FlowConceptRoute,
+  InvitationRoute: InvitationRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
