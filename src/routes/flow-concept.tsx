@@ -41,6 +41,11 @@ function FlowConcept() {
   useEffect(() => {
     const root = document.documentElement;
     root.classList.add("motion-on", "story-pinned");
+    document
+      .querySelectorAll(
+        '.desktop-nav a[href="/flow-concept"], #menu-dialog nav a[href="/flow-concept"]',
+      )
+      .forEach((link) => link.setAttribute("aria-current", "page"));
     const scripts = ["/app.js", "/archive.js"].map((src) => {
       const script = document.createElement("script");
       script.src = src;
