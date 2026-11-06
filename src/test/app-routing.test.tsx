@@ -30,4 +30,12 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).toBe("/invitation");
   });
+
+  it("matches the Experiences page instead of falling back to not found", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/experiences");
+
+    expect(matches.at(-1)?.routeId).toBe("/experiences");
+  });
 });

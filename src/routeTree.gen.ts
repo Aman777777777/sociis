@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ExperiencesRouteImport } from './routes/experiences'
 import { Route as FlowConceptRouteImport } from './routes/flow-concept'
 import { Route as InvitationRouteImport } from './routes/invitation'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperiencesRoute = ExperiencesRouteImport.update({
+  id: '/experiences',
+  path: '/experiences',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FlowConceptRoute = FlowConceptRouteImport.update({
@@ -31,30 +37,34 @@ const InvitationRoute = InvitationRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/experiences': typeof ExperiencesRoute
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/experiences': typeof ExperiencesRoute
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/experiences': typeof ExperiencesRoute
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/flow-concept' | '/invitation'
+  fullPaths: '/' | '/experiences' | '/flow-concept' | '/invitation'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/flow-concept' | '/invitation'
-  id: '__root__' | '/' | '/flow-concept' | '/invitation'
+  to: '/' | '/experiences' | '/flow-concept' | '/invitation'
+  id: '__root__' | '/' | '/experiences' | '/flow-concept' | '/invitation'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ExperiencesRoute: typeof ExperiencesRoute
   FlowConceptRoute: typeof FlowConceptRoute
   InvitationRoute: typeof InvitationRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiences': {
+      id: '/experiences'
+      path: '/experiences'
+      fullPath: '/experiences'
+      preLoaderRoute: typeof ExperiencesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/flow-concept': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ExperiencesRoute: ExperiencesRoute,
   FlowConceptRoute: FlowConceptRoute,
   InvitationRoute: InvitationRoute,
 }
