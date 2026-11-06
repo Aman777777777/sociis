@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ExperiencesRouteImport } from './routes/experiences'
 import { Route as FlowConceptRouteImport } from './routes/flow-concept'
 import { Route as InvitationRouteImport } from './routes/invitation'
+import { Route as ReviewThe300RouteImport } from './routes/review/the-300'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const InvitationRoute = InvitationRouteImport.update({
   path: '/invitation',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReviewThe300Route = ReviewThe300RouteImport.update({
+  id: '/review/the-300',
+  path: '/review/the-300',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/experiences': typeof ExperiencesRoute
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
+  '/review/the-300': typeof ReviewThe300Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/experiences': typeof ExperiencesRoute
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
+  '/review/the-300': typeof ReviewThe300Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,21 @@ export interface FileRoutesById {
   '/experiences': typeof ExperiencesRoute
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
+  '/review/the-300': typeof ReviewThe300Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/experiences' | '/flow-concept' | '/invitation'
+  fullPaths:
+    '/' | '/experiences' | '/flow-concept' | '/invitation' | '/review/the-300'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/experiences' | '/flow-concept' | '/invitation'
-  id: '__root__' | '/' | '/experiences' | '/flow-concept' | '/invitation'
+  to: '/' | '/experiences' | '/flow-concept' | '/invitation' | '/review/the-300'
+  id:
+    | '__root__'
+    | '/'
+    | '/experiences'
+    | '/flow-concept'
+    | '/invitation'
+    | '/review/the-300'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +83,7 @@ export interface RootRouteChildren {
   ExperiencesRoute: typeof ExperiencesRoute
   FlowConceptRoute: typeof FlowConceptRoute
   InvitationRoute: typeof InvitationRoute
+  ReviewThe300Route: typeof ReviewThe300Route
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +116,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InvitationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/review/the-300': {
+      id: '/review/the-300'
+      path: '/review/the-300'
+      fullPath: '/review/the-300'
+      preLoaderRoute: typeof ReviewThe300RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +131,7 @@ const rootRouteChildren: RootRouteChildren = {
   ExperiencesRoute: ExperiencesRoute,
   FlowConceptRoute: FlowConceptRoute,
   InvitationRoute: InvitationRoute,
+  ReviewThe300Route: ReviewThe300Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -85,11 +85,8 @@ function Experiences() {
               </p>
               <p className="sg-sales-hook">Some connections change what comes next.</p>
               <p className="sg-sales-date">€1,000 per guest · Including Belgian VAT</p>
-              <a
-                className="sg-sales-cta"
-                href="https://sociisgroup-the-300-garden-of-choice.jeremie836072.chatgpt.site/review/the-300"
-              >
-                Explore the VIP invitation <span aria-hidden="true">→</span>
+              <a className="sg-sales-cta" href="/review/the-300">
+                Visit The 300 <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
