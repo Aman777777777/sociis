@@ -296,6 +296,7 @@ dialog .button{margin-top:25px}
 .leader-grid{gap:16px}
 .leader-grid h3{font-size:18px}
 }
+
 @media(max-width:900px){.desktop-nav{display:none}
 .menu-button{display:flex}
 .wrap{width:calc(100% - 64px)}
@@ -899,3 +900,17 @@ dialog select,dialog textarea{font-size:16px}
  .hero-scroll .scroll-label{display:none}
  .return-top{left:15px;bottom:15px}
 }
+
+
+/* Use the upright cuts of both typefaces throughout the editorial layout. */
+h2 em,.serif,.hero-foot>span,.culture-backdrop span:last-child,
+.billion-type em,.giving-number span,.why-value em,.art-caption,
+.choice-question,.closing-line p,.demo-heading h3 {font-style:normal}
+.why-bridge h3 em,.story-copy h3 em,.archive-heading h3 em,
+.closing-line em {font-style:normal}
+
+/* A single scroll cue on the opening and one scale for chapter labels. */
+#main .chapter-label {font-size:clamp(11px,.96vw,13px);font-weight:600;line-height:1.55;letter-spacing:.105em}
+.hero .hero-scroll {min-height:48px;min-width:108px;gap:8px}
+.hero .hero-scroll .scroll-label {display:block;font-size:10px}
+@media(max-width:760px){.hero .hero-scroll .scroll-label {font-size:9px}}

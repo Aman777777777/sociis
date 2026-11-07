@@ -18,6 +18,7 @@
 @media(prefers-reduced-motion:no-preference){
  .sg-motion-heading>span>*{animation:sg-heading-rise .85s cubic-bezier(.2,.7,.25,1) both}
  .sg-motion-heading>span+span>*{animation-delay:.14s}
+ @keyframes sg-heading-rise{from{transform:translateY(106%)}to{transform:translateY(0)}}
  .sg-motion-ready .sg-reveal{transition:transform .65s cubic-bezier(.2,.7,.25,1),opacity .6s ease}
  .sg-motion-ready .sg-reveal:not(.sg-in-view){opacity:.65;transform:translateY(22px)}
  .sg-motion-ready .sg-sales-grid>div.sg-reveal{transition-delay:.08s}
@@ -31,3 +32,63 @@
 .sg-vip-feature .sg-sales-hook{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(19px,2.2vw,28px);font-style:italic;line-height:1.2;margin-block:15px}
 .sg-vip-feature .sg-sales-date{margin-block:12px}
 .sg-vip-feature .sg-sales-cta{margin-top:4px}
+
+/* Leave room for the italic punctuation inside the animated word mask. */
+#participate-title em .word-mask{padding-inline-end:.15em;margin-inline-end:-.1em;padding-top:.1em;margin-top:-.1em}
+#participate .participation-rows details:not([open]){padding-bottom:0}
+#participate .sg-support-row{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:80px;padding:18px 0;border-block:1px solid #f3f1e840;color:inherit;text-decoration:none}
+#participate .sg-support-title{display:block;font-size:clamp(22px,2.1vw,27px);line-height:1.2;letter-spacing:-.04em}
+#participate .sg-support-note{display:block;font-size:13px;line-height:1.45;color:#d0d8c6;margin-top:6px}
+#participate .sg-support-arrow{font-size:22px;color:var(--lime)}
+#participate .sg-support-row:hover .sg-support-title{text-decoration:underline;text-underline-offset:5px}
+
+/* Upcoming invitation: keep the offer and booking action readable on entry. */
+#upcoming-experience {
+  background: #102e2a;
+  color: #f4f0e4;
+  scroll-margin-top: 92px;
+}
+#upcoming-experience .sg-sales-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.14fr);
+}
+#upcoming-experience .sg-event-label {
+  display: inline-block;
+  border: 1px solid #d4e79880;
+  border-radius: 5px;
+  color: #d4e798;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  padding: 5px 10px;
+}
+#upcoming-experience #sg-vip-title {
+  font-size: clamp(54px, 6.8vw, 98px);
+  margin: 0 0 12px;
+  animation: none;
+}
+#upcoming-experience .sg-event-format {
+  font-size: clamp(19px, 2vw, 25px);
+  line-height: 1.3;
+  margin: 0 0 16px;
+  text-wrap: pretty;
+}
+#upcoming-experience .sg-event-details,
+#upcoming-experience .sg-event-host,
+#upcoming-experience .sg-event-price {margin: 0 0 12px}
+#upcoming-experience .sg-event-host,
+#upcoming-experience figcaption {color: #d0d8c6}
+#upcoming-experience .sg-sales-cta {margin: 4px 16px 6px 0}
+#upcoming-experience .sg-event-secondary {color: inherit; text-underline-offset: .2em; display: inline-block; padding-block: 12px; font-size: .9rem}
+@media (max-width: 740px) {
+  #upcoming-experience .sg-sales-grid {grid-template-columns: minmax(0, 1fr)}
+  #upcoming-experience {scroll-margin-top: 70px}
+}
+
+.sg-motion-heading em,.sg-sales-grid h2 em,.sg-sales-intro h1 em,.sg-vip-feature .sg-sales-hook {font-style:normal}
+
+#upcoming-experience .sg-event-label {font-size:clamp(.95rem,1.4vw,1.1rem);letter-spacing:.07em}
+#upcoming-experience .sg-event-format {font-weight:600}
+#upcoming-experience .sg-sales-cta {min-height:50px;font-size:1rem}
+.sg-event-jump {display:inline-block;margin-top:14px;color:inherit;font-weight:600;text-underline-offset:.24em}

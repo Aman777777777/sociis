@@ -7,6 +7,7 @@ const TITLE = "Flow Concept — sociisgroup";
 const DESCRIPTION =
   "An independent behavioural institution developing BEE to help people make more sustainable everyday choices.";
 const STYLES = [
+  "/experiences-preview.css",
   "/fonts/institution.css",
   "/style.css",
   "/archive.css",
@@ -14,7 +15,6 @@ const STYLES = [
   "/product-layout.css",
   "/refinements.css",
   "/legal.css",
-  "/experiences-preview.css",
 ];
 
 export const Route = createFileRoute("/flow-concept")({

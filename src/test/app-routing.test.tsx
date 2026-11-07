@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
 import bodyHtml from "@/content/body.html?raw";
+import vipBodyHtml from "@/content/vip.html?raw";
 
 // Match routes without running loaders or rendering: loaders may need a server or
 // network the test run lacks, and jsdom never loads the stylesheets React waits on.
@@ -40,13 +41,24 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).toBe("/experiences");
   });
 
-  it("includes the local The 300 invitation in the root homepage", () => {
+  it("matches the VIP invitation instead of falling back to not found", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/vip/");
+
+    expect(matches.at(-1)?.routeId).toBe("/vip/");
+  });
+
+  it("includes the complete preview homepage and local VIP invitation", () => {
     expect(bodyHtml).toContain('id="upcoming-experience"');
-    expect(bodyHtml).toContain('href="/review/the-300"');
+    expect(bodyHtml).toContain("We’re building <strong>BEE</strong>");
+    expect(bodyHtml).toContain('href="/vip/"');
     expect(bodyHtml).not.toContain("chatgpt.site");
     expect(bodyHtml.indexOf('id="upcoming-experience"')).toBeLessThan(
       bodyHtml.indexOf('id="experiences"'),
     );
+    expect(vipBodyHtml).toContain("data-vip-selector");
+    expect(vipBodyHtml).toContain('href="/vip/supporter.html"');
   });
 
   it("matches The 300 invitation instead of falling back to not found", () => {

@@ -88,12 +88,3 @@ body:has(.header.scrolled) .return-top{right:10px}
  #archive-pause::after{content:'Ⅱ';font-size:16px;line-height:1}
  #archive-pause[aria-pressed="true"]::after{content:'▷'}
 }
-
-/* Slower, cleaner gathering transition: each card holds, copy fades out before the next arrives. */
-.story-pinned .story-journey{height:calc(100svh - 76px + 260svh)}
-.story-pinned .story-card:first-child .story-copy{opacity:var(--copy-a,1)}
-.story-pinned .story-card:last-child .story-copy{opacity:var(--copy-b,0)}
-.no-motion .story-card .story-copy{opacity:1!important}
-@media(max-width:760px){.story-pinned .story-journey{height:calc(100svh - 68px + 220svh)}}
-.film-loading{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;margin:0;padding:12px 20px;border-radius:30px;background:#102e2ae6;color:var(--paper);font-size:12px;letter-spacing:.04em;pointer-events:none}
-#film-dialog{position:fixed}#film-dialog .film-loading{top:45%}

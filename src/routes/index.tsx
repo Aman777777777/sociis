@@ -5,8 +5,9 @@ import bodyHtml from "@/content/body.html?raw";
 const SITE_URL = "https://the300.sociisgroup.com";
 const TITLE = "sociisgroup — Change begins with a choice";
 const DESCRIPTION =
-  "A Belgian for-profit company with a social purpose, developing BEE for more sustainable everyday choices. Scaling through culture, hospitality, company partnerships and communities.";
+  "An independent behavioural institution developing BEE for more sustainable everyday choices. Scaling through culture, hospitality, company partnerships and communities.";
 const STYLES = [
+  "/experiences-preview.css",
   "/fonts/institution.css",
   "/style.css",
   "/archive.css",
@@ -14,7 +15,6 @@ const STYLES = [
   "/product-layout.css",
   "/refinements.css",
   "/legal.css",
-  "/experiences-preview.css",
 ];
 
 export const Route = createFileRoute("/")({
