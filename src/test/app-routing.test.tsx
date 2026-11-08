@@ -65,6 +65,11 @@ describe("App routing", () => {
     expect(vipBodyHtml).toContain('href="/vip/supporter.html"');
   });
 
+  it("links the VIP invitation logo home and provides a back-to-top arrow", () => {
+    expect(vipBodyHtml).toContain('<a class="brand" href="/" aria-label="SociisGroup homepage">');
+    expect(vipBodyHtml).toContain('class="vip-back-to-top" href="#top" aria-label="Back to top"');
+  });
+
   it("matches The 300 invitation instead of falling back to not found", () => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
 
