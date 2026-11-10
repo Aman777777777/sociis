@@ -41,8 +41,8 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).toBe("/experiences");
   });
 
-  it("sends desktop and mobile Experiences links to The 300 section on the homepage", () => {
-    expect(bodyHtml.match(/href="\/#upcoming-experience"[^>]*>Experiences<\/a>/g)).toHaveLength(2);
+  it("sends desktop and mobile Experiences links directly to The 300 section", () => {
+    expect(bodyHtml.match(/href="#upcoming-experience">Experiences<\/a>/g)).toHaveLength(2);
   });
 
   it("matches the VIP invitation instead of falling back to not found", () => {
@@ -53,17 +53,24 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).toBe("/vip/");
   });
 
+  it("matches the Club 64 membership page", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/club-64/");
+
+    expect(matches.at(-1)?.routeId).toBe("/club-64/");
+  });
+
   it("includes the complete preview homepage and local VIP invitation", () => {
     expect(bodyHtml).toContain('id="upcoming-experience"');
     expect(bodyHtml).toContain("We’re building <strong>BEE</strong>");
     expect(bodyHtml).toContain("We help people turn good intentions into everyday choices.");
     expect(bodyHtml).toContain("hotel apps to loyalty programmes");
     expect(bodyHtml).toContain("separately ticketed experiences");
-    expect(bodyHtml).toContain("Individuals · Club 64");
-    expect(bodyHtml).toContain("Small and medium businesses · Circle");
-    expect(bodyHtml).toContain("Corporate partners · Sovereign");
+    expect(bodyHtml).toContain('id="club-64-option"');
+    expect(bodyHtml).toContain('href="/club-64/?from=take-part"');
+    expect(bodyHtml).toContain('href="/vip/?from=experiences"');
     expect(bodyHtml).toContain('href="/vip/?from=take-part"');
-    expect(bodyHtml).toContain('href="/vip/"');
     expect(bodyHtml).not.toContain("chatgpt.site");
     expect(bodyHtml.indexOf('id="upcoming-experience"')).toBeLessThan(
       bodyHtml.indexOf('id="experiences"'),

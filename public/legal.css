@@ -21,3 +21,8 @@ html{overflow-anchor:none}
 @media(max-width:760px){.legal-dialog{padding:24px;width:calc(100% - 24px)}.legal-copy{font-size:14px}.legal-copy h3{font-size:22px;margin-top:27px}.legal-copy .legal-lead{font-size:17px}.legal-header{padding:20px 24px}.legal-header .logo{width:130px}.legal-header>a:last-child{font-size:11px}.legal-page main{margin:45px auto 55px}.footer-base>a{font-size:11px}}
 
 .legal-dialog>.dialog-head{position:sticky;top:0;background:var(--paper);z-index:2;padding-bottom:14px}
+
+.legal-header nav {display:flex;align-items:center;justify-content:flex-end;gap:4px 16px;flex-wrap:wrap;font-size:12px;text-underline-offset:4px}
+.legal-header nav a {display:inline-flex;align-items:center;min-height:44px}
+
+.legal-page .legal-copy,.legal-dialog .legal-copy,.legal-page .legal-copy :is(h1,h2,h3,em,i),.legal-dialog .legal-copy :is(h1,h2,h3,em,i) {font-style:normal}

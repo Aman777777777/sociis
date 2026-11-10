@@ -88,3 +88,7 @@ body:has(.header.scrolled) .return-top{right:10px}
  #archive-pause::after{content:'Ⅱ';font-size:16px;line-height:1}
  #archive-pause[aria-pressed="true"]::after{content:'▷'}
 }
+
+/* Keep both expressions visible in the portrait-shaped opening. */
+.hero .hero-window img {object-position:48% 42%}
+@media(max-width:760px){.hero .hero-window img {object-position:50% 35%}}

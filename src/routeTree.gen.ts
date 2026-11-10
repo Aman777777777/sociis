@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ExperiencesRouteImport } from './routes/experiences'
 import { Route as FlowConceptRouteImport } from './routes/flow-concept'
 import { Route as InvitationRouteImport } from './routes/invitation'
+import { Route as Club64IndexRouteImport } from './routes/club-64/index'
 import { Route as ReviewThe300RouteImport } from './routes/review/the-300'
 import { Route as VipIndexRouteImport } from './routes/vip/index'
 
@@ -36,6 +37,11 @@ const InvitationRoute = InvitationRouteImport.update({
   path: '/invitation',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Club64IndexRoute = Club64IndexRouteImport.update({
+  id: '/club-64/',
+  path: '/club-64/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReviewThe300Route = ReviewThe300RouteImport.update({
   id: '/review/the-300',
   path: '/review/the-300',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
   '/review/the-300': typeof ReviewThe300Route
+  '/club-64/': typeof Club64IndexRoute
   '/vip/': typeof VipIndexRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
   '/review/the-300': typeof ReviewThe300Route
+  '/club-64': typeof Club64IndexRoute
   '/vip': typeof VipIndexRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
   '/review/the-300': typeof ReviewThe300Route
+  '/club-64/': typeof Club64IndexRoute
   '/vip/': typeof VipIndexRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/flow-concept'
     | '/invitation'
     | '/review/the-300'
+    | '/club-64/'
     | '/vip/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/flow-concept'
     | '/invitation'
     | '/review/the-300'
+    | '/club-64'
     | '/vip'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/flow-concept'
     | '/invitation'
     | '/review/the-300'
+    | '/club-64/'
     | '/vip/'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   FlowConceptRoute: typeof FlowConceptRoute
   InvitationRoute: typeof InvitationRoute
   ReviewThe300Route: typeof ReviewThe300Route
+  Club64IndexRoute: typeof Club64IndexRoute
   VipIndexRoute: typeof VipIndexRoute
 }
 
@@ -138,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InvitationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/club-64/': {
+      id: '/club-64/'
+      path: '/club-64'
+      fullPath: '/club-64/'
+      preLoaderRoute: typeof Club64IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/review/the-300': {
       id: '/review/the-300'
       path: '/review/the-300'
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   FlowConceptRoute: FlowConceptRoute,
   InvitationRoute: InvitationRoute,
   ReviewThe300Route: ReviewThe300Route,
+  Club64IndexRoute: Club64IndexRoute,
   VipIndexRoute: VipIndexRoute,
 }
 export const routeTree = rootRouteImport

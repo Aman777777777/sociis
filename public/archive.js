@@ -7,6 +7,7 @@
   const count=document.querySelector('#archive-count'),description=document.querySelector('#archive-description'),status=document.querySelector('#archive-status'),hint=archive.querySelector('.archive-hint'),dialog=document.querySelector('#archive-dialog'),fullImage=document.querySelector('#archive-full-image'),caption=document.querySelector('#archive-caption');
   if(!stage||!wheel||!photos.length||!previous||!next||!pause||!dialog||!fullImage||!caption)return;
   const reduced=matchMedia('(prefers-reduced-motion: reduce)'),step=360/photos.length;
+  wheel.style.setProperty('--archive-step', step+'deg');
   let phase=0,target=0,tilt=0,impulse=0,frame=0,lastFrame=0,lastY=scrollY,lastInput=performance.now();
   let visible=false,paused=false,focusWithin=false,lightboxOpen=false,motion=null,viewportHeight=innerHeight,restorePhoto=null,front=-1,pendingAnnouncement=null;
   const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));

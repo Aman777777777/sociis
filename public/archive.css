@@ -9,14 +9,12 @@
 .archive-hint{width:min(1340px,calc(100% - 112px));margin:0 auto 22px;font-size:11px;line-height:1.7;text-align:center;color:var(--muted)}
 .archive-photo{position:relative;display:block;min-width:0;aspect-ratio:4/3;padding:0;overflow:hidden;background:var(--green);border:1px solid #193a332b;border-radius:4px;color:var(--paper);text-align:left;backface-visibility:hidden;-webkit-backface-visibility:hidden}
 .archive-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%;pointer-events:none}
-.archive-photo[data-archive-index="2"] img{object-position:48% 40%}
-.archive-photo[data-archive-index="3"] img{object-position:70% 40%}
+.archive-photo[data-archive-index="1"] img{object-position:48% 40%}
+.archive-photo[data-archive-index="2"] img{object-position:70% 40%}
 .archive-photo[data-archive-index="0"]{--archive-image:url('media/diana.webp')}
-.archive-photo[data-archive-index="1"]{--archive-image:url('media/hero-room.webp')}
-.archive-photo[data-archive-index="2"]{--archive-image:url('media/family-shared-smile.webp')}
-.archive-photo[data-archive-index="3"]{--archive-image:url('media/the300-voice.jpg')}
-.archive-photo[data-archive-index="4"]{--archive-image:url('media/the300.jpg')}
-.archive-photo[data-archive-index="5"]{--archive-image:url('media/corinthia-before-the-gathering.webp')}
+.archive-photo[data-archive-index="1"]{--archive-image:url('media/the300-voice.jpg')}
+.archive-photo[data-archive-index="2"]{--archive-image:url('media/the300.jpg')}
+.archive-photo[data-archive-index="3"]{--archive-image:url('media/corinthia-before-the-gathering.webp')}
 .archive-photo::after{content:attr(data-caption);position:absolute;inset:auto 0 0;padding:30px 13px 12px;background:linear-gradient(transparent,#0c2421e8);font-size:11px;line-height:1.45;pointer-events:none}
 .archive-photo:hover{border-color:var(--green)}
 .archive-photo:focus-visible{outline:3px solid var(--green);outline-offset:5px}
@@ -48,7 +46,7 @@ html.archive-visible .floating-contact{display:none}
  html:not(.no-motion) .living-archive[data-archive-motion="on"] .archive-stage{height:600px;overflow:clip}
  html:not(.no-motion) .living-archive[data-archive-motion="on"] .archive-hint{position:absolute;bottom:18px;left:22px;right:22px;width:auto;margin:0;z-index:4;pointer-events:none}
  html:not(.no-motion) .living-archive[data-archive-motion="on"] .archive-wheel{position:absolute;left:50%;top:47%;width:360px;height:420px;margin:-210px 0 0 -180px;display:block;transform-style:preserve-3d;transform:translateZ(calc(var(--archive-radius)*-1)) rotateX(-5deg) rotateZ(calc(-3deg + var(--archive-tilt,0deg))) rotateY(var(--archive-turn,0deg));will-change:transform}
- html:not(.no-motion) .living-archive[data-archive-motion="on"] .archive-photo{position:absolute;aspect-ratio:auto;transform:rotateY(calc(var(--archive-index)*60deg)) translateZ(var(--archive-radius));box-shadow:0 12px 28px #102e2a18}
+ html:not(.no-motion) .living-archive[data-archive-motion="on"] .archive-photo{position:absolute;aspect-ratio:auto;transform:rotateY(calc(var(--archive-index)*var(--archive-step,90deg))) translateZ(var(--archive-radius));box-shadow:0 12px 28px #102e2a18}
 }
 @media(max-width:1000px){.archive-heading{gap:6%}.archive-heading h3{font-size:43px}.archive-heading p{font-size:13px}.archive-controls{gap:8px}}
 @media(max-width:760px){
