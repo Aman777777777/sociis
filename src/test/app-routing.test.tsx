@@ -56,6 +56,13 @@ describe("App routing", () => {
   it("includes the complete preview homepage and local VIP invitation", () => {
     expect(bodyHtml).toContain('id="upcoming-experience"');
     expect(bodyHtml).toContain("We’re building <strong>BEE</strong>");
+    expect(bodyHtml).toContain("We help people turn good intentions into everyday choices.");
+    expect(bodyHtml).toContain("hotel apps to loyalty programmes");
+    expect(bodyHtml).toContain("separately ticketed experiences");
+    expect(bodyHtml).toContain("Individuals · Club 64");
+    expect(bodyHtml).toContain("Small and medium businesses · Circle");
+    expect(bodyHtml).toContain("Corporate partners · Sovereign");
+    expect(bodyHtml).toContain('href="/vip/?from=take-part"');
     expect(bodyHtml).toContain('href="/vip/"');
     expect(bodyHtml).not.toContain("chatgpt.site");
     expect(bodyHtml.indexOf('id="upcoming-experience"')).toBeLessThan(
