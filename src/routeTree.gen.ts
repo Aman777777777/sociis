@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CorinthiaGalleryRouteImport } from './routes/corinthia-gallery'
+import { Route as CurrentSiteRouteImport } from './routes/current-site'
 import { Route as ExperiencesRouteImport } from './routes/experiences'
 import { Route as FlowConceptRouteImport } from './routes/flow-concept'
 import { Route as InvitationRouteImport } from './routes/invitation'
@@ -26,6 +27,11 @@ const IndexRoute = IndexRouteImport.update({
 const CorinthiaGalleryRoute = CorinthiaGalleryRouteImport.update({
   id: '/corinthia-gallery',
   path: '/corinthia-gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CurrentSiteRoute = CurrentSiteRouteImport.update({
+  id: '/current-site',
+  path: '/current-site',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExperiencesRoute = ExperiencesRouteImport.update({
@@ -62,6 +68,7 @@ const VipIndexRoute = VipIndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/corinthia-gallery': typeof CorinthiaGalleryRoute
+  '/current-site': typeof CurrentSiteRoute
   '/experiences': typeof ExperiencesRoute
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/corinthia-gallery': typeof CorinthiaGalleryRoute
+  '/current-site': typeof CurrentSiteRoute
   '/experiences': typeof ExperiencesRoute
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
@@ -83,6 +91,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/corinthia-gallery': typeof CorinthiaGalleryRoute
+  '/current-site': typeof CurrentSiteRoute
   '/experiences': typeof ExperiencesRoute
   '/flow-concept': typeof FlowConceptRoute
   '/invitation': typeof InvitationRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/corinthia-gallery'
+    | '/current-site'
     | '/experiences'
     | '/flow-concept'
     | '/invitation'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/corinthia-gallery'
+    | '/current-site'
     | '/experiences'
     | '/flow-concept'
     | '/invitation'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/corinthia-gallery'
+    | '/current-site'
     | '/experiences'
     | '/flow-concept'
     | '/invitation'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CorinthiaGalleryRoute: typeof CorinthiaGalleryRoute
+  CurrentSiteRoute: typeof CurrentSiteRoute
   ExperiencesRoute: typeof ExperiencesRoute
   FlowConceptRoute: typeof FlowConceptRoute
   InvitationRoute: typeof InvitationRoute
@@ -148,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/corinthia-gallery'
       fullPath: '/corinthia-gallery'
       preLoaderRoute: typeof CorinthiaGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/current-site': {
+      id: '/current-site'
+      path: '/current-site'
+      fullPath: '/current-site'
+      preLoaderRoute: typeof CurrentSiteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/experiences': {
@@ -198,6 +218,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CorinthiaGalleryRoute: CorinthiaGalleryRoute,
+  CurrentSiteRoute: CurrentSiteRoute,
   ExperiencesRoute: ExperiencesRoute,
   FlowConceptRoute: FlowConceptRoute,
   InvitationRoute: InvitationRoute,

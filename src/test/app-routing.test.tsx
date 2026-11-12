@@ -17,10 +17,11 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
 
-  it("keeps the existing homepage and matches the isolated Corinthia gallery rebuild", () => {
+  it("serves the gallery rebuild at / and preserves the former homepage at /current-site", () => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
 
-    expect(router.matchRoutes("/").at(-1)?.routeId).not.toBe(rootRouteId);
+    expect(router.matchRoutes("/").at(-1)?.routeId).toBe("/");
+    expect(router.matchRoutes("/current-site").at(-1)?.routeId).toBe("/current-site");
     expect(router.matchRoutes("/corinthia-gallery").at(-1)?.routeId).toBe("/corinthia-gallery");
   });
 

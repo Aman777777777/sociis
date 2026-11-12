@@ -120,6 +120,7 @@ export const Route = createFileRoute("/corinthia-gallery")({
       },
     ],
     links: [
+      { rel: "canonical", href: "https://the300.sociisgroup.com/" },
       { rel: "stylesheet", href: "/fonts/institution.css" },
       { rel: "stylesheet", href: "/gallery-rebuild.css" },
       { rel: "icon", href: "/media/bee-mark.svg" },
@@ -128,7 +129,7 @@ export const Route = createFileRoute("/corinthia-gallery")({
   component: CorinthiaGalleryPage,
 });
 
-function CorinthiaGalleryPage() {
+export function CorinthiaGalleryPage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function closeMenu() {
