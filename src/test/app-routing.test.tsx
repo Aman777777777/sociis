@@ -17,6 +17,13 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
 
+  it("keeps the existing homepage and matches the isolated Corinthia gallery rebuild", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    expect(router.matchRoutes("/").at(-1)?.routeId).not.toBe(rootRouteId);
+    expect(router.matchRoutes("/corinthia-gallery").at(-1)?.routeId).toBe("/corinthia-gallery");
+  });
+
   it("matches the Flow Concept page instead of falling back to not found", () => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
 
