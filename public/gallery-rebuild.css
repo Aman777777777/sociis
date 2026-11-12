@@ -1038,29 +1038,27 @@
   font-size: 0.68rem;
 }
 
-.gr-gallery-nav {
-  display: flex;
-  gap: 1.8rem;
-  padding: 0 0 1rem;
-  border-bottom: 1px solid var(--gr-line);
-}
-
-.gr-gallery-nav a {
-  color: var(--gr-muted);
-  font-size: 0.7rem;
-  text-decoration: none;
-}
-
-.gr-gallery-nav a:hover {
-  color: var(--gr-ink);
-}
-
 .gr-photo-story {
+  position: relative;
+  left: 50%;
   display: grid;
+  width: 100vw;
   grid-template-columns: 1fr 1fr;
   align-items: start;
-  gap: 2rem;
-  padding-top: 3rem;
+  gap: 2rem clamp(1.25rem, 3vw, 2rem);
+  margin-top: 4rem;
+  padding: clamp(3rem, 7vw, 7rem) max(1.5rem, calc((100vw - 1120px) / 2)) 2.25rem;
+  transform: translateX(-50%);
+  background: #211812;
+  color: #f5eee4;
+}
+
+.gr-photo-story .gr-overline {
+  color: #ddbb8a;
+}
+
+.gr-photo-story h3 em {
+  color: #ddbb8a;
 }
 
 .gr-photo-story-intro {
@@ -1073,8 +1071,8 @@
 }
 
 .gr-photo-story-intro p {
-  color: var(--gr-muted);
-  font-size: 0.84rem;
+  color: #d7c7b6;
+  font-size: 0.92rem;
 }
 
 .gr-story-photo {
@@ -1089,6 +1087,7 @@
 
 .gr-story-photo figcaption {
   margin-top: 0.65rem;
+  color: #d7c7b6;
 }
 
 .gr-photo-large img {
@@ -1110,19 +1109,50 @@
 }
 
 .gr-photo-speaker figcaption strong {
-  color: var(--gr-ink);
+  color: #f5eee4;
   font-size: 0.78rem;
 }
 
 .gr-photo-story-second {
+  grid-column: 1 / -1;
   align-self: center;
-  padding-left: 10%;
+  max-width: none;
+  margin-top: clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(2rem, 5vw, 4rem) 0 0;
+  border-top: 1px solid #665143;
 }
 
 .gr-photo-credit {
+  grid-column: 1 / -1;
   margin: 2rem 0 0;
-  color: var(--gr-muted);
+  color: #d7c7b6;
   font-size: 0.67rem;
+}
+
+.gr-gallery-nav {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 1.8rem;
+  margin-bottom: clamp(1.6rem, 4vw, 3rem);
+  border-bottom: 1px solid #665143;
+}
+
+.gr-gallery-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+  color: #f5eee4;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.gr-gallery-nav a:hover,
+.gr-gallery-nav a:focus-visible {
+  border-color: #ddbb8a;
+  color: #ddbb8a;
 }
 
 .gr-people {
@@ -1751,11 +1781,17 @@
   .gr-photo-story {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding-top: 2.3rem;
+    margin-top: 2.3rem;
+    padding: 3rem 1rem 2rem;
   }
 
   .gr-photo-story-intro {
     padding-right: 0;
+  }
+
+  .gr-gallery-nav {
+    gap: 1.3rem;
+    margin-bottom: 0.5rem;
   }
 
   .gr-photo-story-intro h3 {
@@ -1768,7 +1804,9 @@
   }
 
   .gr-photo-story-second {
-    padding: 1.3rem 0 0;
+    grid-column: auto;
+    margin-top: 1.2rem;
+    padding: 1.8rem 0 0;
   }
 
   .gr-leaders {

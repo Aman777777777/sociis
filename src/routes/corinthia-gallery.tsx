@@ -610,11 +610,11 @@ export function CorinthiaGalleryPage() {
                 <small>The 300 · 23 July 2026</small>
               </article>
             </div>
-            <nav className="gr-gallery-nav" aria-label="Photo story sections">
-              <a href="#photo-the-64">The 64</a>
-              <a href="#photo-the-300">The 300</a>
-            </nav>
             <div className="gr-photo-story" id="photo-highlights">
+              <nav className="gr-gallery-nav" aria-label="Photo story sections">
+                <a href="#photo-the-64">The 64</a>
+                <a href="#photo-the-300">The 300</a>
+              </nav>
               <div className="gr-photo-story-intro">
                 <span className="gr-overline">The 64 & The 300 · July 2026</span>
                 <h3>
@@ -680,10 +680,10 @@ export function CorinthiaGalleryPage() {
                 />
                 <figcaption>Under the canopy · The 300</figcaption>
               </figure>
+              <p className="gr-photo-credit">
+                Photography by Ian Hermans, Willem Van Puyenbroeck and Clayton Studio.
+              </p>
             </div>
-            <p className="gr-photo-credit">
-              Photography by Ian Hermans, Willem Van Puyenbroeck and Clayton Studio.
-            </p>
           </div>
         </section>
 
