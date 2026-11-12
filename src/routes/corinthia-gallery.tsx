@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navigation = [
   ["purpose", "Why"],
@@ -16,30 +16,35 @@ const leadership = [
     name: "Jeremie Landweer",
     role: "Founder & CEO",
     image: "leader-jeremie.webp",
+    portrait: "jeremie",
     href: "https://be.linkedin.com/in/jeremie-landweer",
   },
   {
     name: "Dominique Debecker",
     role: "Chief Behavioural Officer",
     image: "leader-dominique.webp",
+    portrait: "dominique",
     href: "https://be.linkedin.com/in/dominique-debecker",
   },
   {
     name: "Luc Garguet-Duport",
     role: "Chief Operating Officer",
     image: "leader-luc.webp",
+    portrait: "luc",
     href: "https://fr.linkedin.com/in/luc-garguet-duport-58910a8",
   },
   {
     name: "Richard Thommeret",
     role: "Chief Communications and Experiences Officer",
     image: "leader-richard-preferred.jpg",
+    portrait: "richard",
     href: "https://be.linkedin.com/in/richardthommeret",
   },
   {
     name: "Chris Benardis",
     role: "Chief Financial Officer",
     image: "leader-chris.webp",
+    portrait: "chris",
     href: "https://ch.linkedin.com/in/chris-benardis",
   },
 ];
@@ -87,11 +92,15 @@ const participation = [
     audience: "Small and medium businesses",
     title: "Circle",
     description: "Meet peers and collaborate on SociisGroup’s work.",
+    href: "mailto:hello@sociisgroup.com?subject=Circle%20membership",
+    label: "Enquire about Circle",
   },
   {
     audience: "Corporate partners",
     title: "Sovereign",
     description: "Help develop BEE and bring it to the people you serve.",
+    href: "mailto:hello@sociisgroup.com?subject=Sovereign%20partnership",
+    label: "Enquire about Sovereign",
   },
   {
     audience: "VIP tickets",
@@ -99,6 +108,52 @@ const participation = [
     description: "A private VIP lunch at the Crystal Garden, Tomorrowland.",
     href: "/vip/?from=take-part",
     label: "VIP invitation",
+  },
+];
+
+const gatheringStories = [
+  {
+    image: "hero-room.webp",
+    alt: "Guests at The 64 framed by red drapes at Corinthia Brussels",
+    chapter: "photo-the-64",
+    label: "The 64 · Corinthia Brussels",
+    title: "A smaller room.",
+    emphasis: "A deeper exchange.",
+    description:
+      "Hospitality creates time and trust to listen, challenge assumptions and explore what we could do together.",
+    date: "The 64 · Corinthia Brussels, 2026",
+  },
+  {
+    image: "the300-voice.jpg",
+    alt: "A speaker on stage at The 300",
+    chapter: "photo-the-300",
+    label: "The 300 · with Love Tomorrow",
+    title: "A wider stage.",
+    emphasis: "A shared direction.",
+    description:
+      "Culture and human connection, with the aim of carrying the work beyond the gathering.",
+    date: "The 300 · 23 July 2026",
+  },
+];
+
+const causes = [
+  {
+    image: "diana.webp",
+    alt: "Dr Tessy Ojo CBE speaking at The 64, with a portrait of Diana behind her",
+    caption: "Dr Tessy Ojo CBE · The 64",
+    category: "Young people & positive change",
+    title: "The Diana Award",
+    description: "Supporting young people with the courage to create positive change.",
+    href: "https://diana-award.org.uk/",
+  },
+  {
+    image: "under-one-sky.webp",
+    alt: "A street-level conversation in Under One Sky’s community work",
+    caption: "Human connection · Under One Sky",
+    category: "Connection, care & community",
+    title: "Under One Sky",
+    description: "Human connection and practical care for people affected by homelessness.",
+    href: "https://underoneskytogether.com/",
   },
 ];
 
@@ -135,6 +190,15 @@ export const Route = createFileRoute("/corinthia-gallery")({
 
 export function CorinthiaGalleryPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeStory, setActiveStory] = useState(0);
+  const [headerScrolled, setHeaderScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateHeader = () => setHeaderScrolled(window.scrollY > 24);
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    return () => window.removeEventListener("scroll", updateHeader);
+  }, []);
 
   function closeMenu() {
     setMenuOpen(false);
@@ -145,7 +209,7 @@ export function CorinthiaGalleryPage() {
       <a className="gr-skip" href="#main-content">
         Skip to content
       </a>
-      <header className="gr-header">
+      <header className={`gr-header${headerScrolled ? " is-scrolled" : ""}`}>
         <a className="gr-brand" href="#top" aria-label="SociisGroup home">
           <img src="/media/logo-master.svg" alt="sociisgroup" />
         </a>
@@ -245,13 +309,44 @@ export function CorinthiaGalleryPage() {
                 shift demand and, over time, what the economy rewards.
               </p>
             </div>
+            <div className="gr-purpose-evidence">
+              <article>
+                <span className="gr-overline">The problem / Ecological overshoot</span>
+                <p className="gr-purpose-value">
+                  1.7 <em>Earths</em>
+                </p>
+                <p>
+                  Humanity’s demand on nature is about 73% above what Earth can regenerate in a
+                  year.
+                </p>
+                <a
+                  href="https://overshoot.footprintnetwork.org/newsroom/eod-2026-en/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Global Footprint Network · 2026 estimate ↗
+                </a>
+              </article>
+              <article>
+                <span className="gr-overline">The possibility / Solutions already exist</span>
+                <p className="gr-purpose-value">1,600+</p>
+                <p>
+                  Efficient Solutions identified by Bertrand Piccard’s Solar Impulse Foundation.
+                </p>
+                <a href="https://impulse-foundation.com/" target="_blank" rel="noreferrer">
+                  Explore the Foundation’s work ↗
+                </a>
+              </article>
+            </div>
             <div className="gr-purpose-detail">
-              <span className="gr-overline">Where behaviour matters</span>
               <div>
+                <p className="gr-eyebrow">Where behaviour matters</p>
                 <h3>
                   Solutions need adoption.
                   <em>Knowing is not doing.</em>
                 </h3>
+              </div>
+              <div>
                 <p>
                   Our focus is helping people and organisations put better options into practice.
                   Repeated choices can shift demand and the incentives businesses respond to.
@@ -295,6 +390,12 @@ export function CorinthiaGalleryPage() {
                 <p className="gr-status">
                   Early web prototype in testing · Core access will be free
                 </p>
+                <a
+                  className="gr-text-link"
+                  href="mailto:hello@sociisgroup.com?subject=BEE%20development"
+                >
+                  Explore BEE development <span aria-hidden="true">↗</span>
+                </a>
               </div>
               <div className="gr-bee-demo">
                 <figure className="gr-image-caption">
@@ -435,28 +536,39 @@ export function CorinthiaGalleryPage() {
                 Explore a BEE pilot <span aria-hidden="true">↗</span>
               </a>
             </div>
-            <figure className="gr-wide-photo">
+          </div>
+        </section>
+
+        <section className="gr-culture-chapter" id="culture">
+          <div className="gr-culture-stage">
+            <div className="gr-culture-backdrop" aria-hidden="true">
+              <span>Ideas move.</span>
+              <span>People act.</span>
+            </div>
+            <div className="gr-culture-portal">
               <img
                 src="/media/the300.jpg"
                 alt="People gathered beneath the flower-filled canopy at The 300"
                 loading="lazy"
               />
-              <figcaption>
-                <span>The 300 · with Love Tomorrow</span>
-                <span>On the iconic grounds of Tomorrowland</span>
-              </figcaption>
-            </figure>
-            <div className="gr-culture-note">
-              <span className="gr-overline">An unconventional approach</span>
-              <h3>
-                Culture moves faster
-                <em>than governance.</em>
-              </h3>
-              <p>
-                We connect culture’s power to move people with technology that helps turn
-                inspiration into everyday action.
-              </p>
+              <div>
+                <p className="gr-eyebrow">An unconventional approach</p>
+                <h2>
+                  Culture moves faster
+                  <em>than governance.</em>
+                </h2>
+                <p>
+                  We connect culture’s power to move people with technology that helps turn
+                  inspiration into everyday action.
+                </p>
+              </div>
+              <span className="gr-culture-credit">
+                The 300 · with Love Tomorrow, on the iconic grounds of Tomorrowland
+              </span>
             </div>
+            <span className="gr-culture-cue">
+              A shared experience can open a different perspective. ↓
+            </span>
           </div>
         </section>
 
@@ -513,12 +625,15 @@ export function CorinthiaGalleryPage() {
                   adoption. We aim to measure repeated choices and lasting change, beyond views and
                   downloads.
                 </p>
-                <p className="gr-research-note">
-                  Social tipping-point research informs our ambition. It does not establish one
-                  billion as a proven global threshold. Our measurement approach will develop
-                  through research and pilots.
-                </p>
-                <div className="gr-sources">
+                <details className="gr-critical-mass">
+                  <summary>
+                    Why a critical mass? <span aria-hidden="true">+</span>
+                  </summary>
+                  <p>
+                    Social tipping-point research informs our ambition. It does not establish one
+                    billion as a proven global threshold. Our measurement approach will develop
+                    through research and pilots.
+                  </p>
                   <a
                     href="https://www.science.org/doi/10.1126/science.aas8827"
                     target="_blank"
@@ -533,7 +648,7 @@ export function CorinthiaGalleryPage() {
                   >
                     Everall et al. · 2025 ↗
                   </a>
-                </div>
+                </details>
               </div>
             </div>
           </div>
@@ -584,117 +699,264 @@ export function CorinthiaGalleryPage() {
                 Explore the photo story <span aria-hidden="true">↓</span>
               </a>
             </div>
-            <div className="gr-editions">
-              <article>
-                <span className="gr-overline">The 64 · Corinthia Brussels</span>
-                <h3>
-                  A smaller room.
-                  <em>A deeper exchange.</em>
-                </h3>
-                <p>
-                  Hospitality creates time and trust to listen, challenge assumptions and explore
-                  what we could do together.
-                </p>
-                <small>The 64 · Corinthia Brussels, 2026</small>
-              </article>
-              <article>
-                <span className="gr-overline">The 300 · with Love Tomorrow</span>
-                <h3>
-                  A wider stage.
-                  <em>A shared direction.</em>
-                </h3>
-                <p>
-                  Culture and human connection, with the aim of carrying the work beyond the
-                  gathering.
-                </p>
-                <small>The 300 · 23 July 2026</small>
-              </article>
+            <div className="gr-story-journey">
+              <div className="gr-story-guidance">
+                <span className="gr-story-position" aria-live="polite">
+                  0{activeStory + 1}
+                </span>
+                <div className="gr-story-steps" aria-label="Choose a gathering">
+                  {gatheringStories.map((story, index) => (
+                    <button
+                      key={story.label}
+                      type="button"
+                      aria-pressed={activeStory === index}
+                      onClick={() => setActiveStory(index)}
+                    >
+                      {index === 0 ? "The 64" : "The 300"}
+                    </button>
+                  ))}
+                </div>
+                <p className="gr-story-scroll-hint">Continue scrolling ↓</p>
+                <div className="gr-story-controls">
+                  <button
+                    type="button"
+                    aria-label="Previous experience"
+                    disabled={activeStory === 0}
+                    onClick={() => setActiveStory(0)}
+                  >
+                    ↑
+                  </button>
+                  <button
+                    type="button"
+                    aria-label="Next experience"
+                    disabled={activeStory === gatheringStories.length - 1}
+                    onClick={() => setActiveStory(1)}
+                  >
+                    ↓
+                  </button>
+                </div>
+              </div>
+              <div className="gr-story-viewport" aria-live="polite">
+                {gatheringStories.map((story, index) =>
+                  index === activeStory ? (
+                    <article className="gr-story-card" key={story.label}>
+                      <a className="gr-story-image" href={`#${story.chapter}`}>
+                        <img src={`/media/${story.image}`} alt={story.alt} loading="lazy" />
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                      <div className="gr-story-copy">
+                        <div>
+                          <span className="gr-overline">{story.label}</span>
+                          <h3>
+                            {story.title}
+                            <em>{story.emphasis}</em>
+                          </h3>
+                        </div>
+                        <p>
+                          {story.description}
+                          <small>{story.date}</small>
+                        </p>
+                      </div>
+                    </article>
+                  ) : null,
+                )}
+              </div>
             </div>
             <div className="gr-photo-story" id="photo-highlights">
-              <nav className="gr-gallery-nav" aria-label="Photo story sections">
-                <a href="#photo-the-64">The 64</a>
-                <a href="#photo-the-300">The 300</a>
-              </nav>
-              <div className="gr-photo-story-intro">
-                <span className="gr-overline">The 64 & The 300 · July 2026</span>
-                <h3>
-                  Before the room
-                  <em>filled with voices.</em>
-                </h3>
-                <p>
-                  On Rue Royale, the doors of Corinthia Brussels, the former Grand Hotel Astoria,
-                  opened onto flowers, candlelight and a room waiting to come alive.
+              <div className="gr-photo-inner">
+                <nav className="gr-gallery-nav" aria-label="Photo story sections">
+                  <a href="#photo-the-64">
+                    The 64 <span aria-hidden="true">↓</span>
+                  </a>
+                  <a href="#photo-the-300">
+                    The 300 <span aria-hidden="true">↓</span>
+                  </a>
+                </nav>
+                <div className="gr-photo-story-intro" id="photo-the-64" tabIndex={-1}>
+                  <span className="gr-overline">The 64 & The 300 · July 2026</span>
+                  <h3>
+                    Before the room
+                    <em>filled with voices.</em>
+                  </h3>
+                  <p>
+                    On Rue Royale, the doors of Corinthia Brussels, the former Grand Hotel Astoria,
+                    opened onto flowers, candlelight and a room waiting to come alive.
+                  </p>
+                </div>
+                <div className="gr-photo-threshold">
+                  <figure>
+                    <img
+                      src="/media/corinthia/door.webp"
+                      alt="The gilded entrance to the former Grand Hotel Astoria, now Corinthia Brussels"
+                      loading="lazy"
+                    />
+                    <figcaption>Grand Hotel Astoria · Corinthia Brussels</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/media/corinthia/flowers.webp"
+                      alt="A tall floral arrangement framed by an arch inside Corinthia"
+                      loading="lazy"
+                    />
+                    <figcaption>Flowers through the arch</figcaption>
+                  </figure>
+                </div>
+                <div className="gr-photo-details">
+                  <figure>
+                    <img
+                      src="/media/corinthia/gilt.webp"
+                      alt="Gilded metalwork on the black entrance door"
+                      loading="lazy"
+                    />
+                    <figcaption>The goldwork</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/media/corinthia/amber.webp"
+                      alt="Chandeliers and ornate arches in amber light"
+                      loading="lazy"
+                    />
+                    <figcaption>Chandeliers in amber light</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/media/corinthia/service.webp"
+                      alt="Two plates carried through an ornate doorway"
+                      loading="lazy"
+                    />
+                    <figcaption>Dinner service</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/media/corinthia/food.webp"
+                      alt="A course served on a sculptural white plate"
+                      loading="lazy"
+                    />
+                    <figcaption>A course from the evening</figcaption>
+                  </figure>
+                </div>
+                <figure className="gr-photo-table">
+                  <img
+                    src="/media/corinthia/table.webp"
+                    alt="A set dinner table with candles and flowers before guests arrive"
+                    loading="lazy"
+                  />
+                  <figcaption>Before the guests arrived · The 64</figcaption>
+                </figure>
+                <div className="gr-photo-chapters">
+                  <article>
+                    <img
+                      src="/media/hero-room.webp"
+                      alt="Guests in the warmly lit ballroom at Corinthia Brussels"
+                      loading="lazy"
+                    />
+                    <div>
+                      <span className="gr-overline">The 64 · Corinthia Brussels</span>
+                      <h4>In the room.</h4>
+                      <p>Guests at the 2026 gathering.</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="/media/diana.webp"
+                      alt="Dr Tessy Ojo CBE speaking in front of a portrait of Diana"
+                      loading="lazy"
+                    />
+                    <div>
+                      <span className="gr-overline">The 64 · On stage</span>
+                      <h4>Dr Tessy Ojo CBE.</h4>
+                    </div>
+                  </article>
+                </div>
+                <section
+                  className="gr-photo-tomorrow"
+                  id="photo-the-300"
+                  tabIndex={-1}
+                  aria-labelledby="gr-photo-tomorrow-title"
+                >
+                  <div className="gr-photo-story-intro">
+                    <span className="gr-overline">
+                      The 300 · Tomorrowland grounds, Boom · With Love Tomorrow
+                    </span>
+                    <h3 id="gr-photo-tomorrow-title">Beyond the garden.</h3>
+                    <p>
+                      From the water garden and Tomorrowland’s sculpted stage to the people
+                      gathering beneath the flower canopy.
+                    </p>
+                  </div>
+                  <figure className="gr-tomorrow-stage">
+                    <img
+                      src="/media/tomorrowland/stage.webp"
+                      alt="The elaborate Tomorrowland main stage seen across the open festival grounds"
+                      loading="lazy"
+                    />
+                    <figcaption>The Tomorrowland grounds · Boom</figcaption>
+                  </figure>
+                  <div className="gr-tomorrow-details">
+                    <figure>
+                      <img
+                        src="/media/tomorrowland/fountains.webp"
+                        alt="Fountains rising from floating lotus platforms on the water"
+                        loading="lazy"
+                      />
+                      <figcaption>The water garden</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        src="/media/tomorrowland/sculpture.webp"
+                        alt="A carved face with a bird in flight on the Tomorrowland stage"
+                        loading="lazy"
+                      />
+                      <figcaption>The stage up close</figcaption>
+                    </figure>
+                  </div>
+                  <figure className="gr-tomorrow-stage gr-photo-canopy">
+                    <img
+                      src="/media/the300.jpg"
+                      alt="Guests beneath the flower canopy at The 300"
+                      loading="lazy"
+                    />
+                    <figcaption>Under the canopy · The 300</figcaption>
+                  </figure>
+                </section>
+                <div className="gr-photo-end">
+                  <div>
+                    <h4>See the full highlights.</h4>
+                    <p>The room, the people and the moments in between.</p>
+                  </div>
+                  <a
+                    className="gr-photo-cta"
+                    href="https://sociisgroup.pic-time.com/jFfymim5ycJ9I"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Explore the 2026 photo highlights <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <p className="gr-photo-credit">
+                  Photography by Ian Hermans, Willem Van Puyenbroeck and Clayton Studio.
                 </p>
               </div>
-              <figure className="gr-story-photo gr-photo-large" id="photo-the-64">
-                <img
-                  src="/media/corinthia-before-the-gathering.webp"
-                  alt="A set dinner table with candles and flowers before guests arrive"
-                  loading="lazy"
-                />
-                <figcaption>Before the guests arrived · The 64</figcaption>
-              </figure>
-              <figure className="gr-story-photo">
-                <img
-                  src="/media/hero-room.webp"
-                  alt="Guests in the warmly lit ballroom at Corinthia Brussels"
-                  loading="lazy"
-                />
-                <figcaption>The 64 · Corinthia Brussels</figcaption>
-              </figure>
-              <figure className="gr-story-photo gr-photo-speaker">
-                <img
-                  src="/media/diana.webp"
-                  alt="Dr Tessy Ojo CBE speaking in front of a portrait of Diana"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <strong>Dr Tessy Ojo CBE.</strong>
-                  <span>The 64 · On stage</span>
-                </figcaption>
-              </figure>
-              <div className="gr-photo-story-intro gr-photo-story-second" id="photo-the-300">
-                <span className="gr-overline">The 300 · Tomorrowland grounds, Boom</span>
-                <h3>
-                  Beyond the garden.
-                  <em>Under one sky.</em>
-                </h3>
-                <p>
-                  From Tomorrowland’s sculpted stage to the people gathering beneath the flower
-                  canopy.
-                </p>
-              </div>
-              <figure className="gr-story-photo">
-                <img
-                  src="/media/under-one-sky.webp"
-                  alt="The Tomorrowland grounds beneath an open summer sky"
-                  loading="lazy"
-                />
-                <figcaption>The Tomorrowland grounds · Boom</figcaption>
-              </figure>
-              <figure className="gr-story-photo gr-photo-large">
-                <img
-                  src="/media/the300.jpg"
-                  alt="Guests beneath the flower canopy at The 300"
-                  loading="lazy"
-                />
-                <figcaption>Under the canopy · The 300</figcaption>
-              </figure>
-              <p className="gr-photo-credit">
-                Photography by Ian Hermans, Willem Van Puyenbroeck and Clayton Studio.
-              </p>
+            </div>
+            <div className="gr-photo-community">
+              <p>Between gatherings, the conversation continues in Sociis House.</p>
+              <a href="https://www.sociis.house/" target="_blank" rel="noreferrer">
+                Enter Sociis House ↗
+              </a>
             </div>
           </div>
         </section>
 
         <section className="gr-section gr-people" id="people">
           <div className="gr-wrap">
-            <p className="gr-eyebrow">07 / People & responsibility</p>
             <div className="gr-people-heading">
-              <h2>
-                People who
-                <em>answer for the work.</em>
-              </h2>
+              <div>
+                <p className="gr-eyebrow">07 / People & responsibility</p>
+                <h2>
+                  People who
+                  <em>answer for the work.</em>
+                </h2>
+              </div>
               <p className="gr-lead">
                 Jeremie, Dominique and Luc form the board. Together with Richard and Chris, they
                 make up the executive leadership team.
@@ -702,23 +964,22 @@ export function CorinthiaGalleryPage() {
             </div>
             <div className="gr-leaders">
               {leadership.map((person, index) => (
-                <article className={index > 2 ? "gr-leader-small" : ""} key={person.name}>
-                  <a
-                    className="gr-leader-photo"
-                    href={person.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`${person.name} on LinkedIn`}
-                  >
+                <article key={person.name}>
+                  <div className="gr-leader-photo leader-portrait" data-person={person.portrait}>
                     <img src={`/media/${person.image}`} alt={person.name} loading="lazy" />
-                    <span aria-hidden="true">↗</span>
-                  </a>
+                  </div>
                   <span className="gr-overline">
                     Executive{index < 3 ? " · Board director" : ""}
                   </span>
                   <h3>{person.name}</h3>
                   <p>{person.role}</p>
-                  <a className="gr-linkedin" href={person.href} target="_blank" rel="noreferrer">
+                  <a
+                    className="gr-linkedin"
+                    href={person.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${person.name} on LinkedIn (opens in a new tab)`}
+                  >
                     LinkedIn ↗
                   </a>
                 </article>
@@ -727,19 +988,41 @@ export function CorinthiaGalleryPage() {
           </div>
         </section>
 
-        <section className="gr-giving">
+        <section className="gr-section gr-giving" id="giving">
           <div className="gr-wrap">
-            <div className="gr-giving-number">20%</div>
-            <div>
-              <p className="gr-eyebrow">08 / Our giving commitment</p>
-              <h2>
-                Humanity is
-                <em>the reason.</em>
-              </h2>
-              <p>
-                Our commitment is to allocate 20% of annual profit to selected charitable causes.
-              </p>
-              <span>These causes feature in our existing work.</span>
+            <div className="gr-giving-heading">
+              <div>
+                <p className="gr-eyebrow">08 / Our giving commitment</p>
+                <p className="gr-giving-number">
+                  20<span>%</span>
+                </p>
+              </div>
+              <div>
+                <h2>
+                  Humanity is
+                  <em>the reason.</em>
+                </h2>
+                <p>
+                  Our commitment is to allocate 20% of annual profit to selected charitable causes.
+                </p>
+                <p>These causes feature in our existing work.</p>
+              </div>
+            </div>
+            <div className="gr-cause-grid">
+              {causes.map((cause) => (
+                <article key={cause.title}>
+                  <figure>
+                    <img src={`/media/${cause.image}`} alt={cause.alt} loading="lazy" />
+                    <figcaption>{cause.caption}</figcaption>
+                  </figure>
+                  <span className="gr-overline">{cause.category}</span>
+                  <h3>{cause.title}</h3>
+                  <p>{cause.description}</p>
+                  <a href={cause.href} target="_blank" rel="noreferrer">
+                    Explore {cause.title} <span aria-hidden="true">↗</span>
+                  </a>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -757,27 +1040,48 @@ export function CorinthiaGalleryPage() {
                   <span className="gr-overline">{item.audience}</span>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                  {item.href && (
-                    <a className="gr-text-link" href={item.href}>
-                      {item.label} <span aria-hidden="true">↗</span>
-                    </a>
-                  )}
+                  <a className="gr-text-link" href={item.href}>
+                    {item.label} <span aria-hidden="true">↗</span>
+                  </a>
                 </article>
               ))}
+            </div>
+            <div className="gr-member-extra">
+              <a href="mailto:hello@sociisgroup.com?subject=BEE">Ask about BEE ↗</a>
+              <a href="mailto:hello@sociisgroup.com?subject=Investment">Discuss investment ↗</a>
             </div>
           </div>
         </section>
       </main>
 
       <footer className="gr-footer">
-        <a className="gr-brand" href="#top" aria-label="Back to top">
-          <img src="/media/logo-master.svg" alt="sociisgroup" />
-        </a>
-        <p>Change behaviour. Shift the economic system.</p>
-        <a href="#top" className="gr-back-top">
-          Back to top ↑
-        </a>
+        <div className="gr-footer-main">
+          <a className="gr-brand" href="#top" aria-label="sociisgroup back to top">
+            <img src="/media/logo-master.svg" alt="sociisgroup" />
+          </a>
+          <a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a>
+        </div>
+        <div className="gr-footer-base">
+          <a href="/club-64/?from=footer">Explore Club 64 ↗</a>
+          <span>© 2026 sociisgroup · Brussels</span>
+          <a
+            href="https://www.forbes.be/nl/van-intentie-naar-actie-de-missie-van-sociisgroup/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Featured in Forbes Belgium ↗
+          </a>
+          <a href="#top" className="gr-back-top">
+            Back to top ↑
+          </a>
+        </div>
       </footer>
+      <a className="gr-floating-contact" href="mailto:hello@sociisgroup.com">
+        Begin a conversation ↗
+      </a>
+      <a className="gr-return-top" href="#top" aria-label="Back to top">
+        ↑
+      </a>
     </div>
   );
 }
