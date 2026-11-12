@@ -47,24 +47,28 @@ const leadership = [
 const routesToAdoption = [
   {
     number: "01",
+    category: "Discovery & influence",
     title: "Culture & influence",
     description:
       "Artists, creators, sport and cultural brands can introduce BEE to their audiences through trusted voices and shared experiences.",
   },
   {
     number: "02",
+    category: "Choices in context",
     title: "Hospitality",
     description:
       "Hotel and travel loyalty programmes, guest apps and bookings can bring BEE into choices people make before, during and after a stay.",
   },
   {
     number: "03",
+    category: "Global company reach",
     title: "Sovereign partners",
     description:
       "We seek global companies to fund, co-develop and distribute BEE, including through retail loyalty programmes and customer and employee platforms.",
   },
   {
     number: "04",
+    category: "Participation & connection",
     title: "Experiences & communities",
     description:
       "The 64, The 300 and Sociis House bring people into the mission, building relationships and continued participation.",
@@ -168,10 +172,10 @@ export function CorinthiaGalleryPage() {
               {label}
             </a>
           ))}
-          <a className="gr-nav-house" href="https://www.sociis.house/">
-            Sociis House <span aria-hidden="true">↗</span>
-          </a>
         </nav>
+        <a className="gr-nav-house" href="https://www.sociis.house/">
+          Sociis House <span aria-hidden="true">↗</span>
+        </a>
       </header>
 
       <main id="main-content">
@@ -192,8 +196,11 @@ export function CorinthiaGalleryPage() {
               An independent behavioural institution
             </p>
             <h1 id="gr-hero-title">
-              Change behaviour.
-              <em>Shift the economic system.</em>
+              <span>
+                Change <span className="gr-accent">behaviour.</span>
+              </span>
+              <em>Shift the economic</em>
+              <em>system.</em>
             </h1>
             <p className="gr-hero-description">
               We are developing <strong>BEE</strong>, our core product: an AI-powered application
@@ -204,16 +211,25 @@ export function CorinthiaGalleryPage() {
               subscriptions, company licences and integrations.
             </p>
             <a className="gr-button gr-button-dark" href="#bee">
-              Discover BEE <span aria-hidden="true">↘</span>
+              Discover BEE <span aria-hidden="true">→</span>
+            </a>
+            <a className="gr-conversation" href="mailto:hello@sociisgroup.com">
+              Begin a conversation <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div className="gr-hero-foot">
+            <span>To serve humanity.</span>
+            <a href="/media/film-r149.mp4" target="_blank" rel="noreferrer">
+              <span className="gr-play" aria-hidden="true">
+                ▷
+              </span>
+              Watch our story <small>1:08</small>
             </a>
           </div>
           <a className="gr-scroll-cue" href="#purpose">
             <span aria-hidden="true" />
             Scroll to explore
           </a>
-          <span className="gr-hero-aside" aria-hidden="true">
-            To serve humanity.
-          </span>
         </section>
 
         <section className="gr-section gr-purpose" id="purpose">
@@ -326,6 +342,13 @@ export function CorinthiaGalleryPage() {
               Our innovation is BEE: one reusable technology platform for individuals and companies.
               We aim to grow a scalable business that helps everyday choices serve humanity.
             </p>
+            <div className="gr-market-line">
+              <span className="gr-overline">Our market</span>
+              <p>Technology for sustainable everyday choices.</p>
+              <span>
+                Intended settings: hospitality, cultural experiences and company customer journeys.
+              </span>
+            </div>
             <div className="gr-business-grid">
               <article>
                 <span className="gr-overline">01 / Individuals</span>
@@ -359,9 +382,10 @@ export function CorinthiaGalleryPage() {
                   <em>& experiences.</em>
                 </h3>
                 <p>
-                  Paid memberships and experiences help fund the work. Club 64 is for individuals,
-                  Circle is for small and medium-sized businesses, and Sovereign is for strategic
-                  enterprise partners.
+                  Paid memberships and experiences help fund the work. Our gatherings introduce
+                  people to SociisGroup and help us build relationships with potential partners.
+                  Club 64 is for individuals, Circle is for small and medium-sized businesses, and
+                  Sovereign is for strategic enterprise partners.
                 </p>
                 <small>Commercial participation</small>
               </article>
@@ -370,6 +394,9 @@ export function CorinthiaGalleryPage() {
               Seeking co-development and pilot partners for BEE, and investment to develop, test and
               prepare it for wider use.
             </p>
+            <a className="gr-text-link" href="mailto:hello@sociisgroup.com">
+              Discuss the business &amp; investment <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </section>
 
@@ -393,10 +420,20 @@ export function CorinthiaGalleryPage() {
               {routesToAdoption.map((route) => (
                 <article key={route.number}>
                   <span className="gr-overline">{route.number}</span>
+                  <span className="gr-route-category">{route.category}</span>
                   <h3>{route.title}</h3>
                   <p>{route.description}</p>
                 </article>
               ))}
+            </div>
+            <div className="gr-pilot-note">
+              <p>
+                Loyalty integrations are key: reaching existing members and supporting repeated
+                choices. A hotel group may also be a Sovereign partner.
+              </p>
+              <a className="gr-text-link" href="mailto:hello@sociisgroup.com">
+                Explore a BEE pilot <span aria-hidden="true">↗</span>
+              </a>
             </div>
             <figure className="gr-wide-photo">
               <img
