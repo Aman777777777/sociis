@@ -19,3 +19,12 @@ Run the production build and test suite with:
 bun run build
 bun test
 ```
+
+## Club 64 applications
+
+The Club 64 form submits on the server to Brevo contact list `4` (`Club 64 | Applications`).
+Configure `BREVO_API_KEY` in the deployed server environment and create the Brevo contact
+attributes `CLUB64_NAME`, `CLUB64_WORK`, `CLUB64_REASON`, and `CLUB64_STATUS` before enabling
+submissions. The server looks up an existing contact before updating it and preserves its current
+Club 64 status. Brevo does not make the lookup and update atomic, so a concurrent status change can
+still race with an application update. Applications are not sent an automatic confirmation email.

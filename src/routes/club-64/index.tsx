@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 
+import { submitClub64Application } from "./-application.functions";
+
 const SITE_URL = "https://the300.sociisgroup.com/club-64/";
 const DESCRIPTION =
   "Club 64 is SociisGroup’s private membership for up to 64 individuals. Two member conversations a year. €2,500 per year. Apply for membership.";
@@ -25,22 +27,35 @@ export const Route = createFileRoute("/club-64/")({
   component: Club64,
 });
 
+type FormStatus = "idle" | "submitting" | "success" | "error";
+
 function Club64() {
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<FormStatus>("idle");
 
-  function prepareApplication(event: FormEvent<HTMLFormElement>) {
+  async function submitApplication(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const body = [
-      `Name: ${formData.get("name")}`,
-      `Email: ${formData.get("email")}`,
-      `What do you do?: ${formData.get("work")}`,
-      `Why would you like to join?: ${formData.get("reason")}`,
-    ].join("\n\n");
-    const subject = encodeURIComponent("Club 64 membership application");
+    if (status === "submitting") return;
 
-    setStatus("Your email app should open with your application. Review and send it to apply.");
-    window.location.href = `mailto:jeremie@sociisgroup.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+    const formData = new FormData(event.currentTarget);
+    const textValue = (name: string) => {
+      const value = formData.get(name);
+      return typeof value === "string" ? value : "";
+    };
+    setStatus("submitting");
+
+    try {
+      const result = await submitClub64Application({
+        data: {
+          name: textValue("name"),
+          email: textValue("email"),
+          work: textValue("work"),
+          reason: textValue("reason"),
+        },
+      });
+      setStatus(result.ok ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -134,7 +149,12 @@ function Club64() {
               applicants a private payment link. There’s no payment to apply.
             </p>
           </div>
-          <form className="club-form" id="club-application" onSubmit={prepareApplication}>
+          <form
+            className="club-form"
+            id="club-application"
+            onSubmit={submitApplication}
+            aria-busy={status === "submitting"}
+          >
             <div className="club-form-pair">
               <label>
                 Full name <input name="name" autoComplete="name" required maxLength={100} />
@@ -151,18 +171,28 @@ function Club64() {
               Why would you like to join?{" "}
               <textarea name="reason" rows={3} maxLength={1200} required />
             </label>
-            <button className="sg-sales-cta" type="submit">
-              Send application <span aria-hidden="true">→</span>
+            <button className="sg-sales-cta" type="submit" disabled={status === "submitting"}>
+              {status === "submitting" ? "Sending application…" : "Send application"}{" "}
+              <span aria-hidden="true">→</span>
             </button>
             <p className="club-cta-note">
-              Your details stay in this page until you choose to open an email draft.{" "}
+              Your application is sent to SociisGroup through Brevo for review. No payment or
+              automatic confirmation email is sent when you apply.{" "}
               <a href="/privacy.html?from=club" target="_blank" rel="noopener noreferrer">
                 Privacy notice
               </a>
               .
             </p>
-            <p className="club-form-status" role="status" tabIndex={-1}>
-              {status}
+            <p
+              className="club-form-status"
+              role={status === "error" ? "alert" : "status"}
+              aria-live={status === "error" ? "assertive" : "polite"}
+              tabIndex={-1}
+            >
+              {status === "success" &&
+                "Your application has been received for review. We’ll be in touch."}
+              {status === "error" &&
+                "We couldn’t submit your application. Your answers are still here; please try again later or contact us."}
             </p>
           </form>
         </section>

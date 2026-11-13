@@ -84,7 +84,11 @@ describe("App routing", () => {
       bodyHtml.indexOf('id="experiences"'),
     );
     expect(vipBodyHtml).toContain("data-vip-selector");
-    expect(vipBodyHtml).toContain('href="/vip/supporter.html"');
+    expect(vipBodyHtml).not.toContain('href="/vip/supporter.html"');
+  });
+
+  it("points the VIP footer to the Club 64 application", () => {
+    expect(vipBodyHtml).toContain('href="/club-64#membership">Club 64 membership</a>');
   });
 
   it("links the VIP invitation logo home and provides a back-to-top arrow", () => {
