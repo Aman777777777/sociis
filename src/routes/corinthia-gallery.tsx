@@ -21,7 +21,7 @@ const leadership = [
   },
   {
     name: "Dominique Debecker",
-    role: "Chief Behavioural Officer",
+    role: "Co-Founder & Co-CEO",
     image: "leader-dominique.webp",
     portrait: "dominique",
     href: "https://be.linkedin.com/in/dominique-debecker",
