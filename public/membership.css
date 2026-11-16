@@ -1,0 +1,57 @@
+.hero-window img[src$="family-shared-smile.webp"]{object-position:50% 47%}
+.hero-art .art-caption{font-style:normal}
+#participate{scroll-margin-top:88px;padding-block:clamp(42px,5vw,76px)}
+#participate h2{font-size:clamp(36px,5.3vw,76px);line-height:1.03;letter-spacing:-.055em;text-wrap:balance;margin:12px 0}
+#participate .participate-intro{margin:0 0 24px;max-width:none}
+.member-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.member-cards article{display:flex;flex-direction:column;padding:clamp(14px,1.7vw,25px);border:1px solid #f3f1e84a;border-radius:6px}
+.member-cards h3{font-size:clamp(24px,2.3vw,34px);line-height:1.15;margin:8px 0}
+.member-cards p{margin:0 0 10px;color:#e5e9d6;font-size:14px;line-height:1.45}
+.member-cards .member-type{font-size:11px;letter-spacing:.04em}
+.member-cards a,.member-cards button,.member-extra button{align-self:flex-start;background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:.24em;text-decoration-thickness:1px;min-height:44px;display:inline-flex;align-items:center;color:#e3eead;font:inherit;font-size:14px;text-align:left}
+.member-cards a,.member-cards button{margin-top:auto}
+.member-extra{display:flex;gap:14px 30px;flex-wrap:wrap;margin-top:12px}
+@media(max-width:850px){.member-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){.member-cards{gap:8px}.member-cards article{padding:12px}.member-cards a,.member-cards button{font-size:13px}}
+.vip-return,.vip-footer a{text-underline-offset:.22em}
+.vip-return{font-size:13px}
+.vip-footer{align-items:baseline;padding-bottom:66px}
+.vip-footer>p{margin:0}
+.vip-footer>div{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px 22px;text-align:right}
+.vip-footer a+a{margin:0}
+.vip-top{position:fixed;z-index:5;bottom:max(12px,env(safe-area-inset-bottom));right:max(12px,env(safe-area-inset-right));display:grid;place-items:center;width:46px;height:46px;border:1px solid #d4e79880;border-radius:50%;background:#15271f;color:#f4f1e9;text-decoration:none;font-size:25px}
+.vip-top[hidden]{display:none}
+@media(max-width:680px){.vip-footer>div{justify-content:flex-start;text-align:left}.vip-return{font-size:12px}}
+.club-page{margin:0;background:#102e2a;color:#f4f0e4;font:16px/1.6 "Institution Sans",Arial,sans-serif}
+.club-page *{box-sizing:border-box}
+.club-page a{color:inherit;text-underline-offset:.22em}
+.club-wrap{width:min(1120px,calc(100% - 10%));margin-inline:auto}
+.club-header,.club-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-block:22px;font-size:14px}
+.club-header{border-bottom:1px solid #f3f1e83f}
+.club-header img{display:block;max-width:100%}
+.club-header nav{display:flex;gap:20px}
+.club-hero,.club-apply{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:clamp(24px,6vw,80px);padding-block:clamp(35px,7vw,100px)}
+.club-page figure,.club-page h1,.club-page h2,.club-page h3{margin:0}
+.club-page h1,.club-page h2,.club-page h3{line-height:1.1;letter-spacing:-.035em}
+.club-page h1{font-size:clamp(56px,9vw,122px)}
+.club-page h2{font-size:clamp(36px,4.6vw,62px)}
+.club-page h3{font-size:22px}
+.club-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em}
+.club-lead{font-size:clamp(20px,2.8vw,30px);margin:14px 0}
+.club-hero img{display:block;width:100%;height:auto;border-radius:4px}
+.club-hero figcaption{font-size:13px;color:#d0d8c6;margin-top:8px}
+.club-benefits{background:#f3f0e6;color:#102e2a;padding-block:clamp(36px,6vw,78px)}
+.club-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:26px}
+.club-grid article{border-top:1px solid #102e2a4f;padding-top:16px}
+.club-apply{align-items:start}
+.club-price{font-size:25px;font-weight:650;margin:15px 0 0}
+.club-apply form{border:1px solid #f3f1e84a;padding:clamp(15px,3vw,29px);border-radius:6px;min-width:0}
+.club-apply fieldset{padding:0;border:0;margin:0;display:grid;gap:12px;min-width:0}
+.club-apply label{display:grid;gap:4px;font-size:14px}
+.club-apply input,.club-apply textarea{width:100%;padding:9px;border:1px solid #f3f1e880;border-radius:3px;background:#0c2420;color:#f4f0e4;font:inherit}
+.club-apply input:disabled,.club-apply textarea:disabled{opacity:.65}
+.club-apply button{justify-self:start;background:#d4e798;color:#102e2a;border:0;border-radius:30px;min-height:44px;padding:10px 18px;font:inherit;font-weight:650}
+.club-apply button:disabled{opacity:.65}
+.club-apply [role="status"]{font-size:14px;color:#e3e9d9}
+.club-footer{border-top:1px solid #f3f1e83f}
+@media(max-width:740px){.club-hero,.club-apply,.club-grid{grid-template-columns:1fr}.club-grid{gap:8px}}

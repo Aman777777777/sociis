@@ -69,7 +69,7 @@ strong{font-weight:600}
 .hero-window img,.hero-window video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% center;transform:scale(calc(1.04 + var(--hero-exit,0)*.08))}
 .hero-window video{opacity:0;transition:opacity .8s;object-fit:contain;object-position:center;transform-origin:58% 50%;transform:scale(var(--ambient-scale,1))}
 .hero-window video.ready{opacity:1}
-.hero-atmosphere{position:absolute;inset:-25px;background:url('media/living-change-poster-v42.webp') center/cover;filter:blur(22px);opacity:.45;transform:scale(1.1)}
+.hero-atmosphere{position:absolute;inset:-25px;background:url('media/family-shared-smile.webp') center/cover;filter:blur(22px);opacity:.45;transform:scale(1.1)}
 @media(min-width:761px){
  .hero-window.wide-framing>img{opacity:0}
 }
@@ -900,17 +900,3 @@ dialog select,dialog textarea{font-size:16px}
  .hero-scroll .scroll-label{display:none}
  .return-top{left:15px;bottom:15px}
 }
-
-
-/* Use the upright cuts of both typefaces throughout the editorial layout. */
-h2 em,.serif,.hero-foot>span,.culture-backdrop span:last-child,
-.billion-type em,.giving-number span,.why-value em,.art-caption,
-.choice-question,.closing-line p,.demo-heading h3 {font-style:normal}
-.why-bridge h3 em,.story-copy h3 em,.archive-heading h3 em,
-.closing-line em {font-style:normal}
-
-/* A single scroll cue on the opening and one scale for chapter labels. */
-#main .chapter-label {font-size:clamp(11px,.96vw,13px);font-weight:600;line-height:1.55;letter-spacing:.105em}
-.hero .hero-scroll {min-height:48px;min-width:108px;gap:8px}
-.hero .hero-scroll .scroll-label {display:block;font-size:10px}
-@media(max-width:760px){.hero .hero-scroll .scroll-label {font-size:9px}}

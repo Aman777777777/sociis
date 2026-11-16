@@ -1,16 +1,17 @@
+
 <a class="skip" href="#main">Skip to content</a>
 <div class="reading-line" aria-hidden="true">
 </div>
 <header class="header">
 <a href="#home" class="logo" aria-label="sociisgroup home">
-<img src="media/logo-master.svg" width="280" height="68" alt="sociisgroup">
+<img src="media/logo-master.svg" width="1050" height="349" alt="sociisgroup">
 </a>
 <nav class="desktop-nav" aria-label="Main navigation">
 <a href="#purpose">Why</a>
 <a href="#bee">BEE</a>
 <a href="#business">The business</a>
-<a href="#approach">Our approach</a>
-<a href="#upcoming-experience">Experiences</a>
+<a href="#approach" data-scroll-also="culture ambition">Our approach</a>
+<a href="#upcoming-experience" data-scroll-also="experiences">Experiences</a>
 <a href="#people">Our people</a>
 <a href="#participate">Take part</a>
 </nav>
@@ -28,14 +29,14 @@
 </header>
 <main id="main">
 <section id="home" class="hero" aria-labelledby="hero-title">
-<div class="hero-art" aria-hidden="true">
+<div class="hero-art">
 <div class="orbit orbit-one">
 </div>
 <div class="orbit orbit-two">
 </div>
 <div class="hero-window">
 <div class="hero-atmosphere"></div>
-<img src="media/family-shared-smile.webp" alt="" width="1600" height="1067" fetchpriority="high">
+<img src="media/family-shared-smile.webp" alt="Jeremie Landweer and his mother sharing a smile at The 64" width="1600" height="1067" fetchpriority="high">
 <div class="window-shade">
 </div>
 </div>
@@ -47,11 +48,23 @@
 <h1 id="hero-title">
 <span class="line">Change <span class="accent">behaviour.</span>
 </span>
-<span class="line serif">Shift the economic</span>
+<span class="line serif">Shift the economic </span>
 <span class="line serif">system.</span>
 </h1>
-<p class="hero-description">We help people turn good intentions into everyday choices. We’re building <strong>BEE</strong>, an AI companion that helps you find more sustainable options that fit your needs and budget.</p>
-<p class="hero-route">Culture helps us reach people. Through hospitality and business partners, we aim to bring BEE into the services people already use, from hotel apps to loyalty programmes.</p>
+<p class="hero-description">We’re building <strong>BEE</strong>, an AI companion that helps people compare everyday options and make more sustainable choices that fit their lives.</p>
+<p class="hero-route">We aim to bring BEE into the places people already make choices, from hotel apps and loyalty programmes to cultural experiences.</p>
+<div class="hero-actions">
+<a class="button lime" href="#bee">Discover BEE <span aria-hidden="true">→</span>
+</a>
+
+</div>
+</div>
+<div class="hero-foot">
+
+
+<button id="film-open" class="film-button">
+<span class="play" aria-hidden="true">▷</span> Watch our story <small>1:08</small>
+</button>
 </div>
 <a href="#purpose" class="hero-scroll" aria-label="Scroll down to explore"><span class="scroll-track" aria-hidden="true"><span class="scroll-beam"></span></span><span class="scroll-label">Scroll to explore</span></a>
 
@@ -59,8 +72,9 @@
 
 <section class="purpose why section paper" id="purpose" aria-labelledby="purpose-title">
 <div class="wrap">
+<div class="chapter-header"><p class="chapter-label"><span>01</span> <span aria-hidden="true">/</span> Why this work matters</p></div>
 <div class="why-heading">
-<div><p class="eyebrow chapter-label">01 / Why this work matters</p><h2 id="purpose-title" data-reveal>We use more resources<br><em>than Earth can renew.</em></h2></div>
+<div><h2 id="purpose-title" data-reveal>We use more resources<br><em>than Earth can renew.</em></h2></div>
 <p class="lead">What we buy and use shapes what businesses make. Changing everyday decisions can shift demand and, over time, what the economy rewards.</p>
 </div>
 <div class="why-evidence">
@@ -86,10 +100,8 @@
 
 <section id="bee" class="bee section paper" aria-labelledby="bee-title">
 <div class="wrap">
-<div class="section-intro">
-<p class="eyebrow chapter-label">02 / What we develop</p>
-<p class="section-note">Behavioural innovation.<br>Built around real life.</p>
-</div>
+<div class="chapter-header"><p class="chapter-label"><span>02</span> <span aria-hidden="true">/</span> What we develop</p><p class="chapter-note">Behavioural innovation.<br>Built around real life.</p></div>
+
 <div class="bee-layout">
 <div class="bee-copy">
 <div class="bee-wordmark">
@@ -99,12 +111,11 @@
 <h2 id="bee-title" data-reveal>Good intentions.<br>
 <em>Everyday action.</em>
 </h2>
-<p class="lead">Ask BEE about an everyday decision. It’s designed to help you weigh your options, understand the trade-offs and decide what works for you.</p>
-<p>We plan to make BEE available directly to individuals and through services they already use, such as hotel apps and loyalty programmes.</p>
+<p class="lead">Ask BEE about an everyday decision. It’s designed to help you compare your options and understand what each means for your time, budget and environmental impact.</p>
+<p>We plan to offer BEE directly and through services people already use, such as hotel apps and loyalty programmes.</p>
 <div class="product-status">
-<span aria-hidden="true">
-</span>Early web prototype in testing · Core access will be free</div>
-<button class="text-button dark-link" data-contact="bee">Explore BEE development <span aria-hidden="true">↗</span>
+<span aria-hidden="true"></span><p>Early web prototype in testing.<br>Core access will be free.</p></div>
+<button class="text-button dark-link" data-contact="bee">Ask about BEE <span aria-hidden="true">↗</span>
 </button>
 </div>
 <div class="bee-demo">
@@ -128,24 +139,22 @@
 
 <section class="business section paper" id="business" aria-labelledby="business-title">
 <div class="wrap">
-<div class="business-heading"><div><p class="eyebrow chapter-label">03 / The business behind the ambition</p><h2 id="business-title" data-reveal>Behavioural technology.<br><em>For people and companies.</em></h2></div><div><p class="business-identity"><strong>sociis</strong>group is a for-profit company with a social purpose, operating as an independent behavioural institution.</p><p>Our innovation is BEE: one reusable technology platform for individuals and companies. We aim to grow a scalable business that helps everyday choices serve humanity.</p></div></div>
+<div class="chapter-header"><p class="chapter-label"><span>03</span> <span aria-hidden="true">/</span> The business behind the ambition</p></div>
+<div class="business-heading"><div><h2 id="business-title" data-reveal>Behavioural technology.<br><em>For people and companies.</em></h2></div><div><p class="business-identity"><span class="sg-wordmark"><b>sociis</b>group</span> is a Belgian for-profit company with a social purpose, operating as an independent behavioural institution.</p><p>Our innovation is BEE: one reusable technology platform for individuals and companies. We aim to grow a scalable business that helps everyday choices serve humanity.</p></div></div>
 <div class="market-line"><span class="eyebrow">Our market</span><p>Technology for sustainable everyday choices.</p><span>Intended settings: hospitality, cultural experiences and company customer journeys.</span></div>
 <div class="revenue-grid">
-<article><span class="eyebrow">Individuals</span><h3>Free core.<br>Optional premium.</h3><p>Core BEE access will be free. Optional paid premium services are planned to create consumer revenue.</p><span class="commercial-status">Platform in development</span></article>
-<article><span class="eyebrow">Companies</span><h3>Enterprise licences<br>&amp; integrations.</h3><p>We plan to co-develop and license BEE, integrating it into loyalty programmes, hotel apps and other customer journeys so sustainable options are easier to choose.</p><span class="commercial-status">Enterprise offering in development</span></article>
-<article><span class="eyebrow">Participation</span><h3>Memberships<br>&amp; experiences.</h3><p>Memberships and separately ticketed experiences help fund the work and bring people into it.</p><a class="sg-event-jump" href="#memberships">Explore our memberships <span aria-hidden="true">↓</span></a></article>
+<article><span class="business-card-label">Individuals</span><h3>Free core.<br>Optional premium.</h3><p>Core BEE access will be free. Optional paid premium services are planned to create consumer revenue.</p><span class="commercial-status">Platform in development</span></article>
+<article><span class="business-card-label">Companies</span><h3>Enterprise licences<br>&amp; integrations.</h3><p>We plan to co-develop and license BEE, integrating it into loyalty programmes, hotel apps and other customer journeys so sustainable options are easier to choose.</p><span class="commercial-status">Enterprise offering in development</span></article>
+<article><span class="business-card-label">Participation</span><h3>Memberships<br>&amp; experiences.</h3><p>Paid memberships and experiences help fund the work. Our gatherings introduce people to <span class="sg-wordmark"><b>sociis</b>group</span> and help us build relationships with potential partners. Club 64 is for individuals, Circle is for small and medium-sized businesses, and Sovereign is for strategic enterprise partners.</p><span class="commercial-status">Commercial participation</span></article>
 </div>
-
-<div class="business-invitation"><p>Seeking co-development and pilot partners for BEE, and investment to develop, test and prepare it for wider use.</p><button class="text-button dark-link" data-contact="investor">Discuss the business &amp; investment ↗</button></div>
+<div class="business-invitation"><p>We’re looking for partners to develop and distribute BEE with us, and for investment to bring it into wider use.</p><button class="text-button dark-link" data-contact="investor">Discuss the business &amp; investment ↗</button></div>
 </div>
 </section>
 
 <section id="approach" class="approach section" aria-labelledby="approach-title">
 <div class="wrap">
-<div class="section-intro">
-<p class="eyebrow chapter-label">04 / How we aim to scale</p>
-<span class="eyebrow">One platform. Four routes.</span>
-</div>
+<div class="chapter-header"><p class="chapter-label"><span>04</span> <span aria-hidden="true">/</span> How we aim to scale</p><p class="chapter-note">One platform. Four routes.</p></div>
+
 <h2 id="approach-title" data-reveal>Bringing BEE<br>
 <em>into everyday life.</em>
 </h2>
@@ -172,7 +181,7 @@
 <p>The 64, The 300 and Sociis House bring people into the mission, building relationships and continued participation.</p>
 </article>
 </div>
-<div class="scale-footer"><p>Loyalty integrations are key: reaching existing members and supporting repeated choices. A hotel group may also be a Sovereign partner.</p><button class="text-button" data-contact="company">Explore a BEE pilot ↗</button></div>
+<div class="scale-footer"><p>Loyalty programmes help BEE reach existing members and support better choices over time. A hotel group can also become a Sovereign partner.</p><button class="text-button" data-contact="company">Discuss a BEE partnership ↗</button></div>
 </div>
 </section>
 
@@ -193,16 +202,17 @@
 </h2>
 <p>We connect culture’s power to move people with technology that helps turn inspiration into everyday action.</p>
 </div>
-<p class="culture-credit">The 300 · with Love Tomorrow, on the iconic grounds of Tomorrowland</p>
+<p class="culture-credit">The 300 at Tomorrowland · In collaboration with Love Tomorrow</p>
 </div>
-<span class="culture-cue" aria-hidden="true">A shared experience can open a different perspective. ↓</span>
+<span class="culture-cue" aria-hidden="true">A shared experience can open a different perspective. <span aria-hidden="true">↓</span></span>
 </div>
 </section>
 
 <section class="mechanism section paper" id="ambition" aria-labelledby="ambition-title">
 <div class="wrap">
+<div class="chapter-header"><p class="chapter-label"><span>05</span> <span aria-hidden="true">/</span> The change we aim for</p></div>
 <div class="mechanism-heading">
-<p class="eyebrow chapter-label">05 / The change we aim for</p>
+
 <h2 id="ambition-title" data-reveal>Different choices.<br>
 <em>Different demand.</em>
 </h2>
@@ -210,18 +220,22 @@
 </div>
 <ol class="demand-path" aria-label="Our intended mechanism of change">
 <li>
+<span>01</span>
 <h3>People choose</h3>
-<p>Different decisions in everyday life.</p>
+<p>People make different choices in everyday life.</p>
 </li>
 <li>
+<span>02</span>
 <h3>Demand shifts</h3>
 <p>What people buy, use and support changes.</p>
 </li>
 <li>
+<span>03</span>
 <h3>Businesses respond</h3>
 <p>Products and investment can adapt.</p>
 </li>
 <li>
+<span>04</span>
 <h3>Incentives evolve</h3>
 <p>Better choices can gain economic weight.</p>
 </li>
@@ -253,9 +267,9 @@
 <div class="sg-event-copy">
 <p class="sg-event-label">2027 VIP invitation</p>
 <h2 id="sg-vip-title">The 300</h2>
-<p class="sg-event-format">A private, seated VIP lunch with live music and guest speakers.</p>
+<p class="sg-event-format">A private seated VIP lunch with guest speakers, followed by live music.</p>
 <p class="sg-event-details"><strong>22 July 2027</strong><br>Crystal Garden · Tomorrowland grounds · Boom, Belgium</p>
-<p class="sg-event-host">Hosted by SociisGroup in collaboration with Love Tomorrow.</p>
+<p class="sg-event-host">Hosted by <span class="sg-wordmark"><b>sociis</b>group</span> in collaboration with Love Tomorrow.</p>
 <p class="sg-event-price"><strong>€1,000 per guest</strong> · Including Belgian VAT</p>
 <a class="sg-sales-cta" href="/vip/?from=experiences">View VIP invitation <span aria-hidden="true">→</span></a>
 </div>
@@ -264,14 +278,16 @@
 </section>
 <section class="experiences section paper" id="experiences" aria-labelledby="experiences-title">
 <div class="wrap">
-<div class="section-intro">
-<p class="eyebrow chapter-label">06 / Where the purpose comes to life</p>
-<span class="eyebrow experience-count">Past editions · The 64 and The 300 · 2026</span>
-</div>
+<div class="chapter-header"><p class="chapter-label"><span>06</span> <span aria-hidden="true">/</span> Where the purpose comes to life</p><p class="chapter-note">Past editions · The 64 and The 300 · 2026</p></div>
+
 <h2 id="experiences-title" data-reveal>Different worlds.<br>
 <em>Human connection.</em>
 </h2>
 <p class="experience-intro">We bring people from business, culture, academia and society together to explore what they could change through their decisions, organisations and ideas.</p>
+<div class="sg-photo-entry">
+<a class="sg-photo-jump" href="#photo-highlights">Explore the photo story <span aria-hidden="true">↓</span></a>
+<a class="sg-photo-cta" href="https://sociisgroup.pic-time.com/jFfymim5ycJ9I" target="_blank" rel="noopener noreferrer">Open Pic-Time gallery <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+</div>
 </div>
 <div class="story-journey" id="story-journey">
 <div class="story-stage">
@@ -285,7 +301,7 @@
 <div class="story-track" id="story-track" aria-label="Our gatherings">
 <article class="story-card">
 <button class="story-image" data-story="64" aria-label="Explore The 64">
-<img src="media/hero-room.webp" width="1600" height="1067" alt="Guests gathered around tables framed by red drapes at The 64 at Corinthia Brussels" loading="lazy">
+<img src="media/hero-room.webp" width="1800" height="1200" alt="Guests at The 64 framed by red drapes at Corinthia Brussels" loading="lazy">
 <span class="image-open" aria-hidden="true">↗</span>
 </button>
 <div class="story-copy">
@@ -311,7 +327,7 @@
 <em>A shared direction.</em>
 </h3>
 </div>
-<p>Culture and human connection, with the aim of carrying the work beyond the gathering.<small>The 300 · 23 July 2026</small>
+<p>Culture and human connection, with the aim of carrying the work beyond the gathering.<small>The 300 · <time datetime="2026-07-23">23 July 2026</time></small>
 </p>
 </div>
 </article>
@@ -319,26 +335,87 @@
 </div>
 </div>
 </div>
-<div class="living-archive" id="living-archive" aria-labelledby="archive-title">
-<div class="wrap archive-heading"><div><p class="eyebrow">Between the gatherings</p><h3 id="archive-title">The connection<br><em>continues.</em></h3></div><div><p>Moments from The 64 and The 300. Continue in Sociis House, our digital community.</p></div></div>
-<div class="archive-stage" role="group" aria-label="Photographs from our gatherings">
-<p class="archive-hint">Scroll to turn. Select a photograph to look closer.</p>
-<div class="archive-wheel">
-<button class="archive-photo" data-archive-index="0" data-caption="Dr Tessy Ojo CBE speaking at The 64, with a portrait of Diana behind her." aria-label="View photograph: Dr Tessy Ojo at The 64"><img src="media/diana.webp" width="1600" height="1067" alt="Dr Tessy Ojo CBE speaking, with a portrait of Diana behind her" loading="lazy"></button>
-<button class="archive-photo" data-archive-index="1" data-caption="A voice on stage · The 300 · 23 July 2026." aria-label="View photograph: a speaker at The 300"><img src="media/the300-voice.jpg" width="1400" height="934" alt="A speaker sharing a perspective on stage at The 300" loading="lazy"></button>
-<button class="archive-photo" data-archive-index="2" data-caption="The 300 · with Love Tomorrow, on the iconic grounds of Tomorrowland." aria-label="View photograph: beneath the canopy at The 300"><img src="media/the300.jpg" width="1400" height="934" alt="People gathered beneath the flower-filled canopy at The 300" loading="lazy"></button>
-<button class="archive-photo" data-archive-index="3" data-caption="Before the gathering · The 64 · Corinthia Brussels." aria-label="View photograph: before The 64 at Corinthia Brussels"><img src="media/corinthia-before-the-gathering.webp" width="1600" height="1067" alt="The room prepared for The 64 at Corinthia Brussels" loading="lazy"></button>
+<div class="sg-photo-story" id="photo-highlights" aria-labelledby="photo-highlights-title">
+  <div class="sg-photo-inner">
+    <nav class="sg-photo-nav" aria-label="Photo story chapters">
+      <a href="#photo-the-64">The 64 <span aria-hidden="true">↓</span></a>
+      <a href="#photo-the-300">The 300 <span aria-hidden="true">↓</span></a>
+      <a class="sg-photo-gallery-link" href="https://sociisgroup.pic-time.com/jFfymim5ycJ9I" target="_blank" rel="noopener noreferrer">Open Pic-Time gallery <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+    </nav>
+    <div class="sg-photo-intro" id="photo-the-64" tabindex="-1">
+      <p class="sg-photo-kicker">The 64 &amp; The 300 · July 2026</p>
+      <h3 id="photo-highlights-title">Before the room<br><em>filled with voices.</em></h3>
+      <p>On Rue Royale, the doors of Corinthia Brussels, the former Grand Hotel Astoria, opened onto flowers, candlelight and a room waiting to come alive.</p>
+    </div>
+    <div class="sg-photo-threshold">
+      <figure class="sg-photo-door">
+        <img src="/media/corinthia/door.webp" width="1000" height="1500" alt="The gilded entrance to the former Grand Hotel Astoria, now Corinthia Brussels" loading="lazy">
+        <figcaption>Grand Hotel Astoria · Corinthia Brussels</figcaption>
+      </figure>
+      <figure class="sg-photo-flowers">
+        <img src="/media/corinthia/flowers.webp" width="1000" height="1500" alt="A tall floral arrangement framed by an arch inside Corinthia" loading="lazy">
+        <figcaption>Flowers through the arch</figcaption>
+      </figure>
+    </div>
+    <div class="sg-photo-details">
+      <figure><img src="/media/corinthia/gilt.webp" width="1000" height="1500" alt="Gilded metalwork on the black entrance door" loading="lazy"><figcaption>The goldwork</figcaption></figure>
+      <figure><img src="/media/corinthia/amber.webp" width="1500" height="1000" alt="Chandeliers and ornate arches in amber light" loading="lazy"><figcaption>Chandeliers in amber light</figcaption></figure>
+      <figure><img src="/media/corinthia/service.webp" width="1500" height="1000" alt="Two plates carried through an ornate doorway" loading="lazy"><figcaption>Dinner service</figcaption></figure>
+      <figure><img src="/media/corinthia/food.webp" width="1500" height="1000" alt="A course served on a sculptural white plate" loading="lazy"><figcaption>A course from the evening</figcaption></figure>
+    </div>
+    <figure class="sg-photo-table">
+      <img src="/media/corinthia/table.webp" width="1500" height="1000" alt="A set dinner table with candles and flowers before guests arrive" loading="lazy">
+      <figcaption>Before the guests arrived · The 64</figcaption>
+    </figure>
+    <div class="sg-photo-chapters">
+      <article>
+        <img src="/media/hero-room.webp" width="1600" height="1067" alt="Guests in the warmly lit ballroom at Corinthia Brussels" loading="lazy">
+        <div><p class="sg-photo-kicker">The 64 · Corinthia Brussels</p><h4>In the room.</h4><p class="sg-photo-caption">Guests at the 2026 gathering.</p></div>
+      </article>
+      <article>
+        <img src="/media/diana.webp" width="1600" height="1067" alt="Dr Tessy Ojo CBE speaking in front of a portrait of Diana" loading="lazy">
+        <div><p class="sg-photo-kicker">The 64 · On stage</p><h4>Dr Tessy Ojo CBE.</h4></div>
+      </article>
+    </div>
+    <section class="sg-photo-tomorrow" id="photo-the-300" tabindex="-1" aria-labelledby="sg-photo-tomorrow-title">
+      <div class="sg-photo-intro">
+        <p class="sg-photo-kicker">The 300 · Tomorrowland grounds, Boom · With Love Tomorrow</p>
+        <h3 id="sg-photo-tomorrow-title">Beyond the garden.</h3>
+        <p>From the water garden and Tomorrowland’s sculpted stage to the people gathering beneath the flower canopy.</p>
+      </div>
+      <figure class="sg-tml-stage">
+        <img src="/media/tomorrowland/stage.webp" width="1600" height="1067" alt="The elaborate Tomorrowland main stage seen across the open festival grounds" loading="lazy">
+        <figcaption>The Tomorrowland grounds · Boom</figcaption>
+      </figure>
+      <div class="sg-tml-details">
+        <figure><img src="/media/tomorrowland/fountains.webp" width="1067" height="1600" alt="Fountains rising from floating lotus platforms on the water" loading="lazy"><figcaption>The water garden</figcaption></figure>
+        <figure><img src="/media/tomorrowland/sculpture.webp" width="1600" height="1067" alt="A carved face with a bird in flight on the Tomorrowland stage" loading="lazy"><figcaption>The stage up close</figcaption></figure>
+      </div>
+      <figure class="sg-tml-stage sg-tml-canopy">
+        <img src="/media/the300.jpg" width="1400" height="934" alt="Guests beneath the flower canopy at The 300" loading="lazy">
+        <figcaption>Under the canopy · The 300</figcaption>
+      </figure>
+    </section>
+    <div class="sg-photo-end">
+      <div><h4>See the full highlights.</h4><p>The room, the people and the moments in between.</p></div>
+      <a class="sg-photo-cta" href="https://sociisgroup.pic-time.com/jFfymim5ycJ9I" target="_blank" rel="noopener noreferrer">Open full Pic-Time gallery <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+    <p class="sg-photo-credit">Photography by Ian Hermans, Willem Van Puyenbroeck and Clayton Studio.</p>
+  </div>
 </div>
+<div class="wrap sg-photo-community">
+  <p>Between gatherings, the conversation continues in Sociis House.</p>
+  <a class="text-button dark-link" href="https://www.sociis.house/" target="_blank" rel="noopener noreferrer">Enter Sociis House ↗<span class="sr-only"> (opens in a new tab)</span></a>
 </div>
-<div class="wrap archive-foot"><div><p class="eyebrow">Our gatherings / A photographic archive</p><p id="archive-description">Dr Tessy Ojo CBE · The 64</p><span id="archive-status" class="sr-only" aria-live="polite" aria-atomic="true"></span></div><div class="archive-controls"><span id="archive-count" aria-label="Current photograph">01 / 04</span><button id="archive-prev" class="icon-button" aria-label="Previous photograph">←</button><button id="archive-pause" aria-label="Pause rotation" title="Pause rotation" class="text-button dark-link" aria-pressed="false">Pause rotation</button><button id="archive-next" class="icon-button" aria-label="Next photograph">→</button></div></div>
-</div>
+
 </section>
 
 <section class="people section" id="people" aria-labelledby="people-title">
 <div class="wrap">
+<div class="chapter-header"><p class="chapter-label"><span>07</span> <span aria-hidden="true">/</span> People &amp; responsibility</p></div>
 <div class="people-heading">
 <div>
-<p class="eyebrow chapter-label">07 / People &amp; responsibility</p>
+
 <h2 id="people-title" data-reveal>People who<br>
 <em>answer for the work.</em>
 </h2>
@@ -387,9 +464,10 @@
 
 <section class="giving section paper" id="giving" aria-labelledby="giving-title">
 <div class="wrap">
+<div class="chapter-header"><p class="chapter-label"><span>08</span> <span aria-hidden="true">/</span> Our giving commitment</p></div>
 <div class="giving-heading">
 <div>
-<p class="eyebrow chapter-label">08 / Our giving commitment</p>
+
 <div class="giving-number" aria-label="20 percent">20<span>%</span>
 </div>
 </div>
@@ -410,6 +488,7 @@
 <p class="eyebrow">Young people &amp; positive change</p>
 <h3>The Diana Award</h3>
 <p>Supporting young people with the courage to create positive change.</p>
+<a class="sg-reference-link" href="https://diana-award.org.uk/" target="_blank" rel="noopener noreferrer">Explore The Diana Award <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
 </article>
 <article>
 <figure>
@@ -419,6 +498,7 @@
 <p class="eyebrow">Connection, care &amp; community</p>
 <h3>Under One Sky</h3>
 <p>Human connection and practical care for people affected by homelessness.</p>
+<a class="sg-reference-link" href="https://underoneskytogether.com/" target="_blank" rel="noopener noreferrer">Explore Under One Sky <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
 </article>
 </div>
 </div>
@@ -426,31 +506,27 @@
 
 <section class="participate section" id="participate" aria-labelledby="participate-title">
 <div class="wrap">
-<header class="take-part-heading">
-<p class="eyebrow chapter-label">09 / Take part</p>
-<h2 id="participate-title">What could we <em>change together?</em></h2>
-<p>Three ways to become a member. One invitation to The 300.</p>
-</header>
-<section class="membership-overview" id="memberships" aria-label="Memberships and VIP tickets">
-<div class="membership-grid">
-<article id="club-64-option"><p class="eyebrow">Individuals</p><h3>Club 64</h3><p>A private circle for up to 64 people from different fields.</p><a href="/club-64/?from=take-part">Explore Club 64 <span aria-hidden="true">↗</span></a></article>
-<article><p class="eyebrow">Small and medium businesses</p><h3>Circle</h3><p>Meet peers and collaborate on SociisGroup’s work.</p><button class="text-button dark-link" data-contact="company" data-membership="Circle">Enquire about Circle <span aria-hidden="true">↗</span></button></article>
-<article><p class="eyebrow">Corporate partners</p><h3>Sovereign</h3><p>Help develop BEE and bring it to the people you serve.</p><button class="text-button dark-link" data-contact="company" data-membership="Sovereign">Enquire about Sovereign <span aria-hidden="true">↗</span></button></article>
-<article class="vip-take-part" id="the-300-option"><p class="eyebrow">VIP tickets</p><h3>The 300</h3><p>A private VIP lunch at the Crystal Garden, Tomorrowland.</p><a href="/vip/?from=take-part">VIP invitation <span aria-hidden="true">↗</span></a></article>
-</div>
-</section>
-<div class="take-part-secondary" id="participation-people" aria-label="Other ways to connect">
-<button class="text-button" data-contact="bee">Ask about BEE <span aria-hidden="true">↗</span></button>
-<button class="text-button" data-contact="investor">Discuss investment <span aria-hidden="true">↗</span></button>
+<div class="chapter-header"><p class="chapter-label"><span>09</span> <span aria-hidden="true">/</span> Take part</p></div>
 
-</div>
+  <h2 id="participate-title">What could we change together?</h2>
+  <p class="participate-intro">Three memberships. One invitation to The 300.</p>
+  <div class="member-cards">
+    <article><p class="member-type">Individuals</p><h3>Club 64</h3><p>A private membership for up to 64 people from different fields.</p><a href="/club-64/?from=take-part">Explore Club 64 ↗</a></article>
+    <article><p class="member-type">Small and medium businesses</p><h3>Circle</h3><p>Meet peers and collaborate on <span class="sg-wordmark"><b>sociis</b>group</span>’s work.</p><button type="button" data-contact="circle">Enquire about Circle ↗</button></article>
+    <article><p class="member-type">Corporate partners</p><h3>Sovereign</h3><p>Help develop BEE and bring it to the people you serve.</p><button type="button" data-contact="sovereign">Enquire about Sovereign ↗</button></article>
+    <article><p class="member-type">VIP tickets</p><h3>The 300</h3><p>A private VIP lunch at the Crystal Garden, Tomorrowland.</p><a href="/vip/?from=take-part">VIP invitation ↗</a></article>
+  </div>
+  <div class="member-extra">
+    <button type="button" data-contact="bee">Ask about BEE ↗</button>
+    <button type="button" data-contact="investor">Discuss investment ↗</button>
+  </div>
 </div>
 </section>
 </main>
-<footer id="site-footer">
+<footer>
 <div class="wrap footer-main">
-<a class="logo" href="#home" aria-label="sociisgroup back to top">
-<img src="media/logo-master.svg" width="280" height="68" alt="sociisgroup" loading="lazy">
+<a class="logo sg-logo-master" href="#home" aria-label="sociisgroup back to top">
+<img src="media/logo-master.svg" width="1050" height="349" alt="sociisgroup" loading="lazy">
 </a>
 <a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a>
 
@@ -458,8 +534,8 @@
 </div>
 <div class="wrap footer-base">
 <a href="/club-64/?from=footer">Explore Club 64 ↗</a>
-<span>© 2026 <strong>sociis</strong>group · Brussels</span>
-<a href="https://www.forbes.be/nl/van-intentie-naar-actie-de-missie-van-sociisgroup/" target="_blank" rel="noopener noreferrer">In Forbes Belgium ↗<span class="sr-only"> (Dutch, opens in a new tab)</span></a>
+<span>© 2026 <span class="sg-wordmark"><b>sociis</b>group</span> · Brussels</span>
+<a class="sg-reference-link" href="https://www.forbes.be/nl/van-intentie-naar-actie-de-missie-van-sociisgroup/" target="_blank" rel="noopener noreferrer">Featured in Forbes Belgium <span aria-hidden="true">↗</span><span class="sr-only"> (article in Dutch, opens in a new tab)</span></a>
 <a id="privacy-open" data-legal="privacy" href="privacy.html">Privacy</a>
 <a data-legal="terms" href="terms.html">Terms</a>
 <a data-legal="cookies" href="cookies.html">Cookies</a>
@@ -468,10 +544,12 @@
 </footer>
 <button id="page-fullscreen" title="Full screen" class="film-button" aria-label="View website in full screen" aria-pressed="false" hidden><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"></path></svg><span class="fullscreen-label">Full screen</span></button>
 <p id="page-fullscreen-status" role="status"></p>
+<button class="floating-contact" data-contact="general" hidden>Begin a conversation <span aria-hidden="true">↗</span>
+</button>
 <a id="return-top" class="return-top" href="#home" aria-label="Return to the top" hidden><span aria-hidden="true">↑</span></a>
 <dialog id="menu-dialog" aria-labelledby="menu-title">
 <div class="dialog-head">
-<span class="eyebrow" id="menu-title">Explore sociisgroup</span>
+<span class="eyebrow" id="menu-title">Explore <span class="sg-wordmark"><b>sociis</b>group</span></span>
 <button class="close icon-button" aria-label="Close navigation">×</button>
 </div>
 <nav aria-label="Mobile navigation">
@@ -498,7 +576,7 @@
 <label for="topic">I’d like to explore</label>
 <select id="topic">
 <option value="general">A conversation</option>
-<option value="company">A company partnership</option>
+<option value="company">A company partnership</option><option value="circle">Circle membership</option><option value="sovereign">Sovereign partnership</option>
 <option value="bee">BEE development or testing</option>
 <option value="investor">Investment</option>
 </select>
@@ -507,6 +585,21 @@
 </textarea>
 <a id="email-draft" class="button green" href="mailto:hello@sociisgroup.com">Open email draft ↗</a>
 <p class="small-note">Opens a draft in your email app to <strong id="recipient">hello@sociisgroup.com</strong>. You review and send it. Nothing is submitted by this page. <a data-legal="privacy" href="privacy.html">How we handle enquiries</a>.</p>
+</dialog>
+<dialog id="film-dialog" aria-labelledby="film-title">
+<div class="dialog-head">
+<h2 id="film-title">Our purpose, in a film.</h2>
+<button class="close icon-button" aria-label="Close film">×</button>
+</div>
+<video id="story-film" controls playsinline preload="none" poster="media/film-r84-poster.webp">
+<track kind="captions" src="media/film-r149.vtt" srclang="en" label="English" default>
+</video>
+<div class="film-bottom">
+<span>1:08 · English captions</span>
+<button id="film-fullscreen" class="text-button">Full screen ↗</button>
+</div>
+<p id="fullscreen-status" role="status">
+</p>
 </dialog>
 <dialog id="story-dialog" aria-labelledby="story-title">
 <div class="dialog-head">
@@ -530,6 +623,6 @@
 <img id="archive-full-image" alt="">
 <p id="archive-caption"></p>
 </dialog>
-<dialog class="legal-dialog" id="privacy-dialog" aria-labelledby="privacy-title"><div class="dialog-head"><span class="eyebrow">Privacy</span><button class="close icon-button" aria-label="Close privacy">×</button></div><div class="legal-copy"><p class="eyebrow">Website information · Updated 14 November 2026</p><h2 id="privacy-title">A considered visit.</h2><p class="legal-lead">A clear account of what happens when you visit or start a conversation.</p><h3>Who is responsible</h3><p><strong>sociisgroup BV</strong><br>Rue des Colonies 11, 1000 Brussels, Belgium<br>Enterprise number 0765.808.268 · VAT BE 0765.808.268<br><a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a></p><h3>Visiting the website</h3><p>We load Google Tag Manager container GTM-TGMBKMCM on every page. Google and tags configured in the container may process technical information such as your IP address and browser or device details. This website does not currently provide a consent prompt, so the container loads automatically. This site code does not configure a Google Analytics 4 measurement ID; analytics reporting depends on tags configured separately in the container.</p><p>This preview is hosted using ChatGPT Sites. The hosting service may process technical request information, such as an IP address, browser details, time and requested resource, to deliver and secure the site. Its processing is also described in the <a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer">OpenAI privacy policy ↗</a>.</p><h3>Starting a conversation</h3><p>Your topic and message remain in the page while you compose them. Choosing Open email draft passes them to your email application. This website does not submit the message to sociisgroup. We receive it only if you send the email.</p><p>If you contact us, we process the information you provide, such as your name, email address, organisation and enquiry, to respond and manage the conversation. We rely on steps requested before a potential contract where applicable, or our legitimate interest in answering enquiries. We do not add you to a marketing list through this contact interaction.</p><h3>Access, providers and retention</h3><p>Information is accessible to people handling your enquiry and the hosting and email providers needed to deliver those services. We may retain records required by law or reasonably needed to establish, exercise or defend legal claims.</p><p>We keep enquiry records while the conversation remains active and for relevant follow up. Once that purpose ends, we delete or anonymise records unless a legal obligation or justified need requires retention. Technical hosting records follow the provider’s applicable retention arrangements. Contact us for details relevant to your enquiry.</p><p>Our service providers may process information outside the European Economic Area under their applicable transfer arrangements. You can ask us about processing locations and safeguards relevant to your information.</p><h3>Your rights</h3><p>Depending on the processing and applicable conditions, you may request access, correction, erasure, restriction or portability, or object to processing based on legitimate interests. Where processing relies on consent, you may withdraw it without affecting earlier lawful processing.</p><p>Contact <a href="mailto:hello@sociisgroup.com?subject=Privacy%20request">hello@sociisgroup.com</a>. We respond without undue delay and normally within one month; where the GDPR allows an extension, we will explain it within that period. You can also complain to the <a href="https://www.dataprotectionauthority.be/citizen" target="_blank" rel="noopener noreferrer">Belgian Data Protection Authority ↗</a>.</p><h3>Scope and changes</h3><p>This notice covers the website and initial enquiries. BEE is in development; its future product use will require its own privacy information. We will update this notice when the website’s processing changes.</p></div><p class="legal-page-link"><a href="privacy.html">Open this notice as a page ↗</a></p></dialog>
-<dialog class="legal-dialog" id="terms-dialog" aria-labelledby="terms-title"><div class="dialog-head"><span class="eyebrow">Terms</span><button class="close icon-button" aria-label="Close terms">×</button></div><div class="legal-copy"><p class="eyebrow">Website information · Updated 26 October 2026</p><h2 id="terms-title">A clear understanding.</h2><p class="legal-lead">Information about this website, its operator and its use.</p><h3>Website operator</h3><p><strong>sociisgroup BV</strong><br>Rue des Colonies 11, 1000 Brussels, Belgium<br>Enterprise number 0765.808.268 · VAT BE 0765.808.268<br><a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a></p><h3>Purpose and product status</h3><p>This website introduces sociisgroup, its purpose, people, work and proposed commercial model. BEE is in development. Illustrations of its intended use are not live product responses or promises of availability or results.</p><p>One billion people is an ambition, not a proven universal threshold. Future revenue models, partnerships and product plans are intentions unless explicitly identified otherwise.</p><h3>Conversations and agreements</h3><p>Opening an email draft does not send an enquiry or create a contract. This website does not take payments or conclude memberships, event bookings, enterprise agreements or investments. Any such arrangement requires separate information and agreed terms.</p><p>The investment invitation is an invitation to discuss the business. Website descriptions are not a securities prospectus, an offer to subscribe or a promise of investment returns.</p><h3>Photographs, films and other content</h3><p>Content is protected by the rights of sociisgroup and its respective creators and rights holders. Credits are shown where applicable. Please request permission before reusing photographs, films, logos or substantial text.</p><h3>Using the website</h3><p>Please do not misuse the site, interfere with its availability or attempt unauthorised access. We aim to keep information accurate, but plans and information may change. Ask us to confirm details before relying on them for a commercial decision.</p><p>External websites are operated separately and have their own terms and policies. Nothing in this notice excludes rights or liabilities that cannot lawfully be excluded.</p><h3>Contact and applicable law</h3><p>Contact <a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a>. Belgian law applies, subject to any mandatory rights and protections that apply to you.</p></div><p class="legal-page-link"><a href="terms.html">Open this notice as a page ↗</a></p></dialog>
-<dialog class="legal-dialog" id="cookies-dialog" aria-labelledby="cookies-title"><div class="dialog-head"><span class="eyebrow">Cookies</span><button class="close icon-button" aria-label="Close cookies">×</button></div><div class="legal-copy"><p class="eyebrow">Website information · Updated 14 November 2026</p><h2 id="cookies-title">Only what is needed.</h2><p class="legal-lead">Google Tag Manager container GTM-TGMBKMCM loads automatically on every page. Tags configured in the container may use cookies or similar storage; which ones are used depends on the container configuration.</p><h3>What our website code does</h3><p>This website does not provide a prompt or controls to accept, refuse, or withdraw tracking consent. Tags configured in Google Tag Manager may set or read cookies and similar storage; this website code does not specify which cookies those tags use.</p><p>Fonts, photographs and films are served with the website. We do not embed social media feeds, advertising pixels or external video players.</p><h3>Hosting and other services</h3><p>The hosting infrastructure may use technical mechanisms needed for delivery or security. This notice does not claim that every service used by your browser is free of cookies. Information about the hosting provider is included in our <a href="privacy.html">Privacy notice</a>.</p><p>If you follow an external link, use LinkedIn or Sociis House, or open your email application, that service has its own privacy and cookie arrangements.</p><h3>Your choice</h3><p>The Google Tag Manager container currently loads automatically, without a consent prompt or controls to accept, refuse, or withdraw tracking. If tags requiring consent are configured in the container, they must be configured not to run until any legally required consent has been obtained.</p><h3>Questions</h3><p>Contact <a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a>.</p></div><p class="legal-page-link"><a href="cookies.html">Open this notice as a page ↗</a></p></dialog>
+<dialog class="legal-dialog" id="privacy-dialog" aria-labelledby="privacy-title"><div class="dialog-head"><span class="eyebrow">Privacy</span><button class="close icon-button" aria-label="Close privacy">×</button></div><div class="legal-copy"><p class="eyebrow">Website information · Updated 26 October 2026</p><h2 id="privacy-title">A considered visit.</h2><p class="legal-lead">A clear account of what happens when you visit or start a conversation.</p><h3>Who is responsible</h3><p><strong>sociisgroup BV</strong><br>Rue des Colonies 11, 1000 Brussels, Belgium<br>Enterprise number 0765.808.268 · VAT BE 0765.808.268<br><a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a></p><h3>Visiting the website</h3><p>Our website code does not create visitor accounts, use analytics or advertising trackers, or store choices in cookies or browser storage. Photographs, films and fonts are served with the website.</p><p>The website host may process technical request information, such as an IP address, browser details, time and requested resource, to deliver and secure the site.</p><h3>Starting a conversation</h3><p>Your topic and message remain in the page while you compose them. Choosing Open email draft passes them to your email application. This website does not submit the message to sociisgroup. We receive it only if you send the email.</p><p>If you contact us, we process the information you provide, such as your name, email address, organisation and enquiry, to respond and manage the conversation. We rely on steps requested before a potential contract where applicable, or our legitimate interest in answering enquiries. We do not add you to a marketing list through this contact interaction.</p><h3>Access, providers and retention</h3><p>Information is accessible to people handling your enquiry and the hosting and email providers needed to deliver those services. We may retain records required by law or reasonably needed to establish, exercise or defend legal claims.</p><p>We keep enquiry records while the conversation remains active and for relevant follow up. Once that purpose ends, we delete or anonymise records unless a legal obligation or justified need requires retention. Technical hosting records follow the provider’s applicable retention arrangements. Contact us for details relevant to your enquiry.</p><p>Our service providers may process information outside the European Economic Area under their applicable transfer arrangements. You can ask us about processing locations and safeguards relevant to your information.</p><h3>Your rights</h3><p>Depending on the processing and applicable conditions, you may request access, correction, erasure, restriction or portability, or object to processing based on legitimate interests. Where processing relies on consent, you may withdraw it without affecting earlier lawful processing.</p><p>Contact <a href="mailto:hello@sociisgroup.com?subject=Privacy%20request">hello@sociisgroup.com</a>. We respond without undue delay and normally within one month; where the GDPR allows an extension, we will explain it within that period. You can also complain to the <a href="https://www.dataprotectionauthority.be/citizen" target="_blank" rel="noopener noreferrer">Belgian Data Protection Authority ↗</a>.</p><h3>Scope and changes</h3><p>This notice covers the website and initial enquiries. BEE is in development; its future product use will require its own privacy information. We will update this notice when the website’s processing changes.</p></div><p class="legal-page-link"><a href="privacy.html">Open this notice as a page ↗</a></p></dialog>
+<dialog class="legal-dialog" id="terms-dialog" aria-labelledby="terms-title"><div class="dialog-head"><span class="eyebrow">Terms</span><button class="close icon-button" aria-label="Close terms">×</button></div><div class="legal-copy"><p class="eyebrow">Website information · Updated 26 October 2026</p><h2 id="terms-title">A clear understanding.</h2><p class="legal-lead">Information about this website, its operator and its use.</p><h3>Website operator</h3><p><strong>sociisgroup BV</strong><br>Rue des Colonies 11, 1000 Brussels, Belgium<br>Enterprise number 0765.808.268 · VAT BE 0765.808.268<br><a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a></p><h3>Purpose and product status</h3><p>This website introduces <span class="sg-wordmark"><b>sociis</b>group</span>, its purpose, people, work and proposed commercial model. BEE is in development. Illustrations of its intended use are not live product responses or promises of availability or results.</p><p>One billion people is an ambition, not a proven universal threshold. Future revenue models, partnerships and product plans are intentions unless explicitly identified otherwise.</p><h3>Conversations and agreements</h3><p>Opening an email draft does not send an enquiry or create a contract. This website does not take payments or conclude memberships, event bookings, enterprise agreements or investments. Any such arrangement requires separate information and agreed terms.</p><p>The investment invitation is an invitation to discuss the business. Website descriptions are not a securities prospectus, an offer to subscribe or a promise of investment returns.</p><h3>Photographs, films and other content</h3><p>Content is protected by the rights of <span class="sg-wordmark"><b>sociis</b>group</span> and its respective creators and rights holders. Credits are shown where applicable. Please request permission before reusing photographs, films, logos or substantial text.</p><h3>Using the website</h3><p>Please do not misuse the site, interfere with its availability or attempt unauthorised access. We aim to keep information accurate, but plans and information may change. Ask us to confirm details before relying on them for a commercial decision.</p><p>External websites are operated separately and have their own terms and policies. Nothing in this notice excludes rights or liabilities that cannot lawfully be excluded.</p><h3>Contact and applicable law</h3><p>Contact <a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a>. Belgian law applies, subject to any mandatory rights and protections that apply to you.</p></div><p class="legal-page-link"><a href="terms.html">Open this notice as a page ↗</a></p></dialog>
+<dialog class="legal-dialog" id="cookies-dialog" aria-labelledby="cookies-title"><div class="dialog-head"><span class="eyebrow">Cookies</span><button class="close icon-button" aria-label="Close cookies">×</button></div><div class="legal-copy"><p class="eyebrow">Website information · Updated 26 October 2026</p><h2 id="cookies-title">Only what is needed.</h2><p class="legal-lead">No advertising or analytics trackers are included in this version of the website.</p><h3>What our website code does</h3><p>It does not set cookies or write to local storage or session storage. Film controls, motion preferences and the photographic carousel use temporary page state, which is not deliberately saved for a future visit.</p><p>Fonts, photographs and films are served with the website. We do not embed social media feeds, advertising pixels or external video players.</p><h3>Hosting and other services</h3><p>The hosting infrastructure may use technical mechanisms needed for delivery or security. This notice does not claim that every service used by your browser is free of cookies. Information about the hosting provider is included in our <a href="privacy.html">Privacy notice</a>.</p><p>If you follow an external link, use LinkedIn or Sociis House, or open your email application, that service has its own privacy and cookie arrangements.</p><h3>Your choice</h3><p>There are no optional tracking categories to accept in this website code. Continuing to scroll is not treated as consent. If nonessential tracking is introduced, it must remain inactive until any legally required consent has been obtained, with a straightforward way to refuse and withdraw consent.</p><h3>Questions</h3><p>Contact <a href="mailto:hello@sociisgroup.com">hello@sociisgroup.com</a>.</p></div><p class="legal-page-link"><a href="cookies.html">Open this notice as a page ↗</a></p></dialog>
