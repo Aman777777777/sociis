@@ -1,0 +1,2 @@
+- [ ] Standardize inconsistent website typography.
+- [ ] Diagnose why the Brevo mailing automation is not working and fix it if possible.
