@@ -1,25 +1,30 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CurrentSite, CURRENT_SITE_STYLES } from "./current-site";
 
-const TITLE = "sociisgroup | Change behaviour. Shift the economic system.";
+const TITLE = "Club 64 for Humanity | A personal invitation";
 const DESCRIPTION =
-  "A Belgian for-profit company with a social purpose, developing BEE for more sustainable everyday choices. Scaling through culture, hospitality, company partnerships and communities.";
+  "A personal invitation from SociisGroup to Club 64 for Humanity.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: TITLE },
       { name: "description", content: DESCRIPTION },
-      { name: "theme-color", content: "#081f1b" },
+      { name: "theme-color", content: "#f0ebe5" },
       { property: "og:type", content: "website" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
     ],
-    links: [
-      { rel: "canonical", href: "https://www.sociisgroup.com/" },
-      ...CURRENT_SITE_STYLES.map((href) => ({ rel: "stylesheet", href })),
-      { rel: "icon", href: "/media/bee-mark.svg" },
-    ],
+    links: [{ rel: "canonical", href: "https://www.sociisgroup.com/" }],
   }),
-  component: CurrentSite,
+  component: InvitationHome,
 });
+
+function InvitationHome() {
+  return (
+    <iframe
+      title="Club 64 for Humanity invitation"
+      src="/club-64-invitation.html"
+      style={{ display: "block", width: "100%", height: "100vh", border: 0 }}
+    />
+  );
+}
