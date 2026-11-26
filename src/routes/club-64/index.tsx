@@ -1,252 +1,318 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
-
-import { submitClub64Application } from "./-application.functions";
+import { useRef, useState, type FormEvent, type KeyboardEvent } from "react";
 
 const SITE_URL = "https://www.sociisgroup.com/club-64/";
 const INVITATION_SIGNUP_URL =
   "https://webforms.pipedrive.com/f/6iEA8PbvvDewZc4Vtm20L6NFz3xhnG4RSBORuI2QqnwdPQGUCC4GNSBrJF1KZcbB0n";
+const INVITATION_PAGE_COUNT = 16;
 const DESCRIPTION =
-  "Club 64 is SociisGroup’s private membership for up to 64 individuals. Two member conversations a year. €2,500 per year. Apply for membership.";
+  "A personal invitation to Club 64, a private international membership for up to 64 people committed to an economy that serves humanity.";
 
 export const Route = createFileRoute("/club-64/")({
   head: () => ({
     meta: [
-      { title: "Club 64 | SociisGroup" },
+      { title: "Club 64 | A personal invitation | SociisGroup" },
       { name: "description", content: DESCRIPTION },
-      { name: "theme-color", content: "#102e2a" },
-      { property: "og:title", content: "Club 64 | SociisGroup" },
+      { name: "theme-color", content: "#f8f6f0" },
+      { property: "og:title", content: "Club 64 | A personal invitation | SociisGroup" },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
     ],
     links: [
       { rel: "canonical", href: SITE_URL },
-      { rel: "stylesheet", href: "/fonts/institution.css" },
-      { rel: "stylesheet", href: "/experiences-preview.css" },
-      { rel: "stylesheet", href: "/membership.css" },
+      { rel: "stylesheet", href: "/club-64-layout.css" },
     ],
   }),
   component: Club64,
 });
 
-type FormStatus = "idle" | "submitting" | "success" | "error";
-
 function Club64() {
-  const [status, setStatus] = useState<FormStatus>("idle");
+  const invitationDialog = useRef<HTMLDialogElement>(null);
+  const [invitationPage, setInvitationPage] = useState(0);
+  const [applicationStatus, setApplicationStatus] = useState("");
 
-  async function submitApplication(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (status === "submitting") return;
+  function openInvitation() {
+    setInvitationPage(0);
+    invitationDialog.current?.showModal();
+  }
 
-    const formData = new FormData(event.currentTarget);
-    const textValue = (name: string) => {
-      const value = formData.get(name);
-      return typeof value === "string" ? value : "";
-    };
-    setStatus("submitting");
+  function changeInvitationPage(direction: -1 | 1) {
+    setInvitationPage((current) =>
+      Math.min(INVITATION_PAGE_COUNT - 1, Math.max(0, current + direction)),
+    );
+  }
 
-    try {
-      const result = await submitClub64Application({
-        data: {
-          name: textValue("name"),
-          email: textValue("email"),
-          work: textValue("work"),
-          reason: textValue("reason"),
-        },
-      });
-      setStatus(result.ok ? "success" : "error");
-    } catch {
-      setStatus("error");
+  function handleInvitationKeys(event: KeyboardEvent<HTMLDialogElement>) {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      changeInvitationPage(1);
+    }
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      changeInvitationPage(-1);
     }
   }
 
+  function submitApplication(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const fields = new FormData(event.currentTarget);
+    const body = [
+      `Full name: ${String(fields.get("name") ?? "")}`,
+      `Email address: ${String(fields.get("email") ?? "")}`,
+      `What do you do?: ${String(fields.get("occupation") ?? "")}`,
+      `Why would you like to join?: ${String(fields.get("reason") ?? "")}`,
+    ].join("\n\n");
+
+    window.location.href =
+      `mailto:jeremie@sociisgroup.com?subject=${encodeURIComponent("Club 64 membership application")}` +
+      `&body=${encodeURIComponent(body)}`;
+    setApplicationStatus(
+      "Your email program should open with your application. Review and send it there to apply.",
+    );
+  }
+
   return (
-    <div className="sg-sales-page club-page">
-      <header className="sg-sales-header">
-        <div className="sg-sales-wrap">
-          <a href="/" aria-label="SociisGroup homepage">
-            <img width="140" src="/media/logo-master.svg" alt="sociisgroup" />
-          </a>
-          <nav aria-label="Club 64 navigation">
-            <a href="/#club-64-option">
-              <span aria-hidden="true">← </span>Back to Take part
-            </a>
-            <a href="/">Home</a>
-          </nav>
-        </div>
+    <div className="club64-page">
+      <header className="club64-header">
+        <a className="club64-logo" href="https://www.sociisgroup.com/">
+          <b>sociis</b>group
+        </a>
+        <nav className="club64-nav" aria-label="Club 64">
+          <a href="#membership">Membership</a>
+          <a href="#invitation">The invitation</a>
+          <a href="#apply">Apply</a>
+        </nav>
       </header>
+
       <main>
-        <section className="club-cover-banner" aria-label="Club 64 for Humanity">
+        <section className="club64-cover" aria-label="Club 64 personal invitation">
           <img
-            src="/media/club64-cover.webp"
-            width="800"
-            height="1067"
-            alt="Club 64 for Humanity — a personal invitation"
+            src="/media/club64-invitation-cover.jpg"
+            alt="Club 64 for Humanity. An embossed personal invitation."
+            width="1100"
+            height="1467"
             fetchPriority="high"
           />
+          <a className="club64-scroll" href="#membership">
+            Scroll to discover Club 64
+          </a>
         </section>
-        <section className="club-invitation-options" aria-label="Club 64 invitation options">
-          <div className="club-invitation-option">
-            <p className="sg-sales-kicker">A personal conversation</p>
-            <h2>Would you like to speak with Jeremie?</h2>
-            <p>Get in touch directly to arrange a conversation about Club 64.</p>
+
+        <section className="club64-section club64-wrap" id="membership">
+          <p className="club64-eyebrow">A private international membership · Up to 64 people</p>
+          <h1>Beyond your usual circles.</h1>
+          <p className="club64-intro">
+            Club 64 brings people from business, culture, hospitality and civil society into a
+            smaller, more personal circle. People who are curious about one another and willing to
+            put their experience and relationships to use for humanity.
+          </p>
+        </section>
+
+        <figure className="club64-photo club64-wrap">
+          <img
+            src="/media/club64-corinthia-gathering.jpg"
+            alt="People gathered at Corinthia Brussels, with warm lighting and red drapes"
+            width="1280"
+            height="854"
+            loading="lazy"
+          />
+          <figcaption>The 64 at Corinthia Brussels · From the SociisGroup archive</figcaption>
+        </figure>
+
+        <section className="club64-section club64-wrap club64-benefits">
+          <div>
+            <p className="club64-eyebrow">Your membership</p>
+            <h2>Room to know<br />one another.</h2>
+            <p className="club64-note">
+              Personal invitation. A considered application. An annual relationship.
+            </p>
+          </div>
+          <div>
+            <article>
+              <h3>Conversations with fellow members</h3>
+              <p>
+                Two planned group conversations each year, with time to exchange experience and
+                ideas. Online or in person, depending on where members are.
+              </p>
+            </article>
+            <article>
+              <h3>Personal introductions</h3>
+              <p>
+                A named SociisGroup contact helps explore connections where both people welcome
+                them.
+              </p>
+            </article>
+            <article>
+              <h3>A connection to the work</h3>
+              <p>
+                Updates on SociisGroup’s work, with opportunities to contribute your experience and
+                relationships. Your membership supports our work through culture and hospitality.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="club64-section club64-deck-section" id="invitation">
+          <div className="club64-wrap club64-deck-layout">
+            <div className="club64-deck-art">
+              <img
+                src="/media/club64-deck-personal-invitation.jpg"
+                alt="A personal invitation from Jeremie Landweer"
+                width="1100"
+                height="1467"
+                loading="lazy"
+              />
+              <img
+                src="/media/club64-deck-belonging.jpg"
+                alt="Belonging, from the Club 64 invitation"
+                width="1100"
+                height="1467"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="club64-eyebrow">The full invitation</p>
+              <h2>Get a feeling<br />for the circle.</h2>
+              <p>
+                The people, the setting and the work behind Club 64. Explore the complete 16-page
+                invitation at your own pace.
+              </p>
+              <button className="club64-button club64-button-light" type="button" onClick={openInvitation}>
+                Read the invitation
+              </button>
+              <br />
+              <a
+                className="club64-text-link"
+                href="/club-64-invitation.pdf"
+                download="Club-64-For-Humanity.pdf"
+              >
+                Download the invitation PDF
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="club64-section club64-wrap club64-application" id="apply">
+          <div>
+            <p className="club64-eyebrow">By personal invitation</p>
+            <h2>Your place<br />in Club 64.</h2>
+            <p className="club64-price">€2,500 <span>per year</span></p>
+            <p>It begins with a personal conversation.</p>
+            <p className="club64-note">
+              We review applications personally. Following acceptance, you receive the full terms
+              and total payable before deciding to join. There is no payment to apply.
+            </p>
+            <p className="club64-note">Event tickets, including The 300, are separate.</p>
+          </div>
+
+          <form className="club64-form" onSubmit={submitApplication}>
+            <div className="club64-fields">
+              <label className="club64-field">
+                Full name
+                <input autoComplete="name" name="name" placeholder="Your name" required />
+              </label>
+              <label className="club64-field">
+                Email address
+                <input
+                  type="email"
+                  autoComplete="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </label>
+              <label className="club64-field club64-full-field">
+                What do you do?
+                <input name="occupation" placeholder="Your role or field of work" required />
+              </label>
+              <label className="club64-field club64-full-field">
+                Why would you like to join?
+                <textarea
+                  name="reason"
+                  placeholder="A few words about you and your interest in Club 64"
+                  required
+                />
+              </label>
+            </div>
+            <div className="club64-submit-row">
+              <button className="club64-button" type="submit">Apply for Club 64</button>
+              <p className="club64-note">
+                Your application opens as an email draft. Review and send it from your email
+                program; it is not a payment or a subscription to future invitations.
+              </p>
+              <p className="club64-form-status" aria-live="polite">{applicationStatus}</p>
+              <a href="/privacy.html?from=club" target="_blank" rel="noopener noreferrer">
+                Privacy
+              </a>
+            </div>
+          </form>
+        </section>
+
+        <div className="club64-wrap club64-secondary">
+          <section>
+            <h3>A question before applying?</h3>
+            <p>It begins with a personal conversation. You can speak with Jeremie without joining the invitation list.</p>
             <a
-              className="club-option-cta club-option-cta-primary"
+              className="club64-text-link"
               href="mailto:jeremie@sociisgroup.com?subject=Club%2064%20%7C%20A%20personal%20conversation"
             >
-              Request a conversation <span aria-hidden="true">↗</span>
+              Request a conversation with Jeremie ↗
             </a>
-          </div>
-          <div className="club-invitation-option club-invitation-signup">
-            <p className="sg-sales-kicker">Stay in the loop</p>
-            <h2>Receive future invitations</h2>
-            <p>Sign up separately if you’d like to hear about future Club 64 invitations.</p>
+          </section>
+          <section>
+            <h3>Future invitations</h3>
+            <p>Keep in touch without applying for membership. This is a separate, optional sign-up.</p>
             <a
-              className="club-option-cta"
+              className="club64-text-link"
               href={INVITATION_SIGNUP_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Sign up for future invitations <span aria-hidden="true">↗</span>
+              Sign up for future invitations ↗
             </a>
-            <p className="club-signup-note">
-              This is separate from requesting a conversation or applying for membership. Any
-              optional email-consent choice is made on the sign-up form.
-            </p>
-          </div>
-        </section>
-        <section className="sg-sales-wrap sg-sales-grid club-hero" aria-labelledby="club-title">
-          <div>
-            <p className="sg-sales-kicker">Private membership by SociisGroup</p>
-            <h1 id="club-title">Club 64</h1>
-            <p className="club-lead">Beyond your usual circles.</p>
-            <p className="club-intro">
-              A private membership for up to 64 people from business, culture, hospitality and civil
-              society. A place to get to know people outside your own field and talk honestly about
-              what we can change.
-            </p>
-          </div>
-          <figure className="club-photo">
-            <img
-              src="/media/hero-room.webp"
-              width="1600"
-              height="1067"
-              alt="Guests in the warmly lit ballroom at Corinthia Brussels"
-              fetchPriority="high"
-            />
-            <figcaption>Corinthia Brussels, 2026 · From the SociisGroup archive</figcaption>
-          </figure>
-        </section>
-        <section className="club-details" aria-labelledby="club-details-title">
-          <div className="sg-sales-wrap">
-            <p className="sg-sales-kicker">What membership includes</p>
-            <h2 className="club-section-title" id="club-details-title">
-              A year in Club 64
-            </h2>
-            <div className="club-details-grid">
-              <article>
-                <h3>A small, private circle</h3>
-                <p>
-                  Membership is by personal invitation and limited to 64 people. We bring together
-                  people who are curious about other perspectives and generous with what they know.
-                </p>
-              </article>
-              <article>
-                <h3>Two conversations a year</h3>
-                <p>
-                  We make time for two member conversations a year, to exchange ideas and learn from
-                  people outside our own field. The format can be online or in person, depending on
-                  where members are.
-                </p>
-              </article>
-              <article>
-                <h3>Work you help make possible</h3>
-                <p>
-                  Your membership supports SociisGroup’s work to bring people and ideas together
-                  and make more sustainable choices possible.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section
-          className="sg-sales-wrap club-join"
-          id="membership"
-          aria-labelledby="club-join-title"
-        >
-          <div>
-            <p className="sg-sales-kicker">Apply for membership</p>
-            <h2 id="club-join-title">Your place in Club 64</h2>
-            <p className="club-price">
-              €2,500 <span>per year</span>
-            </p>
-            <p>
-              One annual payment, including applicable VAT. Membership renews annually until
-              cancelled.
-            </p>
-            <p>
-              Tell us a little about yourself. We review applications personally and send accepted
-              applicants a private payment link. There’s no payment to apply.
-            </p>
-          </div>
-          <form
-            className="club-form"
-            id="club-application"
-            onSubmit={submitApplication}
-            aria-busy={status === "submitting"}
-          >
-            <div className="club-form-pair">
-              <label>
-                Full name <input name="name" autoComplete="name" required maxLength={100} />
-              </label>
-              <label>
-                Email address{" "}
-                <input type="email" name="email" autoComplete="email" required maxLength={254} />
-              </label>
-            </div>
-            <label>
-              What do you do? <input name="work" maxLength={200} required />
-            </label>
-            <label>
-              Why would you like to join?{" "}
-              <textarea name="reason" rows={3} maxLength={1200} required />
-            </label>
-            <button className="sg-sales-cta" type="submit" disabled={status === "submitting"}>
-              {status === "submitting" ? "Sending application…" : "Send application"}{" "}
-              <span aria-hidden="true">→</span>
-            </button>
-            <p className="club-cta-note">
-              Your application is sent to SociisGroup through Brevo for review. No payment or
-              automatic confirmation email is sent when you apply.{" "}
-              <a href="/privacy.html?from=club" target="_blank" rel="noopener noreferrer">
-                Privacy notice
-              </a>
-              .
-            </p>
-            <p
-              className="club-form-status"
-              role={status === "error" ? "alert" : "status"}
-              aria-live={status === "error" ? "assertive" : "polite"}
-              tabIndex={-1}
-            >
-              {status === "success" &&
-                "Your application has been received for review. We’ll be in touch."}
-              {status === "error" &&
-                "We couldn’t submit your application. Your answers are still here; please try again later or contact us."}
-            </p>
-          </form>
-        </section>
-      </main>
-      <footer className="sg-sales-footer">
-        <div className="sg-sales-wrap">
-          <a href="/#club-64-option">
-            <span aria-hidden="true">← </span>Back to Take part
-          </a>
-          <a href="/">Home</a>
-          <a href="mailto:jeremie@sociisgroup.com">jeremie@sociisgroup.com</a>
+          </section>
         </div>
+      </main>
+
+      <footer className="club64-footer">
+        <a href="https://www.sociisgroup.com/">Return to SociisGroup</a>
+        <span>Club 64 · A personal invitation</span>
+        <a href="/privacy.html?from=club">Privacy</a>
       </footer>
+
+      <dialog
+        ref={invitationDialog}
+        className="club64-dialog"
+        aria-label="Club 64 invitation"
+        onKeyDown={handleInvitationKeys}
+      >
+        <div className="club64-viewerbar">
+          <button type="button" onClick={() => changeInvitationPage(-1)} disabled={invitationPage === 0} aria-label="Previous page">
+            Previous
+          </button>
+          <span aria-live="polite">{invitationPage + 1} / {INVITATION_PAGE_COUNT}</span>
+          <button
+            type="button"
+            onClick={() => changeInvitationPage(1)}
+            disabled={invitationPage === INVITATION_PAGE_COUNT - 1}
+            aria-label="Next page"
+          >
+            Next
+          </button>
+          <button type="button" onClick={() => invitationDialog.current?.close()}>
+            Close
+          </button>
+        </div>
+        <img
+          className="club64-viewerimage"
+          src={`/media/club64-invitation-pages/${String(invitationPage + 1).padStart(2, "0")}.jpg`}
+          alt={`Club 64 invitation, page ${invitationPage + 1}`}
+          width="960"
+          height="1280"
+        />
+        <p className="club64-viewerhelp">Use Previous and Next, or the arrow keys. Press Escape to return to the page.</p>
+      </dialog>
     </div>
   );
 }
