@@ -4,6 +4,8 @@ import { useState, type FormEvent } from "react";
 import { submitClub64Application } from "./-application.functions";
 
 const SITE_URL = "https://www.sociisgroup.com/club-64/";
+const INVITATION_SIGNUP_URL =
+  "https://webforms.pipedrive.com/f/6iEA8PbvvDewZc4Vtm20L6NFz3xhnG4RSBORuI2QqnwdPQGUCC4GNSBrJF1KZcbB0n";
 const DESCRIPTION =
   "Club 64 is SociisGroup’s private membership for up to 64 individuals. Two member conversations a year. €2,500 per year. Apply for membership.";
 
@@ -83,6 +85,36 @@ function Club64() {
             alt="Club 64 for Humanity — a personal invitation"
             fetchPriority="high"
           />
+        </section>
+        <section className="club-invitation-options" aria-label="Club 64 invitation options">
+          <div className="club-invitation-option">
+            <p className="sg-sales-kicker">A personal conversation</p>
+            <h2>Would you like to speak with Jeremie?</h2>
+            <p>Get in touch directly to arrange a conversation about Club 64.</p>
+            <a
+              className="club-option-cta club-option-cta-primary"
+              href="mailto:jeremie@sociisgroup.com?subject=Club%2064%20%7C%20A%20personal%20conversation"
+            >
+              Request a conversation <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div className="club-invitation-option club-invitation-signup">
+            <p className="sg-sales-kicker">Stay in the loop</p>
+            <h2>Receive future invitations</h2>
+            <p>Sign up separately if you’d like to hear about future Club 64 invitations.</p>
+            <a
+              className="club-option-cta"
+              href={INVITATION_SIGNUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sign up for future invitations <span aria-hidden="true">↗</span>
+            </a>
+            <p className="club-signup-note">
+              This is separate from requesting a conversation or applying for membership. Any
+              optional email-consent choice is made on the sign-up form.
+            </p>
+          </div>
         </section>
         <section className="sg-sales-wrap sg-sales-grid club-hero" aria-labelledby="club-title">
           <div>
