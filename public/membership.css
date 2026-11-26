@@ -23,6 +23,8 @@
 .vip-top[hidden]{display:none}
 @media(max-width:680px){.vip-footer>div{justify-content:flex-start;text-align:left}.vip-return{font-size:12px}}
 .club-page{margin:0;background:#102e2a;color:#f4f0e4;font:16px/1.6 "Institution Sans",Arial,sans-serif}
+.club-page .club-cover-banner{display:grid;place-items:center;padding:clamp(24px,5vw,56px) 5%;background:#f2eee3}
+.club-page .club-cover-banner img{display:block;width:min(430px,76vw);max-height:76svh;object-fit:contain;box-shadow:0 24px 72px #102e2a26}
 .club-page *{box-sizing:border-box}
 .club-page a{color:inherit;text-underline-offset:.22em}
 .club-wrap{width:min(1120px,calc(100% - 10%));margin-inline:auto}

@@ -3,7 +3,7 @@ import { useState, type FormEvent } from "react";
 
 import { submitClub64Application } from "./-application.functions";
 
-const SITE_URL = "https://the300.sociisgroup.com/club-64/";
+const SITE_URL = "https://www.sociisgroup.com/club-64/";
 const DESCRIPTION =
   "Club 64 is SociisGroup’s private membership for up to 64 individuals. Two member conversations a year. €2,500 per year. Apply for membership.";
 
@@ -22,6 +22,7 @@ export const Route = createFileRoute("/club-64/")({
       { rel: "canonical", href: SITE_URL },
       { rel: "stylesheet", href: "/fonts/institution.css" },
       { rel: "stylesheet", href: "/experiences-preview.css" },
+      { rel: "stylesheet", href: "/membership.css" },
     ],
   }),
   component: Club64,
@@ -74,6 +75,15 @@ function Club64() {
         </div>
       </header>
       <main>
+        <section className="club-cover-banner" aria-label="Club 64 for Humanity">
+          <img
+            src="/media/club64-cover.webp"
+            width="800"
+            height="1067"
+            alt="Club 64 for Humanity — a personal invitation"
+            fetchPriority="high"
+          />
+        </section>
         <section className="sg-sales-wrap sg-sales-grid club-hero" aria-labelledby="club-title">
           <div>
             <p className="sg-sales-kicker">Private membership by SociisGroup</p>
