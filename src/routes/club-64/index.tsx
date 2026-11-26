@@ -163,9 +163,8 @@ function Club64() {
               <article>
                 <h3>Work you help make possible</h3>
                 <p>
-                  Your membership supports SociisGroup’s work, including BEE, the AI companion we’re
-                  developing to help people compare everyday options and make more sustainable
-                  choices.
+                  Your membership supports SociisGroup’s work to bring people and ideas together
+                  and make more sustainable choices possible.
                 </p>
               </article>
             </div>
