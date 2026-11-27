@@ -185,7 +185,7 @@ function Club64() {
               <a
                 className="club64-text-link"
                 href="/club-64-invitation.pdf"
-                download="Club-64-For-Humanity.pdf"
+                  download="Club-64-Invitation.pdf"
               >
                 Download the invitation PDF
               </a>
