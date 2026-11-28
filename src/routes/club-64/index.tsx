@@ -30,17 +30,25 @@ export const Route = createFileRoute("/club-64/")({
 function Club64() {
   const invitationDialog = useRef<HTMLDialogElement>(null);
   const [invitationPage, setInvitationPage] = useState(0);
+  const [invitationZoomed, setInvitationZoomed] = useState(false);
   const [applicationStatus, setApplicationStatus] = useState("");
 
   function openInvitation() {
     setInvitationPage(0);
+    setInvitationZoomed(false);
     invitationDialog.current?.showModal();
   }
 
   function changeInvitationPage(direction: -1 | 1) {
+    setInvitationZoomed(false);
     setInvitationPage((current) =>
       Math.min(INVITATION_PAGE_COUNT - 1, Math.max(0, current + direction)),
     );
+  }
+
+  function openApplicationFromInvitation() {
+    invitationDialog.current?.close();
+    document.getElementById("apply")?.scrollIntoView({ behavior: "smooth" });
   }
 
   function handleInvitationKeys(event: KeyboardEvent<HTMLDialogElement>) {
@@ -123,7 +131,11 @@ function Club64() {
         <section className="club64-section club64-wrap club64-benefits">
           <div>
             <p className="club64-eyebrow">Your membership</p>
-            <h2>Room to know<br />one another.</h2>
+            <h2>
+              Room to know
+              <br />
+              one another.
+            </h2>
             <p className="club64-note">
               Personal invitation. A considered application. An annual relationship.
             </p>
@@ -157,6 +169,7 @@ function Club64() {
           <div className="club64-wrap club64-deck-layout">
             <div className="club64-deck-art">
               <img
+                className="club64-preview-invitation"
                 src="/media/club64-deck-personal-invitation.jpg"
                 alt="A personal invitation from Jeremie Landweer"
                 width="1100"
@@ -164,6 +177,7 @@ function Club64() {
                 loading="lazy"
               />
               <img
+                className="club64-preview-belonging"
                 src="/media/club64-deck-belonging.jpg"
                 alt="Belonging, from the Club 64 invitation"
                 width="1100"
@@ -173,19 +187,27 @@ function Club64() {
             </div>
             <div>
               <p className="club64-eyebrow">The full invitation</p>
-              <h2>Get a feeling<br />for the circle.</h2>
+              <h2>
+                Get a feeling
+                <br />
+                for the circle.
+              </h2>
               <p>
                 The people, the setting and the work behind Club 64. Explore the complete 16-page
                 invitation at your own pace.
               </p>
-              <button className="club64-button club64-button-light" type="button" onClick={openInvitation}>
+              <button
+                className="club64-button club64-button-light"
+                type="button"
+                onClick={openInvitation}
+              >
                 Read the invitation
               </button>
               <br />
               <a
                 className="club64-text-link"
                 href="/club-64-invitation.pdf"
-                  download="Club-64-Invitation.pdf"
+                download="Club-64-Invitation.pdf"
               >
                 Download the invitation PDF
               </a>
@@ -196,8 +218,14 @@ function Club64() {
         <section className="club64-section club64-wrap club64-application" id="apply">
           <div>
             <p className="club64-eyebrow">By personal invitation</p>
-            <h2>Your place<br />in Club 64.</h2>
-            <p className="club64-price">€2,500 <span>per year</span></p>
+            <h2>
+              Your place
+              <br />
+              in Club 64.
+            </h2>
+            <p className="club64-price">
+              €2,500 <span>per year</span>
+            </p>
             <p>It begins with a personal conversation.</p>
             <p className="club64-note">
               We review applications personally. Following acceptance, you receive the full terms
@@ -236,12 +264,16 @@ function Club64() {
               </label>
             </div>
             <div className="club64-submit-row">
-              <button className="club64-button" type="submit">Apply for Club 64</button>
+              <button className="club64-button" type="submit">
+                Apply for Club 64
+              </button>
               <p className="club64-note">
                 Your application opens as an email draft. Review and send it from your email
                 program; it is not a payment or a subscription to future invitations.
               </p>
-              <p className="club64-form-status" aria-live="polite">{applicationStatus}</p>
+              <p className="club64-form-status" aria-live="polite">
+                {applicationStatus}
+              </p>
               <a href="/privacy.html?from=club" target="_blank" rel="noopener noreferrer">
                 Privacy
               </a>
@@ -252,7 +284,10 @@ function Club64() {
         <div className="club64-wrap club64-secondary">
           <section>
             <h3>A question before applying?</h3>
-            <p>It begins with a personal conversation. You can speak with Jeremie without joining the invitation list.</p>
+            <p>
+              It begins with a personal conversation. You can speak with Jeremie without joining the
+              invitation list.
+            </p>
             <a
               className="club64-text-link"
               href="mailto:jeremie@sociisgroup.com?subject=Club%2064%20%7C%20A%20personal%20conversation"
@@ -262,7 +297,9 @@ function Club64() {
           </section>
           <section>
             <h3>Future invitations</h3>
-            <p>Keep in touch without applying for membership. This is a separate, optional sign-up.</p>
+            <p>
+              Keep in touch without applying for membership. This is a separate, optional sign-up.
+            </p>
             <a
               className="club64-text-link"
               href={INVITATION_SIGNUP_URL}
@@ -288,10 +325,17 @@ function Club64() {
         onKeyDown={handleInvitationKeys}
       >
         <div className="club64-viewerbar">
-          <button type="button" onClick={() => changeInvitationPage(-1)} disabled={invitationPage === 0} aria-label="Previous page">
+          <button
+            type="button"
+            onClick={() => changeInvitationPage(-1)}
+            disabled={invitationPage === 0}
+            aria-label="Previous page"
+          >
             Previous
           </button>
-          <span aria-live="polite">{invitationPage + 1} / {INVITATION_PAGE_COUNT}</span>
+          <span aria-live="polite">
+            {invitationPage + 1} / {INVITATION_PAGE_COUNT}
+          </span>
           <button
             type="button"
             onClick={() => changeInvitationPage(1)}
@@ -300,18 +344,63 @@ function Club64() {
           >
             Next
           </button>
+          <button
+            type="button"
+            aria-pressed={invitationZoomed}
+            onClick={() => setInvitationZoomed((zoomed) => !zoomed)}
+          >
+            {invitationZoomed ? "Fit page" : "Enlarge"}
+          </button>
           <button type="button" onClick={() => invitationDialog.current?.close()}>
             Close
           </button>
         </div>
-        <img
-          className="club64-viewerimage"
-          src={`/media/club64-invitation-pages/${String(invitationPage + 1).padStart(2, "0")}.jpg`}
-          alt={`Club 64 invitation, page ${invitationPage + 1}`}
-          width="960"
-          height="1280"
-        />
-        <p className="club64-viewerhelp">Use Previous and Next, or the arrow keys. Press Escape to return to the page.</p>
+        <div className={`club64-viewerstage${invitationZoomed ? " is-zoomed" : ""}`}>
+          <div className="club64-page-frame">
+            <img
+              className="club64-viewerimage"
+              src={`/media/club64-invitation-pages/${String(invitationPage + 1).padStart(2, "0")}.jpg`}
+              alt={`Club 64 invitation, page ${invitationPage + 1}. Tap to ${invitationZoomed ? "fit" : "enlarge"}.`}
+              width="1100"
+              height="1467"
+              role="button"
+              aria-label={`Invitation page ${invitationPage + 1}; ${invitationZoomed ? "fit page" : "enlarge page"}`}
+              aria-pressed={invitationZoomed}
+              tabIndex={0}
+              onClick={() => setInvitationZoomed((zoomed) => !zoomed)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setInvitationZoomed((zoomed) => !zoomed);
+                }
+              }}
+            />
+            {invitationPage === 14 && (
+              <a
+                className="club64-page-action club64-apply-action"
+                href="#apply"
+                aria-label="Apply for Club 64"
+                title="Apply for membership"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openApplicationFromInvitation();
+                }}
+              />
+            )}
+            {invitationPage === 15 && (
+              <a
+                className="club64-page-action club64-contact-action"
+                href="mailto:jeremie@sociisgroup.com?subject=Club%2064%20%7C%20A%20personal%20conversation"
+                aria-label="Contact Jeremie about Club 64"
+                title="Contact me"
+              />
+            )}
+          </div>
+        </div>
+        <p className="club64-viewerhelp">
+          The full page fits when opened. Tap the page or choose Enlarge to read more closely. Use
+          Previous and Next or the arrow keys; press Escape to return to the page.
+        </p>
       </dialog>
     </div>
   );

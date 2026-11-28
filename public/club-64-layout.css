@@ -13,7 +13,10 @@
   margin: 0;
   background: var(--club64-paper);
   color: var(--club64-ink);
-  font: 18px/1.7 Arial, Helvetica, sans-serif;
+  font:
+    18px/1.7 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .club64-page a {
@@ -90,7 +93,7 @@
 .club64-page .club64-scroll {
   margin-top: 28px;
   font-size: 14px;
-  letter-spacing: .07em;
+  letter-spacing: 0.07em;
   text-decoration: none;
 }
 
@@ -107,7 +110,7 @@
   margin: 0 0 24px;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: .14em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -124,7 +127,7 @@
   font-size: clamp(44px, 5.5vw, 76px);
   font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -.045em;
+  letter-spacing: -0.045em;
 }
 
 .club64-page h2 {
@@ -132,7 +135,7 @@
   font-size: clamp(34px, 4vw, 52px);
   font-weight: 400;
   line-height: 1.16;
-  letter-spacing: -.035em;
+  letter-spacing: -0.035em;
 }
 
 .club64-page h3 {
@@ -168,7 +171,7 @@
 
 .club64-page .club64-benefits {
   display: grid;
-  grid-template-columns: .8fr 1.2fr;
+  grid-template-columns: 0.8fr 1.2fr;
   gap: 90px;
 }
 
@@ -223,11 +226,11 @@
 }
 
 .club64-page .club64-deck-art img:first-child {
-  transform: translateY(-22px);
+  transform: none;
 }
 
 .club64-page .club64-deck-art img:last-child {
-  transform: translateY(22px);
+  transform: none;
 }
 
 .club64-page .club64-button {
@@ -265,7 +268,7 @@
 
 .club64-page .club64-application {
   display: grid;
-  grid-template-columns: .85fr 1.15fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: 100px;
 }
 
@@ -360,10 +363,14 @@
 }
 
 .club64-page .club64-dialog {
+  display: flex;
+  flex-direction: column;
   width: min(960px, 96vw);
   height: 94svh;
+  max-height: 94svh;
   padding: 0;
   border: 0;
+  overflow: hidden;
   background: #f4f1e9;
   color: var(--club64-ink);
 }
@@ -373,16 +380,34 @@
 }
 
 .club64-page .club64-viewerbar {
-  position: sticky;
-  z-index: 1;
-  top: 0;
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   padding: 12px 20px;
   border-bottom: 1px solid var(--club64-line);
   background: #f8f6f0;
+}
+
+.club64-page .club64-viewerstage {
+  display: grid;
+  flex: 1 1 auto;
+  min-height: 0;
+  place-items: center;
+  overflow: auto;
+  padding: 14px;
+}
+
+.club64-page .club64-page-frame {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .club64-page .club64-viewerbar button {
@@ -395,17 +420,66 @@
 }
 
 .club64-page .club64-viewerbar button:disabled {
-  opacity: .45;
+  opacity: 0.45;
   cursor: default;
 }
 
 .club64-page .club64-viewerimage {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: zoom-in;
+}
+
+.club64-page .club64-viewerstage.is-zoomed {
+  display: block;
+}
+
+.club64-page .club64-viewerstage.is-zoomed .club64-page-frame {
+  width: max-content;
+  max-width: none;
+  max-height: none;
+}
+
+.club64-page .club64-viewerstage.is-zoomed .club64-viewerimage {
+  width: min(900px, calc(100vw - 36px));
+  max-width: none;
+  max-height: none;
+  cursor: zoom-out;
+}
+
+.club64-page .club64-page-action {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  border-radius: 2px;
+}
+
+.club64-page .club64-page-action:focus-visible {
+  outline: 3px solid #928149;
+  outline-offset: 2px;
+  background: #92814920;
+}
+
+.club64-page .club64-apply-action {
+  top: 61.5%;
+  left: 11.5%;
+  width: 35%;
+  height: 4.5%;
+}
+
+.club64-page .club64-contact-action {
+  top: 90.2%;
+  left: 40%;
+  width: 22%;
+  height: 5%;
 }
 
 .club64-page .club64-viewerhelp {
+  flex: 0 0 auto;
+  margin: 0;
   padding: 10px 20px;
   font-size: 14px;
 }
@@ -460,8 +534,13 @@
   }
 
   .club64-page .club64-deck-art {
+    grid-template-columns: 1fr;
     max-width: 440px;
     margin-inline: auto;
+  }
+
+  .club64-page .club64-preview-invitation {
+    display: none;
   }
 
   .club64-page .club64-fields {
@@ -487,9 +566,25 @@
     padding: 10px;
   }
 
+  .club64-page .club64-dialog {
+    width: 100vw;
+    height: 100svh;
+    max-height: 100svh;
+    margin: 0;
+  }
+
+  .club64-page .club64-viewerstage {
+    padding: 8px;
+  }
+
   .club64-page .club64-viewerbar button {
-    padding: 7px;
-    font-size: 14px;
+    min-height: 40px;
+    padding: 5px 7px;
+    font-size: 12px;
+  }
+
+  .club64-page .club64-viewerstage.is-zoomed .club64-viewerimage {
+    width: calc(100vw - 24px);
   }
 
   .club64-page .club64-footer {
