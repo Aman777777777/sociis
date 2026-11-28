@@ -215,7 +215,7 @@
 .club64-page .club64-deck-art {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: start;
   gap: 12px;
 }
 
@@ -226,11 +226,11 @@
 }
 
 .club64-page .club64-deck-art img:first-child {
-  transform: none;
+  transform: translateY(-22px);
 }
 
 .club64-page .club64-deck-art img:last-child {
-  transform: none;
+  transform: translateY(22px);
 }
 
 .club64-page .club64-button {
