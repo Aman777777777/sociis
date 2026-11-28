@@ -3,7 +3,8 @@ import { useRouterState } from "@tanstack/react-router";
 
 const CONSENT_KEY = "sociis.analytics.consent";
 const CONSENT_LIFETIME = 180 * 24 * 60 * 60 * 1000;
-const MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID?.trim() ?? "";
+const MEASUREMENT_ID =
+  import.meta.env.VITE_GA_MEASUREMENT_ID?.trim() || "G-W9N5R6N5GJ";
 
 type ConsentChoice = "granted" | "denied";
 type StoredConsent = { choice: ConsentChoice; expiresAt: number };
